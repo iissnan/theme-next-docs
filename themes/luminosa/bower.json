@@ -1,0 +1,20 @@
+{
+  "name": "luminosa",
+  "version": "0.0.1",
+  "homepage": "https://github.com/iissnan/theme-next",
+  "authors": [
+    "iissnan <iissnan@gmail.com>"
+  ],
+  "description": "Luminosa theme for NexT site",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "~2.0.3"
+  }
+}
