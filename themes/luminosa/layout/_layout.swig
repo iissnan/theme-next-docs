@@ -18,7 +18,7 @@
 
       <header class="ui fixed inverted menu stackable">
         <div class="ui container">
-          <a href="/" class="header item">Something</a>
+          <a href="/" class="header item">NexT</a>
           {{ menu_template.render(site.data.menu.main) }}
 
           <div class="right menu">
@@ -28,8 +28,16 @@
       </header>
 
       <main class="ui main text container">
-        test
+        {{ page.content }}
       </main>
+
+      <footer class="ui inverted vertical footer segment">
+        <div class="ui container text">
+          <div class="ui stackable inverted divided equal height stackable grid">
+
+          </div>
+        </div>
+      </footer>
 
     </div>
 
