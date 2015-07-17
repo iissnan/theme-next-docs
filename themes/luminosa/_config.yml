@@ -1,0 +1,7 @@
+assets:
+  css: css
+  js: js
+  images: images
+  vendors: vendors
+
+version: 0.0.1

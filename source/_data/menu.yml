@@ -1,0 +1,31 @@
+main:
+  Features:
+    icon: empty star
+    link: /features/
+  Configurations:
+    icon: settings
+    multiple: true
+    items:
+      5 Minutes Setup: /fire-minutes-setup/
+      Third Party Services: /third-party-services/
+      Schemes: /schemes/
+  FAQs:
+    icon: help circle
+    link: /faqs/
+
+aside:
+  Language:
+    icon: world
+    multiple: true
+    items:
+      English: /
+      Chinese: /zh-cn
+  About:
+    multiple: true
+    items:
+      Online preview:
+        icon: unhide
+        link: http://notes.iissnan.com/
+      GitHub repo:
+        icon: github square
+        link: https://github.com/iissnan/hexo-theme-next
