@@ -27,7 +27,7 @@
         </div>
       </header>
 
-      <main class="ui main text container">
+      <main class="ui main text container post">
         {{ page.content }}
       </main>
 

@@ -1,20 +1,21 @@
 title: Features
 ---
-<h1 class="ui center aligned icon header"> <i class="circular checkered flag icon"></i>5 Minutes Setup</h1>
 
-<br />
-<br />
-
+{% iconheader circular checkered flag %}
+  5 Minutes Setup
+{% endiconheader %}
 
 在 Hexo 中，通常有两份配置文件，一个是站点根目录下的 `_config.yml`；另外一个是主题目录下的 `_config.yml`。为了描述方便，在以下说明中，将前者称为 **站点配置文件**，后者称为 **主题配置文件**。
 
-<h2 class="ui header"><i class="diamond icon"></i><div class="content">Installation<div class="sub header">Install NexT theme</div></div></h2>
+{% iconsubheader diamond, Install NexT theme %}
+  Installation
+{% endiconsubheader %}
 
 Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 `themes` 目录下，然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。
 
 ### 下载 NexT 主题
 
-<div class="ui segment"><div class="ui top left attached label">Tips</div><div>可以选择 克隆 或者 [稳定的发布版本](https://github.com/iissnan/hexo-theme-next/releases)</div></div>
+> 可以选择 克隆 或者 [稳定的发布版本](https://github.com/iissnan/hexo-theme-next/releases)
 
 
 为了方便之后的更新，建议使用克隆的方式。克隆命令如下：
@@ -30,7 +31,9 @@ $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 
 运行 `hexo s --debug`，并访问 `http://localhost:4000`，确保站点正确运行。
 
-## 主题设定
+{% iconsubheader settings, 主题参数设定 %}
+  主题设定
+{% endiconsubheader %}
 
 ### Mist
 > Mist 是 NexT 主题的第一款主题中的主题
@@ -99,7 +102,9 @@ language: zh-hk
 编辑 **站点配置文件**，设置 `description` 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)
 
 
-## 第三方服务
+{% iconsubheader cubes, 第三方服务集成 %}
+  第三方服务
+{% endiconsubheader %}
 
 ### 多说
 
