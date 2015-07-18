@@ -1,7 +1,6 @@
 title: Features
 ---
-<h1 class="ui center aligned icon header"> <i class="circular checkered flag icon"></i>5 Minutes Setup
-</h1>
+<h1 class="ui center aligned icon header"> <i class="circular checkered flag icon"></i>5 Minutes Setup</h1>
 
 <br />
 <br />
@@ -9,12 +8,14 @@ title: Features
 
 在 Hexo 中，通常有两份配置文件，一个是站点根目录下的 `_config.yml`；另外一个是主题目录下的 `_config.yml`。为了描述方便，在以下说明中，将前者称为 **站点配置文件**，后者称为 **主题配置文件**。
 
-## 安装
+<h2 class="ui header"><i class="diamond icon"></i><div class="content">Installation<div class="sub header">Install NexT theme</div></div></h2>
 
 Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 `themes` 目录下，然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。
 
 ### 下载 NexT 主题
-> 可以选择 克隆 或者 [稳定的发布版本](https://github.com/iissnan/hexo-theme-next/releases)。
+
+<div class="ui segment"><div class="ui top left attached label">Tips</div><div>可以选择 克隆 或者 [稳定的发布版本](https://github.com/iissnan/hexo-theme-next/releases)</div></div>
+
 
 为了方便之后的更新，建议使用克隆的方式。克隆命令如下：
 
