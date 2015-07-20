@@ -45,6 +45,7 @@
     <script src="{{ url_for(theme.assets.vendors) }}/semantic/dist/semantic.min.js"></script>
     <script>
       $('.ui.dropdown').dropdown();
+      $('.menu .item').tab();
     </script>
   </body>
 </html>

@@ -1,5 +1,21 @@
-$gainsboro                = #eee
-$grey-light               = #ccc
+// Colors
+// colors for use across theme.
+// --------------------------------------------------
+
+$whitesmoke   = #f5f5f5
+$gainsboro    = #eee
+$gray-lighter = #ddd
+$grey-light   = #ccc
+$grey         = #bbb
+$grey-dark    = #999
+$grey-dim     = #666
+$black-light  = #555
+$black-deep   = #222
+$red          = #ff2a2a
+$blue-bright  = #87daff
+$blue         = #0684bd
+$blue-deep    = #262a30
+
 
 $border-color             = $grey-light
 
@@ -13,8 +29,40 @@ $content-desktop-padding  = 40px
 @import "highlight/highlight";
 
 
+hr {
+  margin: 40px 0;
+  height: 3px;
+  border: none;
+  background-color: $gray-lighter;
+  background-image: repeating-linear-gradient(
+  -45deg,
+  white,
+  white 4px,
+  transparent 4px,
+  transparent 8px
+  )
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 15px;
+  color: $grey-dim;
+  border-left: 4px solid $gray-lighter;
+
+  cite::before {
+  content: "-";
+  padding: 0 5px;
+}
+}
+
+
 .ui.text.container {
   font: 16px/1.6 "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
+}
+
+.ui.menu {
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
 }
 
 main {
@@ -22,7 +70,8 @@ main {
   padding: 0 0 120px;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5,
+.ui.header {
   font-family: Georgia, "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
 }
 
