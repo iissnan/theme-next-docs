@@ -1,6 +1,6 @@
 main:
   configurations:
-    icon: settings
+    icon: setting
     multiple: true
     items:
       five-minutes-setup: /five-minutes-setup.html
@@ -12,12 +12,12 @@ main:
     link: /faqs.html
 
 aside:
-  language:
-    icon: world
-    multiple: true
-    items:
-      english: /
-      chinese: /zh-cn
+#  language:
+#    icon: world
+#    multiple: true
+#    items:
+#      english: /
+#      chinese: /zh-cn
   about:
     icon: info circle
     multiple: true
