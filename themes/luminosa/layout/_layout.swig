@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for(theme.assets.css) }}/main.css?v={{ theme.version }}"/>
     <meta name="description" content="{{ config.description }}" />
     <title>{% block title %}{% endblock %}</title>
+    <script src="{{ url_for(theme.assets.vendors) }}/jquery/dist/jquery.min.js"></script>
+    <script src="{{ url_for(theme.assets.vendors) }}/semantic/dist/semantic.min.js"></script>
   </head>
 
   <body>
@@ -41,11 +43,11 @@
 
     </div>
 
-    <script src="{{ url_for(theme.assets.vendors) }}/jquery/dist/jquery.min.js"></script>
-    <script src="{{ url_for(theme.assets.vendors) }}/semantic/dist/semantic.min.js"></script>
     <script>
-      $('.ui.dropdown').dropdown();
-      $('.menu .item').tab();
+      $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('.menu .item').tab();
+      });
     </script>
   </body>
 </html>
