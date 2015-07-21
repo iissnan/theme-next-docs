@@ -7,7 +7,7 @@ title: 第三方服务
 
 
 
-{% tableheadless celled striped very compact selectable small %}
+{% tableheadless celled striped very compact small %}
 | | |
 |-------------|--------|
 |[多说](#多说)        |[DISQUS](#DISUQS)        |[百度统计](#百度统计)       |[Google 分析](#Google_分析)|
@@ -15,6 +15,7 @@ title: 第三方服务
 |[微搜索](#微搜索)     |[Google Webmaster tools](#Google_Webmaster_tools)|[多说热评文章](#多说热评文章)||
 {% endtableheadless %}
 
+<i class="icons"><i class="inverted green life ring icon"></i><i class="corner inverted add icon"></i></i> [问题反馈](https://github.com/iissnan/theme-next/issues)
 
 
 

@@ -7,13 +7,15 @@ title: 主题设定
 
 NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保持最大限度的易用性。
 
-{% tableheadless celled striped very compact selectable small %}
+{% tableheadless celled striped very compact small %}
 | | |
 |-------------|--------|
 |[自定义 LOGO 以及主题图标](#自定义_LOGO_以及主题图标) | [多语言](#多语言) | [RSS 链接](#RSS_链接)          | [标签云 页面](#标签云页面) | [分类 页面](#分类页面)        | 
 |[代码高亮主题](#代码高亮主题)                  | [站点建立时间](#站点建立时间)          | [数学公式显示](#数学公式显示)       | [侧边栏头像](#侧边栏头像)  | [侧边栏社交链接](#侧边栏社交链接)   | 
 |[About 页面](#About页面)                   | [友情链接](#友情链接)        | [腾讯公益404页面](#腾讯公益404页面) |  | |
 {% endtableheadless %}
+
+<i class="icons"><i class="inverted green life ring icon"></i><i class="corner inverted add icon"></i></i> [问题反馈](https://github.com/iissnan/theme-next/issues)
 
 
 ## 自定义 LOGO 以及主题图标 

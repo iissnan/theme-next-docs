@@ -1,22 +1,22 @@
 main:
+  five-minutes-setup:
+    link: /five-minutes-setup.html
   configurations:
-#    icon: setting
+    #icon: setting
     multiple: true
     items:
-      five-minutes-setup:
-        icon: checkered flag
-        link: /five-minutes-setup.html
+
       theme-settings:
         icon: star
         link: /theme-settings.html
       third-party-services:
         icon: plug
         link: /third-party-services.html
-#      schemes:
-#        icon: theme
-#        link: /schemes.html
+      #schemes:
+        #icon: theme
+        #link: /schemes.html
   faqs:
-#    icon: help circle
+    #icon: help circle
     link: /faqs.html
 
 aside:
@@ -27,7 +27,7 @@ aside:
 #      english: /
 #      chinese: /zh-cn
   about:
-#    icon: info circle
+    #icon: info circle
     multiple: true
     items:
       preview-mist:

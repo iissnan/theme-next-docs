@@ -8,7 +8,16 @@ title: 5 分钟快速安装
 
 Hexo 有两份主要的配置文件（`_config.yml`），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为 **站点配置文件**，后者称为 **主题配置文件**。
 
+{% tableheadless celled striped very compact small %}
+| | |
+|-------------|--------|
+|[下载 NexT 主题](#下载_NexT_主题)        |[启用 NexT 主题](#启用_NexT_主题)        |[验证主题是否启用](#验证主题是否启用)       |[选择 Scheme](#选择_Scheme)|
+|[语言设置](#语言设置)|[菜单设置](#菜单设置)|[侧栏设置](#侧栏设置)|[头像设置](#头像设置)|
+|[作者名称](#作者名称)|[站点描述设置](#站点描述设置)|[多说评论系统](#多说评论系统)|[百度统计](#百度统计)|
+|[Swiftype 搜索](#Swiftype_搜索)||||
+{% endtableheadless %}
 
+<i class="icons"><i class="inverted green life ring icon"></i><i class="corner inverted add icon"></i></i> [问题反馈](https://github.com/iissnan/theme-next/issues)
 
 {% iconsubheader diamond, 安装 NexT 主题 %}
   安装
