@@ -29,9 +29,11 @@
         </div>
       </header>
 
-      <main class="ui main text container post">
-        {{ page.content }}
-      </main>
+      {% block page_content %}
+        <main class="ui main text container post">
+          {{ page.content }}
+        </main>
+      {% endblock %}
 
       {#<footer class="ui inverted vertical footer segment">#}
         {#<div class="ui container text">#}
