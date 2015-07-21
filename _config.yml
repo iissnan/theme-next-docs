@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: NexT theme
+title: NexT Documentation
 subtitle:
 description: Site for NexT theme, NexT is an elegant theme for Hexo.
 author: iissnan
-language:
+language: zh-Hans
 timezone:
 
 # URL
