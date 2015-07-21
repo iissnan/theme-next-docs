@@ -2,21 +2,21 @@
   {% for item in menu %}
     {% if item.multiple %}
       <div class="ui dropdown item">
-        {#<i class="icon {{ item.icon }}"></i>#}
-        {{ loop.key }}
+        <i class="icon {{ item.icon }}"></i>
+        {{ __('menu.' + loop.key) }}
         <i class="dropdown icon"></i>
         <div class="menu">
           {% for sub_item in item.items %}
-            <a href="{{ sub_item }}" class="item">{{ loop.key }}</a>
+            <a href="{{ sub_item }}" class="item">{{ __('menu.' + loop.key) }}</a>
           {% endfor %}
         </div>
       </div>
     {% else %}
       <a href="{{ item.link }}" class="item">
         {% if item.icon %}
-          {#<i class="icon {{ item.icon }}"></i>#}
+          <i class="icon {{ item.icon }}"></i>
         {% endif %}
-        {{ loop.key }}
+        {{ __('menu.' + loop.key) }}
       </a>
     {% endif %}
   {% endfor %}
