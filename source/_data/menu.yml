@@ -1,14 +1,22 @@
 main:
   configurations:
-    icon: setting
+#    icon: setting
     multiple: true
     items:
-      five-minutes-setup: /five-minutes-setup.html
-      theme-settings: /theme-settings.html
-      third-party-services: /third-party-services.html
-      schemes: /schemes.html
+      five-minutes-setup:
+        icon: checkered flag
+        link: /five-minutes-setup.html
+      theme-settings:
+        icon: star
+        link: /theme-settings.html
+      third-party-services:
+        icon: plug
+        link: /third-party-services.html
+#      schemes:
+#        icon: theme
+#        link: /schemes.html
   faqs:
-    icon: help circle
+#    icon: help circle
     link: /faqs.html
 
 aside:
@@ -19,8 +27,12 @@ aside:
 #      english: /
 #      chinese: /zh-cn
   about:
-    icon: info circle
+#    icon: info circle
     multiple: true
     items:
-      online-preview: http://notes.iissnan.com/
-      github-repo: https://github.com/iissnan/hexo-theme-next
+      preview-mist:
+        icon: unhide
+        link: http://notes.iissnan.com/
+      github-repo:
+        icon: github alternate
+        link: https://github.com/iissnan/hexo-theme-next
