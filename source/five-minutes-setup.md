@@ -1,4 +1,4 @@
-title: Features
+title: 5 分钟快速安装
 ---
 
 {% iconheader circular checkered flag %}
@@ -21,8 +21,7 @@ Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点
 如果你熟悉 [Git](http://git-scm.com/)，建议你使用 克隆最新版本 的方式，方便之后的主题更新。
 
 {% tabmenu tabular %}
-  {% tabmenuitem clone active %} 克隆最新版本 {% endtabmenuitem %}
-  {% tabmenuitem stable %} 下载稳定版本 {% endtabmenuitem %}
+  {% tabmenuitem clone active %} 克隆最新版本 {% endtabmenuitem %}{% tabmenuitem stable %} 下载稳定版本 {% endtabmenuitem %}
 {% endtabmenu %}
 
 {% tabcontent clone active %}
@@ -75,15 +74,15 @@ NexT 通过 Scheme 提供主题中的主题。 Mist 是 NexT 的第一款 Scheme
 
 可用的语言如以下表格所示：
 
-{% table celled %}
-Language| code | value
--------|--------|--------
-English| en      | `language: en`
-简体中文| zh-Hans | `language: zh-Hans`
-French | fr-FR   | `language: fr-FR`
-正体中文| zh-hk/zh-tw | `language: zh-hk`
-Russian| ru | `language: ru`
-German | de | `language: de`
+{% table celled very compact striped selectable small %}
+语言   |    代码 |       设定值
+-------|--------|----------------
+English| `en`      | `language: en`
+简体中文| `zh-Hans` | `language: zh-Hans`
+French | `fr-FR`   | `language: fr-FR`
+正体中文| `zh-hk`/`zh-tw` | `language: zh-hk`
+Russian| `ru`      | `language: ru`
+German | `de`      | `language: de`
 {% endtable %}
 
 
@@ -93,15 +92,15 @@ German | de | `language: de`
 
 菜单配置在 主题配置文件 的 `menu`。 若你的站点运行在子目录中，请将链接前缀的 `/` 去掉。默认支持的菜单项有：
 
-{% table celled %}
-Key |  value | comment
--------|--------|--------
-home | `home: /` | 主页
-archives | `archives: /archives` | 归档页
-categories  | `categories: /categories` | 分类页（需手动创建）
-tags | `tags: /tags` | 标签页（需手动创建）
-about | `about: /about` | 关于页面 （需手动创建）
-commonweal | `commonweal: /commonwal` | 公益 404 （需手动创建）
+{% table celled very compact striped selectable small %}
+键值         |  设定值     | comment
+------------|-------------|--------
+home        | `home: /`                  | 主页
+archives    | `archives: /archives`      | 归档页
+categories  | `categories: /categories`  | 分类页（需手动创建）
+tags        | `tags: /tags`              | 标签页（需手动创建）
+about       | `about: /about`            | 关于页面 （需手动创建）
+commonweal  | `commonweal: /404.html`   | 公益 404 （需手动创建）
 {% endtable %}
 
 菜单示例配置：
@@ -137,9 +136,9 @@ commonweal | `commonweal: /commonwal` | 公益 404 （需手动创建）
 
 其中，头像的链接地址可以是：
 
-{% table celled %}
+{% table celled very compact striped selectable small %}
 地址 | 值
------------- | -------------
+----------------| -------------
 完整的互联网 URL | `https://avatars1.githubusercontent.com/u/32269?v=3&s=460`
 站点内的地址     | `/uploads/avatar.jpg`  - 需要将你的头像图片放置在 站点的 `source/uploads/`（可能需要新建uploads目录）
  | `/images/avatar.jpg`   - 需要将你的头像图片放置在 主题的 `source/images/` 目录下 
@@ -170,7 +169,7 @@ commonweal | `commonweal: /commonwal` | 公益 404 （需手动创建）
 
 ### 多说评论系统
 
-{% message info %}
+{% message info small %}
 **注意**：`duoshuo_shortname` 不是你的多说登录的 id
 {% endmessage %}
 
@@ -189,7 +188,7 @@ commonweal | `commonweal: /commonwal` | 公益 404 （需手动创建）
 
 ### 百度统计
 
-{% message info %}
+{% message info small %}
 **注意**： `baidu_analytics` 不是你的百度 id 或者 百度统计 id
 {% endmessage %}
 
@@ -205,6 +204,6 @@ commonweal | `commonweal: /commonwal` | 公益 404 （需手动创建）
 然后，编辑 **站点配置文件**，新增 `swiftype_key` 字段，值为你的 swiftype 搜索引擎的 key。
 
 
-<div class="ui horizontal divider">参考</div>
+{% dividerhorizontal %}参考{% enddividerhorizontal %}
 
 - [主题配置参考](https://github.com/iissnan/hexo-theme-next/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83)
