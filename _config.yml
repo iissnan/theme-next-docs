@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: NexT theme
 subtitle:
-description:
-author: John Doe
+description: Site for NexT theme, NexT is an elegant theme for Hexo.
+author: iissnan
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://theme-next.iissnan.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -67,4 +67,5 @@ theme: luminosa
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/iissnan/theme-next
