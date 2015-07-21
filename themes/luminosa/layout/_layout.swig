@@ -31,13 +31,13 @@
         {{ page.content }}
       </main>
 
-      <footer class="ui inverted vertical footer segment">
-        <div class="ui container text">
-          <div class="ui stackable inverted divided equal height stackable grid">
+      {#<footer class="ui inverted vertical footer segment">#}
+        {#<div class="ui container text">#}
+          {#<div class="ui stackable inverted divided equal height stackable grid">#}
 
-          </div>
-        </div>
-      </footer>
+          {#</div>#}
+        {#</div>#}
+      {#</footer>#}
 
     </div>
 

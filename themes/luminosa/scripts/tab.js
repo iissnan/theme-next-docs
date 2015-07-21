@@ -7,7 +7,7 @@
 hexo.extend.tag.register('tabmenu', function tabMenu (args, content) {
   return (
   '<div class="ui ' + args[0] + ' menu top attached">' +
-  hexo.render.renderSync({text: content, engine: 'markdown'}) +
+    content +
   '</div>'
   );
 }, {ends: true});
@@ -18,7 +18,7 @@ hexo.extend.tag.register('tabmenu', function tabMenu (args, content) {
 // = <div class="item {active}" data-tab="{tab-name}"></div>
 hexo.extend.tag.register('tabmenuitem', function tabMenu (args, content) {
   var active = args[1] ? 'active' : '';
-  return '<div class="item ' + active + '" data-tab="' + args[0] + '"> ' + content + ' </div>';
+  return '<a class="item ' + active + '" data-tab="' + args[0] + '"> ' + content + ' </a>';
 }, {ends: true});
 
 
