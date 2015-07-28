@@ -69,3 +69,5 @@ theme: luminosa
 deploy:
   type: git
   repo: https://github.com/iissnan/theme-next
+  branch: gh-pages
+  messages: Site updated
