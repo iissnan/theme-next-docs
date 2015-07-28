@@ -14,8 +14,9 @@ title: 常见问题
 {% endtableheadless %}
 
 
-<i class="icons"><i class="inverted green life ring icon"></i><i class="corner inverted add icon"></i></i> [问题反馈](https://github.com/iissnan/theme-next/issues)
-
+{% icongroup inverted green life ring, inverted add %}
+[文档问题反馈](https://github.com/iissnan/theme-next/issues)
+{% endicongroup %}
 
 ### 首页显示文章摘录
 

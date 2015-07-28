@@ -31,5 +31,5 @@ hexo.extend.tag.register('tabcontent', function tabMenu (args, content) {
   '<div class="ui tab bottom attached segment ' + active + '" data-tab="' + args[0] +'">' +
   hexo.render.renderSync({text: content, engine: 'markdown'}) +
   '</div>'
-  );
+  ).replace(/(<br>)+/g, '');
 }, {ends: true});

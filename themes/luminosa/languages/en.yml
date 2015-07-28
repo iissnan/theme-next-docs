@@ -11,3 +11,8 @@ menu:
   about: About
   preview-mist: Mist Preview
   github-repo: GitHub Repository
+
+home:
+  getting_stated:
+    header: Getting Stated
+    sub_header: 5 分钟快速安装

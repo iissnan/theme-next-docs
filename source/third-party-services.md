@@ -15,9 +15,9 @@ title: 第三方服务
 |[微搜索](#微搜索)     |[Google Webmaster tools](#Google_Webmaster_tools)|[多说热评文章](#多说热评文章)||
 {% endtableheadless %}
 
-<i class="icons"><i class="inverted green life ring icon"></i><i class="corner inverted add icon"></i></i> [问题反馈](https://github.com/iissnan/theme-next/issues)
-
-
+{% icongroup inverted green life ring, inverted add %}
+[文档问题反馈](https://github.com/iissnan/theme-next/issues)
+{% endicongroup %}
 
 <!-- # 用户评论 -->
 {% iconsubheader comments, 第三方评论系统 %}

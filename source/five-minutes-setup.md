@@ -17,7 +17,9 @@ Hexo 有两份主要的配置文件（`_config.yml`），一份位于站点根�
 |[Swiftype 搜索](#Swiftype_搜索)||||
 {% endtableheadless %}
 
-<i class="icons"><i class="inverted green life ring icon"></i><i class="corner inverted add icon"></i></i> [问题反馈](https://github.com/iissnan/theme-next/issues)
+{% icongroup inverted green life ring, inverted add %}
+[文档问题反馈](https://github.com/iissnan/theme-next/issues)
+{% endicongroup %}
 
 {% iconsubheader diamond, 安装 NexT 主题 %}
   安装

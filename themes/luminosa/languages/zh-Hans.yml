@@ -11,3 +11,18 @@ menu:
   about: 关于
   preview-mist: 预览 Mist
   github-repo: GitHub 仓库地址
+
+
+home:
+  getting_stated:
+    header: 开始使用
+    sub_header: 5 分钟快速安装
+  configurations:
+    header: 主题设定
+    sub_header: 语言、标签云、友链、侧栏等设定
+  third_party:
+    header: 第三方服务
+    sub_header: 评论、统计分析、分享、搜索
+  faq:
+    header: 常见问题
+    sub_header: 提问频率最高的问题
