@@ -1,0 +1,91 @@
+<h2 id="Setup">Setup</h2><h3 id="Built-In_Tools">Built-In Tools</h3><p>From the Semantic directory you can setup gulp to build Semantic by running.</p>
+<pre><code class="bash">npm install
+</code></pre>
+<p>Semantic will automatically configure itself using a <code>post-install</code> script built into the package.</p>
+<p>After set-up can use gulp to build your project’s css:</p>
+<pre><code class="bash">/* Watch files */
+gulp watch
+
+/* Build all files */
+gulp build
+</code></pre>
+<p>Visit the <a href="http://learnsemantic.com/guide/expert.html">Getting Started Guide</a> for more details on set-up</p>
+<h3 id="Custom_Pipelines">Custom Pipelines</h3><h4 id="Importing_Gulp_Tasks">Importing Gulp Tasks</h4><p>Each gulp task can be imported into your own Gulpfile using <code>require</code></p>
+<pre><code class="javascript"><span class="keyword">var</span>
+  watch = <span class="built_in">require</span>(<span class="string">'path/to/semantic/tasks/watch'</span>)
+;
+gulp.task(<span class="string">'watch ui'</span>, <span class="string">'Watch Semantic UI'</span>, watch));
+</code></pre>
+<h4 id="Importing_LESS">Importing LESS</h4><blockquote>
+<p>LESS files do not contain vendor prefixes. If you are to use these files directly you must add them during your build step.</p>
+</blockquote>
+<p>Before using source files you will need to create a <code>theme.config</code> by renaming <code>theme.config.example</code>, and a site folder by renaming <code>_site/</code> to <code>site/</code></p>
+<p>You can then import Semantic from your own LESS files:</p>
+<pre><code class="less"><span class="comment">/* Import all components */</span>
+<span class="at_rule">@import</span> <span class="string">'src/semantic'</span>;
+</code></pre>
+<p>To import individual components you will have to create a scope for each import using <code>&amp; {}</code></p>
+<pre><code class="less"><span class="comment">/* Import a specific component */</span>
+<span class="keyword">&amp;</span> { <span class="at_rule">@import</span> <span class="string">'src/definitions/elements/button'</span>; }
+</code></pre>
+<h3 id="Config_Files">Config Files</h3><p>These files are generated automatically using install scripts, but must be manually renamed if you are using installing manually.</p>
+<table>
+<thead>
+<tr>
+<th>filename</th>
+<th>usage</th>
+<th>Initial Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>theme.config</strong></td>
+<td>config file that stores each element’s current theme for LESS</td>
+<td>theme.config.example</td>
+</tr>
+<tr>
+<td><strong>site/</strong></td>
+<td>folder storing all your site’s variables and css overrides for each UI component</td>
+<td>_site/</td>
+</tr>
+<tr>
+<td><strong>semantic.json</strong></td>
+<td>stores folder paths for build tools and current installed version for updates. Only necessary when using build tools</td>
+<td>semantic.json.example</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Workflow">Workflow</h3><p>You will only need to use Semantic’s build tools while refining your UI. When designing pages, you can rely on the compiled css packages in  <code>dist/</code>.</p>
+<p>When creating your UI you can try <a href="http://www.learnsemantic.com/themes/creating.html">downloading different themes</a>, adjusting your <a href="http://www.learnsemantic.com/developing/customizing.html#setting-global-variables">site-wide settings</a> (font-family, colors, etc) and tweaking components in your site’s <a href="http://www.learnsemantic.com/developing/customizing.html#designing-for-the-long-now">component overrides</a>.</p>
+<p>Files in the  <code>examples/</code> folder of your project can be useful for testing out changes in your UI. For example, you might run  <code>gulp watch</code> download a new theme to  <code>src/site/themes/</code> then adjust your  <code>theme.config</code> file with the name of the new theme and refresh  <code>examples/kitchensink.html</code> to inspect changes in the theme.</p>
+<h2 id="Theming">Theming</h2><h3 id="Concepts">Concepts</h3><h4 id="Inheritance">Inheritance</h4><p>There are three levels of inheritance in Semantic</p>
+<ul>
+<li>Default theme - Semantic UI’s neutral default theme</li>
+<li>Packaged theme - A specified packaged theme, like “amazon”, or “material”</li>
+<li>Site theme - A theme specific to your site</li>
+</ul>
+<h4 id="Folder_Structure">Folder Structure</h4><ul>
+<li><code>definitions/</code> contains the <code>css</code> and <code>javascript</code> definitions for each component</li>
+<li><code>themes/</code> contains <em>pre-packaged themes</em> including Semantic’s default theme</li>
+<li><code>site/</code> contains your current site’s theme</li>
+</ul>
+<p>View the <a href="http://learnsemantic.com/themes/overview.html">Theming Guide</a> for a more in-depth look</p>
+<h2 id="Customizing">Customizing</h2><h4 id="Basic_Customization">Basic Customization</h4><p>The best way to start customizing is to specify overriding variables in your site’s <code>site.variables</code> file.</p>
+<p>This is a blank stub file that lets you specify variables that overriding variables.</p>
+<p>Some important values to customize:</p>
+<ul>
+<li>Base font size</li>
+<li>Named color hex codes</li>
+<li>Header/Page Font-families</li>
+<li>Primary and secondary colors</li>
+<li>Grid column count</li>
+</ul>
+<p>To find out what variables are available to modify, you can inspect the variables in the default theme in <code>themes/default/</code></p>
+<h4 id="Advanced_Configuration">Advanced Configuration</h4><p>Each component has its own variable file, which can be used to modify any of the underlying variables for that component.</p>
+<p>For example <code>/site/elements/button.variables</code>.</p>
+<p>You may also specify your own custom LESS in <code>site/elements/button.overrides</code>. This file will have access to all underlying variables available for that component.</p>
+<h4 id="Using_Pre-Packaged_Themes">Using Pre-Packaged Themes</h4><p>You can modify <code>theme.config</code> to use any prepackaged theme available in <code>src/themes/</code>.</p>
+<p>For example you can modify <code>theme.config</code> to use a <code>github</code> button theme by changing</p>
+<pre><code class="less"><span class="variable">@button:</span> <span class="string">'github'</span>;
+</code></pre>
+<p>View the <a href="http://learnsemantic.com/developing/customizing.html">Customization Guide</a> to learn more</p>

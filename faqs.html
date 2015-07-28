@@ -1,0 +1,202 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" type="text/css" href="/vendors/semantic/dist/semantic.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.0.1"/>
+    <meta name="description" content="Site for NexT theme, NexT is an elegant theme for Hexo." />
+    <title> 常见问题 | NexT Documentation </title>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendors/semantic/dist/semantic.min.js"></script>
+  </head>
+
+  <body>
+    <div class="luminosa">
+
+      <header class="ui fixed inverted menu stackable">
+        <div class="ui container">
+          <a href="/" class="header item">NexT</a>
+          
+  
+    
+      <a href="/five-minutes-setup.html" class="item">
+        
+        开始使用
+      </a>
+    
+  
+    
+      <div class="ui dropdown item">
+        
+        配置
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          
+            <a href="/theme-settings.html" class="item">
+              
+                <i class="icon star"></i>
+              
+              主题设定
+            </a>
+          
+            <a href="/third-party-services.html" class="item">
+              
+                <i class="icon plug"></i>
+              
+              第三方服务
+            </a>
+          
+        </div>
+      </div>
+    
+  
+    
+      <a href="/faqs.html" class="item">
+        
+        常见问题
+      </a>
+    
+  
+
+
+          <div class="right menu">
+            
+  
+    
+      <div class="ui dropdown item">
+        
+        关于
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          
+            <a href="http://notes.iissnan.com/" class="item">
+              
+                <i class="icon unhide"></i>
+              
+              预览 Mist
+            </a>
+          
+            <a href="https://github.com/iissnan/hexo-theme-next" class="item">
+              
+                <i class="icon github alternate"></i>
+              
+              GitHub 仓库地址
+            </a>
+          
+        </div>
+      </div>
+    
+  
+
+          </div>
+        </div>
+      </header>
+
+      
+        <main class="ui main text container post">
+          <h1 class="ui center aligned icon header"><i class=" circular life ring icon"></i><p>常见问题</p>
+</h1>
+<table class="ui table celled striped very compact small">
+
+<tbody>
+<tr>
+<td><a href="#首页显示文章摘录">首页显示文章摘录</a></td>
+<td><a href="#设定归档页面文章的篇数">设定归档页面文章的篇数</a></td>
+<td><a href="#设置_favicon">设置 favicon</a></td>
+<td><a href="#自定义字体">自定义字体</a></td>
+</tr>
+<tr>
+<td><a href="#自定义页面内容区域的宽度">自定义页面内容区域的宽度</a></td>
+<td><a href="#标签和分类页面的统计数据不正确">标签和分类页面的统计数据不正确</a></td>
+<td><a href="#语言显示不正确">语言显示不正确</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<i class="icons"><i class="inverted green life ring icon"></i><i class="corner  inverted add icon"></i></i> <a href="https://github.com/iissnan/theme-next/issues" target="_blank" rel="external">文档问题反馈</a><p></p>
+
+<h3 id="首页显示文章摘录">首页显示文章摘录</h3><p>NexT 支持三种方式来控制首页文章的显示方式。若需要在首页显示摘录，可以通过以下方法：</p>
+<ol>
+<li>在文章中使用 <code>&lt;!-- more --&gt;</code> 手动进行截断</li>
+<li>在文章的 <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">front-matter</a> 中添加 <code>description</code>，并提供文章摘录</li>
+<li>自动形成摘要，在 主题配置文件 中添加：<pre><code><span class="attribute">auto_excerpt</span>:
+  <span class="attribute">enable</span>: true
+  <span class="attribute">length</span>: <span class="number">150</span>
+</code></pre>默认截取的长度为 <code>150</code> 字符，可以根据需要自行设定</li>
+</ol>
+<h3 id="设定归档页面文章的篇数">设定归档页面文章的篇数</h3><p>若要实现首页显示 M 篇文章，而归档页面显示 N 篇文章的需求，需要两个设定：</p>
+<div class="ui tabular menu top attached"><a class="item active" data-tab="page-size-step-1"> 步骤一 </a>
+<a class="item " data-tab="page-size-step-2"> 步骤二 </a></div>
+<div class="ui tab bottom attached segment active" data-tab="page-size-step-1"><p>安装 Hexo 插件。在站点目录下使用 <code>npm install --save</code> 安装如下扩展：</p>
+<ul>
+<li><a href="https://github.com/hexojs/hexo-generator-index" target="_blank" rel="external">hexo-generator-index</a></li>
+<li><a href="https://github.com/hexojs/hexo-generator-archive" target="_blank" rel="external">hexo-generator-archive</a></li>
+<li><a href="https://github.com/hexojs/hexo-generator-tag" target="_blank" rel="external">hexo-generator-tag</a></li>
+</ul>
+</div>
+<div class="ui tab bottom attached segment " data-tab="page-size-step-2"><p>安装完成后，在 站点配置文章 中，设定：</p>
+<pre><code><span class="attribute">index_generator</span>:
+  <span class="attribute">per_page</span>: <span class="number">5</span>
+
+<span class="attribute">archive_generator</span>:
+  <span class="attribute">per_page</span>: <span class="number">20</span>
+  <span class="attribute">yearly</span>: true
+  <span class="attribute">monthly</span>: true
+
+<span class="attribute">tag_generator</span>:
+  <span class="attribute">per_page</span>: <span class="number">10</span>
+</code></pre><p>将 <code>per_page</code> 设定成所需要的篇数</p>
+</div>
+<h3 id="设置_favicon">设置 favicon</h3><p>将 <code>favicon</code> 放置到站点的 <code>source</code> 目录下即可</p>
+<h3 id="自定义字体">自定义字体</h3><p>编辑主题的 <code>source/css/_custom/variables.styl</code> 文件，新增两个变量：</p>
+<pre><code><span class="variable">$font</span><span class="attribute">-family</span><span class="attribute">-headings</span> <span class="subst">=</span> Georgia, sans <span class="comment">// 标题，修改成你期望的字体族</span>
+<span class="variable">$font</span><span class="attribute">-family</span><span class="attribute">-base</span> <span class="subst">=</span> <span class="string">"Microsoft YaHei"</span>, Verdana, sans<span class="attribute">-serif</span> <span class="comment">// 修改成你期望的字体族</span>
+</code></pre><h3 id="自定义页面内容区域的宽度">自定义页面内容区域的宽度</h3><p>编辑主题的 <code>source/css/_custom/variables.styl</code> 文件，新增变量：</p>
+<pre><code><span class="variable">$content</span><span class="attribute">-desktop</span> <span class="subst">=</span> <span class="number">700</span>px  <span class="comment">// 修改成你期望的宽度</span>
+</code></pre><h3 id="标签和分类页面的统计数据不正确">标签和分类页面的统计数据不正确</h3><p>按照以下步骤更新数据：</p>
+<ol>
+<li>删除站点目录下的 <code>db.json</code> 文件</li>
+<li>执行 <code>hexo clean</code></li>
+<li>重新生成 <code>hexo g</code></li>
+</ol>
+<h3 id="语言显示不正确">语言显示不正确</h3><p>为了确保语言正确显示，建议明确指定所使用的语言。编辑 站点配置文件， 将 <code>language</code> 字段设置成明确的语言代码。例如：</p>
+<pre><code><span class="label">language:</span> <span class="built_in">zh</span>-Hans
+</code></pre><p>可用的语言有：</p>
+<ul>
+<li>English (<code>en</code>)</li>
+<li>中文简体 (<code>zh-Hans</code>)</li>
+<li>French (<code>fr-FR</code>)</li>
+<li>正体中文 (<code>zh-hk</code>/<code>zh-tw</code>)</li>
+<li>Russian (<code>ru</code>)</li>
+<li>German (<code>de</code>)</li>
+</ul>
+
+        </main>
+      
+
+      
+        
+          
+
+          
+        
+      
+
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('.menu .item').tab({
+          context: 'parent'
+        });
+      });
+    </script>
+  </body>
+</html>

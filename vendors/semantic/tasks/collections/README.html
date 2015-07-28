@@ -1,0 +1,12 @@
+<h2 id="How_to_use">How to use</h2><p>These are collections of tasks that are imported together.</p>
+<p>To import them into gulp:</p>
+<pre><code class="javascript"><span class="keyword">var</span>
+  gulp    = <span class="built_in">require</span>(<span class="string">'gulp'</span>),
+  <span class="comment">// modified to point to semantic folder</span>
+  install = <span class="built_in">require</span>(<span class="string">'tasks/collections/install'</span>)
+;
+gulp = install(gulp);
+
+<span class="comment">// tasks are now injected and ready to be used</span>
+gulp.start(<span class="string">'install'</span>);
+</code></pre>

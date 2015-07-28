@@ -1,0 +1,12 @@
+<h2 id="Tasks">Tasks</h2><ul>
+<li>Watch - Compile only changed files from source</li>
+<li>Build - Build all files from source</li>
+<li>Version - Output version number</li>
+<li>Install - Run Installer to Set-up Paths</li>
+</ul>
+<h2 id="How_to_use">How to use</h2><p>These tasks can be imported into your own gulpfile allowing you to avoid using Semantic’s build tools</p>
+<pre><code class="javascript"><span class="keyword">var</span>
+  watch = <span class="built_in">require</span>(<span class="string">'path/to/semantic/tasks/watch'</span>)
+;
+gulp.task(<span class="string">'watch ui'</span>, <span class="string">'Watch Semantic UI'</span>, watch));
+</code></pre>

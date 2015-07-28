@@ -1,0 +1,319 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" type="text/css" href="/vendors/semantic/dist/semantic.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.0.1"/>
+    <meta name="description" content="Site for NexT theme, NexT is an elegant theme for Hexo." />
+    <title> 主题设定 | NexT Documentation </title>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendors/semantic/dist/semantic.min.js"></script>
+  </head>
+
+  <body>
+    <div class="luminosa">
+
+      <header class="ui fixed inverted menu stackable">
+        <div class="ui container">
+          <a href="/" class="header item">NexT</a>
+          
+  
+    
+      <a href="/five-minutes-setup.html" class="item">
+        
+        开始使用
+      </a>
+    
+  
+    
+      <div class="ui dropdown item">
+        
+        配置
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          
+            <a href="/theme-settings.html" class="item">
+              
+                <i class="icon star"></i>
+              
+              主题设定
+            </a>
+          
+            <a href="/third-party-services.html" class="item">
+              
+                <i class="icon plug"></i>
+              
+              第三方服务
+            </a>
+          
+        </div>
+      </div>
+    
+  
+    
+      <a href="/faqs.html" class="item">
+        
+        常见问题
+      </a>
+    
+  
+
+
+          <div class="right menu">
+            
+  
+    
+      <div class="ui dropdown item">
+        
+        关于
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          
+            <a href="http://notes.iissnan.com/" class="item">
+              
+                <i class="icon unhide"></i>
+              
+              预览 Mist
+            </a>
+          
+            <a href="https://github.com/iissnan/hexo-theme-next" class="item">
+              
+                <i class="icon github alternate"></i>
+              
+              GitHub 仓库地址
+            </a>
+          
+        </div>
+      </div>
+    
+  
+
+          </div>
+        </div>
+      </header>
+
+      
+        <main class="ui main text container post">
+          <h1 class="ui center aligned icon header"><i class=" circular checkered star icon"></i><p>主题设定</p>
+</h1>
+<p>NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保持最大限度的易用性。</p>
+<table class="ui table celled striped very compact small">
+
+<tbody>
+<tr>
+<td><a href="#自定义_LOGO_以及主题图标">自定义 LOGO 以及主题图标</a></td>
+<td><a href="#多语言">多语言</a></td>
+<td><a href="#RSS_链接">RSS 链接</a></td>
+<td><a href="#标签云页面">标签云 页面</a></td>
+<td><a href="#分类页面">分类 页面</a></td>
+</tr>
+<tr>
+<td><a href="#代码高亮主题">代码高亮主题</a></td>
+<td><a href="#站点建立时间">站点建立时间</a></td>
+<td><a href="#数学公式显示">数学公式显示</a></td>
+<td><a href="#侧边栏头像">侧边栏头像</a></td>
+<td><a href="#侧边栏社交链接">侧边栏社交链接</a></td>
+</tr>
+<tr>
+<td><a href="#About页面">About 页面</a></td>
+<td><a href="#友情链接">友情链接</a></td>
+<td><a href="#腾讯公益404页面">腾讯公益404页面</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<i class="icons"><i class="inverted green life ring icon"></i><i class="corner  inverted add icon"></i></i> <a href="https://github.com/iissnan/theme-next/issues" target="_blank" rel="external">文档问题反馈</a><p></p>
+
+<h2 id="自定义_LOGO_以及主题图标">自定义 LOGO 以及主题图标</h2><p>NexT 使用 <a href="http://icomoon.io" target="_blank" rel="external">IcoMoon</a> 的服务为主题提供四套内建的图标。</p>
+<p>借助于这个特性，你可以定制自己的<code>LOGO</code>以及主题的图标。自定义图标需要手工处理：</p>
+<div class="ui tabular menu top attached"><a class="item active" data-tab="custom-icon-step-1"> 步骤一 </a>
+<a class="item " data-tab="custom-icon-step-2"> 步骤二 </a>
+<a class="item " data-tab="custom-icon-step-3"> 步骤三 </a>
+<a class="item " data-tab="custom-icon-step-4"> 步骤四 </a></div>
+<div class="ui tab bottom attached segment active" data-tab="custom-icon-step-1"><p>在 <a href="http://icomoon.io" target="_blank" rel="external">IcoMoon</a> 挑选图标，并生成对应的字体文件。假设你的字体文件命名为 <code>foo</code> 。需要注意的是，生成字体的文件名 <code>icomoon</code> 不要更改。</p>
+</div>
+<div class="ui tab bottom attached segment " data-tab="custom-icon-step-2"><p>在 <code>source/fonts/</code> 目录下新建一个目录，名称以 <code>icon-</code> 开头加上 <code>foo</code> ，即 <code>source/fonts/icon-foo</code>。</p>
+</div>
+<div class="ui tab bottom attached segment " data-tab="custom-icon-step-3"><p>在 <code>source/css/_fonts/</code> 目录下新建一个 <code>styl</code> 文件，名字为 <code>icon-foo.styl</code>。将 IcoMoon 提供的样式文件迁移到这个 <code>styl</code> 文件中。请参看内置的文件。</p>
+<table class="ui table celled very compact striped small"><thead><tr><th>class name</th><th>usage</th></tr></thead><tbody><tr><td><code>icon-logo</code></td><td>指定Logo图标</td></tr><tr><td><code>icon-home</code></td><td>指定菜单中Home链接图标</td></tr><tr><td><code>icon-archives</code></td><td>指定菜单中Archives链接图标</td></tr><tr><td><code>icon-tags</code></td><td>指定菜单中Tags链接图标</td></tr><tr><td><code>icon-feed</code></td><td>指定菜单中RSS链接图标</td></tr><tr><td><code>icon-about</code></td><td>指定菜单中About链接图标</td></tr><tr><td><code>icon-heart</code></td><td>指定菜单中底部心的图标</td></tr><tr><td><code>icon-external-link</code></td><td>指定菜单中外链的链接图标</td></tr></tbody></table></div>
+<div class="ui tab bottom attached segment " data-tab="custom-icon-step-4"><p>编辑 <strong>主题配置文件</strong>，将 <code>icon_font</code> 设置为 <code>foo</code>，即：</p>
+<pre><code><span class="attribute">icon_font</span>: <span class="string">foo</span>
+</code></pre></div>
+<h2 id="语言">语言</h2><p>NexT 目前支持六种语言版本：</p>
+<ul>
+<li>English (<code>en</code>)</li>
+<li>中文简体 (<code>zh-Hans</code>)</li>
+<li>French (<code>fr-FR</code>)</li>
+<li>正体中文 (<code>zh-hk</code>/<code>zh-tw</code>)</li>
+<li>Russian (<code>ru</code>)</li>
+<li>German (<code>de</code>)</li>
+</ul>
+<p>默认语言是英文。编辑 <strong>站点配置文件</strong> 的 <code>_config.yml</code> ，将 <code>language</code> 字段更改为你所需要的语言版本代号：</p>
+<pre><code>language: en
+<span class="preprocessor"># language: zh-Hans</span>
+<span class="preprocessor"># language: fr-FR</span>
+<span class="preprocessor"># language: zh-hk</span>
+<span class="preprocessor"># language: zh-tw</span>
+<span class="preprocessor"># language: ru</span>
+<span class="preprocessor"># language: de</span>
+</code></pre><h2 id="RSS_链接">RSS 链接</h2><p>编辑 <strong>主题配置文件</strong>，将 <code>rss</code> 字段设置为：</p>
+<ol>
+<li><code>rss: false</code>，这将会禁用Feed链接。</li>
+<li><p><code>rss:</code>，当值为空的时候，默认会使用站点的 Feed 链接。在此之前需要使用 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a> 插件生成 Feed。</p>
+<p> 依照 <code>hexo-generator-feed</code> 插件的安装说明进行 Feed 生成，当配件配置完毕后，主题将自动显示 Feed 链接。</p>
+</li>
+<li><p><code>rss: http://your-feed-url</code>，指定特定的链接地址，适用于已经烧制过 Feed 的情形。</p>
+</li>
+</ol>
+<h2 id="标签云页面">标签云页面</h2><p>添加一个标签云页面，并在菜单中显示页面链接。</p>
+<div class="ui tabular menu top attached"><a class="item active" data-tab="tags-page-step-1"> 步骤一 </a>
+<a class="item " data-tab="tags-page-step-2"> 步骤二 </a>
+<a class="item " data-tab="tags-page-step-3"> 步骤三 </a></div>
+<div class="ui tab bottom attached segment active" data-tab="tags-page-step-1"><p>新建一个页面，命名为 <code>tags</code> 。命令如下：</p>
+<pre><code>hexo <span class="keyword">new</span> page <span class="string">"tags"</span>
+</code></pre></div>
+<div class="ui tab bottom attached segment " data-tab="tags-page-step-2"><p>编辑刚新建的页面，将页面的类型设置为 <code>tags</code> ，主题将自动为这个页面显示标签云。页面内容如下：</p>
+<pre><code>title: Tagcloud
+date: 2014-12-22 12:39:04
+<span class="header">type: "tags"
+---</span>
+</code></pre><p>注意：如果有启用多说 或者 Disqus 评论，默认页面也会带有评论。需要关闭的话，请添加字段 comments 并将值设置为 false，如：</p>
+<pre><code>title: Tagcloud
+date: 2014-12-22 12:39:04
+type: "tags"
+<span class="header">comments: false
+---</span>
+</code></pre></div>
+<div class="ui tab bottom attached segment " data-tab="tags-page-step-3"><p>在菜单中添加链接。编辑 <strong>主题配置文件</strong> ，添加 <code>tags</code> 到 <code>menu</code> 中，如下:</p>
+<pre><code><span class="attribute">menu</span>:
+  <span class="attribute">home</span>: /
+  <span class="attribute">archives</span>: /archives
+  <span class="attribute">tags</span>: /tags
+</code></pre></div>
+<h2 id="分类页面">分类页面</h2><p>添加一个 分类 页面，并在菜单中显示页面链接。</p>
+<div class="ui tabular menu top attached"><a class="item active" data-tab="categories-page-step-1"> 步骤一 </a>
+<a class="item " data-tab="categories-page-step-2"> 步骤二 </a>
+<a class="item " data-tab="categories-page-step-3"> 步骤三 </a></div>
+<div class="ui tab bottom attached segment active" data-tab="categories-page-step-1"><p>新建一个页面，命名为 <code>categories</code> 。命令如下：</p>
+<pre><code>hexo <span class="keyword">new</span> page categories
+</code></pre></div>
+<div class="ui tab bottom attached segment " data-tab="categories-page-step-2"><p>编辑刚新建的页面，将页面的类型设置为 <code>categories</code> ，主题将自动为这个页面显示所有分类。</p>
+<pre><code>title: 分类
+date: 2014-12-22 12:39:04
+<span class="header">type: "categories"
+---</span>
+</code></pre><p>注意：如果有启用多说 或者 Disqus 评论，默认页面也会带有评论。需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code>，如：</p>
+<pre><code>title: 分类
+date: 2014-12-22 12:39:04
+type: "categories"
+<span class="header">comments: false
+---</span>
+</code></pre></div>
+<div class="ui tab bottom attached segment " data-tab="categories-page-step-3"><p>在菜单中添加链接。编辑 <strong>主题配置文件</strong> ，将 <code>menu</code> 中的 <code>categories: /categories</code> 注释去掉，如下:</p>
+<pre><code><span class="attribute">menu</span>:
+  <span class="attribute">home</span>: /
+  <span class="attribute">categories</span>: /categories
+  <span class="attribute">archives</span>: /archives
+  <span class="attribute">tags</span>: /tags
+</code></pre></div>
+<h2 id="代码高亮主题">代码高亮主题</h2><p>NexT 使用 <a href="https://github.com/chriskempson/tomorrow-theme" target="_blank" rel="external">Tomorrow Theme</a> 作为代码高亮，共有5款主题供你选择。</p>
+<p>默认使用的是白色的 <code>normal</code>，以下是 <code>normal</code> 与 <code>night</code> 的预览：</p>
+<table class="ui table very compact">
+
+<tbody>
+<tr>
+<td><img src="http://iissnan.com/nexus/next/tomorrow-normal.png" alt="Tomorrow Normal Preview"></td>
+<td><img src="http://iissnan.com/nexus/next/tomorrow-night.png" alt="Tomorrow Night Preview"></td>
+</tr>
+</tbody>
+</table>
+
+<p>请访问 <a href="https://github.com/chriskempson/tomorrow-theme" target="_blank" rel="external">Tomorrow Theme</a> 查看更多主题。</p>
+<h2 id="站点建立时间">站点建立时间</h2><p>这个时间将在站点的底部显示，例如 <code>© 2013 - 2015</code></p>
+<p>编辑 <strong>站点配置文件</strong>，新增字段 <code>since</code>。</p>
+<pre><code><span class="attribute">since</span>: <span class="string">2013</span>
+</code></pre><h2 id="数学公式显示">数学公式显示</h2><p>NexT 借助于 MathJax 来显示数学公式，此选项默认关闭。</p>
+<p>编辑 <strong>主题配置文件</strong>，将 <code>mathjax</code> 设定为 <code>true</code> 即可。</p>
+<pre><code><span class="preprocessor"># MathJax Support</span>
+<span class="label">mathjax:</span>
+</code></pre><h2 id="侧边栏头像">侧边栏头像</h2><p>编辑 <strong>站点配置文件</strong>，新增字段 <code>avatar</code>， 值设置成头像的链接地址。</p>
+<p>其中，头像的链接地址可以是：</p>
+<ol>
+<li>完整的互联网 URL，例如：<code>https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460</code></li>
+<li><p>站点内的地址，例如：</p>
+<ul>
+<li><code>/uploads/avatar.jpg</code>  需要将你的头像图片放置在 <code>站点的 source/uploads/</code>（可能需要新建<code>uploads</code>目录）</li>
+<li><code>/images/avatar.jpg</code>   需要将你的头像图片放置在 <code>主题的 source/images/</code> 目录下。</li>
+</ul>
+</li>
+</ol>
+<h2 id="侧边栏社交链接">侧边栏社交链接</h2><p>编辑 <strong>站点配置文件</strong>，新增字段 <code>social</code>，然后添加社交站点名称与地址即可。例如：</p>
+<pre><code># Social links
+<span class="string">social:</span>
+<span class="label">  github:</span> <span class="string">https:</span><span class="comment">//github.com/your-user-name</span>
+<span class="label">  twitter:</span> <span class="string">https:</span><span class="comment">//twitter.com/your-user-name</span>
+<span class="label">  weibo:</span> <span class="string">http:</span><span class="comment">//weibo.com/your-user-name</span>
+<span class="label">  douban:</span> <span class="string">http:</span><span class="comment">//douban.com/people/your-user-name</span>
+<span class="label">  zhihu:</span> <span class="string">http:</span><span class="comment">//www.zhihu.com/people/your-user-name</span>
+  # 等等
+</code></pre><h2 id="About页面">About页面</h2><p>新建一个 <code>about</code> 页面：</p>
+<pre><code>hexo <span class="keyword">new</span> page <span class="string">"about"</span>
+</code></pre><p>菜单显示 <code>about</code> 链接，在 <strong>主题配置文件</strong> 设置中将 <code>menu</code> 中 <code>about</code> 前面的注释去掉即可。</p>
+<pre><code><span class="attribute">menu</span>:
+  <span class="attribute">home</span>: /
+  <span class="attribute">archives</span>: /archives
+  <span class="attribute">tags</span>: /tags
+  <span class="attribute">about</span>: /about
+</code></pre><h2 id="友情链接">友情链接</h2><p>编辑 <strong>站点配置文件</strong> 添加：</p>
+<pre><code><span class="preprocessor"># title, chinese available</span>
+links_title: Links
+<span class="preprocessor"># links</span>
+links:
+  MacTalk: http:<span class="comment">//macshuo.com/</span>
+</code></pre><h2 id="腾讯公益404页面">腾讯公益404页面</h2><p>简体中文增加腾讯公益404页面，寻找丢失儿童，让大家一起关注此项公益事业！效果如下 <a href="http://www.ixirong.com/404.html" target="_blank" rel="external">http://www.ixirong.com/404.html</a></p>
+<p>使用方法，新建 404.html 页面，放到主题的 <code>source</code> 目录下，内容如下：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"content-type"</span> <span class="attribute">content</span>=<span class="value">"text/html;charset=utf-8;"</span>/&gt;</span>
+  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=edge,chrome=1"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"robots"</span> <span class="attribute">content</span>=<span class="value">"all"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"robots"</span> <span class="attribute">content</span>=<span class="value">"index,follow"</span>/&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://www.qq.com/404/search_children.js"</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span> <span class="attribute">homePageUrl</span>=<span class="value">"your site url "</span> <span class="attribute">homePageName</span>=<span class="value">"回到我的主页"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>
+        </main>
+      
+
+      
+        
+          
+
+          
+        
+      
+
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('.menu .item').tab({
+          context: 'parent'
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1873 @@
+<h2 id="RELEASE_NOTES">RELEASE NOTES</h2><h3 id="Version_2-0-3_-_July_8,_2015">Version 2.0.3 - July 8, 2015</h3><p><strong>Docs Updates</strong></p>
+<ul>
+<li><strong>Examples</strong> - Source code examples have been greatly improved. Required class names for each example will be highlighted in yellow. Other UI elements used in examples will now link out to their definition pages.</li>
+</ul>
+<p><strong><a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.0.3+is%3Aclosed">Reported Bugs</a></strong></p>
+<ul>
+<li><strong>Checkbox</strong> - Checkbox initialized with JS and with <code>for/id</code> matching would cause toggle to occur twice on click (making it seem as if nothing was updated) <strong>thanks @malacalypse</strong> <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2572">#2572</a></li>
+<li><strong>Divider/Grid</strong> - <code>vertical divider</code> no longer has inexplicable right border when stacked on mobile <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2558">#2558</a></li>
+<li><strong>Dropdown</strong> - Dropdown using <code>&lt;select&gt;</code> and <code>apiSettings</code> will now correctly add new <code>&lt;option&gt;</code> value when selections are made <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2573">#2573</a></li>
+<li><strong>Icon</strong> - <code>black icon</code> have been added back as a color option <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2556">#2556</a></li>
+<li><strong>Icon</strong> - Adds missing <code>square</code> and <code>square outline</code> icon <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2532">#2532</a></li>
+<li><strong>Input</strong> - Fixed errored input field having incorrect border radius with <code>labeled input</code></li>
+<li><strong>Modal</strong> - Modal that is larger than page height will now correctly reset body height on remove <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2576">#2576</a></li>
+<li><strong>Popup</strong> - Popup <code>preserve</code> setting (which preserves popup in DOM to avoid regenerating on each show/hide) was set to <code>true</code> by default causing generated popups to remain in DOM. <a href="https://github.com/Semantic-Org/Semantic-UI/issues/1369">#1369</a></li>
+<li><strong>Steps</strong> - Fixed <code>github</code> theme for steps not displaying correctly in 2.0 <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2545">#2545</a></li>
+<li><strong>Steps</strong> - Last <code>step</code> no longer incorrectly shows arrow <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2552">#2552</a></li>
+<li><strong>Transition</strong> - Fixes <code>get current animation</code> erroring when <code>module cache</code> is cleared. <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2469">#2469</a></li>
+</ul>
+<p><strong>Additional Bugs</strong></p>
+<ul>
+<li><strong>Form</strong> - URL regexp will now match now works correctly, and matches against non <code>http://</code> prefixed urls like <code>www.google.com</code></li>
+</ul>
+<h3 id="Version_2-0-2_-_July_7,_2015">Version 2.0.2 - July 7, 2015</h3><p><strong><a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.0.2+is%3Aclosed">Reported Bugs</a></strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Fixed regression in <code>2.0.1</code> causing search dropdown not to clear values correctly <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2533">#2533</a></li>
+<li><strong>Site</strong> - Sizing variables now are relative to <code>@emSize</code> adjusting all sizing variationss proportionately as <code>@emSize</code> changes <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2538">#2538</a></li>
+<li><strong>Dropdown</strong> - Dropdown icon will now always toggle menu visibility <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2510">#2510</a></li>
+<li><strong>Dropdown</strong> -  Pressing same key on dropdown with multiple choices with same first letter will now cycle selections. For example “California” then “Colorado” when pressing C <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2516">#2516</a></li>
+<li><strong>Dropdown</strong> - Dropdown now changes text before calling <code>onChange</code> callback so that callback reflects new dropdown conditions <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2539">#2539</a></li>
+</ul>
+<p><strong>Additional Bugs</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Clicking on label, or deleting a label will no longer trigger dropdown menu toggling</li>
+<li><strong>Dropdown</strong> - Multiselect that do use text labels (e.g. “5 selected”) will now remove filters on selection and scroll to last selected value</li>
+</ul>
+<h3 id="Version_2-0-1_-_July_6,_2015">Version 2.0.1 - July 6, 2015</h3><p><strong><a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.0.1+is%3Aclosed">Reported Bugs</a></strong></p>
+<ul>
+<li><strong>Label</strong> - Attached labels now use a border-radius for corner-edges that matches more closely <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2500">#2500</a></li>
+<li><strong>Label</strong> - Fixes incorrect label sizing for <code>large</code> and bigger sizes <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2486">#2486</a></li>
+<li><strong>Segment</strong> - Fixed incorrect margin set on <code>attached segment</code> <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2503">#2503</a></li>
+<li><strong>Card</strong> - <code>centered cards</code> variation now works similar to <code>centered card</code>. <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2520">#2520</a></li>
+<li><strong>Checkbox</strong> - Fixed issue in chrome where radio checkbox would appear incorrectly when no default value was selected <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2505">#2505</a></li>
+<li><strong>Dropdown</strong> - Fixed transparent tap color not being set correctly. Removed toggle behavior from touch events on multiple dropdown. <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2524">#2524</a></li>
+<li><strong>Checkbox</strong> - Fixed issue where radio checkbox were not properly receiving <code>checked</code> class <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2506">#2506</a></li>
+<li><strong>Tab</strong> - Tab now correctly obeys <code>cache</code> setting. Removed use of API’s local caching by default. <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2493">#2493</a></li>
+<li><strong>Form</strong> - <code>reset</code> will no longer clear values if no default value is found <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2504">#2504</a></li>
+</ul>
+<p><strong>Additional Bugs</strong></p>
+<ul>
+<li><strong>Dimmer</strong> - Dimmer now removes variations like <code>blurring</code> and <code>inverted</code> when <code>destroy</code> is called.</li>
+<li><strong>Dropdown</strong> - <code>restore defaults</code> in dropdown when used with multiple will now correctly clear other values selected that were not there on page load.</li>
+<li><strong>Dropdown</strong> - Removes accidental console.log statement in dropdown</li>
+<li><strong>Dropdown</strong> - Dropdown no longer closes after max selections reached and enter key used for selection.</li>
+<li><strong>Dropdown</strong> - Dropdown will now show correctly when menu only includes a message with no other items</li>
+<li><strong>Menu</strong> - Fixed <code>pointing menu</code> arrow color slightly off</li>
+<li><strong>Progress</strong> - Progress included <code>debug: true</code> by default. This has been now correctly set to <code>false</code></li>
+<li><strong>Modal</strong> - <code>scrolling modal</code> now correctly inherits rules so that it appears at top of screen on mobile</li>
+<li><strong>Menu</strong> - Inverted menu no longer includes a 1px transparent border.</li>
+<li><strong>Menu</strong> - Fixes <code>compact vertical menu</code> using <code>flex</code> style incorrectly</li>
+<li><strong>Menu</strong> - Fixes <code>border-top</code> not appearing on <code>bottom fixed</code> menu</li>
+<li><strong>Tab</strong> - Fixed bug where remote loaded tab content would not show <code>loading tab</code> on first load.</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li><strong>Form</strong> - Clarified usage for <code>reset</code> in form docs <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2504">#2504</a></li>
+<li><strong>Docs</strong> - <code>1.0</code> docs are now available at <a href="http://1.semantic-ui.com">http://1.semantic-ui.com</a> Link in footer has been fixed.</li>
+<li><strong>Image</strong> - Fixed <code>mini image</code> having wrong pixel size in docs <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2521">#2521</a></li>
+<li><strong>Image</strong> - Added docs for missing <code>fluid image</code> variation</li>
+<li><strong>Modal</strong> - Removed legacy JS animation settings still accidentally in docs</li>
+<li><strong>Tab</strong> - Added new examples for <code>evaluateScripts</code> and HTML5 state tabs</li>
+</ul>
+<h3 id="Version_2-0-0_-_June_30,_2015">Version 2.0.0 - June 30, 2015</h3><p><strong>Migration Guide</strong></p>
+<ul>
+<li><strong>Modal</strong> - If you are using a modal with image content, you will need to use <code>image content</code> on the parent element. This is because <code>flex</code> rules require parent styling that the previous <code>table-row</code> rules did not.</li>
+<li><strong>Modal</strong> - Modal will now only close on buttons matching <code>deny</code> or <code>approve</code> selector. Any button that should hide modal on click should either match one of these selectors, or call <code>$(&#39;.ui.modal&#39;).modal(&#39;hide&#39;)</code> <code>onclick</code>.</li>
+<li><strong>Grid</strong> - <code>page grid</code> has been deprecated.  <code>page grids</code> used percentage gutters which made it unnecessarily difficult to style responsive page content. Moving forward we recommend using <code>ui container</code> a fixed width responsive container for holding page contents.</li>
+<li><strong>Dropdown</strong> - Dropdowns will now change opening directions automatically based on available screen space. If you need  to force a dropdown direction use <code>dropdown({ direction: &#39;upward&#39;})</code></li>
+<li><strong>Form Validation</strong> - Form validation now passes settings through a <code>fields</code> object. This is to make form initialization match other components. The previous syntax will continue to work but will produce deprecation notices in console</li>
+<li><strong>Checkbox</strong> - Checkbox <code>fireOnInit</code> now defaults to false. Checkboxes now also <em>do not require javascript</em> to function.</li>
+<li><strong>Dropdown</strong> - Dropdown item <code>description</code> now are floated in default theme and should be included before other <code>item</code> content</li>
+<li><strong>Form</strong> - <code>grouped inline field</code> no longer display horizontally. Use <code>inline field</code> instead for horizontal inline field groups.</li>
+<li><strong>Input</strong> - <code>pointer-events</code> have been removed from <code>icon</code> in <code>icon input</code> unless a <code>link icon</code> is used. This is to make sure the hitbox for focusing an input includes the icon.</li>
+<li><strong>Popup</strong> - Popups are no longer exclusive by default. Opening a popup will not necessarily close other visible popups. You can change this behavior by using the setting <code>exclusive: true</code>. Additionally the default theme now uses <code>1rem</code> size for standard popups.</li>
+<li><strong>Colors</strong> - Default colors have been adjusted, which may cause slight changes in your design. New colors have also been added to fill in missing gaps in <a href="http://en.wikipedia.org/wiki/Linguistic_relativity_and_the_color_naming_debate#Berlin_and_Kay">color naming</a>.</li>
+<li><strong>Segment</strong> - Segment no longer includes a <a href="http://learnlayout.com/clearfix.html">clearfix</a> by default. You will need to specify a <code>clearing segment</code> to clear floated content.</li>
+<li><strong>Rail</strong> - Rail now uses <code>border-box</code> instead of <code>content-box</code>. This means manually specified rail widths will now need to account for padding. This was added to fix issues where rail <code>height: 100%</code> would incorrectly match content when a rail had padding.</li>
+<li><strong>Menu</strong> - <code>tiered menu</code> has been removed in <code>2.0</code>. This may be rewritten in the future, but was not up to the standards of the rest of the library and has been removed.</li>
+<li><strong>Tab</strong> - <code>onTabInit</code> and <code>onTabLoad</code> have been renamed to <code>onFirstLoad</code> and <code>onLoad</code> respectively. This is to conform to the naming conventions of other modules (no self reference). Previous callbacks will continue to work but will produce deprecation notices in console. Two new callbacks <code>onVisible</code> and <code>onRequest</code> have been added as well.</li>
+<li><strong>Button</strong> - <code>wide</code> variations using numbers <code>2 wide</code>, <code>3 wide</code> have been removed due to incompatibilities with some build tools. Please use <code>two wide</code>, or <code>three wide</code> instead.</li>
+<li><strong>Video</strong> - The undocumented <code>video</code> module has been renamed to <code>embed</code>. Behaviors remain the same, but users need to adjust their javascript init to <code>$(&#39;.ui.embed&#39;).embed();</code></li>
+<li><strong>API</strong> - API <code>onFailure</code> will now be called <strong>in all failure conditions</strong>, when a request is errored (504, 404 etc), aborted (page change or CORS), or JSON does not pass <code>successTest</code> function. <code>onError</code> and <code>onAbort</code> will also fire for each specific failure condition.</li>
+</ul>
+<p><strong>New UI</strong></p>
+<ul>
+<li><strong>Container</strong> - Containers are fixed width containers meant for holding page contents, and are a simpler alternative to <code>ui page grid</code>, view more <a href="http://www.semantic-ui.com/elements/container.html#examples">examples in docs</a></li>
+<li><strong>Multiselect</strong> - New <code>multiple</code> dropdown types have been added. Many new dropdown improvements have been added including tagging/tokenizing features and loading data through API requests.</li>
+<li><strong>Embed</strong> - New embed component allows for responsive iframe embeds that maintain their aspect ratio. Embed can be used with YouTube or Vimeo videos, along with placeholder content to avoid loading third party libraries until a user chooses to interact with the video.</li>
+</ul>
+<p><strong>Major Enhancements (Please Read)</strong></p>
+<ul>
+<li><strong>Site</strong> - Added new colors <code>olive</code>, <code>violet</code>, <code>brown</code> and <code>grey</code>. These are available in all elements with color variations.  <strong>Thanks @lemartialou</strong></li>
+<li><strong>API</strong> - API can now be used with mocked responses, and custom AJAX requests. <code>mockResponse</code> has been added to resolve request with a prespecified JSON object, or a synchronous function callback.</li>
+<li><strong>API</strong> <code>mockResponseAsync</code> has been added for custom asynchronous requests. This allows you to specify a custom async callback to resolve an API request, helping with integration with libraries like Ember or Angular that may wrap AJAX requests.</li>
+<li><strong>API</strong> - API callbacks now have an <code>onResponse</code> callback that can adjust a servers response before it is parsed by other callbacks for success or failure conditions. <strong>Thanks @mnquintana</strong></li>
+<li><strong>API</strong> - API now provides a local caching setting to avoid server roundtrips for identical urls by using <code>cache: &#39;local&#39;</code>. This is not enabled by default.  Local caching is useful for results that should return the same values across a single session, for example when querying an autocomplete.</li>
+<li><strong>Card</strong> - Cards now support multiple custom <code>content</code> blocks. Content blocks and images can now appear in any order.</li>
+<li><strong>Checkbox</strong> - Checkbox no longer require javascript to function.</li>
+<li><strong>Checkbox</strong> - Added support for <code>indeterminate</code> checkboxes, along with new stylings.</li>
+<li><strong>Checkbox</strong> - Now includes separate behaviors for triggering state changes without invoking callbacks <code>set checked</code> vs <code>checked</code></li>
+<li><strong>Dropdown</strong> - Added remote API integration with dropdown, to allow <code>search selection</code> to query against a remote dataset.</li>
+<li><strong>Dimmer</strong> - Dimmers now have a <code>blurring</code> variation which apply a glass-like effect when dimmed</li>
+<li><strong>Dropdown</strong> - Dropdowns now automatically observe changes in <code>menu</code> and will update selector cache with new additions</li>
+<li><strong>Dropdowns</strong> - Added ability to add custom choices to all search selection dropdowns (multi/single) using <code>allowAdditions: true</code> setting. Search now displays error messages on no results in all cases.</li>
+<li><strong>Dropdown</strong> - Keyboard shortcuts have been added for selecting dropdown choices, for example “N” will scroll to “New York” in a state selection list, similar to native <code>&lt;select&gt;</code> behavior.</li>
+<li><strong>Dropdown</strong> - Added new dropdown variation <code>scrolling dropdown</code> and <code>scrolling menu</code>, this can be used to include a scrollable section inside a dropdown menu.</li>
+<li><strong>Dropdown</strong> - Dropdown will automatically animate upward if there is not enough space to appear below.</li>
+<li><strong>Dropdown</strong> - Using <code>page up</code> and <code>page down</code> keys will now scroll menus by a page at a time</li>
+<li><strong>Form</strong> - Forms now use <code>flexbox</code> for creating field groups. Inline fields now support <code>(x) wide</code> sizing using <code>flex</code></li>
+<li><strong>Grid</strong> - Grids now use <code>flexbox</code>, columns are now all equal height by default. New flexbox alignment types like <code>stretch</code> have been added for easier vertical alignment.</li>
+<li><strong>Multiple UI</strong> - Many components now use flexbox, which means previous confusing fixes like <code>font-size: 0;</code> to remove <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">white-space from inline block</a> is no longer necessary. Removing this hack, now means any element can be a direct child of <code>grid</code> or <code>menu</code>.</li>
+<li><strong>Modal</strong> - Added new settings <code>blurring</code> and <code>inverted</code> which automatically set a modal’s dimmer to either inverted or blurring.</li>
+<li><strong>Menu</strong> - Menu now uses flexbox. This allows menu items to match each others heights regardless of each items content size. <code>right menu</code> content should now follow other menu content instead of preceding it (no longer uses float).</li>
+<li><strong>Grid</strong> - Grids are now <code>flexbox</code> and <code>equal height</code> by default, the <code>equal height</code> variation can safely be removed</li>
+<li><strong>Popup</strong> - Popup has been rewritten to drastically improve performance, especially when testing multiple positions.</li>
+<li><strong>Transition</strong> - Fallback javascript animations have been removed from UI components like dropdown and popup to increase performance. This removes need for expensive pseudo selectors like <code>:visible</code>, <code>:animated</code> and <code>:hidden</code> and reduces filesize.</li>
+<li><strong>Form Validation</strong> - Form validation now uses a single <code>settings</code> object like other modules. Using <code>(fields, settings)</code> will continue to work but will produce a deprecation notifications in <code>console</code></li>
+<li><strong>Form Validation</strong> - Form validation now supports many new validation rules, including some specifically for use with multiple select values.</li>
+<li><strong>Item</strong> - Items now uses <code>flexbox</code> for layout.</li>
+<li><strong>Message</strong> - <code>icon message</code> now uses <code>flexbox</code> for layout</li>
+<li><strong>Menu</strong> - <code>vertical tabular menu</code>, a vertical tab menu, has been added</li>
+<li><strong>Input</strong> - All <code>input</code> types use <code>flexbox</code> for layout</li>
+<li><strong>Segment</strong> - Segments now support complex nesting, many new rules for how segment groups should appear inside groups</li>
+<li><strong>Segment</strong> - New <code>horizontal segment</code> groups make laying out auto resizing text columns much easier.</li>
+<li><strong>Sidebar</strong> - iOS will now correctly report <code>scrollTop</code> values for <code>document</code> or <code>body</code> when using a sidebar. Chrome on iOS no longer has issues with fixed content not sticking immediately when using a sidebar.</li>
+<li><strong>Shapes</strong> - Shapes now correctly adjusts for margin on <code>sides</code></li>
+<li><strong>Steps</strong> - Steps now use <code>flexbox</code>, fluid steps now center content inside each step</li>
+<li><strong>Steps</strong> - Steps no longer need <code>item count</code> and will automatically divide evenly</li>
+<li><strong>Transition</strong> - Transition code has been optimized to increase performance. 100% improvement on first animation, and 40% improvement on subsequent animations.</li>
+<li><strong>Visibility</strong> - Using <code>.visibility({ type: &#39;fixed&#39;})</code> will now automatically add a placeholder element which will swap places with an element when it is attached to the viewport. This should make fixed content drastically simpler.</li>
+<li><strong>Visibility</strong> - Visibility and sticky now use a more performant <a href="http://davidwalsh.name/pubsub-javascript">pub/sub pattern</a> that will only attach a single event to context <code>scroll</code>.</li>
+<li><strong>Visibility</strong> - Added two new visibility callbacks <code>onOnScreen</code> and <code>onOffScreen</code>, which occur, most obviously when an element first appears in or out of a browser’s viewport.</li>
+</ul>
+<p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Site</strong> - Added many new site variables, including the ability to control input size across all UI <code>inputPadding</code>, along with more border colors, accents, and colors.</li>
+<li><strong>Accordion</strong> - adds <code>onOpening</code> and <code>onClosing</code> callback (before animation) to go with <code>onOpen</code>, <code>onClose</code> (after animation) <strong>Thanks @cluppric</strong></li>
+<li><strong>Accordion</strong> - Added <code>on</code> setting for specifying accordion trigger event.</li>
+<li><strong>Activity Feed</strong> - Activity feed has been rewritten to use <code>flexbox</code></li>
+<li><strong>API</strong> - API now has new settings <code>throttleFirstRequest</code> and <code>interruptRequests</code>. Interrupt requests will abort a previous request on an element when making a new request. <code>throttleFirstRequest</code>, sets whether the first request or only subsequent requests should be throttled when a <code>throttle</code> duration is specified.</li>
+<li><strong>Build Tools</strong> - Build tools will now display pre-specified errors when a theme file is missing or an element specifies an unavailable theme.</li>
+<li><strong>Build Tools</strong> - Adjusting <code>site.variables</code> will now rebuild all UI, instead of just <code>site.less</code></li>
+<li><strong>Button</strong> - Added <code>:focus</code> styles for all button types, all button examples in docs now are keyboard focusable using either <code>&lt;button&gt;</code> or <code>tabindex</code> where appropriate.</li>
+<li><strong>Card</strong> - Card now includes a <code>centered</code> variation</li>
+<li><strong>Checkbox</strong> - Checkbox will now gracefully correct behaviors invoked on the child input element instead of the <code>ui checkbox</code>.</li>
+<li><strong>Checkbox</strong> - Reduced kb size of icon font</li>
+<li><strong>Divider</strong> - <code>vertical divider</code> inside <code>ui grid</code> now accounts for column padding</li>
+<li><strong>Dropdown</strong> - Nested <code>scrolling</code> menus now support keyboard selection, e.g. pressing “A” for apple, and keyboard scrolling.</li>
+<li><strong>Dropdown</strong> - Dropdowns now have <code>match</code> setting to specify whether to match on <code>text</code>, <code>value</code> or <code>both</code></li>
+<li><strong>Dropdown</strong> - Multi select dropdowns now have new settings for specifying maximum selection count</li>
+<li><strong>Dropdown</strong> - Dropdown has new <code>placeholder</code> setting for setting placeholder text in javascript</li>
+<li><strong>Dropdown</strong> - Added <code>showOnFocus</code> option that lets you specify whether dropdown menu should show on focus</li>
+<li><strong>Dropdown</strong> - <code>fullTextSearch: true</code> now uses fuzzy search (same as <code>ui search</code>)</li>
+<li><strong>Dropdown</strong> - Page down and page up now works with dropdown menus</li>
+<li><strong>Dropdown</strong> - Dropdown initialized with <code>disabled</code> prop on an <code>option</code> will now correctly appear disabled</li>
+<li><strong>Dropdown</strong> - Added <code>disabled item</code> state, disabled items will automatically be skipped with keyboard selection</li>
+<li><strong>Form</strong> - Added a host of new styles for form fields autocompleted by your browser, including autocompleted error, and focus states</li>
+<li><strong>Form</strong> - Added placeholder color rules for IE, <code>ms-input-placeholder</code></li>
+<li><strong>Form</strong> - Fix <code>errored field</code> dropdown keyboard selection color</li>
+<li><strong>Form</strong> - Adds form <code>success</code> state</li>
+<li><strong>Form Validation</strong> - Added <code>is valid</code> behavior, returns <code>true/false</code> if form is valid</li>
+<li><strong>Form Validation</strong> - Added <code>different[field]</code> rule which requires a field to be different than another field</li>
+<li><strong>Form Validation</strong> - <code>data-validate</code> now takes precedence over other validation matching schemes like <code>name</code> or <code>id</code></li>
+<li><strong>Form Validation</strong> - New rules for matching against custom regular expressions</li>
+<li><strong>Form Validation</strong> - Form validation now has <code>minCount</code>, <code>maxCount</code>, and <code>exactCount</code> for validating multiple selections</li>
+<li><strong>Grid</strong> - <code>celled grid</code> now removes internal cells on mobile and tablet when used with <code>doubling</code> grid responsive variation.</li>
+<li><strong>Grid</strong> - Added <code>large screen only</code> and <code>widescreen only</code> responsive variations for grid.</li>
+<li><strong>Grid</strong> - <code>equal width</code> grids now works without <code>row</code> wrappers</li>
+<li><strong>Grid</strong> - rows can now be <code>stretched</code> as well as <code>middle aligned</code>, <code>bottom aligned</code> and <code>top aligned</code>!</li>
+<li><strong>Grid</strong> - Fixed margins on <code>internally celled</code> grid</li>
+<li><strong>Grid</strong> - <code>celled</code> and <code>internally celled</code> grid now use flexbox instead of <code>display: table;</code></li>
+<li><strong>Headers</strong> - Added new header type <code>sub header</code>, useful for displaying small headers alongside text content. See examples <a href="http://www.semantic-ui.com/elements/header.html#sub-headers">in the header docs</a></li>
+<li><strong>Image</strong> - Images now include a <code>spaced</code> variation for adding whitespace around images when used inline with text.</li>
+<li><strong>Input</strong> - Added placeholder color rules for IE, <code>ms-input-placeholder</code></li>
+<li><strong>Input</strong> - Action input now supports multiple buttons, and dropdown</li>
+<li><strong>Label</strong> - Labels now have <code>active</code> and <code>active hover</code> states</li>
+<li><strong>Label</strong> - Label now sets an <code>img</code> height even when not using an <code>image label</code></li>
+<li><strong>List</strong> - Any content inside a <code>ui list</code> can now be vertically aligned</li>
+<li><strong>Menu</strong> - Add examples/documentation for <code>fixed menu</code></li>
+<li><strong>Menu</strong> - Added <code>stackable</code> menu variation for simple responsive menus</li>
+<li><strong>Menu</strong> - Added many new variables to menu</li>
+<li><strong>Menu</strong> - Fixed several inheritance issues for <code>dropdown item</code> inside <code>menu</code> appearing as <code>menu item</code>.</li>
+<li><strong>Menu</strong> - Horizontal menus now set a default image size for images / logos</li>
+<li><strong>Menu</strong> - Menus items are now slightly more padded</li>
+<li><strong>Menu</strong> - The hover/active state of <code>dropdown item</code> have been adjusted to match <code>item</code>. Dropdown styles can be themed specifically inside <code>menu</code>.</li>
+<li><strong>Menu</strong> - Vertical dropdown menus are no longer 100% <code>min-width</code></li>
+<li><strong>Modal</strong> - Modal now uses an adjusted <code>scale in</code> transition in the default theme, that should be more subtle and work better with long modal content.</li>
+<li><strong>Modal</strong> - Modal <code>onApprove</code> and <code>onDeny</code> now receive the activating element as the first parameter. Added documentation about using <code>return false</code> to avoid hiding element on click.</li>
+<li><strong>Modal</strong> - Modal content now uses flex, image content now requires <code>image content</code> class on parent to allow for flex stylings.</li>
+<li><strong>Popup</strong> - Popup now defines a <code>transform-origin</code> so animations will be affected by the direction the element is placed</li>
+<li><strong>Popup</strong> - <code>onShow</code> and <code>onHide</code> callback can now cancel popup from showing or hiding by returning false</li>
+<li><strong>Popup</strong> - Added more size variations for popup <code>mini</code>, <code>tiny</code></li>
+<li><strong>Progress</strong> - <code>indicating</code> labels now are more legible use separate css variables from <code>indicating</code> bar color</li>
+<li><strong>Reveal</strong> - Added new <code>active</code> state that allows you to show <code>reveal</code> programatically</li>
+<li><strong>Search</strong> - Cache can now be cleared using <code>$(&#39;.search&#39;).search(&#39;clear cache&#39;)</code></li>
+<li><strong>Segment</strong> - Added <code>padded</code> and <code>very padded</code> segment variations</li>
+<li><strong>Search</strong> - Search now operates off a unique id generated by result position to retrieve results. For example category #1’s first result is ‘A1’ . Previously result titles were used as their “id”, which could cause issues with duplicate titles, or results that do not contain a title.</li>
+<li><strong>Search</strong> - Search will now automatically add class <code>category</code> when using <code>type: category</code>.</li>
+<li><strong>Search</strong> - Search will now generate <code>results</code> container if one is not present on init</li>
+<li><strong>Search</strong> - Search now uses <code>em</code> for resizes, making sure it will resize with the surrounding content</li>
+<li><strong>Search</strong> - Search <code>prompt</code> now has focus styles defined if not using <code>ui input</code></li>
+<li><strong>Segment</strong> - Added <code>clearing</code> segment for cases that need a <a href="http://learnlayout.com/clearfix.html">clearfix</a>.</li>
+<li><strong>Sidebar</strong> - Improved animation performance through performance debugging. Sidebar now caches, width, height, rtl direction on load.</li>
+<li><strong>Site</strong> - Fixed mixed globals <code>@defaultDuration</code> and <code>@transitionDuration</code> usage to use a single variable across all UI <code>@defaultDuration</code>, the same for <code>@defaultEasing</code> and <code>@transitionEasing</code></li>
+<li><strong>Site</strong> - Added in <code>pageOverflowX</code> variable, default theme hides horizontal scrollbars on <code>body</code></li>
+<li><strong>Site</strong> - Added default <code>focus</code> colors for all color variations</li>
+<li><strong>Site</strong> - All floating/raised variations now inherit from a global <code>@floatedShadow</code> making theming easier</li>
+<li><strong>Sticky</strong> - Sticky now internally caches current scroll position when <code>cantFit = true</code> to avoid getting DOM property  on scroll.</li>
+<li><strong>Statistic</strong> - Added new evenly divided group variation, for example <code>three statistics</code> shows 3 per row</li>
+<li><strong>Statistic</strong> - Statitic group now use <code>flex</code>. Styles have been updated.</li>
+<li><strong>Steps</strong> - Added <code>attached</code> steps, which can now be attached to other UI like <code>segment</code></li>
+<li><strong>Tabs</strong> - Tab will now manually correct page scroll position when linking to an in-page anchor in a hidden tab</li>
+<li><strong>Tabs</strong> - Added new callbacks <code>onTabVisible</code> and <code>onRequest</code></li>
+<li><strong>Tabs</strong> - Added <code>parseScripts</code> option, defaults to <code>once</code> parsing inline scripts only first load</li>
+<li><strong>Table</strong> - Adds <code>selectable table</code> variation, which shows hover effect on row when hovering</li>
+<li><strong>Table</strong> - Added <code>vertical alignment</code> variations to <code>ui table</code></li>
+<li><strong>Table</strong> - Added <code>single line</code> table variation which prevents text from wrapping</li>
+<li><strong>Transition</strong> - Adjusting <code>style</code> or <code>class</code> during a transition, will no longer reset the change after transition completes.</li>
+<li><strong>Transition</strong> - Transition will no longer force visible/hidden with inline styles if <code>onComplete</code> callback sets visibility.</li>
+<li><strong>Visibility/Sticky</strong> - Visibility and sticky now refresh automatically after page content loading to deal with changes in position from images loading</li>
+<li><strong>Visibility/Sticky</strong> - Visibility now uses pub/sub pattern to greatly improve scroll performance when attaching multiple events</li>
+<li><strong>Visibility</strong> - Visiblity includes a new setting <code>checkOnRefresh</code> which detemrines whether visibility callbacks should occur on resize or refresh</li>
+<li><strong>Visibility</strong> - Visibility <code>image</code> will now wait to lazy load images that are <em>above</em> the current screen position, not just below.</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>All Modules</strong> - Performance logging now delays 500ms instead of 100ms for console logging to ensure all logs are captured in one group</li>
+<li><strong>All Modules/Transition</strong> - Transitions no longer use <code>rotateZ(0deg)</code> to trigger GPU display of visible state. This causes issues with <code>transform</code> creating new stacking context that can disrupt <code>z-index</code>.</li>
+<li><strong>Accordion</strong> - Fixed bug where <code>exclusive: true</code> could sometimes cause other accordion element animations to get stuck when animating rapidly</li>
+<li><strong>API</strong> - API longer uses <code>readyState = 0</code> as sole check for request abort, this may accidentally trigger with <code>JSONP</code> or <code>CORS</code> requests.</li>
+<li><strong>API</strong> - Fixed <code>this</code> context of <code>beforeSend</code> to use <code>stateContext</code> not <code>element</code></li>
+<li><strong>API</strong> - Fixed <code>loadingDuration</code> not correctly delaying requests when invoking with  <code>.api(&#39;query&#39;)</code></li>
+<li><strong>Build Tools</strong> - Fixes issue with out of date minify dependency causing rules with <code>background: inherit;</code> to be removed.</li>
+<li><strong>Button</strong> - Fixed <code>attached buttons</code> 1px offset when attached to segment and menu (border vs box shadow border)</li>
+<li><strong>Card</strong> - IE11 now can correctly use  <code>flexbox</code> cards <strong>THanks @Widcket</strong></li>
+<li><strong>Checkbox</strong> - Fix <code>disabled checkbox</code> sometimes displaying hand cursor</li>
+<li><strong>Checkbox</strong> - Fixes nested <code>dropdown</code> inside <code>checkbox</code> causing issues</li>
+<li><strong>Checkbox</strong> - Fix <code>:focus</code> styles only applying if checkbox is unchecked</li>
+<li><strong>Divider</strong>  - Hidden divider now correctly hides vertical dividers</li>
+<li><strong>Divider</strong> - Fixes single icon alignment inside <code>vertical divider</code> or <code>horizontal divider</code></li>
+<li><strong>Divider</strong> - Fixed slight offset in <code>vertical divider</code> when it automatically adjusts to <code>horizontal divider</code> inside a <code>stackable grid</code></li>
+<li><strong>Dropdown</strong> - <code>focus</code> after changing tabs will no longer cause menu to re-open <strong>Thanks @trevorharwell</strong></li>
+<li><strong>Dropdown</strong> - Fix issue with search dropdown refocusing on self the first time after “tabbing” away in Chrome</li>
+<li><strong>Dropdown</strong> - Fixes issue with headers disappearing inside of <code>ui dropdown</code> when nested in <code>ui menu</code></li>
+<li><strong>Dropdown</strong> - Fixes <code>onChange</code> to fire when input value changes, not just when menu UI changes</li>
+<li><strong>Dropdown</strong> - Dropdowns with <code>transition: none</code> now work correctly.</li>
+<li><strong>Dropdown</strong> - Fixed issue where <code>sortSelect</code> was relying on object key enumeration order which is browser dependent and unreliable. It now uses a sort function which functions the same in all browsers</li>
+<li><strong>Dropdown</strong> - Fixed issue with <code>search selection</code> not changing text when reselecting same value from list</li>
+<li><strong>Dropdown</strong> - Fixed <code>min-width</code> issues causing background to not appear behind unwrapped text with <code>white-space: nowrap</code></li>
+<li><strong>Dropdown</strong> - Dropdown <code>menu</code> now use same font size as dropdown</li>
+<li><strong>Dropdown</strong> - Fixed dropdown <code>metadata</code> attribute caching causing issues with React integration</li>
+<li><strong>Dropdown</strong> - Fixed border radius on <code>sub menu</code> when aligned <code>left</code></li>
+<li><strong>Dropdown</strong> - Fixed <code>inline dropdown</code> icon not aligning with content</li>
+<li><strong>Dropdown</strong> - Fixed behaviors called on <code>&lt;select&gt;</code> after initialization not being correctly applied to <code>ui dropdown</code></li>
+<li><strong>Dropdown</strong> - Fixed issue with matching boolean values, and using <code>set selected</code> with <code>true</code> or <code>false</code></li>
+<li><strong>Dropdown</strong> - Fixed <code>search dropdown</code> submitting parent form when enter shortcut pressed</li>
+<li><strong>Dropdown</strong> - Fixed dropdown menu items should not center inside of a center aligned container.</li>
+<li><strong>Dropdown</strong> - Fixed some cases where onChange would not occur for values matching equality against ‘’, for example <code>0</code></li>
+<li><strong>Form</strong> - Form will no longer set a height for <code>textarea</code> using the <code>rows</code> property</li>
+<li><strong>Form</strong> - <code>inline fields</code> are now <code>1em</code> and do not match label’s reduced size</li>
+<li><strong>Form</strong> - <code>field</code> inside <code>fields</code> no longer produce double sized margins.</li>
+<li><strong>Form</strong> - Form sizes and input sizes now inherit from <code>site.variables</code></li>
+<li><strong>Form Validation</strong> - Fixed bug causing <code>match</code> rule not to work as expected.</li>
+<li><strong>Form Validation</strong> - Fixed <code>clear</code> and <code>reset</code> causing validation error to appear on checkbox if empty rule was set on checkbox.</li>
+<li><strong>Form Validation</strong> - Form validation now validates correctly on <code>&lt;select&gt;</code> change</li>
+<li><strong>Form</strong> - Fixed autocompleted <code>ui selection dropdown</code> having dropdown icon z-index issues</li>
+<li><strong>Form/Input</strong> - <code>ui labeled input</code> inside <code>form</code> will no longer escape column width. <code>ui fluid input</code> will now use input widths shorter than browser default.</li>
+<li><strong>Grid</strong> - Fixed responsive styling for grid types, more consistent display for <code>divided</code>, <code>celled,</code> on mobile</li>
+<li><strong>Grid</strong> - Fix <code>doubling row</code> not working correctly inside a different <code>doubling grid</code> (css spec issue)</li>
+<li><strong>Grid</strong> - Fix <code>doubling grid</code> incorrectly applying width to <code>(x) column row</code></li>
+<li><strong>Grid</strong> - First column on <code>stackable grid</code> no longer receives top margin</li>
+<li><strong>Grid</strong> - <code>x column wide</code> inside <code>equal width/height</code> now cannot grow beyond column size</li>
+<li><strong>Grid</strong> - Fixes colored grid columns not appearing when not nested in rows</li>
+<li><strong>Icon</strong> - Fixes <code>ascending</code> and <code>descending</code> icon being swapped</li>
+<li><strong>Icon</strong> - Fixes phone icon only appearing as alias <code>call</code></li>
+<li><strong>Image</strong> - <code>rounded image</code> and <code>circular image</code> now apply border radius to all child elements, fixing dimmers, and other content rounding</li>
+<li><strong>Input</strong> - Fixed improper left padding on <code>transparent left icon input</code> <strong>Thanks @zxfwinder</strong></li>
+<li><strong>Input</strong> - Fixed <code>placeholder</code> color not changing correctly on focus <strong>Thanks @zxfwinder</strong></li>
+<li><strong>Input</strong> - Fixed right padding on <code>labeled input</code> that were not <code>corner labeled</code></li>
+<li><strong>Label</strong> - Labels inside <code>header</code> now vertical align better by accounting for line height offset</li>
+<li><strong>List</strong> - <code>horizontal list</code> are now aligned <code>middle</code> by default, while vertical lists are aligned <code>top</code>.</li>
+<li><strong>List</strong> - Fixes numbers not appearing when using <code>inverted ordered list</code> <strong>Thanks @pcj</strong></li>
+<li><strong>List</strong> - <code>a</code> elements inside a <code>ui list</code> will no longer apply styles on <code>ui</code> elements like <code>button</code> <strong>Thanks @ahtinurme</strong></li>
+<li><strong>List</strong> - Fixed <code>divided bulleted list</code> child lists getting wrong indent</li>
+<li><strong>List</strong> - Bullets and numbers are no longer selectable in <code>bulleted list</code> and <code>ordered list</code></li>
+<li><strong>List</strong> - Fixed <code>inverted bulleted list</code> bullet color</li>
+<li><strong>List</strong> - Fix first element touches border on <code>ui horizontal celled list</code></li>
+<li><strong>List</strong> - Added many new variables for link stylings inside list, added separate variables and defaults for child-list spacing</li>
+<li><strong>Loader</strong> - Fix position of <code>inline centered loader</code> to be centered correctly</li>
+<li><strong>Message</strong> - Message now uses <code>@lineHeight</code> from <code>site.variables</code></li>
+<li><strong>Menu</strong> - Fixed menus like <code>left fixed</code> <code>right fixed</code> are all now class order dependent.</li>
+<li><strong>Menu</strong> - Fixed 1px border on last element of inline menus like <code>pagination menu</code> or <code>compact menu</code></li>
+<li><strong>Modal</strong> - Modal no longer hides page scroll bar causing dimmed page content to jump positions.</li>
+<li><strong>Modal</strong> - Fixed bug where clicking an element detached from dom would cause modal to hide prematurely</li>
+<li><strong>Modal</strong> - Clicking on other modals will no longer close open modal when <code>allowMultiple: true</code></li>
+<li><strong>Modal</strong> - Fixed <code>scrolling</code> class not being removed after opening a normal modal after a <code>scrolling</code> modal.</li>
+<li><strong>Message</strong> - Updated all message colors for legibility</li>
+<li><strong>Message</strong> - Close icon position adjusted to align with headers</li>
+<li><strong>Menu</strong> - Fixes divider appears on last element of <code>(x) item menu</code></li>
+<li><strong>Menu</strong> - Fixed <code>top attached menu</code> not having margin-top, and <code>bottom attached menu</code> not having <code>margin-bottom</code></li>
+<li><strong>Menu</strong> - Menu now has a <code>min-height</code> that matches standard item padding</li>
+<li><strong>Menu</strong> - <code>dropdown menu</code> in a <code>secondary pointing menu</code> or <code>tabular menu</code> now receive distinct active styling from other <code>active item</code></li>
+<li><strong>Menu</strong> - Fixed arrow position in <code>pointing menu</code> to be more consistent, round to exact pixels and account for arrow border width</li>
+<li><strong>Menu</strong> - Fix issue with <code>pointing</code> arrow having too high a <code>z-index</code> and appearing above <code>ui dropdown menu</code></li>
+<li><strong>Modal</strong> - <code>scrollable modal</code> now correctly adds padding below modal</li>
+<li><strong>Modal</strong> - Modal with <code>detachable: false</code> inside <code>ui sidebar</code>  <code>pusher</code> element will now show correctly</li>
+<li><strong>Popup</strong> - Popup now correctly adjusts if <code>data</code> attributes change</li>
+<li><strong>Popup</strong> - Fixes issue with <code>min-width</code> in firefox exceeding <code>max-width</code> causing element to not wrap correctly</li>
+<li><strong>Popup</strong> - Popup will now produce an error message and not mistakenly appear in the top left corner of page, if called with a <code>popup</code> or <code>target</code> that does not exist.</li>
+<li><strong>Popup</strong> - Popup will no longer appear incorrectly if the targeted element is not visible on page</li>
+<li><strong>Popup</strong> - Fixed bug which could cause pre-existing inline popup to be removed from DOM after hiding</li>
+<li><strong>Popup</strong> - Fixes popup offstage position calculations with pages including horizontal scrollbars</li>
+<li><strong>Popup</strong> - Added <code>addTouchEvents</code> to specify whether touch events should be added to trigger popup on mobile</li>
+<li><strong>Progress</strong> - Fixed bug where percentage complete values between 0-1% would display incorrectly (0.5% would show as 50%)</li>
+<li><strong>Rail</strong> - Rail 100% height now uses <code>border-box</code> to ensure exact height match to container</li>
+<li><strong>Rating</strong> - Rating now correctly adjusts if <code>data</code> attributes change</li>
+<li><strong>Reveal</strong> - Removed <code>masked</code> reveal, all reveals are masked by default</li>
+<li><strong>RTL</strong> - Fixed <code>rtl: &#39;both&#39;</code> in <code>semantic.json</code> not building both versions of source correctly.</li>
+<li><strong>Search</strong> - Search will no longer incorrectly produce an error when API settings are passed through metadata</li>
+<li><strong>Sidebar</strong> - Top/Bottom sidebar will now show scroll bars correctly when taller than 100% page height</li>
+<li><strong>Sidebar</strong> - Fixed bug where having a <code>style[title]</code> in page causing page not to be pushed correctly</li>
+<li><strong>Sidebar</strong> - Last menu item now has a border when sidebar and menu are used together</li>
+<li><strong>Segment</strong> - Segment groups can now be <code>raised</code> or <code>piled</code> or <code>stacked</code></li>
+<li><strong>Search</strong> - Fixed <code>category search</code> not applying active styles correctly to category names</li>
+<li><strong>Search</strong> - Fixed <code>onSelect</code> not returning the correct value when using <code>type: category</code></li>
+<li><strong>Search</strong> - Fixed <code>onSelect</code> returning the first term that matches the beginining of the selected value not the exact value.</li>
+<li><strong>Search</strong> - Fix <code>loading search</code> with an <code>icon button</code> causing double loaders.</li>
+<li><strong>Search</strong> - <code>searchFields</code> setting now correctly replaces default fields instead of adding the user fields to defaults</li>
+<li><strong>Search</strong> - Calls to <code>set value</code> or <code>query</code> now obey <code>minCharacterLength</code></li>
+<li><strong>Search</strong> - Search API calls now use the same level debug settings as search</li>
+<li><strong>Steps</strong> - Fixes bug where <code>ordered steps</code> had smaller numbers in <code>IE10</code></li>
+<li><strong>Steps</strong> - Fixed bug where <code>stackable steps</code> were not working correctly</li>
+<li><strong>Sticky</strong> - Fix issue with sticky content scroll css transition causing element to scroll too slowly when cannot fit on screen.</li>
+<li><strong>Sticky</strong> - Fix issues when <code>pushing: true</code> with sticky content having incorrect bottom spacing, when container has bottom padding</li>
+<li><strong>Sticky</strong> - Fixed issue with sticky content animating width on display in some cases.</li>
+<li><strong>Tab</strong> - multiple tab groups initialized together with <code>context: &#39;parent&#39;</code> will now each use their own parent</li>
+<li><strong>Tab</strong> - Tabs now use the standard component design pattern internally</li>
+<li><strong>Table</strong> - Fixes <code>sorted</code> column are not correctly centered with <code>center aligned</code> due to margin on sort icon</li>
+<li><strong>Table</strong> - Fixes <code>ascending</code> and <code>descending</code> icons were reversed in table</li>
+<li><strong>Table</strong> - <code>very basic table</code> now works together with <code>padded table</code></li>
+<li><strong>Table</strong> - Fix inheritance of text alignment and vertical alignment</li>
+<li><strong>Transition</strong> - Fixed bug where transition out would cause unwanted focus event in IE if element has focus</li>
+<li><strong>Transition</strong> - Calling an <code>out</code> animation during an <code>in</code> animation with <code>queue: false</code> now correctly calls the <code>complete</code> event of the original animation</li>
+<li><strong>Transition</strong> - Fixed bug where transition could sometimes not occur when an element was determined to always be hidden</li>
+</ul>
+<p><strong>Changes</strong></p>
+<ul>
+<li><strong>All Modules</strong> - All modules now default to <code>verbose: false</code></li>
+<li><strong>Accordion</strong> - Accordion no longer sets a <code>font-size</code> to better couple with other components defaults</li>
+<li><strong>Button</strong> - Button focus color now uses hoverColor background instead of blue box shadow</li>
+<li><strong>Button</strong> - <code>basic colored button</code> now grow their border size to 2px in default theme on hover</li>
+<li><strong>Breadcrumb</strong> - Fixed breadcrumb <code>em</code> rounding, adjusted distance in default theme</li>
+<li><strong>Card</strong> - Card styles have been adjusted, <code>link card</code> now raise to show selection. Colored variations now have shadows.</li>
+<li><strong>Checkbox</strong> - Toggle now uses <code>@primaryColor</code></li>
+<li><strong>Dropdown</strong> - Dropdown padding values now resolve to exact pixel values from em</li>
+<li><strong>Dropdown</strong> - <code>item</code> <code>description</code> is now floated by default</li>
+<li><strong>Feed</strong> - Removed <code>extra text</code> pointer border</li>
+<li><strong>Form</strong> - <code>set value</code> no longer automatically calls <code>validate form</code></li>
+<li><strong>Grid</strong> - Small computer <code>page grid</code> gutters have been adjusted from 8% to 3% to allow for roomier layouts on small screens.</li>
+<li><strong>Grid</strong> - Vertically divided grids now double row spacing to account for dividers</li>
+<li><strong>Grid</strong> - <code>center aligned</code> no longer centers rows, just text. Use <code>centered grid</code> to center a grid column on the page.</li>
+<li><strong>Header/Table/Divider</strong> - These components now pull border color defaults from <code>site.variables</code> instead of using their own values</li>
+<li><strong>Image</strong> - <code>avatar image</code> size has been slightly decreased</li>
+<li><strong>Image</strong> - <code>mini image</code> default width has been increased to <code>35px</code></li>
+<li><strong>Item</strong> - item <code>description</code> now longer sets a <code>max-width</code></li>
+<li><strong>Icon</strong> - <code>disabled icon</code> now have <code>pointer-events</code> again.</li>
+<li><strong>Label</strong> - Label size now varies by type. <code>pointing label</code> are now <code>1em</code> by default.</li>
+<li><strong>Label</strong> - Padding on <code>corner label</code> has been increased</li>
+<li><strong>Input</strong> - Input now use <code>em</code> instead of <code>rem</code> so they will inherit the size of the elements they are nested inside</li>
+<li><strong>Progress</strong> - Update contrast on <code>indicating</code>, update default styles. Fixed some examples</li>
+<li><strong>Menu</strong> - Menu now uses <code>border</code> for borders instead of <code>box-shadow</code></li>
+<li><strong>Menu</strong> - <code>secondary pointing menu</code> has had some slight design tweaks, thinner lines, more padding</li>
+<li><strong>Menu</strong> - Active sub-menu items are now <code>bold</code></li>
+<li><strong>Menu</strong> - Menus no longer have additional borders on <code>active item</code> in the default theme</li>
+<li><strong>Menu</strong> - <code>tiered menu</code> has been removed</li>
+<li><strong>Menu</strong> - Increased contrast on <code>inverted</code> menu selection for legibility</li>
+<li><strong>Modal</strong> - Modals now used fixed widths and not percentage widths. Widths might be slightly different.</li>
+<li><strong>Modal</strong> - Modal no longer observes DOM changes by default, added setting to enable</li>
+<li><strong>Message</strong> - Slightly increases <code>box-shadow</code></li>
+<li><strong>Popup</strong> - Popups now default to <code>exclusive: false</code> and will not hide other popups when opening</li>
+<li><strong>Popup</strong> - Popup no longer produces a console error when a position cannot be found on the page.</li>
+<li><strong>Rating</strong> - Rating styles have been adjusted to use subtle transitions and tweaked color values.</li>
+<li><strong>Segment</strong> - <strong>Clearfix</strong> has been removed from <code>ui segment</code></li>
+<li><strong>Sidebar</strong> - Sidebar <code>legacy</code> animations have been removed. 3D transforms are now available in all supported browsers.</li>
+<li><strong>Search</strong> - Slightly adjusted search result theme for clarity</li>
+<li><strong>Segment</strong> - Segment now uses <code>border</code> for border instead of a second <code>box-shadow</code>, this may adjust position by 1pixel</li>
+<li><strong>Statistic</strong> - Statistic label styles have been updated</li>
+<li><strong>Site</strong> - Additional font variables have been added to site to help clarify variable purpose.</li>
+<li><strong>Site</strong> - Increase contrast on default hovered/down colors for colored variations</li>
+<li><strong>Site</strong> - Page background is now <code>#FFFFFF</code> by default instead of an offwhite <code>#F7F7F7</code></li>
+<li><strong>Site</strong> - Adjusted global line height to the closest even pixel value</li>
+<li><strong>Table</strong> - Table header colors and padding defaults have been slightly adjusted</li>
+<li><strong>Table</strong> - Horizontal cell padding has been slightly reduced, and cell borders are slightly lighter.</li>
+<li><strong>Transition</strong> - Transition no longer checks for vendor prefixed <code>animation-name</code> css property. This was introduced in jQuery <code>1.8</code></li>
+<li><strong>Transition</strong> - Some transition have been modified so that the <code>in</code> animation is more telegraphed than the <code>out</code> animation, which may now recede more gently.</li>
+<li><strong>Visibility</strong> - In returned <code>calculations</code> object, <code>visible</code> and <code>hidden</code> are renamed to <code>onScreen</code> and <code>offScreen</code>, since this describes more accurately what the value represents.</li>
+</ul>
+<h3 id="Version_1-12-3_-_May_20,_2015">Version 1.12.3 - May 20, 2015</h3><p><strong>Announcement</strong><br>Version 2.0 will be launching on June 1st, which will include 100+ bug fixes, enhancements, new ui, and default theme improvements.</p>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Grid</strong> - Fixes bug causing colored variations not to work on columns without row wrappers. Backport from <code>2.x</code></li>
+</ul>
+<h3 id="Version_1-12-2_-_May_4,_2015">Version 1.12.2 - May 4, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Fixed <code>left</code> and <code>right</code> arrow does not move input cursor with <code>visible selection dropdown</code>. Event accidentally prevented by <code>sub menu</code> shortcut keys.</li>
+</ul>
+<h3 id="Version_1-12-1_-_April_26,_2015">Version 1.12.1 - April 26, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Fixes issue with chained dropdown methods used on a <code>&lt;select&gt;</code> not applying to the generated <code>ui dropdown</code> <strong>Backport from 2.0</strong></li>
+<li><strong>Input</strong> - Fixes labeled inputs not adjusting correctly with flex. <strong>Backported from 2.0</strong></li>
+<li><strong>Input</strong> - Fixes placeholder text color prefixes for <code>webkit</code> <strong>Backport from 2.0</strong></li>
+<li><em>*Progress</em> - Fixes rounding error in precision settings <em>Thanks @aaroncox</em></li>
+<li><strong>Popup</strong> - Removes <code>min-width: moz-max-content</code> from popups, which may cause display differences between chrome and FF</li>
+</ul>
+<h3 id="Version_1-12-0_-_April_13,_2015">Version 1.12.0 - April 13, 2015</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Visibility</strong> - Adds updated visibility module from <code>2.x</code> channel. Visibility will automatically refresh by default after images load on page refresh. Fixes issues with element positions after image loading.</li>
+<li><strong>Sticky</strong> - Adds sticky module from <code>2.x</code> branch. Sticky elements now use pub/sub with drastically improved performance. Sticky elements that do not fit on page will now scroll at the same speed as the page is scrolled instead of slower.</li>
+</ul>
+<p><strong>Changes</strong></p>
+<ul>
+<li><strong>Popup</strong> - Popup no longer produces a console error when it cannot find an adequate position in the browser viewport.</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Build Tools</strong> - Fixes issue with component glob matching twice (causing build to include file twice) if duplicate values found in <code>semantic.json</code> component.</li>
+<li><strong>Input</strong> - Backports fix from <code>2.x</code> for <code>ui fluid input</code> not appearing correctly.</li>
+<li><strong>Visibility</strong> - Fixed issue where <code>precache</code> behavior was missing from visibility causing <code>image</code> lazy loading to fail</li>
+</ul>
+<h3 id="Version_1-11-8_-_April_13,_2015">Version 1.11.8 - April 13, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Build Tools</strong> - Fixed <code>npm install</code> without <code>semantic.json</code> to merge changes with site theme and packaged themes in a similar fashion to <code>npm update</code></li>
+<li><strong>Build</strong> - <code>gulp build</code> now properly warns against missing <code>semantic.json</code> <strong>Thanks @rudyrk</strong></li>
+</ul>
+<h3 id="Version_1-11-7_-_April_13,_2015">Version 1.11.7 - April 13, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Sticky</strong> - Fixes errant <code>console.log</code> statement appearing in source</li>
+<li><strong>Card</strong> - Fixes card <code>flex</code> display issues in IE</li>
+<li><strong>Build Tools</strong> - Fixes issue where <code>npm update</code> install scripts would remove custom themes from <code>src/themes/</code> during copy after updating Semantic UI</li>
+</ul>
+<h3 id="Version_1-11-6_-_March_27,_2015">Version 1.11.6 - March 27, 2015</h3><p>More critical bug backports from <code>2.x</code> branch, as well as fixes for browserify</p>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Menu/Dropdown</strong> - Fix dropdown headers disappearing inside menus</li>
+<li><strong>Dropdown</strong> - Fix unescaped character in css property causing css validation errors</li>
+<li><strong>Form</strong> - Fix <code>grouped required</code> fields display issues <strong>Thanks @palmsey</strong></li>
+<li><strong>All UI</strong> - Fix <code>index.js</code> npm build to work with browserify in individual component repos <strong>Thanks @sdimit</strong></li>
+<li><strong>LESS Repo</strong> - Add missing <code>semantic.less</code> file to less repo for importing components</li>
+</ul>
+<h3 id="Version_1-11-5_-_March_23,_2015">Version 1.11.5 - March 23, 2015</h3><p>This version backports several bugs that were being packed in <code>2.0</code> to <code>1.x</code>.<br>2.0 will be coming in the next 1-2 weeks.</p>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Build Tools</strong> - Adjusting site.variables will now rebuild all UI, instead of just site.less</li>
+<li><strong>Build Tools</strong> - LESS will now throw errors correctly in <code>watch</code></li>
+<li><strong>Card</strong> - Fixes dimmer background shorthand property causes transparent dimmer in minified version</li>
+<li><strong>Dimmer</strong> - Fixed <code>variation</code> setting not working correctly</li>
+<li><strong>Dropdown</strong> - <code>onChange</code> no longer fires when reselecting same value</li>
+<li><strong>Dropdown</strong> - Fix bug where element will not blur on tab key when search selection and no selection made</li>
+<li><strong>Dropdown</strong> - Dropdown init on <code>select</code> now returns <code>ui dropdown</code> created for chaining</li>
+<li><strong>Dropdown</strong> - Dropdown <code>focus</code> color has been adjusted to match forms more closely</li>
+<li><strong>Dropdown</strong> - Fixes IE10 scrollbar width in menu (calc was being precompiled in LESS) <strong>Thanks @gabormeszoly</strong></li>
+</ul>
+<h3 id="Version_1-11-3-4_-_March_6,_2015">Version 1.11.3-4 - March 6, 2015</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Grid</strong> - Added opt-in <code>stretched</code> variation for <code>equal height</code> instead of forcing <code>flex</code> on all <code>equal height columns</code> which may cause layout issues due to changes in rendering with <code>flexbox</code>.</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Build Tools</strong> - Fix issues with minified CSS <code>@import</code> not being on top of minified semantic ui concatenated release due to <a href="https://github.com/jakubpawlowicz/clean-css/issues/476">bug in clean-css</a></li>
+<li><strong>Grid</strong> - Fixes <code>stackable</code> <code>equal height/width</code> grid to remove <code>flex</code> on mobile when stacking</li>
+<li><strong>Grid</strong> - Fixed <code>right/left/center aligned</code> to adjust <code>align-items</code> in flex containers like <code>equal height/width</code></li>
+</ul>
+<h3 id="Version_1-11-2_-_March_6,_2015">Version 1.11.2 - March 6, 2015</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Accordion</strong> - Accordion can now specify a trigger element instead of <code>title</code>, added an <a href="http://www.semantic-ui.com/modules/accordion.html#changing-trigger">example in docs</a></li>
+<li><strong>Accordion</strong> - Accordion can now hide while opening animation is still occurring</li>
+<li><strong>Grid</strong> - Equal width grids will now make column content stretch to full height, not just the column itself (requires flexbox). See examples <a href="http://www.semantic-ui.com/collections/grid.html#equal-height">in the grid docs</a></li>
+<li><strong>Header</strong> - Labels inside headers have been slightly increased in size</li>
+<li><strong>Search</strong> - Search now uses internally <a href="https://github.com/bevacqua/fuzzysearch">fuzzy search</a> as its new full text search algorithm.</li>
+</ul>
+<p><strong>Important Fixes</strong></p>
+<ul>
+<li><strong>Build Tools</strong> - Fix issues with minified component CSS <code>@import</code> not always being on top of files due to <a href="https://github.com/jakubpawlowicz/clean-css/issues/476">bug in clean-css</a></li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Accordion</strong> - Removed mistaken extra <code>1px</code> top border on nested <code>styled accordion</code></li>
+<li><strong>Modal</strong> - Fixes modal <code>buttons</code> on mobile devices to not have extra bottom padding.</li>
+<li><strong>Card/Dimmer</strong> - Fix dimmer z-index being too high when inside a <code>ui card</code>. Added variable for specifying default dimmer color inside card.</li>
+<li><strong>Site</strong> - <code>h1-h5</code> now have no top margin when <code>first-child</code> and no bottom margin when <code>last-child</code></li>
+<li><strong>Dropdown</strong> - Fix issue in <code>setup reference</code> (added in <code>1.11.1</code>) where chaining would not return <code>ui dropdown</code> immediately after initialization</li>
+</ul>
+<h3 id="Version_1-11-1_-_March_5,_2015">Version 1.11.1 - March 5, 2015</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Calling behaviors on a dropdown <code>select</code> will now automatically route them to the appropriate parent <code>ui dropdown</code></li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Grid</strong> - Fix issue in <code>centered grid</code> not centering <code>column</code> inside <code>row</code></li>
+<li><strong>Dropdown</strong> - Added select styles for elements before they are initialized instead of FOIC (Flash of invisible content)</li>
+</ul>
+<h3 id="Version_1-11-0_-_March_3,_2015">Version 1.11.0 - March 3, 2015</h3><p><strong>New Components</strong></p>
+<ul>
+<li><strong>Visibiliity</strong> - Attach callbacks to elements visibility conditions like <code>top visible</code> <code>bottom visible</code>, <code>passing</code>. Useful for things like: image lazy loading, infinite scroll content, and recording tracking metrics.</li>
+</ul>
+<p><a href="http://www.semantic-ui.com/behaviors/visibility.html#/examples">See the examples</a> online for a demonstration.</p>
+<p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Menu</strong> - Horizontal menus now use flexbox so they can resize automatically to content size.</li>
+<li><strong>Form</strong> - <code>&lt;select&gt;</code> now receive error formatting on <code>form error</code> <strong>Thanks @davialexandre</strong></li>
+<li><strong>Transition</strong> - Added more reasonable default durations for each animation</li>
+<li><strong>Loader</strong> - <code>inline loader</code> now has a <code>centered</code> variation</li>
+<li><strong>Modal</strong> - Modal no longer hides and reshows dimmer when opening a modal with another modal open with <code>exclusive: true</code></li>
+<li><strong>Popup</strong> - Added <code>exclusive</code> parameter to automatically close other popups on open</li>
+<li><strong>Transition</strong> - Added <code>toggle</code> behavior and docs for <code>show</code> and <code>hide</code></li>
+<li><strong>Transition</strong> - transition now has <code>stop</code>, <code>stop all</code>, and <code>clear queue</code> for removing transitions, (undocumented method <code>stop</code>, and <code>start</code> renamed to <code>enable</code> and <code>disable</code>)</li>
+<li><strong>Dimmer</strong> - Add <code>opacity</code> setting to override css value. Add to docs several undocumented settings, like <code>useCSS</code>, and <code>variation</code>.</li>
+<li><strong>Icon</strong> - added <code>@src</code> variable to make it adjustable with themes that dont support all types like <code>woff2</code></li>
+</ul>
+<p><strong>Deprecations</strong></p>
+<ul>
+<li><strong>Menu</strong> - <code>ui tiered menu</code> has been deprecated. It has been removed from the docs, and will be removed eventually in <code>2.0</code></li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Input</strong> - Fix bug with vertical centering of <code>ui action input</code> inside <code>menu</code> due to <code>flexbox</code> changes</li>
+<li><strong>Dropdown</strong> - Fixes issue where dropdown would not open after restoring previus value on failed <code>search dropdown</code> search</li>
+<li><strong>Dropdown</strong> - Fixes issue where dropdown would not open after restoring previous value on failed <code>search dropdown</code> search</li>
+<li><strong>Grid</strong> - Fixes specificity of grid <code>column</code> colors to not affect other elements with columns</li>
+<li><strong>Icon</strong> - Fix <code>clockwise rotated icon</code> causing <code>clockwise</code> icon to appear</li>
+<li><strong>Popup</strong> - Fix issue with <code>popup</code> not re-opening until another element gains focus on a mobile touchscreen</li>
+<li><strong>Modal</strong> - Fixed issue with modal not appearing when calling <code>show</code> during another modal <code>hide</code></li>
+<li><strong>Popup</strong> - Popup will now fire <code>onHidden</code> when an element is hidden by opening a different popup</li>
+<li><strong>Popup</strong> - Fix popup not namespacing <code>window</code> events and unbinding on <code>destroy</code> <strong>Thanks @revov</strong></li>
+<li><strong>Table</strong> - Fixes table on <code>mobile</code> sizes can surpass parent container width</li>
+<li><strong>Transition</strong> - Fixes <code>swing out</code> animations not working correctly</li>
+<li><strong>Transition</strong> - Fixed display state other than <code>block</code> not determined when using <code>show</code> and <code>hide</code> without an animation</li>
+<li><strong>Transition</strong> - Fix bug in <code>remove looping</code> causing next animation to use same duration</li>
+<li><strong>Segment</strong> - Fix first/last margins on <code>ui segments</code></li>
+<li><strong>Search</strong> - Fix special characters not searching correctly with local search</li>
+<li><strong>Search</strong> - Fix a bug with <code>onSelect</code> returning <code>null</code> when <code>minCharacters: 0</code></li>
+<li><strong>Search</strong> - Fix a bug with <code>onSelect returning</code>null` when results retrieved from cached API query</li>
+<li><strong>Sticky</strong> - Fixed sticky position when page loads and content is below sticky content.</li>
+<li><strong>Sticky</strong> - Fix bottom attached position not adjusting for bottom padding on container element</li>
+<li><strong>Menu</strong> - Fix vertical pointing menu, sub menu arrow color</li>
+<li><strong>Item </strong> - <code>img</code> inside of <code>ui item content</code> now do not receive size formatting by default</li>
+<li><strong>Form</strong> - Added <code>input[type=&quot;search&quot;]</code> styles to <code>ui form</code></li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li><strong>Transition</strong> - Adds examples of <code>hide,</code>show<code>,</code>toggle<code>,</code>stop<code>,</code>stop all<code>, and</code>clear queue`</li>
+<li><strong>Item</strong> - Significant rewrite of <code>ui item</code> documentation</li>
+</ul>
+<h3 id="Version_1-10-4_-_February_28,_2015">Version 1.10.4 - February 28, 2015</h3><ul>
+<li><strong>API</strong> - Remove console error message when no API url is specified but element is a <code>form</code> (defaults to <code>form</code> action)</li>
+<li><strong>API</strong> - <code>api</code> check for <a href="https://github.com/macek/jquery-serialize-object">serialize object</a> optional dependency no longer produces error when <code>serializeForm: true</code> and dependency is not found.</li>
+</ul>
+<h3 id="Version_1-10-3_-_February_27,_2015">Version 1.10.3 - February 27, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Build Tools</strong> - All UI components now have component name in comment banners and release version</li>
+<li><strong>Menu</strong> - Fixes dropdown menu item not having a hover state inside inverted menu</li>
+<li><strong>Search</strong> - Fixes bug in category search causing item selection to sometimes produce a javascript error.</li>
+<li><strong>Button</strong> - Fixes <code>&lt;button&gt;</code> inside <code>vertical buttons</code> not taking full container width</li>
+</ul>
+<h3 id="Version_1-10-1-2_-_February_24,_2015">Version 1.10.1-2 - February 24, 2015</h3><p>No changes, fixes stale pm component builds</p>
+<h3 id="Version_1-10-0_-_February_23,_2015">Version 1.10.0 - February 23, 2015</h3><p><strong>New Features</strong></p>
+<ul>
+<li><strong>Transition</strong> - Transitions now have <code>interval</code> to allow grouped elements to animate one by one with a delay between each animation. Grouped animations determine order based on transition direction to avoid reflows, or can manually be reversed by using <code>reverse: true</code> <a href="http://www.semantic-ui.com/modules/transition.html#grouped-transitions">See Examples</a> for more details.</li>
+</ul>
+<p><strong>Critical Fixes</strong></p>
+<ul>
+<li><strong>Transition</strong> - Webkit <code>failSafe</code> used for <a href="https://code.google.com/p/chromium/issues/detail?id=437860">Chromium Bug #437860</a> now also works for queued animations</li>
+</ul>
+<p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Form Validation</strong> - Adds <code>containsExactly</code>, <code>notExactly</code>, <code>isExactly</code> case sensitive validation rules, make <code>contains</code>, <code>not</code>, <code>is</code> case insensitive.</li>
+<li><strong>Form Validation</strong> - <code>contains</code> rule is now case insensitive</li>
+<li><strong>Form Validation</strong> - Validation messages no longer increase field height on <code>inline fields</code> like checkboxes after error appears</li>
+<li><strong>API</strong> - Added <code>was cancelled</code> to determine whether request was cancelled by <code>beforeSend</code></li>
+<li><em>*Image</em> - Added <code>hidden image</code> state</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Build Tools</strong> - Fixed issue with recursive merge for site themes in update scripts, <a href="https://github.com/Semantic-Org/Semantic-UI/pull/1845">details here</a> Thanks @derekslife</li>
+<li><strong>Cards</strong> - Fix <code>.ui.cards &gt; .ui.card</code> margins to match <code>.ui.cards &gt; .card</code> margins</li>
+<li><strong>Cards</strong> - Fix consecutive card groups to preserve row flow (similar to consecutive grids)</li>
+<li><strong>Sidebar</strong> - Sidebar using <code>exclusive: true</code> now queue animations after hiding previous sidebar (unless <code>overlay</code>) to avoid rendering issues</li>
+<li><strong>State</strong> - Text states now handle <code>cancelled</code> API requests correctly</li>
+<li><strong>Search</strong> - Category search no longer displays unnecessary error message about maxResults</li>
+<li><strong>Composer</strong> - Composer.json should now read version from tags, adjusted some fields.</li>
+<li><strong>Grid</strong> - Stackable grid now has horizontal padding by default on mobile unless nested inside a <code>ui grid</code> or <code>ui segment</code> (not vertical)</li>
+<li><strong>Menu</strong> - Fixes pointing menu displaying under dropdown menu</li>
+</ul>
+<p>-<strong>Docs</strong><br>-<strong>Transition</strong> - <code>useFailSafe</code> was incorrectly shown as <code>false</code> by default</p>
+<h3 id="Version_1-9-3_-_February_20,_2015">Version 1.9.3 - February 20, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>RTL</strong> - Fixes <code>rtl</code> tasks not running correctly on <code>gulp build</code> due to name typo, <code>build rtl</code> instead of <code>build-rtl</code></li>
+<li><strong>Tab</strong> - Fixed bug when loading <code>remote</code> content with <code>tab</code> where current tab would not hide while another tab is loading</li>
+<li><strong>Tab</strong> - Tab with remote content and <code>auto: true</code> now removes duplicate slashes from url path</li>
+<li><strong>API</strong> - Simplified <code>api</code> debug output to console to more clearly label url and data sent</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li><strong>Tab</strong> - Added new tab remote content example with stubbed AJAX using SinonJS</li>
+</ul>
+<h3 id="Version_1-9-2_-_February_19,_2015">Version 1.9.2 - February 19, 2015</h3><p>Added new repositories for css and less only versions, can be installed with</p>
+<pre><code class="bash">npm install semantic-ui-less
+npm install semantic-ui-css
+</code></pre>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Fixes typo causing <code>middle aligned</code> image not to work correctly.</li>
+<li><strong>Build</strong> - <code>gulp watch</code> now compiles concatenated css (missing in <code>1.9.1</code> only)</li>
+</ul>
+<h3 id="Version_1-9-1_-_February_18,_2015">Version 1.9.1 - February 18, 2015</h3><p><strong>LESS Changes</strong></p>
+<p>Importing individual components into other less files now requires scoping. This is to prevent issues with variable scope that cannot be resolved inside definitions.</p>
+<pre><code class="less"><span class="comment">/* Import a specific component */</span>
+<span class="keyword">&amp;</span> { <span class="at_rule">@import</span> <span class="string">'src/definitions/elements/button'</span>; }
+</code></pre>
+<p>Importing <code>semantic.less</code> still does not require any special syntax<br>@import ‘src/semantic’;</p>
+<p><strong>Bugs</strong></p>
+<ul>
+<li>Fixed issue directly importing <code>semantic.less</code> caused by variable scoping in <code>.loadOverrides()</code>.</li>
+<li>Fix bug where <code>equal height</code> row could not be <code>centered</code>, or less than full width</li>
+</ul>
+<h3 id="Version_1-9-0_-_February_17,_2015">Version 1.9.0 - February 17, 2015</h3><h3 id="Build_Tools">Build Tools</h3><h5 id="NPM_Install">NPM Install</h5><ul>
+<li><code>npm install semantic-ui</code> is now the recommended path for getting Semantic UI</li>
+<li>Added <code>npm</code> <code>post-install</code> scripts which automatically install or update semantic</li>
+</ul>
+<h5 id="Gulp_Task_Imports">Gulp Task Imports</h5><ul>
+<li>Semantic tasks are now each defined <a href="https://github.com/Semantic-Org/Semantic-UI/tree/master/tasks">in their own file</a>, and can be directly imported into external gulpfiles. Read more about <a href="https://github.com/Semantic-Org/Semantic-UI/blob/next/src/README.md">importing tasks here</a></li>
+<li>If you are using Grunt, you may be able to import these tasks using <a href="https://www.npmjs.com/package/grunt-gulp">Grunt-gulp</a></li>
+</ul>
+<h5 id="LESS_Component_Imports">LESS Component Imports</h5><ul>
+<li>Semantic LESS files can now be directly included in other LESS files.</li>
+</ul>
+<ul>
+<li>You can import all UI with <code>@import &#39;src/semantic&#39;;</code></li>
+<li>You can also import individual definitions using <code>@import &#39;src/definitions/elements/button&#39;</code>.</li>
+</ul>
+<h3 id="UI_Changes">UI Changes</h3><p><strong>Major Enhancements</strong></p>
+<ul>
+<li><strong>Card</strong> - Cards now equalize height by default using <code>display: flex</code>. No longer are card heights required to be specified manually to align</li>
+<li><strong>Flag</strong> - Reduced the file size of flag sprite to a measly 28kb (500%+ file size reduction)</li>
+<li><strong>Icon</strong> - Added Font Awesome 4.3 including many new icons</li>
+<li><strong>Input</strong> - Input with dropdowns is now much easier, see docs. <code>action input</code> and <code>labeled input</code> now use <code>display: flex</code>. <code>ui action input</code> now supports <code>&lt;button&gt;</code> tag usage (!) which support <code>flex</code> but not <code>table-cell</code></li>
+<li><strong>Segment</strong> - Added plural variation <code>ui segments</code> that stack together in groups without using additional class names</li>
+</ul>
+<p><strong>Enhancement</strong></p>
+<ul>
+<li><strong>API</strong> - API now has an <code>onRequest</code> callback setting that receives the XHR promise after initializing the request</li>
+<li><strong>Button</strong> - Loading buttons no longer receive <code>pointer-events</code> in default theme. Added variable for <code>loading button</code> opacity.</li>
+<li><strong>Card</strong> - Card now has colored variations <strong>Thanks @romuloctba</strong></li>
+<li><strong>Dropdown</strong> - <code>search selection dropdown</code> will now close the menu when a <code>dropdown icon</code> is clicked</li>
+<li><strong>Dropdown</strong> - Added new dropdown setting, <code>forceSelection</code> which forces <code>search selection</code> to a selected value on blur. Defaults to <code>true</code>.</li>
+<li><strong>Flag</strong> - Updated Burma/Myanmar flag to current flag (was pre-2010 flag)</li>
+<li><strong>Form</strong> - Input rules now apply to <code>input[type=&quot;time&quot;]</code></li>
+<li><strong>Form Validation</strong> - <code>get values</code>, <code>set values</code> now support multiple select e.g. <code>field[]</code></li>
+<li><strong>Form Validation</strong> - Dropdown and checkbox will now validate after interaction with <code>on: &#39;blur&#39;</code></li>
+<li><strong>Headers</strong> - Headers can now contain images alongside text, added examples to docs</li>
+<li><strong>Icon</strong> - Added woff2 icon files for supported browsers (20% file-size decrease) <strong>Thanks FontAwesome</strong></li>
+<li><strong>Label</strong> - <code>ribbon label</code> can now be used inside <code>ui image</code> and <code>ui card</code> correctly</li>
+<li><strong>Sidebar</strong> - Sidebars in IE now work correctly with <code>context</code> specified</li>
+<li><strong>Rating</strong> - Vertical alignment of <code>ui rating</code> with inline content now accounts for parent line height</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>All Modules</strong> - Fixed bug where element <code>destroy</code> could remove third party events when re-initialized</li>
+<li><strong>Breadcrumb</strong> - Breadcrumb icon now has exact px value to alleviate vertical align issues</li>
+<li><strong>Card</strong> - Star / Like button colors have been fixed to match <code>ui rating</code> inside <code>card</code></li>
+<li><strong>Card</strong> - Hiding a card with <code>display: none</code> no longer causes layout issues with <code>(x) cards</code></li>
+<li><strong>Card</strong> - <code>image</code> inside <code>content</code> no longer has a fixed size <strong>Thanks @romuloctba</strong></li>
+<li><strong>Form</strong> - <code>info message</code> are no longer hidden by default inside <code>ui form</code></li>
+<li><strong>Form</strong> - Lightened error dropdown hover text color to be more legible</li>
+<li><strong>Dropdown</strong> - Upward dropdown now has upward arrow icon</li>
+<li><strong>Icon</strong> - <code>external link</code> and <code>external link square</code> has been renamed to <code>external icon</code> to no longer receive <code>link</code> styles by default</li>
+<li><strong>Modal</strong> - Modal now swaps to <code>scrolling modal</code> when <code>close icon</code> no longer can be displayed, instead of modal <code>content</code></li>
+<li><strong>Steps</strong> - Fixed bug where evenly divided steps were no longer fluid</li>
+<li><strong>Transition</strong> - Fixes bug where <code>moduleNamespace</code> was being omitted</li>
+<li><strong>Transition</strong> - Transitions with direction now use word order dependency to prevent conflict with component directions, for example `bottom left popup slide down in transition</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li>Fixed bug with chinese mirror modal appearing on every page load when selecting chinese language</li>
+</ul>
+<h3 id="Version_1-8-1_-_January_26,_2015">Version 1.8.1 - January 26, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Grid</strong> - Removed <code>text-align: left</code> from column definition. Now inherits from grid.</li>
+<li><strong>Input</strong> - <code>ui labeled input</code> now uses  <code>flex</code> added example in ui docs with dropdown</li>
+<li><strong>Input</strong> - Fix border radius on <code>ui action input</code> with button groups, aka <code>ui buttons</code></li>
+<li><strong>Popup</strong> - Popup <code>hide all</code> will now use transition set in <code>settings.transition</code> when closing other popups</li>
+<li><strong>Grid</strong> - Fix <code>doubling grid</code> setting <code>100% width</code> which may cause</li>
+</ul>
+<h3 id="Version_1-8-0_-_January_23,_2015">Version 1.8.0 - January 23, 2015</h3><p><a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A1.8.0+is%3Aclosed+sort%3Acomments-desc">View Closed Issues</a><br><a href="https://github.com/Semantic-Org/Semantic-UI/compare/1.7.3...1.8.0">View Commits</a></p>
+<p><strong>Key Features</strong></p>
+<ul>
+<li><strong>Form</strong> - Form now has new methods <code>reset</code>, <code>clear</code>, <code>set value(s)</code>, and <code>read value(s)</code> for modifying and reading form data. Check docs for details on implementation. <strong>Thanks @mktm</strong></li>
+<li><strong>Search</strong> - Search <code>onSelect</code> now receives JSON object matching currently selected element, you can now programmatically retrieve result JSON using <code>.search(&#39;get result&#39;, &#39;query&#39;)</code> or <code>.search(&#39;get results&#39;)</code>. <code>get result</code> will default to current value unless specified as first parameter.</li>
+<li><strong>Transition</strong> - Added many new transitions, and new directions for existing transitions <strong>Thanks @ph7vc</strong></li>
+<li><strong>Dropdown</strong> - Dropdown now stores <code>placeholder text</code> (prompt text) as separate from <code>default text</code> (text set on page load). You can now reset placeholder conditions using `$(‘.ui.dropdown’).dropdown(‘clear’);``</li>
+</ul>
+<p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>API</strong> - Added new behavior <code>$.api(&#39;abort&#39;)</code> which cancels current request</li>
+<li><strong>Dropdown</strong> - Keyboard navigation will now allow opening of sub menus with right/left arrow. Enter will open sub-menus on an unselectable category (<code>allowCategorySelection: false</code>) as well.</li>
+<li><strong>Dropdown</strong> - Mutation observers will now observe changed in <code>&lt;select&gt;</code> values after initialization, and will automatically update dropdown menu when changed</li>
+<li><strong>Dropdown</strong> - Dropdown behavior <code>set selected</code> will now also call <code>set value</code> automatically, so you do not have to invoke two behaviors to update a <code>selection dropdown</code> <strong>Thanks @mktm</strong></li>
+<li><strong>Form</strong> - Form will now prevent browsers from resubmitting form repeatedly when keydown is pressed on input field.</li>
+<li><strong>Header</strong> - Content headers now inherit <code>@h1-h6</code> sizes from <code>site.variables</code></li>
+<li><strong>Header</strong> - Sub headers now adjust in size depending on header size, added new variables for subheader resizing</li>
+<li><strong>Search</strong> - Greatly reduced search delay from <code>300ms</code> to <code>100ms</code>. Previous request will automatically abort <code>xhr</code> when new request made</li>
+<li><strong>Search</strong> - Search <code>onSelect</code> and <code>onResultsAdd</code> can now cancel default actions by returning <code>false</code>.</li>
+<li><strong>Transition</strong> - Transition duration now defaults to what is specified in <code>css</code>, to set custom duration you can still pass at run-time as a different value. Animation duration no longer set by default during animation.</li>
+<li><strong>Transition</strong> - Transition will now prevent repeated animations when using an inferred direction i.e. animation without <code>in</code> or <code>out</code> specified. When <code>queue: true</code> only animations with explicit direction, e.g. <code>fade in</code>, will be ignored when called repeatedly.</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>API</strong> - Fixed bug where <code>$.api(&#39;get xhr&#39;)</code> was not correctly returning xhr promise</li>
+<li><strong>API</strong> - Fixed bug where API would query resource immediately when specifying <code>on: false</code></li>
+<li><strong>Button</strong> - <code>`ui vertical basic buttons</code> now have dividers in default theme</li>
+<li><strong>Button</strong> - Fixes formatting for <code>disabled button</code> inside <code>ui buttons</code></li>
+<li><strong>Checkbox</strong> - Checkbox now only modifies <code>input[type=&quot;radio&quot;]</code> and <code>input[type=&quot;checkbox&quot;]</code> ignoring any other inputs</li>
+<li><strong>Dropdown</strong> - Dropdown no longer will not show menu when no <code>item</code> are present in menu. Dropdown will now only filter results for <code>ui search dropdown</code> #1632 <strong>Thanks PSyton</strong>.</li>
+<li><strong>Dropdown</strong> - Dropdown will now produce an error if behaviors on an initialized <code>&lt;select&gt;</code> are not invoked on <code>ui dropdown</code></li>
+<li><strong>Dropdown</strong> - Fixed bug where link items would not open in sub-menus due to <code>event.preventDefault</code></li>
+<li><strong>Label</strong> - Fixed <code>ui corner label</code> appearing on-top of <code>ui dropdown</code> menu due to issue in z-index hierarchy</li>
+<li><strong>Label</strong> - Fixed issue with <code>ui ribbon label</code> not positioning itself correctly when using sizes like <code>small</code> or <code>large</code></li>
+<li><strong>List</strong> - <code>relaxed list</code> and <code>very relaxed list</code> no longer add padding to child menu items</li>
+<li><strong>Popup</strong> - Popup will now only use a max of one element when <code>settings.popup</code> mistakingly passes multiple DOM elements</li>
+<li><strong>Popup</strong> - Popups will now by default appear over all UI content, even dimmers.</li>
+<li><strong>Search</strong> - Search results no longer hide/show when user changes tab or page loses focus</li>
+<li><strong>Sidebar</strong> - Fixed bug with <code>pusher</code> inheriting first child margins due to <code>margin-collapse</code></li>
+<li><strong>Sidebar</strong> - Mobile <code>is mobile</code> was using RegExp <code>test()</code> which would return an incorrect value when called multiple times</li>
+<li><strong>Sidebar</strong> - Sidebar will now only close if you click on <code>pusher</code> or underlayed <code>body</code> (scale out). Clicking on fixed elements will not close sidebar.</li>
+<li><strong>Transition</strong> - Fixed bug with animations that contain the strings ‘in’ or ‘out’ as part of their names, for example “swing”</li>
+<li><strong>Sticky</strong> - Fixes issue with container size not being set explicitly on rail due to improper method renaming</li>
+</ul>
+<h3 id="Version_1-7-3_-_January_16,_2015">Version 1.7.3 - January 16, 2015</h3><ul>
+<li><strong>Installer</strong> - Fix issue with component list in <code>semantic.json</code> not correctly overriding default components</li>
+</ul>
+<h3 id="Version_1-7-(1-2)_-_January_15,_2015">Version 1.7.(1-2) - January 15, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Installer</strong> - Fixes installer not including RTL parameter correctly</li>
+<li><strong>UI</strong> - Fixes <code>progress</code>, <code>ad</code>, and <code>sidebar</code> not loading <code>.override</code> files correctly</li>
+<li>Removed undocumented components from <code>theme.config.example</code></li>
+</ul>
+<h3 id="Version_1-7-0_-_January_14,_2015">Version 1.7.0 - January 14, 2015</h3><p><strong>Major Changes</strong></p>
+<ul>
+<li><strong>Project</strong> - Right-to-left (RTL) support added. New gulp tasks for RTL file generation and install setting. Docs however do not yet support RTL.<em>Thanks @MohammadYounes for constant support with RTL!</em>.</li>
+<li><strong>Project</strong> - Install now let you specify the outputted file permissions (express/custom install)</li>
+</ul>
+<p><strong>Enhancements / Changes</strong></p>
+<ul>
+<li><strong>Grid</strong> - Added <code>equal width</code> variation using <code>flex-box</code>, <code>equal height</code> now also uses <code>flex-box</code> (this may have to be removed if causes unexpected browser issues)</li>
+<li><strong>Sidebar</strong> - Having a sidebar visible on page load is now much simpler. You can include <code>ui visible sidebar</code> on page load to have a sidebar element appear on page load. To close call <code>$(&#39;.ui.sidebar&#39;).sidebar(&#39;hide&#39;)</code></li>
+<li><strong>Sidebar</strong> - Added documentation on using sidebar on a custom context. Sidebars using a custom context no longer add background colors like those initialized on <code>body</code></li>
+<li><strong>Site</strong> - Form input highlighting color added (helps differentiate form colors with autocompleted fields). Default text highlighting color moved from highlighter yellow to a mellow blue.</li>
+<li><strong>Dropdown</strong> - Javascript Dropdown can now be disabled by adding <code>`disabled</code> class. No need to call <code>destroy</code>. <strong>Thanks Psyton</strong></li>
+<li><strong>Dropdown</strong> - Search dropdown input can now have backgrounds. Fixes issues with autocompleted search dropdowns which have forced yellow “autocompleted” bg.</li>
+<li><strong>Dropdown</strong> - Fix issue with search selection not correctly matching when values are not strings</li>
+<li><strong>Progress</strong> - Progress bars can now display percent or amount left using <code>{value}</code> in text templates</li>
+<li><strong>Dropdown</strong> - New <code>upward dropdown</code> variation, which opens its menu upward. Default animation now uses <code>`settings.transition = &#39;auto&#39;</code> and determines direction of animation based on menu direction</li>
+<li><strong>Dropdown</strong> - Dropdown matching fields without values now trims whitespace by default</li>
+<li><strong>Checkbox</strong> - Checkbox now toggles on spacebar when focused (previously only toggled on enter key).</li>
+<li><strong>Popup</strong> - Popup now uses its own custom method for determining <code>offsetParent</code> meaning 3D contexts (like inside an animation) no longer should break positioning</li>
+<li><strong>Popup</strong> - Popup now uses <code>preserve: false</code> by default, this is slightly less performant but will reduce page clutter caused by leaving generated elements in the DOM</li>
+</ul>
+<p><strong>Code / Build</strong></p>
+<ul>
+<li><strong>Build</strong> - <code>Dist/</code> files now set file permissions in build. <code>644</code> by default. Can adjust in <code>semantic.json</code> or during gulp install. You will need to run <code>npm install</code> to add the new gulp-chmod dependency <em>Thanks @PeterDaveHello</em></li>
+<li><strong>Sidebar</strong> - <code>setup layout</code> not occurs synchronously if you initialize a sidebar without the proper html. This makes sure calls to sidebar will occur correctly before the page is setup. A new setting <code>delaySetup</code> will override this, increasing performance.</li>
+<li><strong>Modules</strong> - Remove use of deprecated <code>.size()</code> for <code>.length</code> across all modules</li>
+<li><strong>Modules</strong> - Use of <code>$.proxy</code> swapped to native <code>function.call()</code> for performance gains across all modules</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Video</strong> - Video component now uses <code>//</code> instead of defaulting to <code>http</code></li>
+<li><strong>Dropdown</strong> - <code>restore defaults</code> will now set placeholder styling and remove active element. Added example in docs.</li>
+<li><strong>Dropdown</strong> - Fixed bug where sub menus may sometimes have dropdown icon overlap text</li>
+<li><strong>Dropdown</strong> - Fixes dropdown search input from filtering text values when input is inside menu, i.e “In-Menu Search”</li>
+<li><strong>Dropdown</strong> - Fix issue with search selection not correctly creating RegExp when select values are not strings <strong>Thanks @alufers</strong></li>
+<li><strong>Dropdown</strong> - Fix issue with <code>left floated</code> and <code>right floated</code> content sometimes not applying correctly</li>
+<li><strong>Popup</strong> - <code>wide</code> and <code>very wide</code> popup will now appear when screen size is below their <code>max-width</code></li>
+<li><strong>Popup</strong> - Popup no longer blurs element on popup hide</li>
+<li><strong>Segment</strong> - <code>ui tabular menu</code> now correctly aligns with attached segment when using fluid variation <em>Thanks @MohammadYounes</em></li>
+<li><strong>Segment</strong> - <code>basic segment</code> no longer removes padding on first and last elements</li>
+<li><strong>Steps</strong> - Steps now use <code>table-cell</code> to allow steps to be equal height by default, even with different content height.</li>
+<li><strong>Button</strong> - Fix issue with labeled icon groups in material theme</li>
+<li><strong>Progress</strong> - Fixes bug with progress that use <code>total</code> and <code>value</code> receiving the wrong values for text templates</li>
+<li><strong>List</strong> - Fix some styling issues with <code>ui list</code> inside <code>ui menu</code></li>
+</ul>
+<h3 id="Version_1-6-4_-_January_12,_2015">Version 1.6.4 - January 12, 2015</h3><ul>
+<li><code>1.6.3</code> contained an unintentional character at beginning of <code>label.less</code> re-released as <code>1.6.4</code></li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Build</strong> - Fix CSS property typo in list icon, and label causing issues with some custom build tools</li>
+</ul>
+<h3 id="Version_1-6-3_-_January_12,_2015">Version 1.6.3 - January 12, 2015</h3><ul>
+<li><code>1.6.3</code> contained an unintentional character at beginning of <code>label.less</code> re-released as <code>1.6.4</code></li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Build</strong> - Fix CSS property typo in list icon, and label causing issues with some custom build tools</li>
+<li><strong>Label</strong> - Fix attached labels to have correct border radius inside of attached segments of all kinds</li>
+</ul>
+<h3 id="Version_1-6-2_-_January_06,_2015">Version 1.6.2 - January 06, 2015</h3><p><strong>Site Variables</strong></p>
+<ul>
+<li><strong>Site</strong> - EM values for <code>small</code> <code>large</code> etc are now all calculated from <code>@emSize</code> allowing you to only change one variable.</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Button</strong> - Fixes active orange button color</li>
+<li><strong>Menu</strong> - Fixes <code>fluid text menu</code> to have correct margins</li>
+</ul>
+<h3 id="Version_1-6-1_-_January_05,_2015">Version 1.6.1 - January 05, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Accordion</strong> - Accordion now uses <code>useFailSafe: true</code> to avoid callbacks not occurring because of race conditions with <code>transitionend</code> in webkit</li>
+</ul>
+<h3 id="Version_1-6-0_-_January_05,_2015">Version 1.6.0 - January 05, 2015</h3><p><strong>Build</strong></p>
+<ul>
+<li><strong>Dist</strong> - Build will now output version number in comment banner</li>
+</ul>
+<p><strong>Updates / Enhancements</strong></p>
+<ul>
+<li><strong>Accordion</strong> - Child element animations now use <code>$.fn.transition</code> and css animations by default (if available)</li>
+<li><strong>Accordion</strong> - Added <code>animateChildren</code> option to disable/enable opacity animation on child elements</li>
+<li><strong>Accordion</strong> - Accordion now uses `easeOutQuint<code>instead of</code>easeInOutQuint`` to increase perceived responsiveness of drawers</li>
+<li><strong>Grid</strong> - <code>stackable grid</code> now only adds horizontal padding when using <code>stackable page grid</code>, otherwise content will take up full width of parent element</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Tab/Segment</strong> - Fixes first tab being 1pixel taller than all other tabs</li>
+<li><strong>Popup</strong> - Fix issue with <code>ui popup</code> receiving error <code>$offsetParent is undefined</code> when using a pre-defined popup</li>
+<li><strong>Popup</strong> - Fix issue with <code>ui popup` not appearing with</code>ui flowing popup<code>due to newly added</code>min-width: max-content``</li>
+<li><strong>Form</strong> - <code>ui search dropdown</code> inside a form has incorrect focus style</li>
+<li><strong>Menu</strong> - Fixes <code>ui fluid labeled icon menu</code> to not have <code>min-width</code></li>
+</ul>
+<h3 id="Version_1-5-2_-_January_02,_2015">Version 1.5.2 - January 02, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Sidebar</strong> - Fix bug with <code>useLegacy</code> introduced in <code>1.5.1</code></li>
+</ul>
+<h3 id="Version_1-5-1_-_January_01,_2015">Version 1.5.1 - January 01, 2015</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Button</strong> - Fixed vertical alignment of <code>ui animated button</code></li>
+<li><strong>Search</strong> - Fixed issue with local search returning all results due to improper regexp</li>
+</ul>
+<h3 id="Version_1-5-0_-_December_30,_2014">Version 1.5.0 - December 30, 2014</h3><p><strong>Critical Bugs</strong></p>
+<ul>
+<li><strong>Build Tools</strong> <code>1.4.0</code> introduced a bug with concatenated uncompressed <code>dist/</code> release including minified code. This would occur only when no components were specified in installer or <code>semantic.json</code>.</li>
+</ul>
+<p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - New setting <code>allowCategorySelection</code> lets menu items with sub menus be selected. Added example in docs.</li>
+<li><strong>Reset</strong> - Reset now inherits <code>box-sizing</code> <a href="http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">from html tag</a></li>
+<li><strong>Label</strong> - <code>ui ribbon label</code> can now appear on the right side of content when specifying <code>ui right ribbon label</code></li>
+<li><strong>Checkbox</strong> - Checkboxes now can handle labels with multiple lines of text</li>
+<li><strong>Progress</strong> - Progress bars now display all intermediary percentage values when animating. Improved performance when progress bar is rapidly updated.</li>
+<li><strong>Popup</strong> - Popup now uses the new property <code>min-width: max-content</code> to allow for better display with <code>inline</code> in some circumstances where it escapes parent element.</li>
+<li><strong>Table</strong> - Table now has coupling with image to make sure size is preserved correctly with table sizing when used inside a table cell.</li>
+<li><strong>Menu</strong> - <code>ui fixed menu</code> now defaults to <code>ui top fixed menu</code></li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Form</strong> - Fixed (x) wide field not having correct bottom field margin when in <code>fields</code> group on tablet or mobile</li>
+<li><strong>Tab</strong> - Calls to global <code>$.tab()</code> would not pass arguments correctly</li>
+<li><strong>Dropdown/Search</strong> - Fixed issues with <code>ui search</code> and <code>ui search dropdown</code> using <code>RegExp test</code> which <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test">advances pointer on match</a> causing results to display incorrectly</li>
+<li><strong>Form</strong> - <code>ui input</code> now receives the same formatting as a normal input inside an <code>inline field</code></li>
+<li><strong>Grid</strong> - Fix display of equal height stackable grid. Add padding to divided stackable grid for dividers</li>
+<li><strong>Input</strong> - Fixed bug when <code>ui action input</code> uses a <code>ui icon button</code>, button was receiving <code>i.icon</code> formatting.</li>
+<li><strong>List</strong> - Fixed bug when using <code>ui icon button</code> or <code>ui icon header</code> causing element to receive icon formatting</li>
+<li><strong>Grid</strong> - Fixed issues where negative margins on <code>ui stackable grid</code> could cause horizontal scroll bars on mobile</li>
+<li><strong>Popup</strong> - Popup destroy will now also destroy any unfired timers (show/hide delay)</li>
+<li><strong>Popup</strong> - Popup now moves to the same offset context to avoid positioning errors when using a named pre-existing popup.</li>
+</ul>
+<h3 id="Version_1-4-1_-_December_23,_2014">Version 1.4.1 - December 23, 2014</h3><p><strong>Build Tools</strong></p>
+<ul>
+<li><code>gulp build</code> will now only build <code>dist/components/</code> for components selected in install</li>
+<li>Fixed bug where interactive installer was not correctly setting components in <code>express</code> and <code>custom</code> install</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - <code>&lt;select&gt;</code> elements will now preserve original <code>&lt;option&gt;</code> order by default. Added <code>sortSelect</code> setting (disabled by default) to automatically sort <code>&lt;option&gt;</code> on initialization</li>
+<li><strong>Button</strong> - Fixes issue with <code>will-change</code> property added to <code>ui button</code> causing layout z-indexing issues (dropdown button)</li>
+</ul>
+<h3 id="Version_1-4-0_-_December_22,_2014">Version 1.4.0 - December 22, 2014</h3><p><a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=milestone%3A1.4.0">Browse Issues for 1.4.0</a></p>
+<p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Modal</strong> - Modal now accepts custom dimmer settings with setting `dimmerSettings``</li>
+<li><strong>Form</strong> - Form inputs without <code>type</code> specified are now formatted <strong>Thanks PSyton</strong></li>
+<li><strong>Accordion</strong> - Added inverted accordion variation</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Progress</strong> - Fixes bug where <code>ui indicating progress</code> would not update its label immediately in webkit</li>
+<li><strong>Button</strong> - Fix Chrome bug with buttons sometimes not correctly repainting (particularly evenly divided groups)</li>
+<li><strong>Menu</strong> - Fix border radius of dropdown menu inside <code>ui vertical menu</code></li>
+<li><strong>Menu</strong> - Fix formatting of <code>ui selection dropdown</code> inside <code>menu</code></li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li>Improved documentation for API and Tab to be slightly more comprehensive</li>
+</ul>
+<h3 id="Version_1-3-2_-_December_17,_2014">Version 1.3.2 - December 17, 2014</h3><ul>
+<li><strong>Modal</strong> - Fixed issue with modal dimmer appearing cut off in some browsers, and not hiding</li>
+</ul>
+<h3 id="Version_1-3-1_-_December_17,_2014">Version 1.3.1 - December 17, 2014</h3><ul>
+<li><strong>Button</strong> - Dist version of button accidentally included <code>chubby</code> theme instead of <code>default</code> theme</li>
+</ul>
+<h3 id="Version_1-3-0_-_December_17,_2014">Version 1.3.0 - December 17, 2014</h3><p><a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A1.2.1+is%3Aclosed">Browse Closed Issues for 1.3.0</a></p>
+<p><strong>Critical Bugs</strong></p>
+<ul>
+<li><strong>Build Tools</strong> - Fixed issue with <code>theme.config</code> causing <code>gulp watch</code> to throw an error</li>
+</ul>
+<p><strong>Enhancement</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Dropdown can now specify which direction a menu should appear left/right, dropdown icons can also appear on the left</li>
+<li><strong>Dropdown</strong> - Full text search now defaults to <code>false</code>, meaning search terms will return only results beginning with letters</li>
+<li><strong>Dropdown</strong> - Search Dropdown is now much more responsive, js improvements and input throttling added.Throttling defaults to <code>50ms</code> and can be modified with settings <code>delay.search</code></li>
+<li><strong>Dropdown</strong> - Search Dropdown now correctly replaces placeholder text when backspacing to empty value</li>
+<li><strong>Dropdown</strong> - Search Dropdown now has a callback when all results filtered <code>onNoResults</code></li>
+<li><strong>Dropdown</strong> - Search dropdown will now strip html before searching values when searching html</li>
+<li><strong>Dropdown</strong> - Search now has keyboard shortcut to open dropdown on arrow down</li>
+<li><strong>Form</strong> - Form will no longer process validation rules on disabled fields</li>
+<li><strong>Label</strong> - Corner attached labels now display correctly inside of attached segments</li>
+<li><strong>Steps</strong> - Steps are now responsive for mobile by default, and have optional responsive styles for tablet</li>
+<li><strong>Table</strong> - Table has now variations to remove responsive stylings, specify responsiveness for tablet</li>
+<li><strong>Table</strong> - Table now has a <code>structured table</code> type, which removes some formatting considerations to support complex table layouts with <code>colspan</code> and <code>rowspan</code></li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Button</strong> - Button “or” positioning variables have been adjusted to be automatically calculated without magic numbers</li>
+<li><strong>Dropdown</strong> - Dropdown now always scrolls to active element on menu open, calculates position with new <code>loading</code> class</li>
+<li><strong>Dropdown</strong> - Fix bug in position of sub menus with <code>floating dropdown</code></li>
+<li><strong>Form</strong> - Fixed positioning of horizontal field groups, aka <code>fields</code> for mobile.</li>
+<li><strong>Grid</strong> - <code>stackable grid</code> now display correctly when nested inside a different <code>stackable grid</code></li>
+<li><strong>Image</strong> - UI image now works with SVG</li>
+<li><strong>Modal</strong> - Fixed issue with modal losing scroll position on mobile</li>
+<li><strong>Modal/Dimmer</strong> - Fixed issues with modal hiding during showing and showing during hiding, fixed issues with “hiding other” modals while a modal is mid-animation.</li>
+<li><strong>Segment</strong> - Vertical segments now have padding on first/last element, fixing issues when using with grids</li>
+<li><strong>Sidebar</strong> - Mobile sidebars now only set <code>overflow</code> on page’s <code>html</code> when browsing from <code>iOS</code> devices. Using overflow caused issues with page’s scroll being lost when resizing a browser to mobile widths. This also affected modules that used  `$(window).scrollTop()`` at mobile screen sizes</li>
+<li><strong>Step</strong> - Fix issue with completed ordered step icon alignment</li>
+<li><strong>Table</strong> - Fix responsive styles when applied to <code>definition table</code>.</li>
+<li><strong>All UI</strong> - Adds error message when triggering an invalid module behavior i.e. typos <code>$(&#39;.dropdown&#39;).dropdown(&#39;hid&#39;);</code></li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li><strong>Button</strong> - Add tabindex /keyboard nav documentation</li>
+<li><strong>Grid</strong> - Add another grid example</li>
+<li>Updates to reflect all new changes to UI listed above</li>
+</ul>
+<h3 id="Version_1-2-0_-_December_08,_2014">Version 1.2.0 - December 08, 2014</h3><p><a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A1.1.3+is%3Aclosed">Browse Closed Issues</a></p>
+<p><strong>Enhancement</strong></p>
+<ul>
+<li><strong>Form</strong> - Form validation now has parameter <code>optional</code> which will only validate a field against a set of rules if the user does not leave it blank <strong>Thanks DHNCarlos</strong></li>
+<li><strong>Fonts</strong> - Add font subset variable for <code>site.variables</code> <strong>Thanks gabormeszoly</strong></li>
+<li><strong>Modal</strong> - Default modal shadow now more subtle</li>
+<li><strong>Sidebar</strong> - Now has behaviors <code>is open/closed</code> that are aliases for <code>is visible/hidden</code></li>
+<li><strong>Checkbox</strong> - JS Checkbox now handles several variations of html. Labels can be before inputs, after, or not included at all. This should work better with server side form generation.</li>
+<li><strong>Progress</strong> - Adds <code>limitValues</code> setting to adjust values outside of 0-100 automatically to within range, defaults to true</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Grid</strong> - Fixes <code>ui stackable grid</code> sometimes not aligning correctly at mobile sizes with <code>ui page grid</code></li>
+<li><strong>Progress</strong> - Fixes issues with setting progress to 0% not working as expected</li>
+<li><strong>Modal</strong> - Fixes issues with multiple modals sometimes not closing dimmers</li>
+<li><strong>Modal</strong> - When a second modal that is not scrolling is opened after a scrolling modal it no longer causes the first modal to not be scrollable</li>
+<li><strong>Modal</strong> - “Hammer” clicking multiple times on a hiding dimmer no longer causes animation issues</li>
+<li><strong>Sidebar</strong> - Fixes issue with multiple sidebars sometimes causing dimmer to close prematurely</li>
+<li><strong>Sidebar</strong> - Dimmer can now be clicked even before sidebar has finished showing to immediately close sidebar</li>
+<li><strong>Item/Card</strong> - Default link formatting inside element simplified to avoid adjusting other nested <code>ui</code> link styles</li>
+<li><strong>Dropdown</strong> - Fixes bug with dropdown converted from <code>select</code> that use <code>&lt;option</code> values with capital letters not being selectable</li>
+<li><strong>Form</strong> - Fixes required checkbox asterisks formatting incorrect</li>
+</ul>
+<p><strong>Docs / Build</strong></p>
+<ul>
+<li>Fixed documentation on dropdown actions, form field widths, form validation types, and many odds &amp; ends</li>
+<li>Adds components to semantic.json.example</li>
+<li>Theme.config.example now links to final site folder</li>
+</ul>
+<h3 id="Version_1-1-2_-_December_03,_2014">Version 1.1.2 - December 03, 2014</h3><ul>
+<li><strong>NPM</strong> - Fixes issue with <code>dist/</code> not being included when using NPM due to <code>.gitignore</code></li>
+</ul>
+<h3 id="Version_1-1-1_-_December_03,_2014">Version 1.1.1 - December 03, 2014</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Step</strong> - Fixes step content appearing overlapped due to use of <code>em</code> instead of <code>rem</code> for line-height.</li>
+<li><strong>Sidebar</strong> - Fixes issue that may cause sidebars to stay open in some circumstances when using multiple sidebars</li>
+</ul>
+<h3 id="Version_1-1-0_-_December_02,_2014">Version 1.1.0 - December 02, 2014</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Transition</strong> - Transition’s caching of final display state and animation existence now has improved performance.</li>
+<li><strong>Popup</strong> - Popup now has a <code>settings.prefer</code> that defaults to <code>adjacent</code>. This setting sets prefered next placement when a popup cannot fit on screen in the chosen placement. <code>prefer</code> can also be set to <code>opposite</code> to prefer the same position on the opposite side</li>
+<li><strong>Popup</strong> - Popup can now use a setting <code>lastResort</code>. When set to a position it will be used as a last resort even if popup does not entirely fit on the page. Setting this to <code>false</code> will produce an error when a popup cannot fit on screen.</li>
+<li><strong>Transition</strong> now has <code>useFailSafe</code> parameter (off by default) to ensure transition callback fires even if native <code>onAnimationEnd</code> event does not fire due to element visibility. <a href="https://code.google.com/p/chromium/issues/detail?id=135350#c2">Chromium Bug Report by Product Manager @ Mozilla</a> and <a href="https://code.google.com/p/chromium/issues/detail?id=437860">this open issue</a></li>
+<li><strong>All UI</strong> - Many <code>em</code> measurements adjusted slightly to calculate out as exact pixel values (Fixes 1px rounding errors)</li>
+<li><strong>Steps</strong> - Now use global border color</li>
+<li><strong>Progress</strong> - Progress now has sizing variations</li>
+<li><strong>Input</strong> - <code>transparent input</code> can now be <code>inverted</code></li>
+<li><strong>Dropdown</strong> - Dropdown <code>onChange</code> callback now fires when calling <code>setSelected</code> programatically.</li>
+</ul>
+<p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Build Tools</strong> - NPM now correctly pins dependencies instead of using bleeding-edge versions which may break builds</li>
+<li><strong>Transition</strong> - Transition now correctly detects missing animations, errors do not cause future image transitions to break</li>
+<li><strong>Menu/Segment</strong> Fixes double border on pointing menu with attached segment <strong>Thanks davialexandre</strong></li>
+<li><strong>Progress</strong> - Fixes indicating progress appearing incorrectly at 100% complete <strong>Thanks ordepdev</strong></li>
+<li><strong>Icon</strong> - <code>remove icon</code> is now formatted correctly when used as <code>remove link icon</code></li>
+<li><strong>Input</strong> - <code>ui action input</code> can now accomodate <code>ui button</code> that adjust padding from default</li>
+<li><strong>Dropdown</strong> - Fix <code>action input</code> used inside <code>ui dropdown</code> to appear correctly <strong>Thanks ordepdev</strong></li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li><strong>Progress</strong> - Added missing settings docs for progress module</li>
+</ul>
+<h3 id="Version_1-0-1_-_November_28,_2014">Version 1.0.1 - November 28, 2014</h3><p><strong>Bugs</strong></p>
+<ul>
+<li><strong>Site</strong> - Add protocol variable for Google Font loader to avoid issues with <code>//</code> when loading locally causing freezing</li>
+<li><strong>Icon</strong> - Fix horizontal centering of circular icon</li>
+<li><strong>Transition</strong> - Fix vertical flip not working due to css typo <strong>Thanks cgroner</strong></li>
+<li><strong>Menu</strong> - Removes missing image loader variable <strong>Thanks ryan-mahoney</strong></li>
+<li><strong>Card/Item</strong> - Fix generic link stylings erroneously affecting linked ui elements like buttons</li>
+<li><strong>Table</strong> - Fixes table cell transition animating all properties</li>
+</ul>
+<h3 id="Version_1-0-0_-_November_24,_2014">Version 1.0.0 - November 24, 2014</h3><p><strong>Breaking Changes</strong></p>
+<ul>
+<li><strong>Word Order</strong> - Many multi word variations now require proper word order, for example <code>left aligned</code> or <code>right floated</code> classnames must be adjacent. This is to prevent conflicts with other multiple word variations</li>
+<li><strong>Form</strong> - Date field has been removed, use a <code>ui icon input</code> with a <code>calendar icon</code> instead</li>
+<li><strong>Label</strong> - Corner labels no longer support text, only icons.</li>
+<li><strong>Dropdown</strong> - Sub menus inside dropdowns now need a wrapping div <strong>text</strong> around sub-menu descriptions</li>
+<li><strong>Checkbox</strong> - Checkbox “enable” and “disable” have been replaced with “check” and “uncheck”</li>
+<li><strong>Modal</strong> - Modal <code>left</code> and <code>right</code> sections are now replaced with <code>image</code> and <code>description</code></li>
+<li><strong>Accordion</strong> - Accordions are now unstyled by default allowing for simpler coupling with other UI without having to override styles. Styled accordions are now included as a variation <code>ui styled accordion</code></li>
+<li><strong>List</strong> - List item selectors are now more strict, list items must be immediate children of <code>ui list</code> or <code>ui list list</code></li>
+<li><strong>Item</strong> - 0.x.x’s UI card has been adjusted heavily. Vertically listed content should use <code>ui item</code> while floated grouped content should continue to use <code>ui card</code>. Some ‘card’ view content has been slightly adjusted. Please refer to documentation</li>
+<li><strong>Header / Icon</strong> - Inverted headers and icons no longer invert background colors, but instead use a lighter version of colors more legible on dark backgrounds. Inverted circular icons, still however invert the color of the circle.</li>
+<li><strong>Input</strong> - Labeled inputs now have <code>corner</code> <code>left</code> and <code>top</code> label types. Any labeled inputs should be converted to <code>corner labeled input</code> to preserve functionality from <code>0.x</code></li>
+<li><strong>Modal</strong> - allowMultiple (allowing multiple modals at once) is now set to <strong>false</strong> by default.</li>
+<li><strong>Table</strong> - Tables are no longer striped by default, instead you must specify the ‘striped’ variation</li>
+<li><strong>Transition</strong> - Complete, and Start callbacks are now <code>onComplete</code> and <code>onStart</code></li>
+</ul>
+<p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>General</strong> - CSS animations now hint with will change properties to increase performance in supported browsers</li>
+<li><strong>General</strong> - Many modules now use DOM Mutations and event delegation to allow content adjustment after initialization</li>
+<li><strong>Accordion</strong> - Accordion now includes all icons in an embedded font instead of requiring icons</li>
+<li><strong>Button</strong> - Now has compact form, used for fitting into tight spaces</li>
+<li><strong>Button</strong> - Now has CSS loaders to allow loading state to maintain other styles</li>
+<li><strong>Checkbox</strong> - Now correctly handles read-only and disabled, has read-only and disabled states</li>
+<li><strong>Checkbox</strong> - All styles have been redone. Standard checkboxes are now based around PX and not EM making sure there are no unusual circles or rounding issues. Checkboxes also now use a custom font for glyphs instead of CSS tricks.</li>
+<li><strong>Checkbox</strong> - Checkbox now have a <code>fireOnInit</code> setting for firing callbacks on page load</li>
+<li><strong>Checkbox</strong> - Checkbox now receive a <code>checked</code> class when checked, making it easier to write css selectors on checked checkboxes, for example when using sibling selectors <code>.ui.checked.checkbox + .content { // style }</code></li>
+<li><strong>Dropdown</strong> - New dropdown type, searchable selection for large lists of choices</li>
+<li><strong>Dropdown</strong> - Dropdowns can now be initialized directly on a <code>&lt;select&gt;</code> element without any html</li>
+<li><strong>Dropdown</strong> - New action combo will change text of adjacent button, select will select element but not change text</li>
+<li><strong>Dropdown</strong> - Many new content types now work inside dropdowns, headers, dividers, images, inputs, labels and more</li>
+<li><strong>Form</strong> - Form now has a success state which will automatically display success messages</li>
+<li><strong>Dimmer</strong> - Dimmer will now automatically determine whether click-to-close is enabled by <code>settings.on</code></li>
+<li><strong>Dimmer</strong> - Multiple dimmers can now be used on the same context with <code>dimmerName</code></li>
+<li><strong>Dimmer</strong> - Dimmer variations can be specified when creating a dimmer from javascript using <code>variation</code> setting.</li>
+<li><strong>Form</strong> - Grouped fields and inline fields can now have labels</li>
+<li><strong>Form</strong> - Forms in ‘success’ state will now show success messages inside</li>
+<li><strong>Form</strong> - Inputs now use 1em font size and correctly match selection dropdown height</li>
+<li><strong>Form</strong> - Inverted form now properly styles loader</li>
+<li><strong>Form</strong> - New field type <code>required</code> formats labels to show filling out field is mandatory</li>
+<li><strong>Grid</strong> - <code>ui divider</code> can now be used inside of row columns as well as <code>vertically divided grid</code> variation</li>
+<li><strong>Grid</strong> - Grid rows and columns now support color variations</li>
+<li><strong>Grid</strong> - Grid has been rewritten to automatically create row flow without row wrappers</li>
+<li><strong>Grid</strong> - Divided and celled grids can now be inverted for dark backgrounds</li>
+<li><strong>Grid</strong> - Elements inside a grid that are not rows or columns will now align properly</li>
+<li><strong>Grid</strong> - Fixed page grid allows for fixed pixel size containers used with a grid instead of percentage</li>
+<li><strong>Grid</strong> - Vertically divided grid now does not include left/right gutters in divider</li>
+<li><strong>Header</strong> - Linked headers now receive link colors</li>
+<li><strong>Image</strong> - New <code>bordered image</code> variation</li>
+<li><strong>Item</strong> - Items now have a horizontal list view for content lists</li>
+<li><strong>Label</strong> - Added tag label and empty circular label style</li>
+<li><strong>Label</strong> - Now has compact form, for fitting into tight spaces</li>
+<li><strong>Label</strong> - Now has more sizes available</li>
+<li><strong>List</strong> - Child lists can now be formatted to sit inside text content</li>
+<li><strong>List</strong> - List images can now specify vertical alignment</li>
+<li><strong>List</strong> - List spacing defaults have been adjusted to be more consistent</li>
+<li><strong>Popup</strong> - Popup can now allow itself not to be closed when hovered over</li>
+<li><strong>Popup</strong> - A popup element can now be specified on initialization.</li>
+<li><strong>Reveal</strong> - Reveals now all use css properties with GPU acceleration</li>
+<li><strong>Popup</strong> - Positioned popups will now extend in the opposite direction to fit better with floated content</li>
+<li><strong>Rating</strong> - Rating now uses an embedded icon font to maximize compatibility</li>
+<li><strong>Rating</strong> - Rating can now automatically generate icons without including them</li>
+<li><strong>Rating</strong> - Rating can use data attributes to specify individual ratings</li>
+<li><strong>Sidebar</strong> - Sidebar now has tall / very tall variations for resizing top/bottom sidebars</li>
+<li><strong>Shape</strong> - Shape now is better at calculating sizes when animating</li>
+<li><strong>Shape</strong> - You can now disable repeated animations by setting, so animation wont queue if side is currently visible</li>
+<li><strong>Steps</strong> - Steps can now have icons, descriptions and titles. Step default theme has been modified significantly to be more flexible.</li>
+<li><strong>Table</strong> - Tables now have ‘basic’ and ‘very’ basic variations</li>
+<li><strong>Transition</strong> - Transition will now keep block position of elements hidden with visibility hidden</li>
+<li><strong>Transition</strong> - Transitions now will handle multiple display types more consistently</li>
+<li><strong>Transition</strong> - Transition now has a new <code>start</code> callback, before animation starts</li>
+<li><strong>Transition</strong> - Complete callback now does not occur if animation is interrupted before completing</li>
+<li><strong>Transition</strong> - You can now specify the final displayType of a transitioning element in metadata or settings (not just automatically detected)</li>
+<li><strong>More <a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+label%3AEnhancement+is%3Aclosed">untracked changes</a> added as well</strong></li>
+</ul>
+<p><strong> Bug Fixes </strong></p>
+<ul>
+<li>See Closed GitHub Issues</li>
+</ul>
+<h3 id="Version_0-19-3_-_Sep_11,_2014">Version 0.19.3 - Sep 11, 2014</h3><p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Grid</strong> - Fixes issue where some responsive grid stylings were being overridden by other variations (for example stackable overriding )</li>
+</ul>
+<h3 id="Version_0-19-2_-_Sep_11,_2014">Version 0.19.2 - Sep 11, 2014</h3><p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Grid</strong> - (Backport from 1.0 branch) Fixes issue where some combinations of (tablet/mobile/computer) only does not function correctly</li>
+</ul>
+<h3 id="Version_0-19-1_-_Sep_5,_2014">Version 0.19.1 - Sep 5, 2014</h3><p><strong>Bug Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - (Backport from 1.0 branch) Fixes issue where modal sometimes appears too low on second show</li>
+</ul>
+<h3 id="Version_0-19-0_-_July_3,_2014">Version 0.19.0 - July 3, 2014</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Transition</strong> - Adds “fade in left/right” variations to match “fade up/down” <strong>Thanks AdamMaras</strong></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Accordion</strong> - Fixes incompatibilities with <code>ui list</code> when used inside a <code>ui accordion</code>, fixes issues with menu accordion display in some circumstances</li>
+<li><strong>Menu</strong> - Fixes <code>ui inverted secondary pointing menu</code> to have correct pointer color for all color variations <strong>Thanks AdamMaras</strong></li>
+<li><strong>Docs</strong> - Language clarified for menu/rating definition <strong>Thanks jnbt/ewiner</strong></li>
+</ul>
+<h3 id="Version_0-18-0_-_June_6,_2014">Version 0.18.0 - June 6, 2014</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Modal</strong> - Modals now focus on first input if available <strong>Thanks Knotix</strong></li>
+<li><strong>RTL</strong> - RTL now uses RTLCSS instead of CSSJanus <strong>Thanks MohammadYounes</strong></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Menu</strong> - Fixes bug where pointing menu would sometimes appear below content <strong>Thanks Skysplit</strong></li>
+<li><strong>Dropdown</strong> - Fixes dropdown ‘is animating’ with dropdowns when CSS animations were not included <strong>Thanks nathankot</strong></li>
+<li><strong>Accordion</strong> - Accordion title does not know have to be :first-child to receive proper border <strong>Thanks BigBlueHat</strong></li>
+<li><strong>Popup</strong> - Fixes javascript animation of popup missing easing dependency</li>
+<li><strong>Label</strong> - Fixes border radius on bottom left label</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li><strong>Modal</strong> - Docs now have HTML examples</li>
+<li><strong>Docs</strong> - Fixes issue with overview mode not clearing code examples</li>
+<li><strong>CSS Guide</strong> - Fixes typos in css guide</li>
+</ul>
+<h3 id="Version_0-17-0_-_May_9,_2014">Version 0.17.0 - May 9, 2014</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Dropdowns can now receive focus and be navigated with a keyboard <strong>Thanks Musatov</strong></li>
+<li><strong>Popup</strong> - Popup now has an <code>onRemove</code> callback after removing element from DOM</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Element does not accurately close other modals when initialized at different times <strong>Thanks nojhamster</strong></li>
+<li><strong>Modal</strong> - Fixes javascript error for browsers that don’t support CSS animations if jquery.easing is not included</li>
+<li><strong>Form, Input</strong> - Fixes <code>ui input</code> to work correctly inside <code>inline field</code></li>
+</ul>
+<h3 id="Version_0-16-1_-_April_22,_2014">Version 0.16.1 - April 22, 2014</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Transition</strong> - Fixes bug where transition could accidentally hide element on show due to error when determining original display type</li>
+</ul>
+<h3 id="Version_0-16-0_-_April_22,_2014">Version 0.16.0 - April 22, 2014</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Form</strong> - Fields can now be aligned to a grid <strong>Thanks seralex-vi</strong></li>
+</ul>
+<p><strong>Critical Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Fixes issue where position sometimes appeared too low on second show</li>
+<li><strong>Reveal</strong> - Fixes reveal being broken in Chrome in <code>0.15.5</code> due to poor fix for reveal selectability</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Transition</strong> - Fixes issue where transition hidden was sometimes overwritten by UI styles causing the element to stay visible</li>
+<li><strong>Checkbox</strong> - Fixes issue where checkboxes with multiple line labels were appearing formatted incorrectly.</li>
+</ul>
+<h3 id="Version_0-15-5_-_April_11,_2014">Version 0.15.5 - April 11, 2014</h3><p><strong>Critical Fixes</strong></p>
+<ul>
+<li><strong>Checkbox</strong> - Fixes <code>ui checkbox</code> to obey <code>disabled</code> property of input</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Reveal</strong> - Hidden content now can be selected on reveal</li>
+<li><strong>Message</strong> - Fixes hidden/visible class to work with animations</li>
+<li><strong>Message</strong> - Fixes hidden/visible class to set proper display on <code>ui icon message</code></li>
+<li><strong>Message</strong> - Fixes hitbox/position of <code>close icon</code> inside message</li>
+</ul>
+<h3 id="Version_0-15-4_-_April_04,_2014">Version 0.15.4 - April 04, 2014</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Rating</strong> - Fixes issue where rating was behaving erratically in Chrome</li>
+</ul>
+<h3 id="Version_0-15-3_-_April_04,_2014">Version 0.15.3 - April 04, 2014</h3><p><strong>Changes</strong></p>
+<ul>
+<li><strong>Transition</strong> - CSS Transitions now work in legacy FF (FF &gt; 12)</li>
+<li><strong>All UI</strong> - Adds support for legacy FF vendor prefixes (FF &gt; 12)</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li>Adds more examples for static checkbox/radio boxes with HTML only</li>
+<li>Fixes a variety of issues with malformed examples (thanks community)</li>
+</ul>
+<h3 id="Version_0-15-2_-_Mar_28,_2014">Version 0.15.2 - Mar 28, 2014</h3><p><strong>Changes</strong></p>
+<ul>
+<li><strong>All Modules</strong> - Debug is now disabled by default</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Step</strong> - Fixes issue with border radius on vertical steps</li>
+<li><strong>Icon</strong> - Orange color is now available for icon</li>
+<li><strong>Menu</strong> - Fixes formatting of attached segments with menus</li>
+</ul>
+<h3 id="Version_0-15-1_-_Mar_14,_2014">Version 0.15.1 - Mar 14, 2014</h3><p><strong>Critical Fixes</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Typo in dropdown css was causing selection dropdowns not to appear</li>
+</ul>
+<h3 id="Version_0-15-0_-_Mar_14,_2014">Version 0.15.0 - Mar 14, 2014</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Step</strong> - Vertical Steps now have option to have two line items</li>
+<li><strong>Form</strong> - Forms, Dropdowns, and Inputs now have matching padding size, and use 1em font size to appear same size as surrounding text</li>
+<li><strong>Icon</strong> - Icons on dark backgrounds should render better in OSX</li>
+<li><strong>Modal</strong> - Modals now have an onVisible and onHidden callback for after animation ends</li>
+<li><strong>Form Validation</strong> - Form validation now automatically revalidates a selection dropdown on change when invalid</li>
+</ul>
+<p><strong>Critical Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Browsers without RequestAnimationFrame (Opera) were erroring on modal show</li>
+<li><strong>Dropdown</strong> - Element’s with numeric <code>data-text</code> values were erroring when selected</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Modal onShow and onHide occurs before transition starts, allowing for class name changes not to be reset</li>
+<li><strong>Dropdown</strong> - Default selection text was not appearing when a dropdown had a value that was <code>false</code> or <code>0</code></li>
+<li><strong>Input</strong> - Fixes slight error in corner label rounding <strong>Thanks MohammadYounes</strong></li>
+<li><strong>Reveal</strong> - Reveals will now show on active, for touch devices <strong>Thanks Illyism</strong></li>
+<li><strong>Table</strong> - Fixes rounding on tables with multiple tfoot elements <strong>Thanks webdesserts</strong></li>
+<li><strong>Icon</strong> - Hide and unhide icon were accidentally given opposite names</li>
+<li><strong>Checkbox</strong> - Checkboxes can now have multiple inputs inside, for use with .NET and other languages that insert their own hidden inputs</li>
+</ul>
+<p><strong>Project</strong></p>
+<ul>
+<li><strong>iOS</strong> - Active styles, for example pressed in buttons, now appear in docs on touch devices</li>
+</ul>
+<h3 id="Version_0-14-0_-_Mar_03,_2014">Version 0.14.0 - Mar 03, 2014</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Modal</strong> - Modal now uses requestAnimationFrame instead of debounced callback</li>
+<li><strong>Dropdown</strong> - Dropdown now has error state <strong>Thanks Musatov</strong></li>
+<li><strong>Form</strong> - Form fields with errors will now properly style dropdown elements <strong>Thanks Musatov</strong></li>
+<li><strong>Step</strong> - Steps can now appear vertically</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>List</strong> - Bulleted and horizontal lists now appear correctly in IE10-11</li>
+</ul>
+<p><strong>Project</strong></p>
+<ul>
+<li><strong>NPM</strong> - Docpad is now moved to a dev dependency <strong>Thanks kapouer</strong></li>
+</ul>
+<h3 id="Version_0-13-1_-_Feb_28,_2014">Version 0.13.1 - Feb 28, 2014</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Fixes modal positioning appearing slightly below center on second load</li>
+<li><strong>Checkbox</strong> - Fixes checkbox appearance inside inverted forms</li>
+<li><strong>Input</strong> - Fixes ui input to inherit form sizing</li>
+<li><strong>Accordion</strong> - Fixes issues with accordion rules being too specific, causing several common usages of accordions to break</li>
+<li><strong>Form Validation</strong> -  Fixes form validation regular expression matching <strong>Thanks icefox0801</strong></li>
+</ul>
+<h3 id="Version_0-13-0_-_Feb_20,_2014">Version 0.13.0 - Feb 20, 2014</h3><p><strong>Enhancements</strong></p>
+<ul>
+<li><strong>Label</strong> - Corner labels now are coupled to have rounded edges with components with rounded edges like input</li>
+<li><strong>Form</strong> - Grouped form fields now have responsive styles for mobile</li>
+<li><strong>Modal</strong> - Modal will now work when modal is taller than page’s content</li>
+<li><strong>Checkbox</strong> - Checkboxes now also trigger DOM <code>change</code> event</li>
+<li><strong>Accordion</strong> - Accordions now preserve inline styles when animating</li>
+<li><strong>Form Validation</strong> - Form validation now rechecks on all form change events, not just input change</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Menu</strong> - Fixes 2px border on last element in horizontal menus</li>
+<li><strong>Menu</strong> - Fixes dropdown formatting when used <em>*inside</em> a menu item</li>
+<li><strong>Menu</strong> - Fixes formatting of grouped icon buttons inside menus</li>
+<li><strong>Modal</strong> - Fixes z-index of modal close to appear above <code>relative/absolute</code> modal content on mobile</li>
+<li><strong>Dimmer</strong> - Dimmers are less buggy when used with <code>on: &#39;hover</code></li>
+</ul>
+<h3 id="Version_0-12-5_-_Feb_04,_2014">Version 0.12.5 - Feb 04, 2014</h3><p><strong>Enhancement</strong></p>
+<ul>
+<li><strong>Button</strong> - Or buttons can now have text specified using <code>&lt;div class=&quot;or&quot; data-text&quot;text&quot;&gt;</code> with alternate text <em>Thanks MohammadYounes</em></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Popup</strong> - Fixes issue where popups using <code>title</code> attribute to store data were losing title content instead of correctly restoring it</li>
+<li><strong>Modal</strong> - Fixes an issue where modal may not position correctly in some cases <em>Thanks GianlucaGuarini</em></li>
+<li><strong>Modal</strong> - Fixes modal throwing an error when transition is not included <em>Thanks robertoles</em></li>
+</ul>
+<h3 id="Version_0-12-4_-_Jan_29,_2014">Version 0.12.4 - Jan 29, 2014</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Form</strong> - Fixes issue with onSuccess not allowing cancellation of form submit in form validation</li>
+<li><strong>Input</strong> - Fixes <code>ui buttons</code> to work inside an <code>ui action input</code> <strong>Thanks MohammadYounes </strong></li>
+<li><strong>Items</strong> - Fixes <code>ui horizontal items</code> to work correctly, missing comma <strong>Thanks mishak87</strong></li>
+</ul>
+<p><strong>Project</strong></p>
+<ul>
+<li><strong>RTL</strong> - Adds RTL hinting for some files <strong>Thanks MohammadYounes</strong></li>
+<li><strong>Specs</strong> - Adds additional JSON spec files for future use with generators <strong>Thanks brigand</strong></li>
+</ul>
+<h3 id="Version_0-12-3_-_Jan_24,_2014">Version 0.12.3 - Jan 24, 2014</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Message</strong> - Fixes some issues with margins sometimes not appearing with <code>attached message</code> <strong>thanks joltmode</strong></li>
+<li><strong>Item</strong> - Fixes color repeating to be consistent for items <strong>thanks skysplit</strong></li>
+</ul>
+<h3 id="Version_0-12-2_-_Jan_21,_2014">Version 0.12.2 - Jan 21, 2014</h3><p><strong>Enhancement</strong></p>
+<ul>
+<li><strong>Form Validation</strong> - Adding custom validation is now simpler, uses syntax <code>$(&#39;.form&#39;).form(&#39;add prompt&#39;, identifier, &#39;Error message&#39;);</code></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Menu</strong> - Slightly updates input sizes inside menus</li>
+<li><strong>Grid</strong> - Fixes grid <code>only tablet/mobile/computer</code> showing both devices on exact pixel of breakpoint, i.e. 768px</li>
+<li><strong>Icon</strong> - Fixes ascending alphabetic inheritance</li>
+</ul>
+<h3 id="Version_0-12-1_-_Jan_15,_2014">Version 0.12.1 - Jan 15, 2014</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>LESS</strong> - Fixes typo breaking less parsing <strong>thanks DVSoftware</strong></li>
+<li><strong>Menu</strong> - Fixes buttons using <code>&lt;a&gt;</code> tag from inheriting link styles. <strong>thanks joltmode</strong></li>
+<li><strong>Menu</strong> - Fixes <code>action input</code> to work inside menus  <strong>thanks joltmode</strong></li>
+<li><strong>Modal</strong> - Fixes possible race conditions in animations of modal <strong>thanks dos1</strong></li>
+<li><strong>Message</strong> - Prevents close icon from being misformatted in icon message <strong>thanks MohammadYounes</strong></li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li><strong>Icons</strong> - Fixes some icon code samples in docs <strong>thanks mishak87</strong><br>Some updates to docs formatting</li>
+</ul>
+<h3 id="Version_0-12-0_-_Jan_06,_2014">Version 0.12.0 - Jan 06, 2014</h3><p><strong>Major Fixes</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Fixes dropdowns links not working on touch devices</li>
+<li><strong>Input</strong> - Fixes input placeholder styles to work (accidental regex replace)</li>
+</ul>
+<p><strong>Major Updates</strong></p>
+<ul>
+<li><strong>Transition</strong> - Transitions will now, by default, prevent the current animation from being queued while it is actively animating the same animation</li>
+<li><strong>Modal</strong> - New setting <code>allowMultiple</code> lets you specify whether multiple modals can be shown at once</li>
+<li><strong>Modal</strong> - New setting <code>detachable</code> allows you to specify whether modal DOM element can be moved (Thanks MohammadYounes)</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Default value is now stored on init, and can be restored using ‘restore defaults’ behavior</li>
+<li><strong>Modal</strong> - Buttons can now use both <code>cancel/deny</code> or <code>ok/approve</code>, for approve/deny events to fire (Thanks MohammadYounes)</li>
+<li><strong>Menu</strong> - Fixed menu now adds padding on the next element if it is a grid</li>
+<li><strong>Progress Bar</strong> - Adds warning color</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Icon</strong> - Fixes unnecessary formatting on thumbs up/down</li>
+<li><strong>Dropdown</strong> - Fixes touchmove event not clearing on touch devices causing unnecessary overhead</li>
+<li><strong>Input</strong> - Action inputs can now be fluid</li>
+<li><strong>Sidebar</strong> - Fixes issue where top sidebar was receiving left offset</li>
+<li><strong>Menu</strong> - Fixes z-index on fixed menu to exist just below modals</li>
+<li><strong>Dropdown</strong> - Fixes issue where last match was returned, not prioritizing value over text</li>
+<li><strong>Form</strong> - Fixes all validation input to be trimmed for whitespace</li>
+</ul>
+<h3 id="Version_0-11-0_-_Dec_25,_2013">Version 0.11.0 - Dec 25, 2013</h3><h3 id="Merry_Christmas!">Merry Christmas!</h3><p><strong>Major Updates</strong></p>
+<p>-<strong>Transition</strong>: Transition has been completely rewritten, performance should be about 10x after first animation due to caching and use of request animation frame</p>
+<p><strong>New Features</strong></p>
+<p>-<strong>Transition</strong>: Transitions now work with <strong>any display type</strong> not just display: block, meaning transitions can be used on buttons and other inline elements without affecting display</p>
+<p><strong>Fixes</strong></p>
+<p>-<strong>Transition</strong>: Fixes typo in “horizontal flip out” causing opacity to be fading in</p>
+<p>-<strong>Popup</strong> - Fixes popup sometimes opening and closing when <code>event:click</code> is used and a user double clicks</p>
+<p>-<strong>Modules</strong>: Fixed error in all modules where calling invoke would modify instance outside of scope, making it impossible to access some data (for instance cached positions) from outside of module.</p>
+<p>-<strong>Modal</strong>: Fixes issues with modal in IE, IE11 can now use CSS animations with modals</p>
+<h3 id="Version_0-10-3_-_Dec_22,_2013">Version 0.10.3 - Dec 22, 2013</h3><p><strong>Critical Fixes</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Fixes issue where dropdown animation does not occur sometimes (Thanks MohammadYounes)</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Popup</strong> - Native browser popups no longer if using <code>title</code> attribute</li>
+<li><strong>Grid</strong> - Fixes issue where stackable grid was not working correctly when using (x) wide column</li>
+<li><strong>Modal</strong> - Fixes element detaching sometimes in case where it is already inside a dimmer</li>
+<li><strong>Input</strong> - Removes duplicate sizes</li>
+</ul>
+<h3 id="Version_0-10-2_-_Dec_13,_2013">Version 0.10.2 - Dec 13, 2013</h3><p><strong>New</strong></p>
+<ul>
+<li><strong>Button</strong> - Adds VK button</li>
+<li><strong>Input</strong> - Action inputs now support button groups</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Rating</strong> - Fixes vertical alignment with text</li>
+<li><strong>Dropdown</strong> - Fixes missing easing equations for dropdown javascript animations. Would cause an error when no css transitions were included and jquery easing was not available.</li>
+</ul>
+<h3 id="Version_0-10-1_-_Dec_06,_2013">Version 0.10.1 - Dec 06, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Fixes issue with modal animation regression in 0.10.0</li>
+</ul>
+<h3 id="Version_0-10-0_-_Dec_05,_2013">Version 0.10.0 - Dec 05, 2013</h3><p><strong>New</strong></p>
+<ul>
+<li><strong>Grid</strong> - Adds <code>doubling</code> responsive variation which automatically formats content spacing based on device type</li>
+<li><strong>Form Validation</strong> - Adds two new parameters, to allow for changing of revalidation and delay on input</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li><strong>Grid</strong> - Row padding is now EM not % based, this might shift layouts slightly</li>
+<li><strong>Grid</strong> - Grid columns not inside a row will automatically receive row padding now. This will allow for content to flow correctly when row count is unknown</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Grid</strong> - Fixes margin on stackable grids</li>
+<li><strong>Dropdown</strong> - Value can be retrieved even in instances where forms arent used</li>
+</ul>
+<h3 id="Version_0-9-6_-_Dec_04,_2013">Version 0.9.6 - Dec 04, 2013</h3><p><strong>Updates</strong></p>
+<ul>
+<li><strong>Rating</strong> - Ratings now receive class disabled when read only, instead of receiving <code>active</code> when rateable since active are much more common</li>
+<li><strong>Grid</strong> - Fixes some instances where grid column width <code>x wide</code> was being overruled by parent element <code>x column</code>.</li>
+<li><strong>Header, Grid, Segment</strong> - Adds justified alignment</li>
+<li><strong>Message</strong> - Fixes issues with attached icon message (thanks overra)</li>
+</ul>
+<h3 id="Version_0-9-5_-_Nov_25,_2013">Version 0.9.5 - Nov 25, 2013</h3><p><strong>New</strong></p>
+<ul>
+<li><strong>Segment</strong> - Segments now have a circular variation</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>LESS files now include vendor prefixes by default instead of only including them in css releases</li>
+</ul>
+<h3 id="Version_0-9-4_-_Nov_24,_2013">Version 0.9.4 - Nov 24, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Fixes issue where falsey value (i.e. 0) could not be selected</li>
+<li><strong>Transition</strong> - Fixes transition exists function from not being called</li>
+<li><strong>Form</strong> - Adds input type=”url” to forms</li>
+<li><strong>Sidebar</strong> - Fixes right sidebars to correctly allow for sizing (Thanks DveMac)</li>
+<li><strong>Sidebar</strong> - Typo in sidebar header (Thanks slobo)</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li>Fixes various typos and missing closing html tags</li>
+</ul>
+<h3 id="Version_0-9-3_-_Nov_17,_2013">Version 0.9.3 - Nov 17, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Fixes “falsey” values (like 0) not being processed correctly</li>
+<li><strong>Segment</strong> - Fixes segment text color when nested inside inverted segment</li>
+<li><strong>Button</strong> - Fixes improper active/visible state due to :not specificity (most noticeable in mousedown on a dropdown button)</li>
+</ul>
+<h3 id="Version_0-9-2_-_Nov_8,_2013">Version 0.9.2 - Nov 8, 2013</h3><p><strong>Fixes</strong> - Fixes popup not repositioning itself when offstage.</p>
+<h3 id="Version_0-9-1_-_Nov_7,_2013">Version 0.9.1 - Nov 7, 2013</h3><p><strong>New</strong></p>
+<ul>
+<li><strong>Popup</strong> - Adds context option for popup (thanks jefmathiot)</li>
+<li><strong>Accordion</strong> - Adds formatting for nested accordions</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li><strong>Accordion</strong> - Fixes issue with accordion events inside accordions</li>
+</ul>
+<h3 id="Version_0-9-0_-_Nov_5,_2013">Version 0.9.0 - Nov 5, 2013</h3><p><strong>New</strong></p>
+<ul>
+<li><strong>Button</strong> - Basic icons now have inverted style</li>
+<li><strong>Segment</strong> - Segments can now be used with <code>ui grid</code> and <code>ui grid column/row</code></li>
+<li><strong>List</strong> - Adds animated list variation</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li><strong>Release</strong> - Fixes issues with minification in grunt</li>
+<li><strong>Examples</strong> - Adds new homepage example to release zip</li>
+<li><strong>Code Samples</strong> - Updates ACE editor version</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li><strong>List</strong> - Updated some list styles for greater flexibility</li>
+<li><strong>Dropdown</strong> - Dropdown now always receives pointer cursor in all types</li>
+<li><strong>Form</strong> - Darkens placeholder text color to be more visible</li>
+<li><strong>Menu</strong> - Dropdown position inside secondary menus should be more precise</li>
+<li><strong>Input</strong> - Labeled icons now have smaller corner labels</li>
+<li><strong>Menu</strong> - Floating dropdown menus now work inside menus</li>
+<li><strong>Button</strong> - UI buttons no longer have shadows, this helps match colored buttons in layouts</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Header</strong> - Fixes alignment of solo icons in headers</li>
+<li><strong>Button</strong> - Fixes labeled icon placement in Chrome</li>
+<li><strong>Modal</strong> - Fixes use of unsupported comma separated :not selector</li>
+<li><strong>Modal</strong> - Fixes left/right ui content receiving modal styles inappropriately</li>
+<li><strong>Menu</strong> - Fixes some inverted menu stylings not applying correctly in some instances</li>
+<li><strong>Grid</strong> - Fixes comp/tablet/mobile only columns not working if not inside a row</li>
+</ul>
+<h3 id="Version_0-8-6_-_Nov_2,_2013">Version 0.8.6 - Nov 2, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Fixes issue with scrollable variation on mobile, updates mobile styles</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li>Fixes bug in jquery waypoint 2.0.3 causing menus to be lame</li>
+</ul>
+<h3 id="Version_0-8-5_-_Nov_2,_2013">Version 0.8.5 - Nov 2, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Fixed issue with modals not working in 0.8.4 due to mistake in transition invoke</li>
+<li><strong>Modules</strong> - Invoke now gives user’s query in error message for method not found</li>
+</ul>
+<h3 id="Version_0-8-4_-_Nov_1,_2013">Version 0.8.4 - Nov 1, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Modules</strong> - Fixes bug where invoking a sentence behavior that has a single word match would always invoke single word match. I.e. <code>show modal</code> would mistakenly call <code>show</code> if it existed.</li>
+<li><strong>Modules</strong> - Adds CSS transition support detection to all modules using css transitions to allow for graceful degradation for IE8</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li><strong>Download</strong> - Fixes issue where non minified source was being included with minified copy</li>
+<li><strong>IE</strong> - Fixed some issue with IE display in docs</li>
+</ul>
+<h3 id="Version_0-8-3_-_Oct_30,_2013">Version 0.8.3 - Oct 30, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Adds fixes for opening modals when other modals are opened, adds a few new API behaviors</li>
+<li><strong>Form</strong> - Fixes issues with form validation not escaping regex characters</li>
+<li><strong>Form</strong> - Errored fields now have their icons and corner labels colored appropriately</li>
+<li><strong>Labels</strong> - Fixes formatting of links inside labels</li>
+</ul>
+<h3 id="Version_0-8-2_-_Oct_28,_2013">Version 0.8.2 - Oct 28, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Quick Fix for modal events in IE</li>
+<li><strong>Menu</strong> - Fixes arrow direction on vertical menu dropdown</li>
+<li><strong>Button</strong> - Fixes button height issue with button groups including icon and normal buttons</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li>Fixes some missing closing tags</li>
+</ul>
+<h3 id="Version_0-8-1_-_Oct_26,_2013">Version 0.8.1 - Oct 26, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Button</strong> - Fixes colored version sometime losing white text color</li>
+<li><strong>Button</strong> - Fixes 1pixel jump on animated fade buttons</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li>Prefixer now used for prefixing in grunt</li>
+<li>Spelling fixes</li>
+</ul>
+<h3 id="Version_0-8-0_-_Oct_25,_2013">Version 0.8.0 - Oct 25, 2013</h3><p><strong>New</strong></p>
+<ul>
+<li><strong>Button</strong> - Default button styles have been significantly tweaked</li>
+<li><strong>Button</strong> - Evenly divided buttons can use number classes instead of words <code>class=&quot;2 buttons&quot;</code></li>
+<li><strong>Button</strong> - New animated button styles, fade, horizontal, and vertical</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Button</strong> - Fixes “or” sizing to work for all sizes</li>
+<li><strong>Dropdown</strong> - Fixes border radius on non-selection dropdowns from changing on activation</li>
+<li><strong>Input</strong> - Action buttons now have tactile feedback like normal buttons</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li>Added more detailed contributing guide</li>
+<li>Updates info on setting up server</li>
+<li>Added new examples to button and input</li>
+</ul>
+<h3 id="Version_0-7-2_-_Oct_23,_2013">Version 0.7.2 - Oct 23, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Modal</strong> - Fixes issue with modal hiding twice onApprove</li>
+</ul>
+<h3 id="Version_0-7-1_-_Oct_23,_2013">Version 0.7.1 - Oct 23, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Dropdown</strong> - Fixes issue with dropdown icon position in chrome</li>
+<li><strong>Popup</strong> - Fixes issue with popup’s using setting inline: true</li>
+</ul>
+<h3 id="Version_0-7-0_-_Oct_22,_2013">Version 0.7.0 - Oct 22, 2013</h3><p><strong>New</strong></p>
+<ul>
+<li><strong>Table</strong> - Added awesome new responsive style to ui tables</li>
+<li><strong>Button</strong> - New social buttons for Instagram, LinkedIn, Google Plus, Pinterest</li>
+<li><strong>List</strong> - Adds documentation for module format</li>
+<li><strong>List</strong> - Adds onTabInit for local tabs on first load</li>
+<li><strong>List</strong> - Popups can now have a different target than itself</li>
+<li><strong>Modal</strong> - Modal hide can be cancelled from <code>onApprove</code> and <code>onDeny</code> by returning false from callback</li>
+<li><strong>Transition</strong> - onShow and onHide callbacks for visibility changing transitions</li>
+<li><strong>Shape</strong> - New ‘cube’ and ‘text’ shape type</li>
+<li><strong>Shape</strong> - Transition duration can now be set programatically</li>
+<li><strong>Shape</strong> - New beforeChange callback</li>
+<li><strong>Sidebar</strong> - Sidebar will now default to being exclusive and hiding other sidebars on show</li>
+<li><strong>Sidebar</strong> - Sidebar now has onChange, onShow, onHide callbacks</li>
+<li><strong>Sidebar</strong> - Sidebar now have several size variations, and a new styled variation that comes preformatted</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li><strong>Dimmer</strong> - Adds more dimmer examples, fixes settings</li>
+<li><strong>Modules</strong> - New examples and docs for all modules</li>
+<li>Adds sortable tables to docs</li>
+<li>New tabbed doc style for modules</li>
+<li>Code samples will now automatically format indention</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Button</strong> - Fixes vertical fluid buttons not taking up full width</li>
+<li><strong>Shape</strong> - Shape now works with no additional stylings</li>
+<li><strong>Shape</strong> - Fixes calculation of next side size to work correctly by using offstage element</li>
+<li><strong>Modules</strong> - Fixed issue when altering settings using <code>module(&#39;setting&#39;)</code> with an object</li>
+<li><strong>Dimmer</strong> - Dimmer now obeys border radius of parent</li>
+<li><strong>Dropdown</strong> - Dropdown cannot display inside item image</li>
+<li><strong>Dropdown</strong> - Dropdown links were being prevented by event.preventDefault used for touch devices</li>
+<li><strong>Dropdown</strong> - Fixes issue with borders on selection dropdown</li>
+<li><strong>Dropdown</strong> - Fixes pointing dropdown to appear correctly in menu</li>
+<li><strong>List</strong> - Celled tables now have celled table headers</li>
+<li><strong>Menu</strong> - Fixes border radius on tabular menu, fixes one pixel jump on active state</li>
+<li><strong>Menu</strong> - Removes vertical label width missing units in menu</li>
+<li><strong>Popup</strong> - Popup .toggle() now always hides/shows popup correctly</li>
+<li><strong>Popup</strong> - Popup fixed a bug where “top right” placed popup might sometimes be too large</li>
+<li><strong>Popup</strong> - Popup will not reshow a visible popup on hover</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li><strong>Accordion</strong> - Reduces vertical padding on basic accordion content</li>
+<li><strong>Header</strong> - Block header now uses RGBA instead of solid color by default</li>
+<li><strong>Label</strong> - Ribbon labels now have a shadow color</li>
+<li><strong>List</strong> - Horizontal padding on icon list slightly increased, fixes to icon position</li>
+<li><strong>List</strong> - Increased padding on attached labels</li>
+<li><strong>List</strong> - Leading on bulleted and ordered list slightly increased</li>
+<li><strong>Message</strong> - Increase opacity of icons on icon messages</li>
+<li><strong>Modal</strong> - Optimizes dimmer init on modal to occur on modal init and not modal show</li>
+<li><strong>Popup</strong> - Popup border now uses RGBA to look sexier on dark backgrounds</li>
+<li><strong>Popup</strong> - Popup default duration is now 200ms (slighty slower)</li>
+<li><strong>Popup</strong> - Popup metadata attribute arrowOffset is now offset for simplicities sake</li>
+<li><strong>Popup</strong> - Popup no-longer receives class name ‘visible’ on show, this allows popups to be used on dropdowns and other elements with a visible state</li>
+<li><strong>Popup</strong> - Popups are no longer inline by default</li>
+<li><strong>Table</strong> - Table headers are now darker to increase contrast with rainbow striped rows</li>
+<li><strong>Sidebar</strong> - Floating sidebar is slightly less heavily shadowed</li>
+</ul>
+<h3 id="Version_0-6-5_-_Oct_18,_2013">Version 0.6.5 - Oct 18, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes issue where browser default action, like link clicking, was prevented on dropdown item click</li>
+<li>Modal keyboard shortcuts now obey settings.closable (credit to luisrudge)</li>
+</ul>
+<h3 id="Version_0-6-4_-_Oct_16,_2013">Version 0.6.4 - Oct 16, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes issue where browser default action, like link clicking, was prevented on dropdown item click</li>
+</ul>
+<h3 id="Version_0-6-3_-_Oct_15,_2013">Version 0.6.3 - Oct 15, 2013</h3><p><strong>Deprecation</strong></p>
+<ul>
+<li>Dropdown changeText and updateForm have been deprecated and will be removed in 1.0</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li>Dropdown hide no longer selects current item as active (useful for menus)</li>
+<li>Simplified possible dropdown actions changeText and updateForm are now consolidated into activate which is the new default</li>
+</ul>
+<h3 id="Version_0-6-2_-_Oct_15,_2013">Version 0.6.2 - Oct 15, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes touch+mouse like touchscreen laptops to work with dropdowns</li>
+<li>Fixes input position inside menus with no other content</li>
+<li>Fixes input sizing on small/large menus</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li>Dropdown vastly improved for touch, now can scroll with touch without closing dropdown</li>
+<li>Dropdown active style now slightly more noticable</li>
+</ul>
+<h3 id="Version_0-6-1_-_Oct_15,_2013">Version 0.6.1 - Oct 15, 2013</h3><p><strong>Updates</strong></p>
+<ul>
+<li>Adds onApprove/onDeny callbacks to modal</li>
+<li>Adds small/large sizing of modal, reformats default modal size to be slightly inset from page grid</li>
+<li>Adds clockwise/counterclockwise rotated icon and default rotate</li>
+<li>Adds orange label/segment</li>
+<li>Adds automatic menu formatting for buttons inside menus</li>
+<li>Dropdowns in vertical menu automatically receive proper triangle pointer direction</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes modal spacing on left/right content to match up with grid gutters</li>
+<li>Fixes inheritance issues with rotated icon</li>
+<li>Fixes tests not passing for modal/dimmer</li>
+<li>Fixes overflow on item corner label</li>
+<li>Fixes right menu formatting in secondary menus</li>
+<li>Fixed shadow overlap on dropdown in menus</li>
+</ul>
+<h3 id="Version_0-6-0_-_Oct_14,_2013">Version 0.6.0 - Oct 14, 2013</h3><p><strong>Updates</strong></p>
+<ul>
+<li>Adds travis CI support with preliminary test coverage for all javascript modules</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>Minor Fixes caught with testing suite, related to ensuring proper destroy, init,</li>
+<li>Minor fixes to edge cases with seting and retrieving internals/settings as default, init, or during run-time on some modules</li>
+</ul>
+<h3 id="Version_0-5-1_-_Oct_11,_2013">Version 0.5.1 - Oct 11, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes issue with modal sometimes closing/opening multiple times caused by changes in 0.5.0</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li>Fixes vertical alignment of checkboxes</li>
+</ul>
+<h3 id="Version_0-5-0_-_Oct_10,_2013">Version 0.5.0 - Oct 10, 2013</h3><p><strong>Critical Fixes</strong></p>
+<ul>
+<li>Fixes in some UI modules, issue where settings being shared across elements initialized at the same time instead of each instance.</li>
+<li>Fixes regression where popup was overriding variation class name on positioning</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes an issue where popup that was set to inline: false was being removed prematurely</li>
+<li>Fixes inheritance issue where grid column may sometimes not appear the correct size</li>
+<li>Fixes modal hide/show dependency issue where dimmer would not always hide modal and vice-versa</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li>Adds an example to popup where inline is set to false</li>
+<li>Accordion now comes bundled with proper easing</li>
+<li>Added onCreate to popup module</li>
+</ul>
+<h3 id="Version_0-4-3_-_Oct_10,_2013">Version 0.4.3 - Oct 10, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Updates dropdown to include proper invoke</li>
+</ul>
+<h3 id="Version_0-4-2_-_Oct_9,_2013">Version 0.4.2 - Oct 9, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes issue with event bubbling being cancelled on dropdown item click</li>
+</ul>
+<h3 id="Version_0-4-1_-_Oct_9,_2013">Version 0.4.1 - Oct 9, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes heart rating color</li>
+</ul>
+<h3 id="Version_0-4-0_-_Oct_8,_2013">Version 0.4.0 - Oct 8, 2013</h3><p><strong>Updates</strong></p>
+<ul>
+<li>Updated some checkbox stylings</li>
+<li>Checkboxes markup now more semantic with default markup including only one label tag that can be inside ui checkbox</li>
+</ul>
+<h3 id="Version_0-3-8_-_Oct_8,_2013">Version 0.3.8 - Oct 8, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Display issues with accordion</li>
+</ul>
+<h3 id="Version_0-3-7_-_Oct_8,_2013">Version 0.3.7 - Oct 8, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes modal show/hide action reversal in Webkit</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li>Dimmer can now take different durations for its show and hide</li>
+</ul>
+<h3 id="Version_0-3-6_-_Oct_7,_2013">Version 0.3.6 - Oct 7, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes popup position sometimes appearing off-stage on second apperance</li>
+<li>Fixes popup positions top left, top right, bottom left, bottom right being flipped</li>
+</ul>
+<p><strong>Docs</strong></p>
+<ul>
+<li>Updates form and accordion docs</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li>Dropdown action default is now automatically determined based on type of dropdown, select dropdowns now will update form fields with default options</li>
+<li>Adds fluid variation to accordion</li>
+<li>Adds more html5 form support for forms (deneuxa)</li>
+<li>Fields can include both field and another level of fields</li>
+</ul>
+<h3 id="Version_0-3-5_-_Oct_2,_2013">Version 0.3.5 - Oct 2, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes radio checkboxes (again)</li>
+<li>Fixes header content display in icon headers</li>
+</ul>
+<h3 id="Version_0-3-4_-_Oct_2,_2013">Version 0.3.4 - Oct 2, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Transitions now work in Safari versions that do not support animation-direction</li>
+<li>Fixes accordion in safari styles getting stuck</li>
+<li>Centering of content in icon header</li>
+</ul>
+<h3 id="Version_0-3-3_-_Oct_2,_2013">Version 0.3.3 - Oct 2, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes modal not working due to destroy teardown in dimmer Issue #153</li>
+<li>Fixes selector for checkbox to fix radio boxes Issue #154</li>
+<li>Fixes issue with popup display in some edge cases Issue #128</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li>Headers and lists with icons now do not break with multiline content</li>
+<li>Examples resize with browser width</li>
+<li>Updates ACE editor library</li>
+<li>Code samples now do not change after interacting with examples</li>
+</ul>
+<h3 id="Version_0-3-2_-_Oct_2,_2013">Version 0.3.2 - Oct 2, 2013</h3><p><strong>Updates</strong></p>
+<ul>
+<li>Dropdown now formats top and right arrow icons automatically with icon coupling with sub menus</li>
+<li>Updates feed example with more feature examples</li>
+<li>Adds more sizes to ratings</li>
+<li>Makes active pagination item style more clear</li>
+<li>Adds attach events method to modal for attaching modal events to other elements</li>
+<li>Adds input focus/blur to modal, see Issue #124</li>
+<li>Adds new methods to rating: ‘get rating’, ‘clear rating’, ‘disable’, ‘enable’, adds new setting ‘clearable’</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes position of menu dropdowns in some cases</li>
+<li>Updates modal to refocus elements after close</li>
+<li>Right floated list content now receives left margin</li>
+<li>List items display issues with icons + content</li>
+<li>Fixes rating line height issue</li>
+<li>Fixes rating not being sent as first callback parameter on ‘onRate’</li>
+<li>Lists items now auto clear floats</li>
+<li>Fixes icon input inside a menu placement issues</li>
+</ul>
+<h3 id="Version_0-3-1_-_Sep_30,_2013">Version 0.3.1 - Sep 30, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes Page Grid still receiving negative margin</li>
+</ul>
+<h3 id="Version_0-3-0_-_Sep_30,_2013">Version 0.3.0 - Sep 30, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Responsive Grid is now called “Page Grid”. Responsive grids are now deprecated. This reduces confusion.</li>
+<li>Negative margins are now automatically removed from grids that are descendents of body tag.</li>
+</ul>
+<h3 id="Version_0-2-5_-_Sep_28,_2013">Version 0.2.5 - Sep 28, 2013</h3><p><strong>Fixes</strong></p>
+<ul>
+<li>Fixes checkbox  selector issue with multiple inputs inside a checkbox</li>
+<li>Modal no longer uses inline css to center when in fixed position mode</li>
+<li>Fixes dropdown to now set active item to whatever hidden input field is when using action updateForm</li>
+</ul>
+<h3 id="Version_0-2-4_-_Sep_28,_2013">Version 0.2.4 - Sep 28, 2013</h3><p><strong>Updates</strong></p>
+<ul>
+<li>Fixes issue with display on Chromebook Pixel and some devices</li>
+<li>Fixes issues with concatenated version receiving conflicted icon definitions causing icons to not function</li>
+</ul>
+<h3 id="Version_0-2-3_-_Sep_28,_2013">Version 0.2.3 - Sep 28, 2013</h3><p><strong>Updates</strong></p>
+<ul>
+<li>Fixes issues with modal not swapping to absoultely positioned from fixed when content cannot fit in viewport</li>
+</ul>
+<h3 id="Version_0-2-2_-_Sep_28,_2013">Version 0.2.2 - Sep 28, 2013</h3><p><strong>Updates</strong></p>
+<ul>
+<li>Fixes invoke returning found function instead of results of found function in dropdown, modal</li>
+</ul>
+<h3 id="Version_0-2-1_-_Sep_28,_2013">Version 0.2.1 - Sep 28, 2013</h3><p><strong>Updates</strong></p>
+<ul>
+<li>Modals can now have an icon in its left content that will be automatically formatted</li>
+<li>Preserve 3D animations are now on by default for dimmers</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>Transition now forces browser repaint after animation</li>
+<li>Refactored modal and dimmer components</li>
+<li>Modal will now resize when browser window resizes if vertical height changes</li>
+<li>Fixes issues with dimmer settings sticking between separate modals with the same dimmer.</li>
+</ul>
+<h3 id="Version_0-2-0_-_Sep_28,_2013">Version 0.2.0 - Sep 28, 2013</h3><p><strong>New</strong></p>
+<ul>
+<li>Adds responsive modal styling, modal always now sits with 5% gutters under page grid responsive styling</li>
+<li>Adds basic modal variation</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>Issue with modal active state not being removed correctly from modals</li>
+<li>Swaps modal and dropdown to use same variable naming pattern as rest of modules</li>
+<li>Removed selector count from performance logs</li>
+</ul>
+<h3 id="Version_0-1-0_-_Sep_25,_2013">Version 0.1.0 - Sep 25, 2013</h3><p><strong>New</strong></p>
+<ul>
+<li>Added new font icon set using Font Awesome port</li>
+<li>Adds dropdown icon sexiness to accordions, now with rotating pointing arrows</li>
+<li>Added old icon set as a separate basic icon set</li>
+<li>Added fluid input variation</li>
+<li>Increased size of corner labels</li>
+<li>Adds relaxed grid variation with increased gutters</li>
+<li>Added relaxed and very relaxed list type with increased padding</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>Rating icon missing font content with icon font update</li>
+<li>Padding on side of rating</li>
+<li>Adds horizontally padded, vertically padded menu item variations to allow menu items to remove padding</li>
+<li>Added fixes to tabular menu especially with attached content</li>
+<li>UI Loaders now positioned automatically in all circumstances, even with long text</li>
+<li>Connected items no longer assume 3 items per row</li>
+<li>Fixes display of left corner icon labels</li>
+</ul>
+<p><strong>Updates</strong></p>
+<ul>
+<li>Updated documentation for sidebar, transition, and form validation</li>
+<li>Updated list docs</li>
+<li>Accordion settings documentation</li>
+<li>Rating settings documentation</li>
+</ul>
