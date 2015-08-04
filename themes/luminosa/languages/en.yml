@@ -2,8 +2,10 @@ menu:
   configurations: Configurations
   five-minutes-setup: Getting Stated
   theme-settings: Theme Settings
+  theme-settings-example: Theme Settings Example
   third-party-services: Third Party Services
   schemes: Schemes
+  tag-plugins: Built-in Tag Plugins
   faqs: FAQs
   language: Language
   english: English

@@ -14,7 +14,7 @@
   <script src="{{ url_for(theme.assets.vendors) }}/semantic/dist/semantic.min.js"></script>
   <style>
     body { padding: 100px; }
-    h1.ui.header { margin-bottom: 120px; }
+    h1.ui.header { margin-bottom: 80px; }
     .logo a { color: rgba(0,0,0,.87); }
 
     a:hover { text-decoration: none; }
@@ -82,6 +82,19 @@
               <div class="content">
                 {{ _p('home.faq.header') }}
                 <div class="sub header">{{ _p('home.faq.sub_header') }}</div>
+              </div>
+            </h2>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="eight wide column">
+          <a href="/tag-plugins.html">
+            <h2 class="ui header">
+              <i class="icon rocket"></i>
+              <div class="content">
+                {{ _p('home.tag_plugins.header') }}
+                <div class="sub header">{{ _p('home.tag_plugins.sub_header') }}</div>
               </div>
             </h2>
           </a>

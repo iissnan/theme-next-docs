@@ -12,12 +12,17 @@ main:
       third-party-services:
         icon: plug
         link: /third-party-services.html
+      theme-settings-example:
+        icon: file text outline
+        link: /theme-settings-example.html
       #schemes:
         #icon: theme
         #link: /schemes.html
   faqs:
     #icon: help circle
     link: /faqs.html
+  tag-plugins:
+    link: /tag-plugins.html
 
 aside:
 #  language:

@@ -2,9 +2,11 @@ menu:
   configurations: 配置
   five-minutes-setup: 开始使用
   theme-settings: 主题设定
+  theme-settings-example: 主题配置参考
   third-party-services: 第三方服务
   schemes: Schemes
   faqs: 常见问题
+  tag-plugins: 主题内建样式
   language: 语言
   english: 英文
   chinese: 简体中文
@@ -26,3 +28,6 @@ home:
   faq:
     header: 常见问题
     sub_header: 提问频率最高的问题
+  tag_plugins:
+    header: 主题内建样式
+    sub_header: 特殊的引用、图片等样式
