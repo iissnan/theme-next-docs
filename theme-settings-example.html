@@ -1,0 +1,248 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" type="text/css" href="/vendors/semantic/dist/semantic.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.0.1"/>
+    <meta name="description" content="Site for NexT theme, NexT is an elegant theme for Hexo." />
+    <title> 主题配置参考 | NexT Documentation </title>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendors/semantic/dist/semantic.min.js"></script>
+  </head>
+
+  <body>
+    <div class="luminosa">
+
+      <header class="ui fixed inverted menu stackable">
+        <div class="ui container">
+          <a href="/" class="header item">NexT</a>
+          
+  
+    
+      <a href="/five-minutes-setup.html" class="item">
+        
+        开始使用
+      </a>
+    
+  
+    
+      <div class="ui dropdown item">
+        
+        配置
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          
+            <a href="/theme-settings.html" class="item">
+              
+                <i class="icon star"></i>
+              
+              主题设定
+            </a>
+          
+            <a href="/third-party-services.html" class="item">
+              
+                <i class="icon plug"></i>
+              
+              第三方服务
+            </a>
+          
+            <a href="/theme-settings-example.html" class="item">
+              
+                <i class="icon file text outline"></i>
+              
+              主题配置参考
+            </a>
+          
+        </div>
+      </div>
+    
+  
+    
+      <a href="/faqs.html" class="item">
+        
+        常见问题
+      </a>
+    
+  
+    
+      <a href="/tag-plugins.html" class="item">
+        
+        主题内建样式
+      </a>
+    
+  
+
+
+          <div class="right menu">
+            
+  
+    
+      <div class="ui dropdown item">
+        
+        关于
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          
+            <a href="http://notes.iissnan.com/" class="item">
+              
+                <i class="icon unhide"></i>
+              
+              预览 Mist
+            </a>
+          
+            <a href="https://github.com/iissnan/hexo-theme-next" class="item">
+              
+                <i class="icon github alternate"></i>
+              
+              GitHub 仓库地址
+            </a>
+          
+        </div>
+      </div>
+    
+  
+
+          </div>
+        </div>
+      </header>
+
+      
+        <main class="ui main text container post">
+          <h1 class="ui center aligned icon header"><i class=" circular file text outline icon"></i><p>主题配置参考</p>
+</h1>
+<h2 id="放置在_站点配置文件_中的选项">放置在 站点配置文件 中的选项</h2><pre><code><span class="preprocessor"># =============================================================================</span>
+<span class="preprocessor"># NexT Theme configuration</span>
+<span class="preprocessor"># =============================================================================</span>
+
+<span class="preprocessor"># 多说帐号</span>
+duoshuo_shortname: your-duoshuo-shortname
+
+<span class="preprocessor"># DISQUS 帐号 （如果已经设置 多说 帐号，此选项将被跳过）</span>
+disqus_shortname: your-disqus-shortname
+
+<span class="preprocessor"># JiaThis 分享服务</span>
+jiathis: <span class="literal">true</span>
+
+<span class="preprocessor"># 多说 分享服务（必须启用多说）</span>
+duoshuo_share:
+
+<span class="preprocessor"># 社交链接，将在侧栏中显示</span>
+social:
+  GitHub: your-github-url
+  Twitter: your-twitter-url
+  Weibo: your-weibo-url
+  DouBan: your-douban-url
+  ZhiHu: your-zhihu-url
+  # 等等
+
+
+<span class="preprocessor"># Creative Commons 4.0 International License.</span>
+<span class="preprocessor"># http://creativecommons.org/</span>
+<span class="preprocessor"># Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</span>
+creative_commons: by-nc-sa
+
+<span class="preprocessor"># Google 站长工具验证，请选择 `HTML Meta` 验证方式</span>
+<span class="preprocessor"># See: https://www.google.com/webmasters/</span>
+google_site_verification: VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0
+
+
+<span class="preprocessor"># Google 分析 ID</span>
+google_analytics:
+
+
+<span class="preprocessor"># 百度统计 ID，此 ID 是百度统计提供脚本中 hm.js? 后面那串字符，非百度统计帐号</span>
+baidu_analytics: <span class="number">50</span>c15455e37f70aea674ff4a663eef27
+
+<span class="preprocessor"># 站点起始时间</span>
+since: <span class="number">2011</span>
+
+<span class="preprocessor"># =============================================================================</span>
+<span class="preprocessor"># End NexT Theme configuration</span>
+<span class="preprocessor"># =============================================================================</span>
+</code></pre><h2 id="放置在_主题配置文件_中的选项">放置在 主题配置文件 中的选项</h2><pre><code><span class="preprocessor"># 菜单配置</span>
+menu:
+  home: /
+  archives: /archives
+  #categories: /categories
+  tags: /tags
+  #about: /about
+
+
+<span class="preprocessor"># Favicon</span>
+<span class="preprocessor"># 从`Next 0.2`起，favicon将不再放置于主题之内。</span>
+<span class="preprocessor"># 请将你的favicon放置在`hexo-site/source/`目录下。</span>
+favicon: /favicon.ico
+
+
+<span class="preprocessor"># 设置为`false`不显示`rss`链接</span>
+<span class="preprocessor"># 留空，并且通过`hexo-site-feed`插件配置使用默认的feed</span>
+<span class="preprocessor"># 设置成特定的`url`，适用于通过第三方服务定制feed的情况。</span>
+rss: <span class="literal">false</span>
+
+<span class="preprocessor"># 图标字体</span>
+<span class="preprocessor"># NexT内建四种图标: default | linecons | fifty-shades | feather</span>
+icon_font: <span class="keyword">default</span>
+<span class="preprocessor">#icon_font: fifty-shades</span>
+<span class="preprocessor">#icon_font: feather</span>
+<span class="preprocessor">#icon_font: linecons</span>
+
+
+<span class="preprocessor"># 代码高亮主题</span>
+<span class="preprocessor"># available: normal | night | night eighties | night blue | night bright</span>
+highlight_theme: normal
+
+
+<span class="preprocessor"># MathJax support</span>
+<span class="preprocessor"># 开启数学公式渲染支持，默认关闭。设置为 `true` 开启。</span>
+mathjax:
+
+
+<span class="preprocessor"># Mist</span>
+<span class="preprocessor"># 使用 Mist 主题</span>
+<span class="preprocessor">#scheme: Mist</span>
+
+
+<span class="preprocessor"># Sidebar 侧栏行为，可选值有</span>
+<span class="preprocessor">#  - post   默认值，在文章页面自动展开侧栏</span>
+<span class="preprocessor">#  - always 在所有页面自动展开侧栏</span>
+<span class="preprocessor">#  - hide   在手动点击侧栏的开关按钮时展开</span>
+sidebar: post
+<span class="preprocessor">#sidebar: always</span>
+<span class="preprocessor">#sidebar: hide</span>
+
+
+<span class="preprocessor"># `阅读全文` 按钮跳转之后是否自动滚动页面到设置 `&lt;!-- more --&gt;` 的地方。</span>
+scroll_to_more: <span class="literal">true</span>
+
+
+<span class="preprocessor"># 是否为侧边栏文章的目录自动添加索引，默认开启。设置为 `false` 关闭。</span>
+toc_list_number: <span class="literal">true</span>
+</code></pre>
+        </main>
+      
+
+      
+        
+          
+
+          
+        
+      
+
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('.menu .item').tab({
+          context: 'parent'
+        });
+      });
+    </script>
+  </body>
+</html>
