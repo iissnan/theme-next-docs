@@ -118,14 +118,14 @@ NexT 支持集成 [Swiftype](https://swiftype.com/) 和 [微搜索](http://tinys
 ### Swiftype
 
 {% tabmenu tabular %}
-  {% tabmenuitem swiftype-step-1 active %} 步骤一 {% endtabmenuitem %}
+  {% tabmenuitem swiftype-step-1 activate %} 步骤一 {% endtabmenuitem %}
   {% tabmenuitem swiftype-step-2 %} 步骤二 {% endtabmenuitem %}
   {% tabmenuitem swiftype-step-3 %} 步骤三 {% endtabmenuitem %}
   {% tabmenuitem swiftype-step-4 %} 步骤四 {% endtabmenuitem %}
   {% tabmenuitem swiftype-step-5 %} 步骤五 {% endtabmenuitem %}
 {% endtabmenu %}
 
-{% tabcontent swiftype-step-1 active %}
+{% tabcontent swiftype-step-1 activate %}
 前往 [Swiftype 注册页面](https://swiftype.com/users/sign_up)，注册一个新账户。
 
 {% img ui centered bordered image /uploads/swiftype/step-1.png %}
