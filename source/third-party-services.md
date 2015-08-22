@@ -138,7 +138,7 @@ NexT 支持集成 [Swiftype](https://swiftype.com/) 和 [微搜索](http://tinys
 {% endtabcontent %}
 
 {% tabcontent swiftype-step-3 %}
-搜索引擎创建完成后，在菜单中选择 `Integrate -> Install Search` 开启搜索定制，安装步骤完成定制。最后一步记得点击 `Active` 按钮。
+搜索引擎创建完成后，在菜单中选择 `Integrate -> Install Search` 开启搜索定制，安装步骤完成定制。最后一步记得点击 `Activate` 按钮。
 
 {% img ui centered bordered image /uploads/swiftype/step-3.png %}
 {% endtabcontent %}
