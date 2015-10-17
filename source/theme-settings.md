@@ -20,7 +20,9 @@ NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保
 {% endicongroup %}
 
 
-## 自定义 LOGO 以及主题图标 
+## 自定义 LOGO 以及主题图标
+
+<div class="ui red message"><i class="warning sign icon"></i>**Deprecated!**</div>
 
 NexT 使用 [IcoMoon](http://icomoon.io) 的服务为主题提供四套内建的图标。
 
@@ -228,6 +230,7 @@ NexT 借助于 MathJax 来显示数学公式，此选项默认关闭。
     # MathJax Support
     mathjax:
 
+ProTip: [使用七牛 CDN 来加速 MathJax 脚本的加载](https://github.com/iissnan/hexo-theme-next/pull/363)
 
 ## 侧边栏头像
 

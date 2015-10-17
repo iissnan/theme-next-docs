@@ -215,6 +215,6 @@ commonweal  | `commonweal: /404.html`   | 公益 404 （需手动创建）
 然后，编辑 **站点配置文件**，新增 `swiftype_key` 字段，值为你的 swiftype 搜索引擎的 key。
 
 
-{% dividerhorizontal %}参考{% enddividerhorizontal %}
+{% dividerhorizontal %}下一步{% enddividerhorizontal %}
 
-- [主题配置参考](https://github.com/iissnan/hexo-theme-next/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83)
+- [主题配置](/theme-settings.html)

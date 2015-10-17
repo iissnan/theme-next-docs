@@ -20,17 +20,16 @@ $blue-deep    = #262a30
 $border-color             = $grey-light
 
 $line-height-code-block   = 1.4
-$font-family-base         = $font-family-chinese, sans-serif
-$font-family-monospace    = "PT Mono", Consolas, Monaco, Menlo, monospace
+$font-family-chinese      = "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
+$font-family-base         = "Lato", $font-family-chinese, sans-serif
+$font-family-monospace    = "Input Mono", Consolas, Monaco, Menlo, monospace
 
 $content-desktop-padding  = 40px
 
 
 @import "highlight/highlight";
 
-a:hover {
-  text-decoration: underline;
-}
+a:hover { text-decoration: underline; }
 
 hr {
   margin: 40px 0;
@@ -60,13 +59,9 @@ blockquote {
 }
 
 
-.ui.text.container {
-  font: 16px/1.6 "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
-}
+.ui.text.container { font: 16px/1.6 $font-family-base; }
 
-.ui.menu {
-  font-family: "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
-}
+.ui.menu { font-family: $font-family-base; }
 
 main {
   margin-top: 100px;
@@ -74,9 +69,7 @@ main {
 }
 
 h1, h2, h3, h4, h5,
-.ui.header {
-  font-family: Georgia, "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
-}
+.ui.header { font-family: $font-family-base; }
 
 h1.ui.icon.header { margin-bottom: 60px; }
 h2.ui.header.dividing { margin-top: 80px; }

@@ -71,17 +71,21 @@ NexT 支持三种方式来控制首页文章的显示方式。若需要在首页
 
 ### 自定义字体
 
-编辑主题的 `source/css/_custom/variables.styl` 文件，新增两个变量：
+编辑主题的 `source/css/_variables/custom/.styl` 文件，新增两个变量：
 
     $font-family-headings = Georgia, sans // 标题，修改成你期望的字体族
     $font-family-base = "Microsoft YaHei", Verdana, sans-serif // 修改成你期望的字体族
+    $code-font-family = "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace // 代码字体
+    $font-size-base = 16px // 正文字体的大小
+    $code-font-size = 13px // 代码字体的大小
 
 
 ### 自定义页面内容区域的宽度
 
-编辑主题的 `source/css/_custom/variables.styl` 文件，新增变量：
+编辑主题的 `source/css/_variables/custom.styl` 文件，新增变量：
 
     $content-desktop = 700px  // 修改成你期望的宽度
+    $content-desktop-large = 900px // 当视窗超过 1600px 后的宽度
 
 ### 标签和分类页面的统计数据不正确
 

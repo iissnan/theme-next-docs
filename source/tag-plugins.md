@@ -21,6 +21,9 @@ title: 主题内建样式
 
 <!-- Built-in tag (Require NexT 0.4.5 or above) -->
 {% centerquote %}blah blah blah{% endcenterquote %}
+
+<!-- 别名 -->
+{% cq %} blah blah blah {% endcq %}
 ```
 
 
@@ -40,4 +43,7 @@ title: 主题内建样式
 
 <!-- Built-in tag (Require NexT 0.4.5 or above) -->
 {% fullimage /image-url, alt, title %}
+
+<!-- 别名 -->
+{% fi /image-url, alt, title %}
 ```
