@@ -1,0 +1,27 @@
+{
+  "name": "theme-next",
+  "version": "2.0.0",
+  "homepage": "https://github.com/iissnan/theme-next",
+  "authors": [
+    "Vi <iissnan@gmail.com>"
+  ],
+  "description": "NexT Documentation",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "NexT"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0"
+  }
+}
