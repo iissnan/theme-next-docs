@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>开始使用 | NexT 文档</title>
+  <link rel="stylesheet" href="/assets/vendors/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&amp;subset=latin,latin-ext" />
+  <link rel="stylesheet" href="/assets/vendors/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+
+<body class="doc-getting-started">
+  <!--[if lt IE 10]>
+  <p class="browserupgrade">
+    You are using an <strong>outdated</strong> browser.
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+  </p>
+  <![endif]-->
+
+  <header id="top">
+    <nav class="navbar navbar-inverse navbar-static-top" id="nav">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">NexT</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#">开始使用</a></li>
+            <li><a href="#">主题配置</a></li>
+            <li><a href="#">内建标签</a></li>
+            <li><a href="#">常见问题</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="docs">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-9" role="main">
+
+          <p>
+            Hexo 有两份主要的配置文件（<code>_config.yml</code>），一份位于站点根目录下，另一份位于主题目录下。
+            为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>，后者称为 <strong>主题配置文件</strong>。
+          </p>
+
+          <div class="docs-section">
+            <h1 class="page-header" id="install">安装</h1>
+            <p>Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 `themes` 目录下，然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。</p>
+            <h2>下载 NexT</h2>
+            <p>如果你熟悉 <a href="http://git-scm.com/" target="_blank">Git</a>，建议你使用 克隆最新版本 的方式，方便之后的主题更新。</p>
+            <div>
+
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                  <a href="#clone" aria-controls="clone" role="tab" data-toggle="tab">
+                    克隆最新版本
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#stable" aria-controls="profile" role="tab" data-toggle="tab">
+                    下载稳定版本
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="clone">
+                  <p>在终端窗口下，定位到 Hexo 站点目录下。使用 <code>Git</code> checkout 代码：</p>
+                  <pre><code>$ cd your-hexo-site
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="stable">
+                  <ol>
+                    <li>
+                      前往 NexT 版本 [发布页面](https://github.com/iissnan/hexo-theme-next/releases)。
+                    </li>
+                    <li>
+                      选择你所需要的版本，下载 Download 下的 Source Code (zip) 到本地。例如，下载 v0.4.0 版本：
+                      <img src="/assets/img/five-minutes-setup/download-stable-version.png" alt="" />
+                    </li>
+                    <li>
+                      解压所下载的压缩包至站点的 themes 目录下，
+                      并将 解压后的文件夹名称（<code>hexo-theme-next-0.4.0</code>）更改为 <code>next</code>。
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+            </div>
+            <h2>启用 NexT</h2>
+            <p>
+              与所有 Hexo 主题启用的模式一样。
+              当 克隆/下载 完成后，打开 站点配置文件，找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。
+            </p>
+
+            <h2>验证</h2>
+            <p>运行 <code>hexo s --debug</code>，当命令行输出中提示：</p>
+            <pre>
+              <code>
+                Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
+              </code>
+            </pre>
+            <p>
+              此时即可访问 <code>http://localhost:4000</code>，确保站点正确运行。默认你看到的样式可能如下：
+              <img src="/assets/img/five-minutes-setup/validation.png" alt="" />
+            </p>
+
+            <p class="bg-success">当你看到如上图所示时，说明 你已成功安装 NexT 主题。</p>
+          </div>
+
+          <div class="docs-section">
+            <h1 class="page-header" id="theme-settings">主题设定</h1>
+
+            <h2>选择 Scheme</h2>
+            <p>
+              NexT 通过 Scheme 提供主题中的主题。
+              Mist 是 NexT 的第一款 Scheme。
+              启用 Mist 仅需在 主题配置文件 中将 <code>#scheme: Mist</code> 前面的 <code>#</code> 注释去掉即可。
+            </p>
+
+            <h2>语言设置</h2>
+            <p>编辑 站点配置文件，将 <code>language</code> 设置成你所需要的语言。<br>例如选用正体中文，则配置为：</p>
+            <pre><code>language: zh-hk</code></pre>
+            <p>可用的语言如以下表格所示：</p>
+            <table class="table table-condensed table-striped table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>语言</th>
+                <th>代码</th>
+                <th>设定值</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>English</td>
+                <td><code>en</code></td>
+                <td><code>language: en</code></td>
+              </tr>
+              <tr>
+                <td>简体中文</td>
+                <td><code>zh-Hans</code></td>
+                <td><code>language: zh-Hans</code></td>
+              </tr>
+              <tr>
+                <td>French</td>
+                <td><code>fr-FR</code></td>
+                <td><code>language: fr-FR</code></td>
+              </tr>
+              <tr>
+                <td>正体中文</td>
+                <td><code>zh-hk</code>/<code>zh-tw</code></td>
+                <td><code>language: zh-hk</code></td>
+              </tr>
+              <tr>
+                <td>Russian</td>
+                <td><code>ru</code></td>
+                <td><code>language: ru</code></td>
+              </tr>
+              <tr>
+                <td>German</td>
+                <td><code>de</code></td>
+                <td><code>language: de</code></td>
+              </tr>
+              </tbody>
+            </table>
+
+            <h2>菜单设置</h2>
+            <p>菜单配置在 主题配置文件 的 <code>menu</code>。 若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉。默认支持的菜单项有：</p>
+            <table class="table table-condensed table-striped table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>键值</th>
+                <th>设定值</th>
+                <th>comment</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>home</td>
+                <td><code>home: /</code></td>
+                <td>主页</td>
+              </tr>
+              <tr>
+                <td>archives</td>
+                <td><code>archives: /archives</code></td>
+                <td>归档页</td>
+              </tr>
+              <tr>
+                <td>categories</td>
+                <td><code>categories: /categories</code></td>
+                <td>分类页（需手动创建）</td>
+              </tr>
+              <tr>
+                <td>tags</td>
+                <td><code>tags: /tags</code></td>
+                <td>标签页（需手动创建）</td>
+              </tr>
+              <tr>
+                <td>about</td>
+                <td><code>about: /about</code></td>
+                <td>关于页面 （需手动创建）</td>
+              </tr>
+              <tr>
+                <td>commonweal</td>
+                <td><code>commonweal: /404.html</code></td>
+                <td>公益 404 （需手动创建）</td>
+              </tr>
+              </tbody>
+            </table>
+            <p>菜单示例配置：</p>
+            <pre><code>
+              menu:
+                home: /
+                archives: /archives
+                #about: /about
+                #categories: /categories
+                tags: /tags
+                #commonweal: /404.html
+            </code></pre>
+
+            <h2>侧栏设置</h2>
+            <p>
+              默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示。
+              可以通过修改 主题配置文件 中的 <code>sidebar</code> 字段来控制侧栏的行为。
+            </p>
+            <p>支持的选项有：</p>
+            <ul>
+              <li><code>post</code>    - 默认行为，在文章页面（拥有目录列表）时显示</li>
+              <li><code>always</code>  - 在所有页面中都显示</li>
+              <li><code>hide</code>    - 在所有页面中都隐藏（可以手动展开）</li>
+            </ul>
+            <p>侧栏示例配置：</p>
+            <pre><code>sidebar: post</code></pre>
+
+            <h2>头像设置</h2>
+            <p>编辑 站点配置文件，新增字段 <code>avatar</code>， 值设置成头像的链接地址。</p>
+            <p>其中，头像的链接地址可以是：</p>
+            <table class="table table-condensed table-striped table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>地址</th>
+                <th>值</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>完整的互联网 URL</td>
+                <td><code>https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460</code></td>
+              </tr>
+              <tr>
+                <td>站点内的地址</td>
+                <td><code>/uploads/avatar.jpg</code>  - 需要将你的头像图片放置在 站点的 <code>source/uploads/</code>（可能需要新建uploads目录）</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><code>/images/avatar.jpg</code>   - 需要将你的头像图片放置在 主题的 <code>source/images/</code> 目录下</td>
+              </tr>
+              </tbody>
+            </table>
+            <p>头像设置示例： </p>
+            <pre><code>avatar: https://avatars1.githubusercontent.com/u/32269?v=3&s=460</code></pre>
+
+            <h2>作者名称</h2>
+            <p>编辑 站点配置文件，设置 <code>author</code> 为你的昵称。</p>
+
+            <h2>站点描述</h2>
+            <p>编辑 站点配置文件，设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
+          </div>
+
+          <div class="docs-section">
+            <h1 id="third-party-services">第三方服务</h1>
+
+            <h2>多说评论</h2>
+            <p class="bg-warning">注意：duoshuo_shortname 不是你的多说登录的 id</p>
+            <p>使用多说前需要先在 多说 创建一个站点。具体步骤如下：</p>
+            <ol>
+              <li>登录后在首页选择 “我要安装”。</li>
+              <li><p>创建站点，填写站点相关信息。<strong>多说域名</strong> 这一栏填写的即是你的 <code>duoshuo_shortname</code>，如图：</p>
+                <img src="/uploads/five-minutes-setup/duoshuo-create-site.png" class="ui fluid bordered image">
+              </li>
+              <li><p>创建站点完成后在 站点配置文件 中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。</p>
+              </li>
+            </ol>
+            <p>多说设置示例：</p>
+            <pre><code>duoshuo_shortname: iissnan-notes</code></pre>
+
+            <h2>百度统计</h2>
+            <p class="bg-warning">注意： baidu_analytics 不是你的百度 id 或者 百度统计 id</p>
+            <ol>
+              <li>登录 <a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a>，定位到站点的代码获取页面</li>
+              <li>复制 <code>hm.js?</code> 后面那串统计脚本 id，如： <img src="/uploads/five-minutes-setup/analytics-baidu-id.png" class="ui fluid bordered image"></li>
+              <li>编辑 站点配置文件，新增字段 <code>baidu_analytics</code> 字段，值设置成你的百度统计脚本 id。</li>
+            </ol>
+
+            <h2>Swiftype 搜索</h2>
+            <p>
+              使用 Swiftype 之前需要前往 Swiftype 配置一个搜索引擎。
+              <br>然后，编辑 <strong>站点配置文件</strong>，新增 <code>swiftype_key</code> 字段，值为你的 swiftype 搜索引擎的 key。
+            </p>
+          </div>
+          
+        </div>
+
+        <div class="col-md-3">
+          <nav>
+            <ul class="nav">
+              <li>
+                <a href="#install">安装</a>
+                <ul class="nav">
+                  <li>下载 NexT</li>
+                  <li>启用 NexT</li>
+                  <li>验证</li>
+                </ul>
+              </li>
+              <li>
+                <a href="#theme-settings">主题设定</a>
+                <ul class="nav">
+                  <li>选择 Scheme</li>
+                  <li>语言设置</li>
+                  <li>菜单设置</li>
+                  <li>侧栏设置</li>
+                  <li>头像设置</li>
+                  <li>作者名称</li>
+                  <li>站点描述</li>
+                </ul>
+              </li>
+              <li>
+                <a href="#third-party-services">
+                  第三方服务
+                </a>
+                <ul class="nav">
+                  <li>多说评论</li>
+                  <li>百度统计</li>
+                  <li>Swiftype 搜索</li>
+                </ul>
+              </li>
+            </ul>
+            <a href="#top">返回顶部</a>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <p>
+        2015  <i class="fa fa-heart"></i>  IIssNan <br />
+        <span class="text-muted">精工细作</span>
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="/assets/vendors/jquery/dist/jquery.js"></script>
+  <script src="/assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+</body>
+</html>
