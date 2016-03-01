@@ -3,7 +3,7 @@ browserSync = require('browser-sync')
 
 gulp.task 'browser-sync', ->
   browserSync.init {
-    server: baseDir: './'
+    server: baseDir: './app'
   }
 
 
