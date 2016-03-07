@@ -1,5 +1,11 @@
+@import "menu";
+
 body {
   font: 14px/1.6 Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
 }
 
 hr.half-rule {
@@ -7,64 +13,26 @@ hr.half-rule {
   width: 100px;
 }
 
+.page-description {
+  i {
+    margin-bottom: 1rem;
+    padding: 25px;
+    border: 4px solid #eee;
+    border-radius: 50%;
+    font-size: 50px;
+  }
+}
 
 header {
   background: rgba(0,0,0,0.7) no-repeat 0 50%;
   background-size: cover;
 }
 
-/* ========================================
-   navbar
-   ======================================== */
-.navbar {
-  margin-bottom: 0;
-  width: 100%;
-  transition: all 0.5s;
+main {
+  margin-top: 100px;
+
+  .home & { margin : 0; }
 }
-
-.home .navbar {
-  background: none;
-  border-color: transparent;
-}
-
-.navbar-inverse .navbar-brand { color: white; }
-
-.navbar-inverse .navbar-nav>li>a {
-  color: white;
-}
-
-.navbar.affix-top .navbar-nav>li>a:focus:after,
-.navbar.affix-top .navbar-nav>li>a:hover:after,
-.navbar.affix-top .navbar-nav>.active>a:after,
-.navbar.affix-top .navbar-nav>.active>a:focus:after,
-.navbar.affix-top .navbar-nav>.active>a:hover:after {
-  content: " ";
-  position: absolute;
-  bottom: 6px;
-  left: 50%;
-  margin-left: -3px;
-  width: 6px;
-  height: 6px;
-  background: white;
-  border-radius: 50%;
-}
-
-.navbar.affix-top .navbar-nav>.active>a,
-.navbar.affix-top .navbar-nav>.active>a:focus,
-.navbar.affix-top .navbar-nav>.active>a:hover {
-  background-color: transparent;
-}
-
-.navbar.affix {
-  color: #333;
-  background: #222;
-  border-color: #080808;
-}
-
-.navbar-inverse.affix .navbar-nav>li>a {
-  color: #9d9d9d;
-}
-
 
 /* ========================================
    doc categories
@@ -117,6 +85,9 @@ header {
   border-color: #e9eaec;
 }
 
+.nav>li>ul {
+  margin: 0 10px;
+}
 
 /* ========================================
    feature-schemes

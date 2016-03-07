@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh">
 <head>
   <meta charset="utf-8">
@@ -20,7 +20,9 @@
     {% endblock %}
   </header>
 
-  {% block main %}{% endblock %}
+  <main>
+    {% block main %}{% endblock %}
+  </main>
 
   {% block footer %}
     {% include './footer.nun' %}

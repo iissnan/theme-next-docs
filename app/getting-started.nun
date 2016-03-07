@@ -1,9 +1,53 @@
 {% extends './templates/layout.nun' %}
 
 {% block main %}
+  <h1 class="text-center page-description">
+    <i class="fa-flag-checkered fa"></i>
+    <p>5 分钟快速安装</p>
+  </h1>
+
+  <hr class="half-rule">
+
   <section class="docs">
     <div class="container">
       <div class="row">
+        <div class="col-md-3">
+          <nav>
+            <ul class="nav">
+              <li>
+                <a href="#install">安装</a>
+                <ul class="nav">
+                  <li><a href="#下载_NexT_主题">下载 NexT</a></li>
+                  <li><a href="">启用 NexT</a></li>
+                  <li><a href="">验证</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#theme-settings">主题设定</a>
+                <ul class="nav">
+                  <li><a href="">选择 Scheme</a></li>
+                  <li><a href="">设置 语言</a></li>
+                  <li><a href="">设置 菜单</a></li>
+                  <li><a href="">设置 侧栏</a></li>
+                  <li><a href="">设置 头像</a></li>
+                  <li><a href="">作者名称</a></li>
+                  <li><a href="">站点描述</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#third-party-services">
+                  第三方服务
+                </a>
+                <ul class="nav">
+                  <li><a href="">多说评论</a></li>
+                  <li><a href="">百度统计</a></li>
+                  <li><a href="">Swiftype 搜索</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a href="#top">返回顶部</a>
+          </nav>
+        </div>
 
         <div class="col-md-9" role="main">
 
@@ -40,7 +84,7 @@
                 <div role="tabpanel" class="tab-pane active" id="clone">
                   <p>在终端窗口下，定位到 Hexo 站点目录下。使用 <code>Git</code> checkout 代码：</p>
                   <pre><code>$ cd your-hexo-site
-  $ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre>
+                      $ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="stable">
                   <ol>
@@ -49,7 +93,7 @@
                     </li>
                     <li>
                       选择你所需要的版本，下载 Download 下的 Source Code (zip) 到本地。例如，下载 v0.4.0 版本：
-                      <img src="/uploads/five-minutes-setup/download-stable-version.png" alt="" />
+                      <img src="/uploads/five-minutes-setup/download-stable-version.png" alt=""/>
                     </li>
                     <li>
                       解压所下载的压缩包至站点的 themes 目录下，
@@ -76,10 +120,10 @@
             </pre>
             <p>
               此时即可访问 <code>http://localhost:4000</code>，确保站点正确运行。默认你看到的样式可能如下：
-              <img src="/uploads/five-minutes-setup/validation.png" alt="" />
+              <img src="/uploads/five-minutes-setup/validation.png" alt=""/>
             </p>
 
-            <p class="bg-success">当你看到如上图所示时，说明 你已成功安装 NexT 主题。</p>
+            <div class="alert alert-success">当你看到如上图所示时，说明 你已成功安装 NexT 主题。</div>
           </div>
 
           <div class="docs-section">
@@ -183,14 +227,14 @@
             </table>
             <p>菜单示例配置：</p>
             <pre><code>
-              menu:
+                menu:
                 home: /
                 archives: /archives
                 #about: /about
                 #categories: /categories
                 tags: /tags
                 #commonweal: /404.html
-            </code></pre>
+              </code></pre>
 
             <h2>侧栏设置</h2>
             <p>
@@ -199,9 +243,9 @@
             </p>
             <p>支持的选项有：</p>
             <ul>
-              <li><code>post</code>    - 默认行为，在文章页面（拥有目录列表）时显示</li>
-              <li><code>always</code>  - 在所有页面中都显示</li>
-              <li><code>hide</code>    - 在所有页面中都隐藏（可以手动展开）</li>
+              <li><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</li>
+              <li><code>always</code> - 在所有页面中都显示</li>
+              <li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
             </ul>
             <p>侧栏示例配置：</p>
             <pre><code>sidebar: post</code></pre>
@@ -223,11 +267,12 @@
               </tr>
               <tr>
                 <td>站点内的地址</td>
-                <td><code>/uploads/avatar.jpg</code>  - 需要将你的头像图片放置在 站点的 <code>source/uploads/</code>（可能需要新建uploads目录）</td>
+                <td><code>/uploads/avatar.jpg</code> - 需要将你的头像图片放置在 站点的 <code>source/uploads/</code>（可能需要新建uploads目录）
+                </td>
               </tr>
               <tr>
                 <td></td>
-                <td><code>/images/avatar.jpg</code>   - 需要将你的头像图片放置在 主题的 <code>source/images/</code> 目录下</td>
+                <td><code>/images/avatar.jpg</code> - 需要将你的头像图片放置在 主题的 <code>source/images/</code> 目录下</td>
               </tr>
               </tbody>
             </table>
@@ -245,7 +290,7 @@
             <h1 id="third-party-services">第三方服务</h1>
 
             <h2>多说评论</h2>
-            <p class="bg-warning">注意：duoshuo_shortname 不是你的多说登录的 id</p>
+            <div class="alert alert-warning">注意：duoshuo_shortname 不是你的多说登录的 id</div>
             <p>使用多说前需要先在 多说 创建一个站点。具体步骤如下：</p>
             <ol>
               <li>登录后在首页选择 “我要安装”。</li>
@@ -259,10 +304,11 @@
             <pre><code>duoshuo_shortname: iissnan-notes</code></pre>
 
             <h2>百度统计</h2>
-            <p class="bg-warning">注意： baidu_analytics 不是你的百度 id 或者 百度统计 id</p>
+            <div class="alert alert-warning">注意： baidu_analytics 不是你的百度 id 或者 百度统计 id</div>
             <ol>
               <li>登录 <a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a>，定位到站点的代码获取页面</li>
-              <li>复制 <code>hm.js?</code> 后面那串统计脚本 id，如： <img src="/uploads/five-minutes-setup/analytics-baidu-id.png" class="ui fluid bordered image"></li>
+              <li>复制 <code>hm.js?</code> 后面那串统计脚本 id，如： <img src="/uploads/five-minutes-setup/analytics-baidu-id.png"
+                                                             class="ui fluid bordered image"></li>
               <li>编辑 站点配置文件，新增字段 <code>baidu_analytics</code> 字段，值设置成你的百度统计脚本 id。</li>
             </ol>
 
@@ -273,44 +319,6 @@
             </p>
           </div>
 
-        </div>
-
-        <div class="col-md-3">
-          <nav>
-            <ul class="nav">
-              <li>
-                <a href="#install">安装</a>
-                <ul class="nav">
-                  <li>下载 NexT</li>
-                  <li>启用 NexT</li>
-                  <li>验证</li>
-                </ul>
-              </li>
-              <li>
-                <a href="#theme-settings">主题设定</a>
-                <ul class="nav">
-                  <li>选择 Scheme</li>
-                  <li>语言设置</li>
-                  <li>菜单设置</li>
-                  <li>侧栏设置</li>
-                  <li>头像设置</li>
-                  <li>作者名称</li>
-                  <li>站点描述</li>
-                </ul>
-              </li>
-              <li>
-                <a href="#third-party-services">
-                  第三方服务
-                </a>
-                <ul class="nav">
-                  <li>多说评论</li>
-                  <li>百度统计</li>
-                  <li>Swiftype 搜索</li>
-                </ul>
-              </li>
-            </ul>
-            <a href="#top">返回顶部</a>
-          </nav>
         </div>
 
       </div>

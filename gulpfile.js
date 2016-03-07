@@ -14,12 +14,13 @@ var source = {
   },
   dirs: {
     index: './app',
-    css: '/app/assets/css'
+    css: './app/assets/css'
   }
 };
 
 gulp.task('browser-sync', () => {
   browserSync.init({
+    open: false,
     server: {
       baseDir: './app',
       middleware: [

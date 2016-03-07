@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-static-top" id="nav">
+<nav class="navbar navbar-default  navbar-fixed-top" id="nav">
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">NexT</a>
