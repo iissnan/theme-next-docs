@@ -1,3 +1,13 @@
 node_modules/
 .idea/
 .vagrant/
+npm-debug.log
+
+# Bootstrap
+app/assets/vendors/bootstrap/**
+!app/assets/vendors/bootstrap/dist/
+
+# FontAwesome
+app/assets/vendors/font-awesome/**
+!app/assets/vendors/font-awesome/css/
+!app/assets/vendors/font-awesome/fonts/

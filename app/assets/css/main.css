@@ -18,10 +18,13 @@ header {
    ======================================== */
 .navbar {
   margin-bottom: 0;
-  background: none;
-  border-color: transparent;
   width: 100%;
   transition: all 0.5s;
+}
+
+.home .navbar {
+  background: none;
+  border-color: transparent;
 }
 
 .navbar-inverse .navbar-brand { color: white; }
@@ -51,8 +54,6 @@ header {
 .navbar.affix-top .navbar-nav>.active>a:hover {
   background-color: transparent;
 }
-
-
 
 .navbar.affix {
   color: #333;
