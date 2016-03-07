@@ -3,6 +3,8 @@ node_modules/
 .vagrant/
 npm-debug.log
 
+app/assets/css/
+
 # Bootstrap
 app/assets/vendors/bootstrap/**
 !app/assets/vendors/bootstrap/dist/
