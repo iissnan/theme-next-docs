@@ -1,0 +1,8 @@
+<footer class="footer">
+  <div class="container text-center">
+    <p>
+      &copy; 2015 - 2016  <i class="fa fa-heart"></i>  IIssNan <br />
+      <span class="text-muted">精工细作</span>
+    </p>
+  </div>
+</footer>
