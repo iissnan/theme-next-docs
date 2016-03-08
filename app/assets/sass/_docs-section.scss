@@ -1,5 +1,16 @@
-.next-docs hr {
-  margin: 40px 0 80px;
+.next-doc-header {
+  margin-bottom: 40px;
+  padding: 100px 40px;
+  color: white;
+  background: url("/assets/img/banner-1.jpg") no-repeat;
+
+  i {
+    margin-bottom: 1rem;
+    padding: 25px;
+    border: 4px solid #eee;
+    border-radius: 50%;
+    font-size: 50px;
+  }
 }
 
 .next-docs-section {

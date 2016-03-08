@@ -1,4 +1,4 @@
-{% extends './templates/layout.nun' %}
+{% extends './templates/layout/base.nun' %}
 
 {% block page %}home{% endblock %}
 

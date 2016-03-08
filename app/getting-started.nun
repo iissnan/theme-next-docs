@@ -15,10 +15,16 @@
   <div class="next-docs-section">
 
     <h2 class="page-header" id="install">安装</h2>
-    <p>Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 <code>themes</code> 目录下，然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。</p>
+    <p>
+      Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 <code>themes</code> 目录下，
+      然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。
+    </p>
 
     <h3>下载 NexT</h3>
-    <p>如果你熟悉 <a href="http://git-scm.com/" target="_blank">Git</a>，建议你使用 克隆最新版本 的方式，方便之后的主题更新。</p>
+    <p>
+      如果你熟悉 <a href="http://git-scm.com/" target="_blank">Git</a>，
+      建议你使用 克隆最新版本 的方式，方便之后的主题更新。
+    </p>
 
     <div>
 
@@ -40,8 +46,10 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="clone">
           <p>在终端窗口下，定位到 Hexo 站点目录下。使用 <code>Git</code> checkout 代码：</p>
-          <pre><code>$ cd your-hexo-site
-              $ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre>
+          {% code %}
+            $ cd your-hexo-site
+            $ git clone https://github.com/iissnan/hexo-theme-next themes/next
+          {% endcode %}
         </div>
         <div role="tabpanel" class="tab-pane" id="stable">
           <ol>
@@ -71,11 +79,9 @@
 
     <h3>验证</h3>
     <p>运行 <code>hexo s --debug</code>，当命令行输出中提示：</p>
-    <pre>
-      <code>
+    {% code %}
         Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
-      </code>
-    </pre>
+    {% endcode %}
     <p>
       此时即可访问 <code>http://localhost:4000</code>，确保站点正确运行。默认你看到的样式可能如下：
       <img src="/uploads/five-minutes-setup/validation.png" alt="" class="img-thumbnail img-responsive"/>
@@ -96,7 +102,7 @@
 
     <h3>语言设置</h3>
     <p>编辑 站点配置文件，将 <code>language</code> 设置成你所需要的语言。<br>例如选用正体中文，则配置为：</p>
-    <pre><code>language: zh-hk</code></pre>
+    {% code "yml" %}language: zh-hk{% endcode %}
     <p>可用的语言如以下表格所示：</p>
     <table class="table table-condensed table-striped table-bordered table-hover">
       <thead>
@@ -141,7 +147,10 @@
     </table>
 
     <h3>菜单设置</h3>
-    <p>菜单配置在 主题配置文件 的 <code>menu</code>。 若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉。默认支持的菜单项有：</p>
+    <p>
+      菜单配置在 主题配置文件 的 <code>menu</code>。
+      若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉。默认支持的菜单项有：
+    </p>
     <table class="table table-condensed table-striped table-bordered table-hover">
       <thead>
       <tr>
@@ -184,15 +193,15 @@
       </tbody>
     </table>
     <p>菜单示例配置：</p>
-    <pre><code>
+    {% code "yml" %}
         menu:
-        home: /
-        archives: /archives
-        #about: /about
-        #categories: /categories
-        tags: /tags
-        #commonweal: /404.html
-      </code></pre>
+          home: /
+          archives: /archives
+          #about: /about
+          #categories: /categories
+          tags: /tags
+          #commonweal: /404.html
+    {% endcode %}
 
     <h3>侧栏设置</h3>
     <p>
@@ -206,7 +215,7 @@
       <li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
     </ul>
     <p>侧栏示例配置：</p>
-    <pre><code>sidebar: post</code></pre>
+    {% code "yml" %}sidebar: post{% endcode %}
 
     <h3>头像设置</h3>
     <p>编辑 站点配置文件，新增字段 <code>avatar</code>， 值设置成头像的链接地址。</p>
@@ -225,17 +234,23 @@
       </tr>
       <tr>
         <td>站点内的地址</td>
-        <td><code>/uploads/avatar.jpg</code> - 需要将你的头像图片放置在 站点的 <code>source/uploads/</code>（可能需要新建uploads目录）
+        <td>
+          <p>
+            <code>/uploads/avatar.jpg</code>
+            - 需要将你的头像图片放置在 站点的 <code>source/uploads/</code>（可能需要新建uploads目录）
+          </p>
+          <p>
+            <code>/images/avatar.jpg</code>
+            - 需要将你的头像图片放置在 主题的 <code>source/images/</code> 目录下
+          </p>
         </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><code>/images/avatar.jpg</code> - 需要将你的头像图片放置在 主题的 <code>source/images/</code> 目录下</td>
       </tr>
       </tbody>
     </table>
     <p>头像设置示例： </p>
-    <pre><code>avatar: https://avatars1.githubusercontent.com/u/32269?v=3&s=460</code></pre>
+    {% code %}
+      avatar: https://avatars1.githubusercontent.com/u/32269?v=3&s=460
+    {% endcode %}
 
     <h3>作者名称</h3>
     <p>编辑 站点配置文件，设置 <code>author</code> 为你的昵称。</p>
@@ -265,7 +280,7 @@
       </li>
     </ol>
     <p>多说设置示例：</p>
-    <pre><code>duoshuo_shortname: iissnan-notes</code></pre>
+    {% code "yml" %}duoshuo_shortname: iissnan-notes{% endcode %}
 
     <h3>百度统计</h3>
     <div class="alert alert-warning">注意： baidu_analytics 不是你的百度 id 或者 百度统计 id</div>

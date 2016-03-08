@@ -10,30 +10,22 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
 }
 
+pre {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.hljs { padding: 20px; }
+
 hr.half-rule {
   margin: 40px auto;
   width: 100px;
 }
 
-.page-description {
-  i {
-    margin-bottom: 1rem;
-    padding: 25px;
-    border: 4px solid #eee;
-    border-radius: 50%;
-    font-size: 50px;
-  }
-}
-
 header {
   background: rgba(0,0,0,0.7) no-repeat 0 50%;
   background-size: cover;
-}
-
-main {
-  margin-top: 100px;
-
-  .home & { margin : 0; }
 }
 
 /* ========================================
@@ -42,7 +34,7 @@ main {
 .hero { height: 360px; }
 
 .hero-headline {
-  padding-top: 70px;
+  padding-top: 110px;
   color: white;
   text-align: center;
   font-size: 48px;

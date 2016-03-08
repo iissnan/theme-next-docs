@@ -2,11 +2,9 @@
 
 {% block main %}
   <section class="next-docs">
-    <h1 class="text-center page-description">
+    <h1 class="text-center next-doc-header">
       {% block pageHeader %}{% endblock %}
     </h1>
-
-    <hr>
 
     <div class="container next-docs-sections">
       <div class="row">

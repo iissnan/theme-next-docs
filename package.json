@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "gulp-sass": "^2.2.0",
+    "highlight.js": "^9.2.0",
     "url": "^0.11.0"
   },
   "scripts": {

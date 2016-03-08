@@ -41,6 +41,8 @@ gulp.task('browser-sync', () => {
     source.files.css,
     source.files.img
   ], browserSync.reload);
+
+  gulp.watch(source.files.sass, ['sass']);
 });
 
 gulp.task('sass', () => {
@@ -49,9 +51,4 @@ gulp.task('sass', () => {
     .pipe(gulp.dest(source.dirs.css));
 });
 
-gulp.task('sass:watch', () => {
-  gulp.watch(source.files.sass, ['sass']);
-});
-
-
-gulp.task('default', ['sass', 'sass:watch', 'browser-sync']);
+gulp.task('default', ['sass', 'browser-sync']);
