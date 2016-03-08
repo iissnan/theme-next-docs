@@ -1,0 +1,27 @@
+.next-docs hr {
+  margin: 40px 0 80px;
+}
+
+.next-docs-section {
+  margin: 100px 0 0;
+
+  h2 { margin: 60px 0 10px; }
+  h3 { margin: 50px 0 10px; }
+  h4 { margin: 40px 0 10px; }
+
+  ol li { margin: 10px 0; }
+
+  .img-thumbnail {
+    margin: 5px 0;
+    border-color: #f5f5f5;
+  }
+
+  .nav-tabs { margin: 40px 0 0;}
+
+  .tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+  }
+}
+

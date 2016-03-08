@@ -1,0 +1,19 @@
+.next-docs-sidebar {
+  padding: 0 20px;
+
+  &.affix {
+    position: fixed;
+    top: 70px;
+    width: 213px;
+  }
+
+  ul { padding-left: 0; }
+  li {
+    margin: 10px 0;
+    list-style: none;
+  }
+  a { color: #333; }
+  a:hover { text-decoration: underline; }
+
+  li>ul { padding-left: 20px; }
+}
