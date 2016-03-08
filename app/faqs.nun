@@ -1,0 +1,16 @@
+{% extends './templates/layout/doc.nun' %}
+
+{% block pageHeader %}
+  <i class="fa-life-ring fa"></i> <br />
+  常见问题
+{% endblock %}
+
+
+{% block pageContent %}
+
+{% endblock %}
+
+
+{% block pageSidebar %}
+
+{% endblock %}

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NexT 文档</title>
+  <title>NexT 使用文档</title>
   <link rel="stylesheet" href="/assets/vendors/bootstrap-cosmo/bootstrap.min.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&amp;subset=latin,latin-ext" />
   <link rel="stylesheet" href="/assets/vendors/font-awesome/css/font-awesome.min.css" />
@@ -12,11 +12,11 @@
 </head>
 
 <body class="main {% block page %}{% endblock %}">
-  {% include './browser-upgrade.nun' %}
+  {% include '../partials/browser-upgrade.nun' %}
 
   <header>
     {% block header %}
-      {% include './menu.nun' %}
+      {% include '../partials/menu.nun' %}
     {% endblock %}
   </header>
 
@@ -25,7 +25,7 @@
   </main>
 
   {% block footer %}
-    {% include './footer.nun' %}
+    {% include '../partials/footer.nun' %}
   {% endblock %}
 
   {% block scripts %}

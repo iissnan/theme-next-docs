@@ -1,0 +1,16 @@
+{% extends './templates/layout/doc.nun' %}
+
+{% block pageHeader %}
+  <i class="fa-rocket fa"></i> <br />
+  主题内建样式
+{% endblock %}
+
+
+{% block pageContent %}
+
+{% endblock %}
+
+
+{% block pageSidebar %}
+
+{% endblock %}

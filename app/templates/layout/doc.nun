@@ -1,0 +1,24 @@
+{% extends './base.nun' %}
+
+{% block main %}
+  <section class="next-docs">
+    <h1 class="text-center page-description">
+      {% block pageHeader %}{% endblock %}
+    </h1>
+
+    <hr>
+
+    <div class="container next-docs-sections">
+      <div class="row">
+        <div class="col-md-9" role="main">
+          {% block pageContent %}{% endblock %}
+        </div>
+        <div class="col-md-3">
+          <nav class="next-docs-sidebar">
+            {% block pageSidebar %}{% endblock %}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends './templates/layout/doc.nun' %}
+
+{% block pageHeader %}
+  <i class="fa-file-text-o fa"></i> <br />
+  主题配置参考与说明
+{% endblock %}
+
+
+{% block pageContent %}
+
+{% endblock %}
+
+
+{% block pageSidebar %}
+
+{% endblock %}
