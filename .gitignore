@@ -13,14 +13,3 @@ app/assets/vendors/bootstrap/**
 app/assets/vendors/font-awesome/**
 !app/assets/vendors/font-awesome/css/
 !app/assets/vendors/font-awesome/fonts/
-
-# Highlight.js
-app/assets/vendors/highlight.js/*.*
-app/assets/vendors/highlight.js/demo/
-app/assets/vendors/highlight.js/docs/
-app/assets/vendors/highlight.js/test/
-app/assets/vendors/highlight.js/tools/
-app/assets/vendors/highlight.js/src/**
-!app/assets/vendors/highlight.js/src/styles/
-
-
