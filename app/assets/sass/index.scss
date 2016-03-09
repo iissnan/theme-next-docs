@@ -1,21 +1,9 @@
+@import "scaffolding";
 @import "menu";
 @import "sidebar";
 @import "docs-section";
 @import "github";
-
-body {
-  font: 14px/1.6 Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: inherit;
-}
-
-pre {
-  padding: 0;
-  background: none;
-  border: none;
-}
+@import "bootstrap-extend";
 
 .hljs { padding: 20px; }
 
@@ -32,10 +20,10 @@ header {
 /* ========================================
    doc categories
    ======================================== */
-.hero { height: 360px; }
+.hero { height: 400px; }
 
 .hero-headline {
-  padding-top: 110px;
+  padding-top: 140px;
   color: white;
   text-align: center;
   font-size: 48px;
@@ -55,15 +43,15 @@ header {
 .hero-buttons .btn {
   margin-left: 10px;
   padding: 8px 40px;
-  color: white;
-  background: transparent;
+  color: black;
+  background: white;
   border: 2px solid white;
   transition: all 0.3s;
 }
 
 .hero-buttons .btn:hover {
-  color: black;
-  background: white;
+  color: white;
+  background: transparent;
 }
 
 .intersect-section {

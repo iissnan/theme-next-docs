@@ -8,19 +8,31 @@
 
 {% block pageContent %}
   <p>
-    Hexo 有两份主要的配置文件（<code>_config.yml</code>），一份位于站点根目录下，另一份位于主题目录下。
+    <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a> 是一个基于 Node.js 的高效的静态站点生成框架。
+    通过 Hexo 你可以轻松的使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的
+    <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank">标签插件</a>
+    来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。
+  </p>
+  <div class="bs-callout bs-callout-primary">
+    你可以访问 <a href="https://hexo.io/zh-cn/docs/">Hexo 的文档</a> 了解如何安装 Hexo
+  </div>
+  <p>
+    在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。
+    其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置有主题作者提供，主要用于配置主题相关的选项。
+  </p>
+  <p>
     为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>，后者称为 <strong>主题配置文件</strong>。
   </p>
 
-  <div class="next-docs-section">
 
-    <h2 class="page-header" id="install">安装</h2>
+  <div class="next-docs-section">
+    <h2 class="page-header" id="install">安装 NexT</h2>
     <p>
-      Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 <code>themes</code> 目录下，
+      Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下，
       然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。
     </p>
 
-    <h3>下载 NexT</h3>
+    <h3>下载主题</h3>
     <p>
       如果你熟悉 <a href="http://git-scm.com/" target="_blank">Git</a>，
       建议你使用 克隆最新版本 的方式，方便之后的主题更新。
@@ -71,23 +83,23 @@
 
     </div>
 
-    <h3>启用 NexT</h3>
+    <h3>启用主题</h3>
     <p>
       与所有 Hexo 主题启用的模式一样。
       当 克隆/下载 完成后，打开 站点配置文件，找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。
     </p>
 
-    <h3>验证</h3>
-    <p>运行 <code>hexo s --debug</code>，当命令行输出中提示：</p>
+    <h3>验证主题</h3>
+    <p>运行 <code>hexo s --debug</code>，观察命令行输出是否有任何异常信息。当命令行输出中提示出：</p>
     {% code %}
-        Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
+      INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
     {% endcode %}
+    <p>此时即可使用浏览器访问 <code>http://localhost:4000</code>，检查站点是否正确运行。</p>
+    <p class="bs-callout bs-callout-success">
+      当你看到站点的外观与下图所示类似时即说明你已成功安装 NexT 主题。这是 NexT 默认的 Scheme —— Muse</p>
     <p>
-      此时即可访问 <code>http://localhost:4000</code>，确保站点正确运行。默认你看到的样式可能如下：
-      <img src="/uploads/five-minutes-setup/validation.png" alt="" class="img-thumbnail img-responsive"/>
+      <img src="/uploads/five-minutes-setup/validation-default-scheme.png" alt="" class="img-thumbnail img-responsive"/>
     </p>
-
-    <div class="alert alert-success">当你看到如上图所示时，说明 你已成功安装 NexT 主题。</div>
   </div>
 
   <div class="next-docs-section">
@@ -192,7 +204,7 @@
       </tr>
       </tbody>
     </table>
-    <p>菜单示例配置：</p>
+    <div class="next-doc-example">菜单示例配置</div>
     {% code "yml" %}
         menu:
           home: /
@@ -214,7 +226,7 @@
       <li><code>always</code> - 在所有页面中都显示</li>
       <li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
     </ul>
-    <p>侧栏示例配置：</p>
+    <div class="next-doc-example">侧栏示例配置</div>
     {% code "yml" %}sidebar: post{% endcode %}
 
     <h3>头像设置</h3>
@@ -247,8 +259,8 @@
       </tr>
       </tbody>
     </table>
-    <p>头像设置示例： </p>
-    {% code %}
+    <div class="next-doc-example">头像设置示例 </div>
+    {% code "yml"%}
       avatar: https://avatars1.githubusercontent.com/u/32269?v=3&s=460
     {% endcode %}
 
@@ -263,7 +275,7 @@
     <h2 id="third-party-services" class="page-header">第三方服务</h2>
 
     <h3>多说评论</h3>
-    <div class="alert alert-warning">注意：duoshuo_shortname 不是你的多说登录的 id</div>
+    <div class="bs-callout bs-callout-warning">注意：duoshuo_shortname 不是你的多说登录的 id</div>
     <p>使用多说前需要先在 多说 创建一个站点。具体步骤如下：</p>
     <ol>
       <li>登录后在首页选择 “我要安装”。</li>
@@ -279,11 +291,11 @@
           创建站点完成后在 站点配置文件 中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。</p>
       </li>
     </ol>
-    <p>多说设置示例：</p>
+    <div class="next-doc-example">多说设置示例</div>
     {% code "yml" %}duoshuo_shortname: iissnan-notes{% endcode %}
 
     <h3>百度统计</h3>
-    <div class="alert alert-warning">注意： baidu_analytics 不是你的百度 id 或者 百度统计 id</div>
+    <div class="bs-callout bs-callout-warning">注意： baidu_analytics 不是你的百度 id 或者 百度统计 id</div>
     <ol>
       <li>
         登录 <a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a>，
