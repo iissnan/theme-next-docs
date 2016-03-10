@@ -1,0 +1,19 @@
+$fontLatoPath: "../fonts/lato/";
+
+// Light
+@include font-face(Lato, $fontLatoPath + 'light', 300);
+
+// Light Italic
+@include font-face(Lato, $fontLatoPath + 'light-italic', 300, italic);
+
+// Normal
+@include font-face(Lato, $fontLatoPath + 'regular');
+
+// Normal Italic
+@include font-face(Lato, $fontLatoPath + 'regular-italic', normal, italic);
+
+// Bold
+@include font-face(Lato, $fontLatoPath + 'bold', 700);
+
+// Bold Italic
+@include font-face(Lato, $fontLatoPath + 'bold-italic', 700, italic);
