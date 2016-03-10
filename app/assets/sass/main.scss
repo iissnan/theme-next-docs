@@ -26,8 +26,21 @@ header {
 /* ========================================
    Footer
    ======================================== */
-.footer { padding: 80px 0 20px; }
+.footer { padding: 80px 0 40px; }
 .footer .fa {
   margin: 0 5px;
   font-size: 10px;
+}
+
+.footer hr { margin-bottom: 10px; }
+
+.next-docs-footer-links {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin: 0 0 0 10px;
+  }
 }

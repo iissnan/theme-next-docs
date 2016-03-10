@@ -7,10 +7,10 @@
     <div>
       <span class="next-docs-copyright">&copy; 2015 - 2016</span>
       <ul class="next-docs-footer-links">
-        <li><a href="">文档问题反馈</a></li>
-        <li><a href="">文档 @ GitHub</a></li>
-        <li><a href="">NexT</a></li>
-        <li><a href="">NexT Gitter 讨论组</a></li>
+        <li><a href="https://github.com/iissnan/theme-next-docs/issues">文档问题反馈</a></li>
+        <li><a href="https://github.com/iissnan/theme-next-docs">文档 @ GitHub</a></li>
+        <li><a href="https://github.com/iissnan/hexo-theme-next">NexT</a></li>
+        <li><a href="https://gitter.im/iissnan/hexo-theme-next">NexT Gitter 讨论组</a></li>
       </ul>
     </div>
   </div>
