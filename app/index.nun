@@ -20,16 +20,20 @@
     <div class="container"></div>
   </section>
 
-  <section class="features">
+  <section class="next-doc-section">
     <div class="container">
-      <div class="row feature-multiple-schemes">
-        <div class="col-md-12 text-center">
+      <div class="row">
+        <div class="col-md-12">
 
-          <h3>一个主题，三种外观，选您所好</h3>
-          <p class="text-muted">
-            通过主题中的主题（亦称 Scheme），您可以方便地改变您博客的外观，同时几乎所有配置同样适用
-          </p>
+          <div class="next-doc-section-header">
+            <h3>一个主题，三种外观，选您所好</h3>
+            <p class="text-muted">
+              通过主题中的主题（亦称 Scheme），您可以方便地改变您博客的外观，同时几乎所有配置同样适用
+            </p>
+          </div>
+
           <img src="/assets/img/NextSchemes3.png" class="img-responsive center-block" alt="NexT Schemes" />
+
         </div>
       </div>
     </div>
@@ -77,6 +81,39 @@
           </div>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section class="next-doc-section">
+    <div class="container">
+
+      <div class="next-doc-section-header">
+        <h3> 5 套代码高亮主题</h3>
+        <p class="text-muted">
+          NexT 使用 Tomorrow 的代码高亮配色，只需要一行配置，即可切换您所喜爱的主题
+        </p>
+      </div>
+
+      <div class="next-doc-highlight-schemes">
+        <div class="tomorrow-night next-doc-highlight-schemes-item">
+          <img src="/assets/img/tomorrow-night.png" alt="Tomorrow Night">
+        </div>
+        <div class="tomorrow-night-eighties next-doc-highlight-schemes-item">
+          <img src="/assets/img/tomorrow-night-eighties.png"
+               alt="Tomorrow Eighties">
+        </div>
+        <div class="tomorrow next-doc-highlight-schemes-item">
+          <img src="/assets/img/tomorrow.png" alt="Tomorrow">
+        </div>
+        <div class="tomorrow-night-blue next-doc-highlight-schemes-item">
+          <img src="/assets/img/tomorrow-night-blue.png"
+               alt="Tomorrow Night Blue">
+        </div>
+        <div class="tomorrow-night-bright next-doc-highlight-schemes-item">
+          <img src="/assets/img/tomorrow-night-bright.png"
+               alt="Tomorrow Bright">
+        </div>
+      </div>
     </div>
   </section>
 {% endblock %}

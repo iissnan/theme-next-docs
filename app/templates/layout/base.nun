@@ -7,6 +7,7 @@
   <title>{% block documentTitle %}{% endblock %}</title>
   <link rel="stylesheet" href="/assets/vendors/bootstrap-cosmo/bootstrap.min.css" />
   <link rel="stylesheet" href="/assets/vendors/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/assets/vendors/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 
@@ -30,6 +31,7 @@
   {% block scripts %}
     <script src="/assets/vendors/jquery/index.js"></script>
     <script src="/assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/vendors/slick-carousel/slick/slick.min.js"></script>
     <script src="/assets/js/main.js"></script>
   {% endblock %}
 </body>

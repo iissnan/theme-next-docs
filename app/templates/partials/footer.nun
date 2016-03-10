@@ -1,8 +1,9 @@
 <footer class="footer">
   <div class="container">
     <hr>
-    <p class="pull-right text-muted">
-      Made by IIssNan with <i class="fa fa-heart"></i>
+    <p class="pull-right text-muted next-maker">
+      Made by <a href="https://github.com/iissnan" target="_blank">IIssNan</a>
+      with <i class="fa fa-heart"></i>
     </p>
     <div>
       <span class="next-docs-copyright">&copy; 2015 - 2016</span>
