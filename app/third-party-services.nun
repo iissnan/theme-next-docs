@@ -1,8 +1,10 @@
 {% extends './templates/layout/doc.nun' %}
 
+{% block documentTitle %}第三方服务集成 - NexT 使用文档{% endblock %}
+
 {% block pageHeader %}
   <i class="fa-plug fa"></i> <br />
-  第三方服务
+  第三方服务集成
 {% endblock %}
 
 

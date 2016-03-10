@@ -1,8 +1,10 @@
 {% extends './templates/layout/doc.nun' %}
 
+{% block documentTitle %}内置标签 - NexT 使用文档{% endblock %}
+
 {% block pageHeader %}
   <i class="fa-rocket fa"></i> <br />
-  主题内建样式
+  内置标签
 {% endblock %}
 
 

@@ -1,8 +1,10 @@
 {% extends './templates/layout/doc.nun' %}
 
+{% block documentTitle %}开始使用 - NexT 使用文档{% endblock %}
+
 {% block pageHeader %}
   <i class="fa-flag-checkered fa"></i> <br />
-  5 分钟快速安装
+  开始使用
 {% endblock %}
 
 

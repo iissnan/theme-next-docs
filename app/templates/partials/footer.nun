@@ -1,8 +1,17 @@
 <footer class="footer">
-  <div class="container text-center">
-    <p>
-      &copy; 2015 - 2016  <i class="fa fa-heart"></i>  IIssNan <br />
-      <span class="text-muted">精工细作</span>
+  <div class="container">
+    <hr>
+    <p class="pull-right text-muted">
+      Made by IIssNan with <i class="fa fa-heart"></i>
     </p>
+    <div>
+      <span class="next-docs-copyright">&copy; 2015 - 2016</span>
+      <ul class="next-docs-footer-links">
+        <li><a href="">文档问题反馈</a></li>
+        <li><a href="">文档 @ GitHub</a></li>
+        <li><a href="">NexT</a></li>
+        <li><a href="">NexT Gitter 讨论组</a></li>
+      </ul>
+    </div>
   </div>
 </footer>

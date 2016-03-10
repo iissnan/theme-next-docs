@@ -4,11 +4,10 @@
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NexT 使用文档</title>
+  <title>{% block documentTitle %}{% endblock %}</title>
   <link rel="stylesheet" href="/assets/vendors/bootstrap-cosmo/bootstrap.min.css" />
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&amp;subset=latin,latin-ext" />
   <link rel="stylesheet" href="/assets/vendors/font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 
 <body class="main {% block page %}{% endblock %}">
