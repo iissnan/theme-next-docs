@@ -30,7 +30,7 @@
   </p>
 
 
-  <div class="next-docs-section">
+  <div>
     <h2 class="page-header" id="install">安装 NexT</h2>
     <p>
       Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下，

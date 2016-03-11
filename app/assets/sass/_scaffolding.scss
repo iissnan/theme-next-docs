@@ -3,8 +3,10 @@
   color: #fff;
 }
 
+$font-chinese: "PingFang SC", "Microsoft YaHei";
+
 body {
-  font: 14px/1.6 Monda, Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font: 14px/1.6 Monda, Lato, $font-chinese, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -21,7 +23,7 @@ pre {
 code, tt {
   padding: 0 3px;
   font: {
-    family: "PT Mono", "Source Code Pro", "Courier New", monospace;
+    family: "PT Mono", "Source Code Pro", "Courier New", $font-chinese, monospace;
     weight: 500;
   }
   color: #292e31;

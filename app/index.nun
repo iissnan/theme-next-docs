@@ -167,12 +167,14 @@
       </ul>
 
       <p class="next-doc-categories-button">
-        <a class="btn btn-default" href="/getting-started.html" role="button">开始使用</a>
+        <a class="next-docs-btn next-docs-btn-default"
+           href="/getting-started.html" role="button">开始使用</a>
       </p>
     </div>
   </section>
 
   {# See: https://buttons.github.io/ #}
+  {#
   <section class="next-github-buttons">
     <div class="container text-center">
       <a class="github-button"
@@ -213,6 +215,7 @@
     </div>
     <script async="async" defer="defer" id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
   </section>
+  #}
 
 {% endblock %}
 

@@ -1,9 +1,9 @@
 .next-docs-sidebar {
-  padding: 0 20px;
+  padding: 60px 20px 0;
 
   &.affix {
     position: fixed;
-    top: 70px;
+    top: 0;
     width: 213px;
   }
 
@@ -12,6 +12,9 @@
     margin: 10px 0;
     list-style: none;
   }
+
+  &>ul>li:first-child { margin-top: 0; }
+
   a { color: #333; }
   a:hover { text-decoration: underline; }
 

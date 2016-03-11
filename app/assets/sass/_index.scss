@@ -220,21 +220,7 @@
   }
 }
 
-.next-doc-categories-button {
-  @extend .next-hero-buttons;
-  margin-top: 0;
-
-  & .btn {
-    color: white;
-    background: #6f7c82;
-    border-color: #6f7c82;
-  }
-  & .btn:hover {
-    color: #6f7c82;
-    background: transparent;
-    border-color: #6f7c82;
-  }
-}
+.next-doc-categories-button { margin-top: 0; }
 
 
 

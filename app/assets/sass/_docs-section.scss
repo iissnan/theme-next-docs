@@ -114,3 +114,16 @@
 .next-doc-example + pre code {
   border-color: #ddd;
 }
+
+.next-docs-section-footer {
+  margin: 80px 0;
+
+  .next-docs-btn {
+    margin-left: 10px;
+    padding: 3px 10px;
+    border-width: 1px;
+    font-size: 12px;
+
+    &:first-child { margin-left: 0; }
+  }
+}
