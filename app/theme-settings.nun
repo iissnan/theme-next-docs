@@ -1,6 +1,9 @@
 {% extends './templates/layout/doc.nun' %}
 
+{# S: 页面元数据 #}
 {% block documentTitle %}主题配置 - NexT 使用文档{% endblock %}
+{% block pageName %}theme-settings{% endblock %}
+{# E: 页面元数据 #}
 
 {% block pageHeader %}
   <i class="fa-star fa"></i> <br />

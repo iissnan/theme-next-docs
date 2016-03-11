@@ -1,7 +1,7 @@
 {% extends './templates/layout/base.nun' %}
 
 {% block documentTitle %}NexT 使用文档{% endblock %}
-{% block page %}home{% endblock %}
+{% block pageName %}home{% endblock %}
 
 {% block header %}
   {{ super() }}
@@ -39,7 +39,7 @@
   <section class="next-section next-section-intersect next-features-multi-languages">
     <div class="container">
       <div class="next-section-header">
-        <h3 class="intersect-title">多种语言支持</h3>
+        <h3 class="next-section-intersect-title">多种语言支持</h3>
         <p>来自 NexT 的热心用户的贡献， NexT 现已支持 8 中语言</p>
       </div>
 

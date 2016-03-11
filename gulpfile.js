@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var utils = require('./lib/utils');
 var renderer = require ('./lib/renderer');
+var configs = require('./lib/configs');
 
 var source = {
   files: {
@@ -26,9 +27,11 @@ gulp.task('browser-sync', () => {
       middleware: [
         (req, res, next) => {
           var doc = utils.mappingRequestDocument(req.url);
+
           if (doc) {
-            res.end(renderer.render(doc));
+            res.end(renderer.render(doc, { config: configs }));
           }
+
           next();
         }
       ]

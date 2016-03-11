@@ -45,4 +45,16 @@ $(document).ready(function () {
       }
     });
   }
+
+  activateMenuItem();
+
+  /**
+   * Add `active` class to menu item by comparing location pathname with menu item's href.
+   */
+  function activateMenuItem () {
+    var pathname = window.location.pathname;
+    var menuItemSelector = '[href="' + pathname + '"]';
+
+    $('#nav').find(menuItemSelector).parent().addClass('active');
+  }
 });

@@ -1,0 +1,23 @@
+# TODO: i18 Support
+
+menu:
+  getting-started:
+    label: 开始使用
+    href: /getting-started.html
+  theme-settings:
+    label: 主题配置
+    href: /theme-settings.html
+    subItems:
+      theme-settings-example:
+        label: 主题配置示例
+        href: /theme-settings-example.html
+  third-party-services:
+    label: 第三方服务
+    href: /third-party-services.html
+  tag-plugins:
+    label: 内建标签
+    href: /tag-plugins.html
+  faqs:
+    label: 常见问题
+    href: /faqs.html
+
