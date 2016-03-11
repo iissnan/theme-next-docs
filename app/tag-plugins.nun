@@ -12,6 +12,40 @@
 
 
 {% block pageContent %}
+  <h2 id="tag-center-blockquote" class="page-header">独立居中的引用</h2>
+  <p class="text-muted">带上下分割线的引用，引用内文本将自动居中。适用于单行引用文本的场景。</p>
+  <img src="/uploads/tags/blockquote-center.png" alt="Center Blockquote Tag"
+       class="img-thumbnail img-responsive center-block">
+  <div class="next-doc-example">
+    居中应用应用示例
+  </div>
+  {% code %}
+    <!-- HTML -->
+    <blockquote class="blockquote-center">blah blah blah</blockquote>
+
+    <!-- Built-in tag (Require NexT 0.4.5 or above) -->
+    {% raw %}{% centerquote %}blah blah blah{% endcenterquote %}{% endraw %}
+
+    <!-- 别名 -->
+    {% raw %}{% cq %} blah blah blah {% endcq %}{% endraw %}
+  {% endcode %}
+
+  <h2 id="full-width-image" class="page-header">突破容器限制宽度的图片</h2>
+  <p class="text-muted">图片将自动扩展 26%，突破文章宽度。</p>
+  <img src="/uploads/tags/full-image.jpg" class="img-thumbnail img-responsive center-block">
+  <div class="next-doc-example">
+    突破容器限制宽度的图片示例
+  </div>
+  {% code %}
+    <!-- HTML -->
+    <img src="/image-url" class="full-image" />
+
+    <!-- Built-in tag (Require NexT 0.4.5 or above) -->
+    {% raw %}{% fullimage /image-url, alt, title %}{% endraw %}
+
+    <!-- 别名 -->
+    {% raw %}{% fi /image-url, alt, title %}{% endraw %}
+  {% endcode %}
 
 {% endblock %}
 
