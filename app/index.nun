@@ -6,26 +6,23 @@
 {% block header %}
   {{ super() }}
 
-  <section class="hero">
-    <div class="text-center hero-headline">精于心，简于形</div>
-    <div class="text-center hero-description">Elegant Theme for Hexo</div>
-    <div class="text-center hero-buttons">
+  <section class="next-hero">
+    <div class="text-center next-hero-headline">精于心，简于形</div>
+    <div class="text-center next-hero-description">Elegant Theme for Hexo</div>
+    <div class="text-center next-hero-buttons">
       <a class="btn btn-default" href="/getting-started.html" role="button">开始使用</a>
     </div>
   </section>
 {% endblock %}
 
 {% block main %}
-  <section class="project-info">
-    <div class="container"></div>
-  </section>
 
-  <section class="next-doc-section next-features-multi-schemes">
+  <section class="next-section next-features-multi-schemes">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
 
-          <div class="next-doc-section-header">
+          <div class="next-section-header">
             <h3>一个主题，三种外观，选您所好</h3>
             <p class="text-muted">
               通过主题中的主题（亦称 Scheme），您可以方便地改变您博客的外观，同时几乎所有配置同样适用
@@ -39,9 +36,9 @@
     </div>
   </section>
 
-  <section class="next-doc-section intersect-section next-features-multi-languages">
+  <section class="next-section next-section-intersect next-features-multi-languages">
     <div class="container">
-      <div class="next-doc-section-header">
+      <div class="next-section-header">
         <h3 class="intersect-title">多种语言支持</h3>
         <p>来自 NexT 的热心用户的贡献， NexT 现已支持 8 中语言</p>
       </div>
@@ -91,32 +88,32 @@
     </div>
   </section>
 
-  <section class="next-doc-section next-features-code-highlight">
+  <section class="next-section next-features-code-highlight">
     <div class="container">
 
-      <div class="next-doc-section-header">
+      <div class="next-section-header">
         <h3> 5 套代码高亮主题</h3>
         <p class="text-muted">
-          NexT 使用 Tomorrow 的代码高亮配色，只需要一行配置，即可切换您所喜爱的主题
+          NexT 使用 Tomorrow 的代码高亮配色，只需要一行配置，即可选择您所喜爱的配色方案
         </p>
       </div>
 
-      <div class="next-doc-highlight-schemes">
-        <div class="tomorrow-night next-doc-highlight-schemes-item">
+      <div class="next-features-highlight-schemes" id="highlightSchemesSlider">
+        <div class="tomorrow-night next-features-highlight-schemes-item">
           <img src="/assets/img/tomorrow-night.png" alt="Tomorrow Night">
         </div>
-        <div class="tomorrow-night-eighties next-doc-highlight-schemes-item">
+        <div class="tomorrow-night-eighties next-features-highlight-schemes-item">
           <img src="/assets/img/tomorrow-night-eighties.png"
                alt="Tomorrow Eighties">
         </div>
-        <div class="tomorrow next-doc-highlight-schemes-item">
+        <div class="tomorrow next-features-highlight-schemes-item">
           <img src="/assets/img/tomorrow.png" alt="Tomorrow">
         </div>
-        <div class="tomorrow-night-blue next-doc-highlight-schemes-item">
+        <div class="tomorrow-night-blue next-features-highlight-schemes-item">
           <img src="/assets/img/tomorrow-night-blue.png"
                alt="Tomorrow Night Blue">
         </div>
-        <div class="tomorrow-night-bright next-doc-highlight-schemes-item">
+        <div class="tomorrow-night-bright next-features-highlight-schemes-item">
           <img src="/assets/img/tomorrow-night-bright.png"
                alt="Tomorrow Bright">
         </div>
@@ -124,11 +121,13 @@
     </div>
   </section>
 
-  <section class="next-doc-section intersect-section next-doc-categories">
+  <section class="next-section next-section-intersect next-doc-categories">
     <div class="container text-center">
 
-      <h3 class="intersect-section-title">定制属于您自己的 NexT</h3>
-      <p>NexT 拥有丰富而简单的配置，结合第三方服务，打造属于您自己的博客</p>
+      <div class="next-section-header">
+        <h3 class="next-section-intersect-title">定制属于您自己的 NexT</h3>
+        <p>NexT 拥有丰富而简单的配置，结合第三方服务，打造属于您自己的博客</p>
+      </div>
 
       <ul class="next-doc-categories-list text-left clearfix">
         <li>
@@ -166,7 +165,54 @@
           </div>
         </li>
       </ul>
+
+      <p class="next-doc-categories-button">
+        <a class="btn btn-default" href="/getting-started.html" role="button">开始使用</a>
+      </p>
     </div>
   </section>
+
+  {# See: https://buttons.github.io/ #}
+  <section class="next-github-buttons">
+    <div class="container text-center">
+      <a class="github-button"
+         href="https://github.com/iissnan/hexo-theme-next"
+         data-icon="octicon-star"
+         data-count-href="/iissnan/hexo-theme-next/stargazers"
+         data-count-api="/repos/iissnan/hexo-theme-next#stargazers_count"
+         data-count-aria-label="# stargazers on GitHub"
+         aria-label="Star iissnan/hexo-theme-next on GitHub">
+        Star
+      </a>
+      <a class="github-button"
+         href="https://github.com/iissnan/hexo-theme-next/fork"
+         data-icon="octicon-repo-forked"
+         data-count-href="/iissnan/hexo-theme-next/network"
+         data-count-api="/repos/iissnan/hexo-theme-next#forks_count"
+         data-count-aria-label="# forks on GitHub"
+         aria-label="Fork iissnan/hexo-theme-next on GitHub">
+        Fork
+      </a>
+      <a class="github-button"
+         href="https://github.com/iissnan/hexo-theme-next"
+         data-icon="octicon-eye"
+         data-count-href="/iissnan/hexo-theme-next/watchers"
+         data-count-api="/repos/iissnan/hexo-theme-next#subscribers_count"
+         data-count-aria-label="# watchers on GitHub"
+         aria-label="Watch iissnan/hexo-theme-next on GitHub">
+        Watch
+      </a>
+      <a class="github-button"
+         href="https://github.com/iissnan/hexo-theme-next"
+         data-icon="octicon-issue-opened"
+         data-count-api="/repos/iissnan/hexo-theme-next#open_issues_count"
+         data-count-aria-label="# issues on GitHub"
+         aria-label="Issue iissnan/hexo-theme-next on GitHub">
+        Issue
+      </a>
+    </div>
+    <script async="async" defer="defer" id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+  </section>
+
 {% endblock %}
 

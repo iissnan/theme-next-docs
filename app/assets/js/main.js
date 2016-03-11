@@ -8,7 +8,7 @@ $(document).ready(function () {
     return 'url("/assets/img/banner-' + r + '.jpg")';
   });
 
-  $('.next-doc-highlight-schemes').slick({
+  $('#highlightSchemesSlider').slick({
     dots: true,
     centerMode: true,
     centerPadding: '0',

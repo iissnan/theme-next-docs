@@ -1,9 +1,9 @@
 /* ========================================
    Hero
    ======================================== */
-.hero { height: 600px; }
+.next-hero { height: 600px; }
 
-.hero-headline {
+.next-hero-headline {
   padding-top: 230px;
   color: white;
   text-align: center;
@@ -11,56 +11,52 @@
   text-shadow: 0 2px 2px rgba(0,0,0,.2);
 }
 
-.hero-description {
+.next-hero-description {
   color: white;
   font-size: 20px;
   text-shadow: 0 2px 2px rgba(0,0,0,.2);
 }
 
-.hero-buttons {
+.next-hero-buttons {
   margin-top: 50px;
   text-align: center;
 }
-.hero-buttons .btn {
+.next-hero-buttons .btn {
   margin-left: 10px;
   padding: 8px 40px;
   color: black;
   background: white;
   border: 2px solid white;
-  transition: all 0.3s;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-.hero-buttons .btn:hover {
+.next-hero-buttons .btn:hover {
   color: white;
   background: transparent;
 }
 
-.next-doc-section {
-  padding: 100px 0;
-}
+
 
 /* ========================================
-   Intersect Section
+   Sections
    ======================================== */
+.next-section { padding: 100px 0; }
 
-.intersect-section {
+.next-section-intersect {
   background-color: #f5f7f9;
   border-top: 1px solid #e9eaec;
   color: #6f7c82;
 }
 
-.intersect-section-title {
-  color: #292e31;
-}
+.next-section-intersect-title { color: #292e31; }
 
-.intersect-section .half-rule {
-  border-color: #e9eaec;
-}
-
-.next-doc-section-header {
+.next-section-header {
   margin: 0 0 60px;
   text-align: center;
 }
+
+
 
 /* ========================================
    Feature: Multiple Schemes
@@ -68,6 +64,8 @@
 .next-features-multi-schemes {
   padding-bottom: 0;
 }
+
+
 
 /* ========================================
    Feature: Multiple Languages
@@ -107,39 +105,14 @@
   tr:last-child td{ border: none; }
 }
 
+
+
 /* ========================================
-   doc categories
+   Feature: Multiple Code Highlight Schemes
    ======================================== */
-.next-doc-categories { padding: 100px 0; }
+.next-features-code-highlight { padding-bottom: 100px; }
 
-.next-doc-categories-list {
-  margin: 80px 20px 0;
-  padding: 0;
-
-  .fa { font-size: 35px; }
-
-  li {
-    float: left;
-    margin: 0 0 40px 40px;
-    width: 40%;
-    list-style: none;
-  }
-}
-
-.next-doc-categories-item-content {
-  margin-left: 50px;
-
-  h4, p { margin: 0 0 10px 10px; }
-
-  h4 a {
-    color: #292e31;
-    text-decoration: underline;
-
-    &:hover { color: #000; }
-  }
-}
-
-.next-doc-highlight-schemes  {
+.next-features-highlight-schemes  {
 
   .slick-prev, .slick-next {
     position: absolute;
@@ -191,7 +164,7 @@
   .slick-dots .slick-active button { background: #6f7c82; }
 }
 
-.next-doc-highlight-schemes-item {
+.next-features-highlight-schemes-item {
   position: relative;
 
   &.slick-center { z-index: 100; }
@@ -213,6 +186,59 @@
 
 }
 
-.next-features-code-highlight {
-  padding-bottom: 100px;
+
+
+/* ========================================
+   Doc Categories
+   ======================================== */
+.next-doc-categories { padding: 100px 0; }
+
+.next-doc-categories-list {
+  margin: 80px 20px 0;
+  padding: 0;
+
+  .fa { font-size: 35px; }
+
+  li {
+    float: left;
+    margin: 0 0 40px 40px;
+    width: 40%;
+    list-style: none;
+  }
 }
+
+.next-doc-categories-item-content {
+  margin-left: 50px;
+
+  h4, p { margin: 0 0 10px 10px; }
+
+  h4 a {
+    color: #292e31;
+    text-decoration: underline;
+
+    &:hover { color: #000; }
+  }
+}
+
+.next-doc-categories-button {
+  @extend .next-hero-buttons;
+  margin-top: 0;
+
+  & .btn {
+    color: white;
+    background: #6f7c82;
+    border-color: #6f7c82;
+  }
+  & .btn:hover {
+    color: #6f7c82;
+    background: transparent;
+    border-color: #6f7c82;
+  }
+}
+
+
+
+/* ========================================
+   GitHub Buttons
+   ======================================== */
+.next-github-buttons { margin-top: 30px; }

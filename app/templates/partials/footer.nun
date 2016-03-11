@@ -2,11 +2,10 @@
   <div class="container">
     <hr>
     <p class="pull-right text-muted next-maker">
-      Made by <a href="https://github.com/iissnan" target="_blank">IIssNan</a>
+      &copy; Made by <a href="https://github.com/iissnan" target="_blank">IIssNan</a>
       with <i class="fa fa-heart"></i>
     </p>
     <div>
-      <span class="next-docs-copyright">&copy; 2015 - 2016</span>
       <ul class="next-docs-footer-links">
         <li><a href="https://github.com/iissnan/theme-next-docs/issues">文档问题反馈</a></li>
         <li><a href="https://github.com/iissnan/theme-next-docs">文档 @ GitHub</a></li>
