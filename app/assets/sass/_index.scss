@@ -36,7 +36,7 @@
 }
 
 .next-doc-section {
-  padding-top: 100px;
+  padding: 100px 0;
 }
 
 /* ========================================
@@ -57,19 +57,54 @@
   border-color: #e9eaec;
 }
 
-/* ========================================
-   feature-schemes
-   ======================================== */
-.features {}
-
-.feature-multiple-schemes {
-  margin-top: 100px;
-}
-
-
 .next-doc-section-header {
   margin: 0 0 60px;
   text-align: center;
+}
+
+/* ========================================
+   Feature: Multiple Schemes
+   ======================================== */
+.next-features-multi-schemes {
+  padding-bottom: 0;
+}
+
+/* ========================================
+   Feature: Multiple Languages
+   ======================================== */
+.next-features-multi-languages {
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    background: url("/assets/img/map.svg") no-repeat 50% 0;
+  }
+
+  table {
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse;
+  }
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+
+    &:first-child { font-weight: bold; }
+  }
+
+  tr:last-child td{ border: none; }
 }
 
 /* ========================================
@@ -176,4 +211,8 @@
     transform: scale(1);
   }
 
+}
+
+.next-features-code-highlight {
+  padding-bottom: 100px;
 }

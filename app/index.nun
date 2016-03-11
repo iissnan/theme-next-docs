@@ -20,7 +20,7 @@
     <div class="container"></div>
   </section>
 
-  <section class="next-doc-section">
+  <section class="next-doc-section next-features-multi-schemes">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -39,7 +39,92 @@
     </div>
   </section>
 
-  <section class="next-doc-categories intersect-section">
+  <section class="next-doc-section intersect-section next-features-multi-languages">
+    <div class="container">
+      <div class="next-doc-section-header">
+        <h3 class="intersect-title">多种语言支持</h3>
+        <p>来自 NexT 的热心用户的贡献， NexT 现已支持 8 中语言</p>
+      </div>
+
+      <table>
+        <tr>
+          <td>English</td>
+          <td>Hello</td>
+          <td>hə'ləʊ</td>
+        </tr>
+        <tr>
+          <td>简体中文</td>
+          <td>您好</td>
+          <td>nǐ-hǎo</td>
+        </tr>
+        <tr>
+          <td>Français</td>
+          <td>Bonjour</td>
+          <td>bɔ̃ʒuːʁ</td>
+        </tr>
+        <tr>
+          <td>Português</td>
+          <td>Olá</td>
+          <td>ɔ'la</td>
+        </tr>
+        <tr>
+          <td>Deutsch</td>
+          <td>Hallo</td>
+          <td>halɔ</td>
+        </tr>
+        <tr>
+          <td>繁体中文</td>
+          <td>您好</td>
+          <td>nǐ-hǎo</td>
+        </tr>
+        <tr>
+          <td>Русский язык</td>
+          <td>здравствуйте</td>
+          <td>'ruskʲɪj jɪˈzɨk</td>
+        </tr>
+        <tr>
+          <td>日本語</td>
+          <td>こんにちは</td>
+          <td>Konnichiwa</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="next-doc-section next-features-code-highlight">
+    <div class="container">
+
+      <div class="next-doc-section-header">
+        <h3> 5 套代码高亮主题</h3>
+        <p class="text-muted">
+          NexT 使用 Tomorrow 的代码高亮配色，只需要一行配置，即可切换您所喜爱的主题
+        </p>
+      </div>
+
+      <div class="next-doc-highlight-schemes">
+        <div class="tomorrow-night next-doc-highlight-schemes-item">
+          <img src="/assets/img/tomorrow-night.png" alt="Tomorrow Night">
+        </div>
+        <div class="tomorrow-night-eighties next-doc-highlight-schemes-item">
+          <img src="/assets/img/tomorrow-night-eighties.png"
+               alt="Tomorrow Eighties">
+        </div>
+        <div class="tomorrow next-doc-highlight-schemes-item">
+          <img src="/assets/img/tomorrow.png" alt="Tomorrow">
+        </div>
+        <div class="tomorrow-night-blue next-doc-highlight-schemes-item">
+          <img src="/assets/img/tomorrow-night-blue.png"
+               alt="Tomorrow Night Blue">
+        </div>
+        <div class="tomorrow-night-bright next-doc-highlight-schemes-item">
+          <img src="/assets/img/tomorrow-night-bright.png"
+               alt="Tomorrow Bright">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-doc-section intersect-section next-doc-categories">
     <div class="container text-center">
 
       <h3 class="intersect-section-title">定制属于您自己的 NexT</h3>
@@ -81,39 +166,6 @@
           </div>
         </li>
       </ul>
-    </div>
-  </section>
-
-  <section class="next-doc-section">
-    <div class="container">
-
-      <div class="next-doc-section-header">
-        <h3> 5 套代码高亮主题</h3>
-        <p class="text-muted">
-          NexT 使用 Tomorrow 的代码高亮配色，只需要一行配置，即可切换您所喜爱的主题
-        </p>
-      </div>
-
-      <div class="next-doc-highlight-schemes">
-        <div class="tomorrow-night next-doc-highlight-schemes-item">
-          <img src="/assets/img/tomorrow-night.png" alt="Tomorrow Night">
-        </div>
-        <div class="tomorrow-night-eighties next-doc-highlight-schemes-item">
-          <img src="/assets/img/tomorrow-night-eighties.png"
-               alt="Tomorrow Eighties">
-        </div>
-        <div class="tomorrow next-doc-highlight-schemes-item">
-          <img src="/assets/img/tomorrow.png" alt="Tomorrow">
-        </div>
-        <div class="tomorrow-night-blue next-doc-highlight-schemes-item">
-          <img src="/assets/img/tomorrow-night-blue.png"
-               alt="Tomorrow Night Blue">
-        </div>
-        <div class="tomorrow-night-bright next-doc-highlight-schemes-item">
-          <img src="/assets/img/tomorrow-night-bright.png"
-               alt="Tomorrow Bright">
-        </div>
-      </div>
     </div>
   </section>
 {% endblock %}
