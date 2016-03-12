@@ -14,7 +14,11 @@
 
 @import "index";
 
-.hljs { padding: 20px; }
+.hljs {
+  padding: 20px;
+  font-size: 13px;
+}
+.hljs-comment, .hljs-quote { font-style: normal; }
 
 hr.half-rule {
   margin: 40px auto;

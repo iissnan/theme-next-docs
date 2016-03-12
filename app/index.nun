@@ -40,7 +40,7 @@
     <div class="container">
       <div class="next-section-header">
         <h3 class="next-section-intersect-title">多种语言支持</h3>
-        <p>来自 NexT 的热心用户的贡献， NexT 现已支持 8 中语言</p>
+        <p>感谢 NexT 的热心用户，正是他们的贡献， NexT 现已支持 8 种语言</p>
       </div>
 
       <table>
@@ -70,7 +70,7 @@
           <td>halɔ</td>
         </tr>
         <tr>
-          <td>繁体中文</td>
+          <td>繁體中文</td>
           <td>您好</td>
           <td>nǐ-hǎo</td>
         </tr>
@@ -173,49 +173,7 @@
     </div>
   </section>
 
-  {# See: https://buttons.github.io/ #}
-  {#
-  <section class="next-github-buttons">
-    <div class="container text-center">
-      <a class="github-button"
-         href="https://github.com/iissnan/hexo-theme-next"
-         data-icon="octicon-star"
-         data-count-href="/iissnan/hexo-theme-next/stargazers"
-         data-count-api="/repos/iissnan/hexo-theme-next#stargazers_count"
-         data-count-aria-label="# stargazers on GitHub"
-         aria-label="Star iissnan/hexo-theme-next on GitHub">
-        Star
-      </a>
-      <a class="github-button"
-         href="https://github.com/iissnan/hexo-theme-next/fork"
-         data-icon="octicon-repo-forked"
-         data-count-href="/iissnan/hexo-theme-next/network"
-         data-count-api="/repos/iissnan/hexo-theme-next#forks_count"
-         data-count-aria-label="# forks on GitHub"
-         aria-label="Fork iissnan/hexo-theme-next on GitHub">
-        Fork
-      </a>
-      <a class="github-button"
-         href="https://github.com/iissnan/hexo-theme-next"
-         data-icon="octicon-eye"
-         data-count-href="/iissnan/hexo-theme-next/watchers"
-         data-count-api="/repos/iissnan/hexo-theme-next#subscribers_count"
-         data-count-aria-label="# watchers on GitHub"
-         aria-label="Watch iissnan/hexo-theme-next on GitHub">
-        Watch
-      </a>
-      <a class="github-button"
-         href="https://github.com/iissnan/hexo-theme-next"
-         data-icon="octicon-issue-opened"
-         data-count-api="/repos/iissnan/hexo-theme-next#open_issues_count"
-         data-count-aria-label="# issues on GitHub"
-         aria-label="Issue iissnan/hexo-theme-next on GitHub">
-        Issue
-      </a>
-    </div>
-    <script async="async" defer="defer" id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
-  </section>
-  #}
+  {% include "./templates/partials/githu-buttons.nun" %}
 
 {% endblock %}
 
