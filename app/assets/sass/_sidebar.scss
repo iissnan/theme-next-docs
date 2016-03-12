@@ -1,16 +1,19 @@
 .next-docs-sidebar {
-  padding: 60px 20px 0;
+  padding: 0 20px;
 
-  &.affix {
-    position: fixed;
-    top: 0;
-    width: 213px;
-  }
+  &.affix-bottom { position: absolute; }
+
+  .nav>ul:first-child { margin-top: 60px; }
+  &.affix .nav>ul:first-child { margin-top: 0; }
 
   ul { padding-left: 0; }
   li {
     margin: 10px 0;
     list-style: none;
+    &.active > a {
+      text-decoration: underline;
+      font-weight: bold;
+    }
   }
 
   &>ul>li:first-child { margin-top: 0; }
@@ -19,4 +22,19 @@
   a:hover { text-decoration: underline; }
 
   li>ul { padding-left: 20px; }
+}
+
+@media (min-width: 992px) {
+  .next-docs-sidebar.affix {
+    position: fixed;
+    top: 20px;
+    width: 213px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .next-docs-sidebar.affix,
+  .next-docs-sidebar.affix-bottom {
+    width: 263px;
+  }
 }

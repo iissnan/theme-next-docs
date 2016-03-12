@@ -12,19 +12,24 @@
           {% block pageContent %}{% endblock %}
 
           <div class="text-center next-docs-section-footer">
-            <a href="#top" class="back-to-top next-docs-btn next-docs-btn-default">
-              <i class="fa fa-arrow-up"></i> 返回顶部
-            </a>
             <a href="https://github.com/iissnan/theme-next-docs/issues"
                target="_blank" class="next-docs-btn next-docs-btn-default">
               <i class="fa fa-bug"></i> 文档问题反馈
             </a>
+            <a href="#top" class="back-to-top next-docs-btn next-docs-btn-default">
+              <i class="fa fa-arrow-up"></i> 返回顶部
+            </a>
           </div>
-
         </div>
         <div class="col-md-3">
-          <nav class="next-docs-sidebar">
-            {% block pageSidebar %}{% endblock %}
+          <nav class="next-docs-sidebar nav">
+            <div class="nav">
+              {% block pageSidebar %}{% endblock %}
+            </div>
+
+            <ul>
+              <li><a href="#top" class="back-to-top">回到顶部</a></li>
+            </ul>
           </nav>
         </div>
       </div>

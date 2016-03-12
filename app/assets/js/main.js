@@ -1,7 +1,9 @@
 $(document).ready(function () {
 
-  affix('#nav', $('header').height());
-  $('.next-docs-sidebar').size() > 0 && affix('.next-docs-sidebar', $('.next-docs-sections').offset().top);
+  affix('.home #nav', { top: $('header').height() } );
+
+  affixDocSidebarTOC();
+
 
   $('.home header').css('background-image', function getHeaderBackgroundImage() {
     var r = 1 + parseInt(Math.random() * 8, 10);
@@ -38,12 +40,36 @@ $(document).ready(function () {
     ]
   });
 
+  $('.back-to-top').on('click', function (event){
+    event.preventDefault();
+    $('html, body').animate({scrollTop : 0}, 800);
+  });
+
+  /**
+   * Affix #{target}
+   *
+   * @param {String} target
+   * @param {Object} offset
+   */
   function affix (target, offset) {
     $(target).affix({
-      offset: {
-        top: offset
-      }
+      offset: offset
     });
+  }
+
+  function affixDocSidebarTOC () {
+    var SIDEBAR_SELECTOR = '.next-docs-sidebar';
+    var hasSidebar = $(SIDEBAR_SELECTOR).size() > 0;
+    var offset = {};
+
+    if (hasSidebar) {
+      offset.top = $('.next-docs-sections').offset().top;
+      offset.bottom = 120;
+
+      affix(SIDEBAR_SELECTOR, offset);
+
+      $('body').scrollspy({ target: SIDEBAR_SELECTOR });
+    }
   }
 
   activateMenuItem();

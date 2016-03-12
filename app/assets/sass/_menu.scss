@@ -4,7 +4,7 @@
 .navbar {
   margin-bottom: 0;
   width: 100%;
-  transition: background .3s;
+  transition: background .5s ease;
 }
 
 .home .navbar {
@@ -19,7 +19,7 @@
     margin-left: -25%;
     width: 50%;
     border: 1px solid transparent;
-    transition: border-color .3s;
+    transition: border-color .3s ease;
   }
 
   &.affix-top .navbar-nav>li>a:focus:after,
