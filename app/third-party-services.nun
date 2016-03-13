@@ -12,7 +12,10 @@
 
 
 {% block pageContent %}
-  <h2 class="page-header">评论系统</h2>
+  静态站点拥有一定的局限性，因此我们需要借助于第三方服务来扩展站点的功能。
+  以下是 NexT 目前支持的第三方服务，你可以根据你的需求集成一些功能进来。
+
+  <h2 id="comment-system" class="page-header">评论系统</h2>
   <p>
     NexT 支持 <a href="http://duoshuo.com" target="_blank" rel="external">多说</a> 和
     <a href="https://disqus.com/" target="_blank" rel="external">DISQUS</a> 评论系统。
@@ -26,79 +29,101 @@
     <code>comments: false</code>
   </p>
 
-  <h3 id="多说">多说</h3>
-  <p>使用多说前需要先在 <a href="http://duoshuo.com" target="_blank" rel="external">多说</a> 创建一个站点。具体步骤如下：</p>
+  <h3 id="duoshuo">多说</h3>
+  <p>
+    使用多说前需要先在
+    <a href="http://duoshuo.com" target="_blank" rel="external">多说</a>
+    创建一个站点。具体步骤如下：
+  </p>
   <ol>
     <li>登录后在首页选择 “我要安装”。</li>
     <li><p>创建站点，填写表单。<strong>多说域名</strong> 这一栏填写的即是你的 <code>duoshuo_shortname</code>，如图：</p>
       <img src="/uploads/five-minutes-setup/duoshuo-create-site.png" class="img-thumbnail img-responsive">
     </li>
-    <li><p>创建站点完成后在 站点配置文件 中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。</p>
+    <li>
+      <p>
+        创建站点完成后在
+          <span class="label label-primary">站点配置文件</span>
+        中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。
+      </p>
     </li>
   </ol>
 
-  <h3 id="DISUQS">DISUQS</h3>
-  <p>编辑 站点配置文件，添加 <code>disqus_shortname</code> 字段，设置如下</p>
+  <h3 id="disqus">DISUQS</h3>
+  <p>
+    编辑 <span class="label label-primary">站点配置文件</span>，
+    添加 <code>disqus_shortname</code> 字段，设置如下：
+  </p>
   {% code "yml" %}
   disqus_shortname: your-disqus-shortname
   {% endcode %}
 
-  <h2 class="page-header">数据统计与分析</h2>
+  <h2 id="analytics-system" class="page-header">数据统计与分析</h2>
 
-  <h3 id="百度统计">百度统计</h3>
+  <h3 id="anlaytics-baidu">百度统计</h3>
   <ol>
     <li>登录 <a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a>，定位到站点的代码获取页面</li>
     <li>
-      复制 <code>hm.js?</code> 后面那串统计脚本 id，如：<br>
-      <img src="/uploads/five-minutes-setup/analytics-baidu-id.png" class="ui centered image">
+      复制 <code>hm.js?</code> 后面那串统计脚本 id，如下图所示：<br>
+      <img src="/uploads/five-minutes-setup/analytics-baidu-id.png"
+           class="img-thumbnail img-responsive">
     </li>
-    <li>3.编辑 站点配置文件，新增字段 <code>baidu_analytics</code>，值设置成你的百度统计脚本 id。</li>
+    <li>
+      编辑 <span class="label label-primary">站点配置文件</span>，
+      新增字段 <code>baidu_analytics</code>，值设置成你的百度统计脚本 id。
+    </li>
   </ol>
 
-  <h3 id="Google_分析">Google 分析</h3>
+  <h3 id="analytics-google">Google 分析</h3>
   <p>
-    编辑 站点配置文件，新增字段 <code>google_analytics</code>，
+    编辑 <span class="label label-primary">站点配置文件</span>，
+    新增字段 <code>google_analytics</code>，
     值设置成你的 Google 跟踪 ID。跟踪 ID 通常是以 <code>UA-</code> 开头。
     <img src="/uploads/analytics-google.png" class="img-thumbnail img-responsive">
   </p>
 
   {# 内容分享服务 #}
-  <h2 class="page-header">内容分享服务</h2>
+  <h2 class="page-header" id="share-system">内容分享服务</h2>
   <p>
     分享服务优先选择 <a href="http://www.jiathis.com/" target="_blank" rel="external">JiaThis</a>，
     也就是说，当同时开启了 JiaThis、多说分享，将仅启用 JiaThis。
   </p>
 
-  <h3 id="JiaThis">JiaThis</h3>
-  <p>编辑 站点/主题配置文件，添加字段 <code>jiathis</code>，值为 <code>true</code>。</p>
+  <h3 id="share-jiathis">JiaThis</h3>
+  <p>
+    编辑 <span class="label label-primary">站点配置文件</span>，
+    添加字段 <code>jiathis</code>，值为 <code>true</code>。
+  </p>
   <div class="next-doc-example"> JiaThis 内容分享服务配置示例</div>
-  {% code %}
-  # JiaThis 分享服务
-  jiathis: true
+  {% code "yml" %}
+    # JiaThis 分享服务
+    jiathis: true
   {% endcode %}
 
-  <h3 id="百度分享">
+  <h3 id="share-baidu">
     <a href="http://share.baidu.com/" target="_blank" rel="external">百度分享</a>
   </h3>
-  <p>编辑 站点/主题配置文件，添加字段 <code>baidushare</code>，值为 <code>true</code>。</p>
+  <p>编辑 <span class="label label-primary">站点配置文件</span>，添加字段 <code>baidushare</code>，值为 <code>true</code>。</p>
   <div class="next-doc-example"> 百度内容分享服务配置示例</div>
-  {% code %}
-  # 百度分享服务
-  baidushare: true
+  {% code "yml"%}
+    # 百度分享服务
+    baidushare: true
   {% endcode %}
 
-  <h3 id="多说分享">多说分享</h3>
+  <h3 id="share-duoshuo">多说分享</h3>
+  <p class="bs-callout bs-callout-warning">多说分享必须与多说评论同时使用</p>
   <p>
-    编辑 站点/主题配置文件，添加字段 <code>duoshuo_share</code>，
-    值为 <code>true</code>。<br>多说分享必须与多说评论同时使用。
+    编辑 <span class="label label-primary">站点配置文件</span>，
+    添加字段 <code>duoshuo_share</code>，
+    值为 <code>true</code>。
   </p>
   <div class="next-doc-example"> 多说内容分享服务配置示例</div>
-  {% code %}
-  # 多说分享服务
-  duoshuo_share: true
+  {% code "yml"%}
+    # 多说分享服务
+    duoshuo_share: true
   {% endcode %}
 
-  <h2 class="page-header">搜索服务</h2>
+  <h2 id="search-system" class="page-header">搜索服务</h2>
   <p>
     NexT 支持集成 <a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a> 和
     <a href="http://tinysou.com/" target="_blank" rel="external">微搜索</a>
@@ -160,12 +185,12 @@
     </div>
   </div>
 
-  <h3 id="微搜索">微搜索</h3>
+  <h3 id="wei-sousuo">微搜索</h3>
   <p>TBD</p>
 
-  <h2 class="page-header">其他服务</h2>
+  <h2 id="others" class="page-header">其他服务</h2>
 
-  <h3 id="Google_Webmaster_tools">Google Webmaster tools</h3>
+  <h3 id="google-webmaster-tools">Google Webmaster tools</h3>
   <p>设置 <a href="https://www.google.com/webmasters/tools/" target="_blank" rel="external">Google站点管理工具</a> 的验证字符串，用于提交 sitemap</p>
   <ol>
     <li>
@@ -176,11 +201,13 @@
     </li>
     <li>
       <p>设置主题。编辑 站点配置，新增字段 <code>google_site_verification</code>。</p>
-      {% code "yml"%}google_site_verification: XXXXXXXXXXXXXXXXXXXXXXX{% endcode %}
+      {% code "yml"%}
+        google_site_verification: XXXXXXXXXXXXXXXXXXXXXXX
+      {% endcode %}
     </li>
   </ol>
 
-  <h3 id="多说热评文章">多说热评文章</h3>
+  <h3 id="duoshuo-popular-posts">多说热评文章</h3>
   <p>
     多说评论组件提供 <strong>热评文章</strong> 功能，
     详情见 <a href="http://xirong.duoshuo.com/admin/tools/top-threads/" target="_blank" rel="external">多说官网说明</a>，仅在文章页面显示。
@@ -196,5 +223,42 @@
 
 
 {% block pageSidebar %}
-
+  <ul>
+    <li>
+      <a href="#comment-system">评论系统</a>
+      <ul>
+        <li><a href="#duoshuo">多说</a></li>
+        <li><a href="#disqus">Disqus</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#analytics-system">数据统计与分析</a>
+      <ul>
+        <li><a href="#anlaytics-baidu">百度统计</a></li>
+        <li><a href="#analytics-google">Google 分析</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#share-system">内容分享服务</a>
+      <ul>
+        <li><a href="#share-jiathis">JiaThis</a></li>
+        <li><a href="#share-baidu">百度分享</a></li>
+        <li><a href="#share-duoshuo">多说分享</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#search-system">搜索服务</a>
+      <ul>
+        <li><a href="#swiftype">Swiftype</a></li>
+        <li><a href="#wei-sousuo">微搜索</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#others">其他服务</a>
+      <ul>
+        <li><a href="#google-webmaster-tools">Google Webmaster tools</a></li>
+        <li><a href="#duoshuo-popular-posts">多说热评文章</a></li>
+      </ul>
+    </li>
+  </ul>
 {% endblock %}
