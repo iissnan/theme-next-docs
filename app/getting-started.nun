@@ -26,21 +26,23 @@
     其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置有主题作者提供，主要用于配置主题相关的选项。
   </p>
   <p>
-    为了描述方便，在以下说明中，将前者称为 <strong>站点配置文件</strong>，后者称为 <strong>主题配置文件</strong>。
+    为了描述方便，在以下说明中，将前者称为  <span class="label label-primary">站点配置文件</span>，
+    后者称为 <span class="label label-info">主题配置文件</span>。
   </p>
 
 
   <div>
-    <h2 class="page-header" id="install">安装 NexT</h2>
+    <h2 class="page-header" id="install-next-theme">安装 NexT</h2>
     <p>
       Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下，
       然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。
     </p>
 
-    <h3>下载主题</h3>
+    <h3 id="download-next-theme">下载主题</h3>
     <p>
       如果你熟悉 <a href="http://git-scm.com/" target="_blank">Git</a>，
-      建议你使用 克隆最新版本 的方式，方便之后的主题更新。
+      建议你使用 克隆最新版本 的方式，之后的更新可以通过 <code>git pull</code> 来快速更新，
+      而不用再次下载压缩包替换。
     </p>
 
     <div>
@@ -88,45 +90,86 @@
 
     </div>
 
-    <h3>启用主题</h3>
-    <p>
-      与所有 Hexo 主题启用的模式一样。
-      当 克隆/下载 完成后，打开 站点配置文件，找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。
+    <p class="bs-callout bs-callout-success">
+      如果你对 Git 感兴趣，可以通过《Pro Git》这本书来学习。你可以访问我制作的一个
+      <a href="http://iissnan.com/progit">在线版本（第一版）</a>。
     </p>
 
-    <h3>验证主题</h3>
-    <p>运行 <code>hexo s --debug</code>，观察命令行输出是否有任何异常信息。当命令行输出中提示出：</p>
+
+
+    <h3 id="activate-next-theme">启用主题</h3>
+    <p>
+      与所有 Hexo 主题启用的模式一样。
+      当 克隆/下载 完成后，打开 <span class="label label-primary">站点配置文件</span>，
+      找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。
+    </p>
+    <div class="next-doc-example">启用 NexT 主题</div>
+    {% code "yml" %}
+      theme: next
+    {% endcode %}
+    <p>
+      到此，NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前，
+      我们最好使用 <code>hexo clean</code> 来清除 Hexo 的缓存。
+    </p>
+
+    <h3 id="validate-next-theme">验证主题</h3>
+    <p>
+      首先启动 Hexo 本地站点，并开启调试模式（即加上 <code>--debug</code>），整个命令是 <code>hexo s --debug</code>。
+      在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助他人更好的定位错误。
+      当命令行输出中提示出：
+    </p>
     {% code %}
       INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
     {% endcode %}
     <p>此时即可使用浏览器访问 <code>http://localhost:4000</code>，检查站点是否正确运行。</p>
     <p class="bs-callout bs-callout-success">
       当你看到站点的外观与下图所示类似时即说明你已成功安装 NexT 主题。这是 NexT 默认的 Scheme —— Muse</p>
+
     <p>
-      <img src="/uploads/five-minutes-setup/validation-default-scheme.png" alt="" class="img-thumbnail img-responsive"/>
+      <img src="/uploads/five-minutes-setup/validation-default-scheme-mac.png" alt="" class="img-responsive"/>
+    </p>
+    <p>
+     现在，你已经成功安装并启用了 NexT 主题。下一步我们将要更改一些主题的设定，包括个性化以及集成第三方服务。
     </p>
   </div>
 
   <div class="next-docs-section">
     <h2 class="page-header" id="theme-settings">主题设定</h2>
 
-    <h3>选择 Scheme</h3>
+    <h3 id="select-scheme">选择 Scheme</h3>
     <p>
-      NexT 通过 Scheme 提供主题中的主题。
-      Mist 是 NexT 的第一款 Scheme。
-      启用 Mist 仅需在 主题配置文件 中将 <code>#scheme: Mist</code> 前面的 <code>#</code> 注释去掉即可。
+      Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以
+      在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：
     </p>
+    <ul>
+      <li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
+      <li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
+      <li>Pisces - 双栏 Scheme，小家碧玉似的清新</li>
+    </ul>
+    <p>
+      Scheme 的切换通过更改 <span class="label label-info">主题配置文件</span>，搜索 scheme 关键字。
+      你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 <code>#</code> 即可。
+    </p>
+    <div class="next-doc-example">选择 Pisce Scheme</div>
+    {% code "yml" %}
+      #scheme: Muse
+      #scheme: Mist
+      scheme: Pisces
+    {% endcode %}
 
-    <h3>语言设置</h3>
-    <p>编辑 站点配置文件，将 <code>language</code> 设置成你所需要的语言。<br>例如选用正体中文，则配置为：</p>
-    {% code "yml" %}language: zh-hk{% endcode %}
-    <p>可用的语言如以下表格所示：</p>
+    <h3 id="select-language">设置 语言</h3>
+    <p>
+      编辑 <span class="label label-primary">站点配置文件</span>，
+      将 <code>language</code> 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：
+    </p>
+    {% code "yml" %}language: zh-Hans{% endcode %}
+    <p>目前 NexT 支持的语言如以下表格所示：</p>
     <table class="table table-condensed table-striped table-bordered table-hover">
       <thead>
       <tr>
         <th>语言</th>
         <th>代码</th>
-        <th>设定值</th>
+        <th>设定示例</th>
       </tr>
       </thead>
       <tbody>
@@ -141,102 +184,206 @@
         <td><code>language: zh-Hans</code></td>
       </tr>
       <tr>
-        <td>French</td>
+        <td>Français</td>
         <td><code>fr-FR</code></td>
         <td><code>language: fr-FR</code></td>
       </tr>
       <tr>
-        <td>正体中文</td>
-        <td><code>zh-hk</code>/<code>zh-tw</code></td>
+        <td>Português</td>
+        <td><code>pt</code></td>
+        <td><code>language: pt</code></td>
+      </tr>
+      <tr>
+        <td>繁體中文</td>
+        <td><code>zh-hk</code> 或者 <code>zh-tw</code></td>
         <td><code>language: zh-hk</code></td>
       </tr>
       <tr>
-        <td>Russian</td>
+        <td>Русский язык</td>
         <td><code>ru</code></td>
         <td><code>language: ru</code></td>
       </tr>
       <tr>
-        <td>German</td>
+        <td>Deutsch</td>
         <td><code>de</code></td>
         <td><code>language: de</code></td>
       </tr>
+      <tr>
+        <td>日本語</td>
+        <td><code>ja</code></td>
+        <td><code>language: ja</code></td>
+      </tr>
       </tbody>
     </table>
 
-    <h3>菜单设置</h3>
+    <h3 id="menu-settings">设置 菜单</h3>
     <p>
-      菜单配置在 主题配置文件 的 <code>menu</code>。
-      若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉。默认支持的菜单项有：
+      菜单配置包括两个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。
+      NexT 使用的是 <a href="http://fontawesome.io/" target="_blank">Font Awesome</a> 提供的图标，
+      Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下
+      图标模糊的问题。<br />
+      编辑 <span class="label label-info">主题配置文件</span> ,修改以下内容：
     </p>
-    <table class="table table-condensed table-striped table-bordered table-hover">
-      <thead>
-      <tr>
-        <th>键值</th>
-        <th>设定值</th>
-        <th>comment</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>home</td>
-        <td><code>home: /</code></td>
-        <td>主页</td>
-      </tr>
-      <tr>
-        <td>archives</td>
-        <td><code>archives: /archives</code></td>
-        <td>归档页</td>
-      </tr>
-      <tr>
-        <td>categories</td>
-        <td><code>categories: /categories</code></td>
-        <td>分类页（需手动创建）</td>
-      </tr>
-      <tr>
-        <td>tags</td>
-        <td><code>tags: /tags</code></td>
-        <td>标签页（需手动创建）</td>
-      </tr>
-      <tr>
-        <td>about</td>
-        <td><code>about: /about</code></td>
-        <td>关于页面 （需手动创建）</td>
-      </tr>
-      <tr>
-        <td>commonweal</td>
-        <td><code>commonweal: /404.html</code></td>
-        <td>公益 404 （需手动创建）</td>
-      </tr>
-      </tbody>
-    </table>
-    <div class="next-doc-example">菜单示例配置</div>
-    {% code "yml" %}
+    <ol>
+      <li>
+        <p>设定菜单内容，对应的字段是 <code>menu</code>。
+        菜单内容的设置格式是：<code>item name: link</code>。其中 <code> item name </code>
+        是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。
+        </p>
+        <div class="next-doc-example">菜单示例配置</div>
+        {% code "yml" %}
+            menu:
+              home: /
+              archives: /archives
+              #about: /about
+              #categories: /categories
+              tags: /tags
+              #commonweal: /404.html
+        {% endcode %}
+        <p class="bs-callout bs-callout-warning">
+          若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉
+        </p>
+        <p>NexT 默认的菜单项有：</p>
+        <div class="table-responsive">
+          <table class="table table-condensed table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+              <th>键值</th>
+              <th>设定值</th>
+              <th>显示文本（简体中文）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>home</td>
+              <td><code>home: /</code></td>
+              <td>主页</td>
+            </tr>
+            <tr>
+              <td>archives</td>
+              <td><code>archives: /archives</code></td>
+              <td>归档页</td>
+            </tr>
+            <tr>
+              <td>categories</td>
+              <td><code>categories: /categories</code></td>
+              <td>分类页 <i class="fa fa-exclamation-circle"></i></td>
+            </tr>
+            <tr>
+              <td>tags</td>
+              <td><code>tags: /tags</code></td>
+              <td>标签页 <i class="fa fa-exclamation-circle"></i></td>
+            </tr>
+            <tr>
+              <td>about</td>
+              <td><code>about: /about</code></td>
+              <td>关于页面 <i class="fa fa-exclamation-circle"></i></td>
+            </tr>
+            <tr>
+              <td>commonweal</td>
+              <td><code>commonweal: /404.html</code></td>
+              <td>公益 404 <i class="fa fa-exclamation-circle"></i></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>标注 <i class="fa fa-exclamation-circle"></i> 的项表示需要手动创建这个页面</p>
+      </li>
+      <li>
+        <p>
+        设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用
+        这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的
+        <code>languages/&lt;language&gt;.yml</code>。以简体中文为例，若你需要添加一个菜单项，
+        比如 <code>something</code>，即需要修改翻译文件，简体中文对应的翻译文件是
+        <code>languages/zh-Hans.yml</code>，在 <code>menu</code> 字段下添加一项：
+        </p>
+        {% code "yml" %}
         menu:
-          home: /
-          archives: /archives
-          #about: /about
-          #categories: /categories
-          tags: /tags
-          #commonweal: /404.html
-    {% endcode %}
+          home: 首页
+          archives: 归档
+          categories: 分类
+          tags: 标签
+          about: 关于
+          search: 搜索
+          commonweal: 公益404
+          something: 有料
+        {% endcode %}
+      </li>
+      <li>
+        <p>
+          设定菜单项的图标，对应的字段是 <code>menu_icons</code>。
+          此设定格式是 <code>item name: icon name</code>，其中 <code>item name</code>
+          与上一步所配置的菜单名字对应，<code>icon name</code> 是 Font Awesome 图标的
+          名字。而 <code>enable</code> 可用于控制是否显示图标，你可以设置成 <code>false</code>
+          来去掉图标。
+        </p>
+        <div class="next-doc-example">菜单图标配置示例</div>
+        {% code "yml" %}
+          menu_icons:
+            enable: true
+            # Icon Mapping.
+            home: home
+            about: user
+            categories: th
+            tags: tags
+            archives: archive
+            commonweal: heartbeat
+        {% endcode %}
+        <p class="bs-callout bs-callout-warning">
+          在菜单图标开启的情况下，如果菜单项与菜单未匹配（没有设置或者无效的 Font Awesome 图标名字）
+          的情况下，NexT 将会使用 <i class="fa fa-question-circle"></i> 作为图标。
+        </p>
+      </li>
+    </ol>
 
-    <h3>侧栏设置</h3>
+
+    <h3 id="sidebar-settings">设置 侧栏</h3>
     <p>
-      默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示。
-      可以通过修改 主题配置文件 中的 <code>sidebar</code> 字段来控制侧栏的行为。
+      默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。
+      可以通过修改 <span class="label label-primary">主题配置文件</span> 中的
+      <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置，
+      其二是侧栏显示的时机。
     </p>
-    <p>支持的选项有：</p>
     <ul>
-      <li><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</li>
-      <li><code>always</code> - 在所有页面中都显示</li>
-      <li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
+      <li>
+        <p>设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
+        <ul>
+          <li>left - 靠左放置</li>
+          <li>right - 靠右放置</li>
+        </ul>
+        <p class="bs-callout bs-callout-danger">
+          仅 Pisces Scheme 支持位置配置，版本 <span class="label label-warning">5.0.0</span>
+        </p>
+        {% code "yml" %}
+          sidebar:
+            position: left
+        {% endcode %}
+      </li>
+      <li>
+        <p>设置侧栏显示的时机，修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
+        <ul>
+          <li><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</li>
+          <li><code>always</code> - 在所有页面中都显示</li>
+          <li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
+          <li><code>remove</code> - 完全移除</li>
+        </ul>
+        {% code "yml" %}
+          sidebar:
+            display: post
+        {% endcode %}
+        <p class="bs-callout bs-callout-danger">
+          已知侧栏在 <code>use motion: false</code> 的情况下不会展示。
+          <span class="label label-warning">5.0.0</span>
+        </p>
+      </li>
     </ul>
-    <div class="next-doc-example">侧栏示例配置</div>
-    {% code "yml" %}sidebar: post{% endcode %}
 
-    <h3>头像设置</h3>
-    <p>编辑 站点配置文件，新增字段 <code>avatar</code>， 值设置成头像的链接地址。</p>
-    <p>其中，头像的链接地址可以是：</p>
+
+    <h3 id="avatar-setting">设置 头像</h3>
+    <p>
+      编辑 <span class="label label-primary">站点配置文件</span>，
+      新增字段 <code>avatar</code>， 值设置成头像的链接地址。其中，头像的链接地址可以是：
+    </p>
     <table class="table table-condensed table-striped table-bordered table-hover">
       <thead>
       <tr>
@@ -246,19 +393,23 @@
       </thead>
       <tbody>
       <tr>
-        <td>完整的互联网 URL</td>
-        <td><code>https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460</code></td>
+        <td>完整的互联网 URI</td>
+        <td>
+          <code>http://example.com/avtar.png</code>
+        </td>
       </tr>
       <tr>
         <td>站点内的地址</td>
         <td>
           <p>
-            <code>/uploads/avatar.jpg</code>
-            - 需要将你的头像图片放置在 站点的 <code>source/uploads/</code>（可能需要新建uploads目录）
+            将头像放置主题目录下的  <code>source/uploads/</code> （新建uploads目录若不存在）
+            <br />
+            配置为：<code>avatar: /uploads/avatar.png</code>
           </p>
           <p>
-            <code>/images/avatar.jpg</code>
-            - 需要将你的头像图片放置在 主题的 <code>source/images/</code> 目录下
+            或者 放置在 <code>source/images/</code> 目录下
+            <br />
+            配置为：<code>avatar: /images/avatar.png</code>
           </p>
         </td>
       </tr>
@@ -266,20 +417,26 @@
     </table>
     <div class="next-doc-example">头像设置示例 </div>
     {% code "yml"%}
-      avatar: https://avatars1.githubusercontent.com/u/32269?v=3&s=460
+      avatar: http://example.com/avtar.png
     {% endcode %}
 
-    <h3>作者名称</h3>
-    <p>编辑 站点配置文件，设置 <code>author</code> 为你的昵称。</p>
+    <h3 id="author-setting">作者名称</h3>
+    <p>
+      编辑 <span class="label label-primary">站点配置文件</span>，
+      设置 <code>author</code> 为你的昵称
+    </p>
 
-    <h3>站点描述</h3>
-    <p>编辑 站点配置文件，设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
+    <h3 id="description-setting">站点描述</h3>
+    <p>
+      编辑 <span class="label label-primary">站点配置文件</span>，
+      设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)
+    </p>
   </div>
 
   <div class="next-docs-section">
-    <h2 id="third-party-services" class="page-header">第三方服务</h2>
+    <h2 id="third-party-services" class="page-header">集成第三方服务</h2>
 
-    <h3>多说评论</h3>
+    <h3 id="comment-system-duoshuo">多说评论</h3>
     <div class="bs-callout bs-callout-warning">注意：duoshuo_shortname 不是你的多说登录的 id</div>
     <p>使用多说前需要先在 多说 创建一个站点。具体步骤如下：</p>
     <ol>
@@ -299,7 +456,7 @@
     <div class="next-doc-example">多说设置示例</div>
     {% code "yml" %}duoshuo_shortname: iissnan-notes{% endcode %}
 
-    <h3>百度统计</h3>
+    <h3 id="analysis-system-baidu">百度统计</h3>
     <div class="bs-callout bs-callout-warning">注意： baidu_analytics 不是你的百度 id 或者 百度统计 id</div>
     <ol>
       <li>
@@ -311,15 +468,18 @@
         <img src="/uploads/five-minutes-setup/analytics-baidu-id.png" class="img-thumbnail img-responsive">
       </li>
       <li>
-        编辑 站点配置文件，新增字段 <code>baidu_analytics</code> 字段，值设置成你的百度统计脚本 id
+        编辑 <span class="label label-primary">站点配置文件</span>，
+        新增字段 <code>baidu_analytics</code> 字段，值设置成你的百度统计脚本 id
       </li>
     </ol>
 
-    <h3>Swiftype 搜索</h3>
+    <h3 id="search-system-swiftype">Swiftype 搜索</h3>
     <p>
       使用 Swiftype 之前需要前往 Swiftype 配置一个搜索引擎。
-      而后编辑 <strong>站点配置文件</strong>，新增 <code>swiftype_key</code> 字段，
-      值为你的 swiftype 搜索引擎的 key。
+      而后编辑 <span class="label label-primary">站点配置文件</span>，
+      新增 <code>swiftype_key</code> 字段，值为你的 swiftype 搜索引擎的 key。
+      详细的配置请参考：
+        <a href="/third-party-services.html#swfitype" target="_blank">第三方服务 - Swiftype</a>
     </p>
   </div>
 {% endblock %}
@@ -328,33 +488,33 @@
 {% block pageSidebar%}
   <ul>
     <li>
-      <a href="#install">安装</a>
+      <a href="#install-next-theme">安装 NexT</a>
       <ul>
-        <li><a href="#下载_NexT_主题">下载 NexT</a></li>
-        <li><a href="">启用 NexT</a></li>
-        <li><a href="">验证</a></li>
+        <li><a href="#download-next-theme">下载 NexT 主题</a></li>
+        <li><a href="#activate-next-theme">启用 NexT 主题</a></li>
+        <li><a href="#validate-next-theme">验证是否正确启用</a></li>
       </ul>
     </li>
     <li>
       <a href="#theme-settings">主题设定</a>
       <ul>
-        <li><a href="">选择 Scheme</a></li>
-        <li><a href="">设置 语言</a></li>
-        <li><a href="">设置 菜单</a></li>
-        <li><a href="">设置 侧栏</a></li>
-        <li><a href="">设置 头像</a></li>
-        <li><a href="">作者名称</a></li>
-        <li><a href="">站点描述</a></li>
+        <li><a href="#select-scheme">选择 Scheme</a></li>
+        <li><a href="#select-language">设置 语言</a></li>
+        <li><a href="#menu-settings">设置 菜单</a></li>
+        <li><a href="#sidebar-settings">设置 侧栏</a></li>
+        <li><a href="#avatar-setting">设置 头像</a></li>
+        <li><a href="#author-setting">作者名称</a></li>
+        <li><a href="#description-setting">站点描述</a></li>
       </ul>
     </li>
     <li>
       <a href="#third-party-services">
-        第三方服务
+        集成第三方服务
       </a>
       <ul>
-        <li><a href="">多说评论</a></li>
-        <li><a href="">百度统计</a></li>
-        <li><a href="">Swiftype 搜索</a></li>
+        <li><a href="#comment-system-duoshuo">多说评论</a></li>
+        <li><a href="#analysis-system-baidu">百度统计</a></li>
+        <li><a href="#search-system-swiftype">Swiftype 搜索</a></li>
       </ul>
     </li>
   </ul>
