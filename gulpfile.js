@@ -28,7 +28,8 @@ var dest = {
     fonts: './app/assets/fonts/**/*',
     vendors: './app/assets/vendors/**/*',
     html: './app/**/*.nun',
-    'uploads': './app/uploads/**/*'
+    uploads: './app/uploads/**/*',
+    CNAME: './app/CNAME'
   },
   dirs: {
     dist: './dist',
@@ -86,6 +87,7 @@ gulp.task('dist', ['clean:dist', 'sass'], () => {
   });
 
   gulp.src(dest.files.uploads).pipe(gulp.dest(dest.dirs.uploads));
+  gulp.src(dest.files.CNAME).pipe(gulp.dest(dest.dirs.dist));
 
   gulp.src(dest.files.html)
     .pipe(tap(function (file) {
