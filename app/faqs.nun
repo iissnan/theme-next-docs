@@ -57,6 +57,9 @@
     若你发现设置的 Favicon 并未生效，请先清除浏览器的缓存后直接访问 Favicon 的地址，这个地址通常是
     <code>http://your-domain.com/favicon.ico</code>。
   </p>
+  <p class="bs-callout bs-callout-warning">
+    如果你的站点是放在子目录下，请设置为：<code>favicon: favicon.ico</code>
+  </p>
 
   <h2 id="custom-font">如何更改字体？</h2>
   <p>

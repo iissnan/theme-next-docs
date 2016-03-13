@@ -1,11 +1,15 @@
 {% extends './base.nun' %}
 
+{% block header %}
+  {{ super() }}
+
+  <h1 class="text-center next-docs-header">
+    {% block pageHeader %}{% endblock %}
+  </h1>
+{% endblock %}
+
 {% block main %}
   <section class="next-docs">
-    <h1 class="text-center next-doc-header">
-      {% block pageHeader %}{% endblock %}
-    </h1>
-
     <div class="container next-docs-sections">
       <div class="row">
         <div class="col-md-9 next-docs-section" role="main">

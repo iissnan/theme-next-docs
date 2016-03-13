@@ -35,7 +35,7 @@
     若你正在使用的版本比较低，可以选择使用 <code>HTML</code> 方式。
   </p>
 
-  <div class="next-doc-example">
+  <div class="next-docs-example">
     <span class="label label-success">标签调用方法</span>
   </div>
   {% code %}
@@ -77,7 +77,7 @@
   </p>
 
 
-  <div class="next-doc-example">
+  <div class="next-docs-example">
     <span class="label label-success">标签调用方法 </span>
   </div>
   {% code %}

@@ -103,7 +103,7 @@
       当 克隆/下载 完成后，打开 <span class="label label-primary">站点配置文件</span>，
       找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。
     </p>
-    <div class="next-doc-example">启用 NexT 主题</div>
+    <div class="next-docs-example">启用 NexT 主题</div>
     {% code "yml" %}
       theme: next
     {% endcode %}
@@ -150,7 +150,7 @@
       Scheme 的切换通过更改 <span class="label label-info">主题配置文件</span>，搜索 scheme 关键字。
       你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 <code>#</code> 即可。
     </p>
-    <div class="next-doc-example">选择 Pisce Scheme</div>
+    <div class="next-docs-example">选择 Pisce Scheme</div>
     {% code "yml" %}
       #scheme: Muse
       #scheme: Mist
@@ -230,7 +230,7 @@
         菜单内容的设置格式是：<code>item name: link</code>。其中 <code> item name </code>
         是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。
         </p>
-        <div class="next-doc-example">菜单示例配置</div>
+        <div class="next-docs-example">菜单示例配置</div>
         {% code "yml" %}
             menu:
               home: /
@@ -317,7 +317,7 @@
           名字。而 <code>enable</code> 可用于控制是否显示图标，你可以设置成 <code>false</code>
           来去掉图标。
         </p>
-        <div class="next-doc-example">菜单图标配置示例</div>
+        <div class="next-docs-example">菜单图标配置示例</div>
         {% code "yml" %}
           menu_icons:
             enable: true
@@ -415,7 +415,7 @@
       </tr>
       </tbody>
     </table>
-    <div class="next-doc-example">头像设置示例 </div>
+    <div class="next-docs-example">头像设置示例 </div>
     {% code "yml"%}
       avatar: http://example.com/avtar.png
     {% endcode %}
@@ -453,7 +453,7 @@
           创建站点完成后在 站点配置文件 中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。</p>
       </li>
     </ol>
-    <div class="next-doc-example">多说设置示例</div>
+    <div class="next-docs-example">多说设置示例</div>
     {% code "yml" %}duoshuo_shortname: iissnan-notes{% endcode %}
 
     <h3 id="analysis-system-baidu">百度统计</h3>

@@ -3,12 +3,17 @@ $(document).ready(function () {
   affix('.home #nav', { top: $('header').height() } );
 
   affixDocSidebarTOC();
+  //randomHero();
+  activateMenuItem();
+  registerBackToTop();
 
+  function randomHero () {
+    $('.home header').css('background-image', function getHeaderBackgroundImage() {
+      var r = 1 + parseInt(Math.random() * 8, 10);
+      return 'url("/assets/img/banner-' + r + '.jpg")';
+    });
+  }
 
-  $('.home header').css('background-image', function getHeaderBackgroundImage() {
-    var r = 1 + parseInt(Math.random() * 8, 10);
-    return 'url("/assets/img/banner-' + r + '.jpg")';
-  });
 
   $('#highlightSchemesSlider').slick({
     dots: true,
@@ -40,10 +45,13 @@ $(document).ready(function () {
     ]
   });
 
-  $('.back-to-top').on('click', function (event){
-    event.preventDefault();
-    $('html, body').animate({scrollTop : 0}, 800);
-  });
+  function registerBackToTop () {
+    $('.back-to-top').on('click', function (event){
+      event.preventDefault();
+      $('html, body').animate({scrollTop : 0}, 800);
+    });
+  }
+
 
   /**
    * Affix #{target}
@@ -72,7 +80,7 @@ $(document).ready(function () {
     }
   }
 
-  activateMenuItem();
+
 
   /**
    * Add `active` class to menu item by comparing location pathname with menu item's href.

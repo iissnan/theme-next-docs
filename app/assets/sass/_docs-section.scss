@@ -1,15 +1,10 @@
-.next-doc-header {
+.next-docs-header {
+  position: relative;
   margin-top: 0;
   margin-bottom: 40px;
   padding: 100px 40px;
   color: white;
-  background: {
-    image: url("/assets/img/do.svg");
-    repeat: no-repeat;
-    size: 4000px;
-    position: 50%;
-    color: #111321;
-  }
+  z-index: 10;
 
   i {
     margin-bottom: 1rem;
@@ -99,7 +94,7 @@
 }
 
 
-.next-doc-example {
+.next-docs-example {
   position: relative;
   padding: 10px;
   border: 1px solid #ddd;
@@ -116,7 +111,7 @@
   }
 }
 
-.next-doc-example + pre code {
+.next-docs-example + pre code {
   border-color: #ddd;
 }
 

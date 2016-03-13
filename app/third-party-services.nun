@@ -94,7 +94,7 @@
     编辑 <span class="label label-primary">站点配置文件</span>，
     添加字段 <code>jiathis</code>，值为 <code>true</code>。
   </p>
-  <div class="next-doc-example"> JiaThis 内容分享服务配置示例</div>
+  <div class="next-docs-example"> JiaThis 内容分享服务配置示例</div>
   {% code "yml" %}
     # JiaThis 分享服务
     jiathis: true
@@ -104,7 +104,7 @@
     <a href="http://share.baidu.com/" target="_blank" rel="external">百度分享</a>
   </h3>
   <p>编辑 <span class="label label-primary">站点配置文件</span>，添加字段 <code>baidushare</code>，值为 <code>true</code>。</p>
-  <div class="next-doc-example"> 百度内容分享服务配置示例</div>
+  <div class="next-docs-example"> 百度内容分享服务配置示例</div>
   {% code "yml"%}
     # 百度分享服务
     baidushare: true
@@ -117,7 +117,7 @@
     添加字段 <code>duoshuo_share</code>，
     值为 <code>true</code>。
   </p>
-  <div class="next-doc-example"> 多说内容分享服务配置示例</div>
+  <div class="next-docs-example"> 多说内容分享服务配置示例</div>
   {% code "yml"%}
     # 多说分享服务
     duoshuo_share: true

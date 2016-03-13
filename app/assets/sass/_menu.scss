@@ -1,50 +1,39 @@
 /* ========================================
    navbar
    ======================================== */
+
 .navbar {
   margin-bottom: 0;
   width: 100%;
   transition: background .5s ease;
-}
-
-.home .navbar {
   background: none;
   border-color: transparent;
 
-  &.affix-top .navbar-nav>li>a:after {
+  .navbar-nav>li>a:after {
     content: ' ';
     position: absolute;
     left: 50%;
-    bottom: 10px;
-    margin-left: -25%;
-    width: 50%;
+    bottom: 8px;
+    margin-left: -15%;
+    width: 30%;
     border: 1px solid transparent;
-    transition: border-color .3s ease;
+    transition: all .3s ease;
+    opacity: .8;
   }
 
-  &.affix-top .navbar-nav>li>a:focus:after,
-  &.affix-top .navbar-nav>li>a:hover:after,
-  &.affix-top .navbar-nav>.active>a:after,
-  &.affix-top .navbar-nav>.active>a:focus:after,
-  &.affix-top .navbar-nav>.active>a:hover:after {
-    border-color: white;
-  }
-
-  &.affix-top .navbar-nav>li>a:hover,
-  &.affix-top .navbar-nav>li>a:focus,
-  &.affix-top .navbar-nav>.active>a,
-  &.affix-top .navbar-nav>.active>a:focus,
-  &.affix-top .navbar-nav>.active>a:hover {
+  .navbar-nav>li>a:hover,
+  .navbar-nav>li>a:focus,
+  .navbar-nav>.active>a,
+  .navbar-nav>.active>a:focus,
+  .navbar-nav>.active>a:hover {
     background-color: transparent;
+
+    &:after { border-color: white; }
+  }
+
+  &.affix {
+    color: #333;
+    background: #000;
+    border-color: #080808;
   }
 }
-
-
-.navbar.affix {
-  color: #333;
-  background: #222;
-  border-color: #080808;
-}
-
-.navbar-inverse.affix .navbar-nav>li>a { color: #9d9d9d; }
-
