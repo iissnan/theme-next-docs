@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
+var tap = require('gulp-tap');
+var del = require('del');
 var utils = require('./lib/utils');
 var renderer = require ('./lib/renderer');
 var configs = require('./lib/configs');
@@ -16,6 +18,26 @@ var source = {
   dirs: {
     index: './app',
     css: './app/assets/css'
+  }
+};
+var dest = {
+  files: {
+    js: './app/assets/js/**/*',
+    css: './app/assets/css/**/*',
+    img: './app/assets/img/**/*',
+    fonts: './app/assets/fonts/**/*',
+    vendors: './app/assets/vendors/**/*',
+    html: './app/**/*.nun',
+    'uploads': './app/uploads/**/*'
+  },
+  dirs: {
+    dist: './dist',
+    js: './dist/assets/js',
+    css: './dist/assets/css',
+    img: './dist/assets/img',
+    fonts: './dist/assets/fonts',
+    vendors: './dist/assets/vendors/',
+    uploads: './dist/uploads'
   }
 };
 
@@ -52,6 +74,25 @@ gulp.task('sass', () => {
   return gulp.src(source.files.sass)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(source.dirs.css));
+});
+
+gulp.task('clean:dist', function() {
+  return del.sync('dist');
+});
+
+gulp.task('dist', ['clean:dist', 'sass'], () => {
+  ['js', 'css', 'fonts', 'img', 'vendors'].forEach(function (item) {
+    gulp.src(dest.files[item]).pipe(gulp.dest(dest.dirs[item]));
+  });
+
+  gulp.src(dest.files.uploads).pipe(gulp.dest(dest.dirs.uploads));
+
+  gulp.src(dest.files.html)
+    .pipe(tap(function (file) {
+      file.contents = new Buffer(renderer.render(file.path, { config: configs }));
+      file.path = file.path.replace('nun', 'html');
+    }))
+    .pipe(gulp.dest(dest.dirs.dist));
 });
 
 gulp.task('default', ['sass', 'browser-sync']);

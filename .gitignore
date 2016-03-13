@@ -2,6 +2,8 @@ node_modules/
 .idea/
 .vagrant/
 npm-debug.log
+dist/
+
 
 app/assets/css/
 
