@@ -27,7 +27,9 @@ var dest = {
     img: './app/assets/img/**/*',
     fonts: './app/assets/fonts/**/*',
     vendors: './app/assets/vendors/**/*',
-    html: './app/**/*.nun',
+    html: {
+      zh: './app/*.nun'
+    },
     uploads: './app/uploads/**/*',
     CNAME: './app/CNAME'
   },
@@ -89,7 +91,7 @@ gulp.task('dist', ['clean:dist', 'sass'], () => {
   gulp.src(dest.files.uploads).pipe(gulp.dest(dest.dirs.uploads));
   gulp.src(dest.files.CNAME).pipe(gulp.dest(dest.dirs.dist));
 
-  gulp.src(dest.files.html)
+  gulp.src(dest.files.html.zh)
     .pipe(tap(function (file) {
       file.contents = new Buffer(renderer.render(file.path, { config: configs }));
       file.path = file.path.replace('nun', 'html');
