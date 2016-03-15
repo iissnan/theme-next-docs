@@ -46,7 +46,7 @@
     counter-reset: counter;
     padding:0 26px;
 
-    li {
+    &>li {
       position: relative;
       margin: 10px 0;
       list-style-type: none;

@@ -221,9 +221,9 @@
       菜单配置包括两个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。
       NexT 使用的是 <a href="http://fontawesome.io/" target="_blank">Font Awesome</a> 提供的图标，
       Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下
-      图标模糊的问题。<br />
-      编辑 <span class="label label-info">主题配置文件</span> ,修改以下内容：
+      图标模糊的问题。
     </p>
+    <p>编辑 <span class="label label-info">主题配置文件</span> ,修改以下内容：</p>
     <ol>
       <li>
         <p>设定菜单内容，对应的字段是 <code>menu</code>。
@@ -240,10 +240,8 @@
               tags: /tags
               #commonweal: /404.html
         {% endcode %}
-        <p class="bs-callout bs-callout-warning">
-          若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉
-        </p>
-        <p>NexT 默认的菜单项有：</p>
+        <p class="bs-callout bs-callout-warning">若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉</p>
+        <p>NexT 默认的菜单项有（标注 <i class="fa fa-exclamation-circle"></i> 的项表示需要手动创建这个页面）：</p>
         <div class="table-responsive">
           <table class="table table-condensed table-striped table-bordered table-hover">
             <thead>
@@ -287,15 +285,16 @@
             </tbody>
           </table>
         </div>
-        <p>标注 <i class="fa fa-exclamation-circle"></i> 的项表示需要手动创建这个页面</p>
       </li>
       <li>
         <p>
-        设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用
-        这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的
-        <code>languages/&lt;language&gt;.yml</code>。以简体中文为例，若你需要添加一个菜单项，
-        比如 <code>something</code>，即需要修改翻译文件，简体中文对应的翻译文件是
-        <code>languages/zh-Hans.yml</code>，在 <code>menu</code> 字段下添加一项：
+          设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用
+          这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的
+          <code>languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。
+        </p>
+        <p>
+          以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件 
+          <code>languages/zh-Hans.yml</code>，在 <code>menu</code> 字段下添加一项：
         </p>
         {% code "yml" %}
         menu:
@@ -344,7 +343,7 @@
       <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置，
       其二是侧栏显示的时机。
     </p>
-    <ul>
+    <ol>
       <li>
         <p>设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
         <ul>
@@ -352,7 +351,7 @@
           <li>right - 靠右放置</li>
         </ul>
         <p class="bs-callout bs-callout-danger">
-          仅 Pisces Scheme 支持位置配置，版本 <span class="label label-warning">5.0.0</span>
+          目前仅 Pisces Scheme 支持 <code>position</code> 配置。影响版本<span class="label label-danger">5.0.0</span>及更低版本。
         </p>
         {% code "yml" %}
           sidebar:
@@ -373,10 +372,10 @@
         {% endcode %}
         <p class="bs-callout bs-callout-danger">
           已知侧栏在 <code>use motion: false</code> 的情况下不会展示。
-          <span class="label label-warning">5.0.0</span>
+          影响版本<span class="label label-danger">5.0.0</span>及更低版本。
         </p>
       </li>
-    </ul>
+    </ol>
 
 
     <h3 id="avatar-setting">设置 头像</h3>

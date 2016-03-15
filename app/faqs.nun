@@ -197,6 +197,14 @@
     因此，最好检查下 <strong>站点配置文件</strong> 中是否有存在上述同名的配置。
     如果存在，请将两者配置在一起。
   </p>
+
+  <h2 id="optimize">如何优化 NexT 主题？</h2>
+  <p>
+    NexT 并未对 HTML、JavaScript 以及 CSS 做压缩处理。如果你比较在意这点，可以在
+    NexT 的 Issues 列表搜索
+    <a href="https://github.com/iissnan/hexo-theme-next/issues?utf8=%E2%9C%93&q=+label%3AOptimization">
+      他人共享的优化方案</a>。
+  </p>
 {% endblock %}
 
 
@@ -209,5 +217,6 @@
     <li><a href="#count-incorrect-for-tags-categories">标签/分类数量统计不准确？</a></li>
     <li><a href="#incorrect-language">为何语言显示不正确？</a></li>
     <li><a href="#setting-page-size">如何设置页面文章的篇数？</a></li>
+    <li><a href="#optimize">如何优化 NexT 主题？</a></li>
   </ul>
 {% endblock %}
