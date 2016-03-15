@@ -4,9 +4,9 @@ menu:
   getting-started:
     label: 开始使用
     href: /getting-started.html
-#  theme-settings:
-#    label: 主题配置
-#    href: /theme-settings.html
+  theme-settings:
+    label: 主题配置
+    href: /theme-settings.html
 #    subItems:
 #      theme-settings-example:
 #        label: 主题配置示例

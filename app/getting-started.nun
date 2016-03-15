@@ -293,7 +293,7 @@
           <code>languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。
         </p>
         <p>
-          以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件 
+          以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件
           <code>languages/zh-Hans.yml</code>，在 <code>menu</code> 字段下添加一项：
         </p>
         {% code "yml" %}

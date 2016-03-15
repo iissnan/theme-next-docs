@@ -190,6 +190,17 @@
 
   <h2 id="others" class="page-header">其他服务</h2>
 
+  <h3 id="mathjax">MathJax </h3>
+  <p>NexT 借助于 MathJax 来显示数学公式，此选项默认关闭。</p>
+  <p>编辑 <span class="label label-info">主题配置文件</span>，将 <code>mathjax</code> 设定为 <code>true</code> 即可。</p>
+  {% code "yml" %}
+    # MathJax Support
+    mathjax:
+  {% endcode %}
+  <p class="bs-callout bs-callout-success">
+    ProTip: <a href="https://github.com/iissnan/hexo-theme-next/pull/363">使用七牛 CDN 来加速 MathJax 脚本的加载</a>
+  </p>
+
   <h3 id="google-webmaster-tools">Google Webmaster tools</h3>
   <p>设置 <a href="https://www.google.com/webmasters/tools/" target="_blank" rel="external">Google站点管理工具</a> 的验证字符串，用于提交 sitemap</p>
   <ol>
@@ -256,6 +267,7 @@
     <li>
       <a href="#others">其他服务</a>
       <ul>
+        <li><a href="#mathjax">MathJax</a></li>
         <li><a href="#google-webmaster-tools">Google Webmaster tools</a></li>
         <li><a href="#duoshuo-popular-posts">多说热评文章</a></li>
       </ul>
