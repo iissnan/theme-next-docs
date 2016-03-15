@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
@@ -84,7 +86,9 @@ gulp.task('clean:dist', function() {
 });
 
 gulp.task('dist', ['clean:dist', 'sass'], () => {
-  ['js', 'css', 'fonts', 'img', 'vendors'].forEach(function (item) {
+  let ASSETS = ['js', 'css', 'fonts', 'img', 'vendors'];
+
+  ASSETS.forEach(function (item) {
     gulp.src(dest.files[item]).pipe(gulp.dest(dest.dirs[item]));
   });
 
