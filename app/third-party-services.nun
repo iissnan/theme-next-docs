@@ -123,6 +123,28 @@
     duoshuo_share: true
   {% endcode %}
 
+  <h3 id="share-addthis">
+    AddThis
+    <small>由 <a href="https://github.com/hackjustu">hackjustu</a> 提供</small>
+  </h3>
+  <ol>
+    <li>
+      在网站 <a href="https://www.addthis.com/">AddThis</a> 上注册账号。
+      可以使用 Google/Facebook/Twitter 账号进行第三方登陆
+    </li>
+    <li>
+      从下面菜单获得 AddThis id：<code>More.. --&gt; General --&gt; ID</code>。
+      具体 ID 获得方式参考以下截图 <br/>
+      <img src="/uploads/add-this-id.png" alt="AddThis Id" class="img-responsive img-thumbnail">
+    </li>
+    <li>
+      在主题<code>_config.yml</code>中，把<code>#Share</code>下的 <code>#add_this_id</code>取消注释，
+      改为<code>add_this_id: put_your_add_this_id_here</code>
+    </li>
+  </ol>
+
+
+
   <h2 id="search-system" class="page-header">搜索服务</h2>
   <p>
     NexT 支持集成 <a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a> 和
@@ -255,6 +277,7 @@
         <li><a href="#share-jiathis">JiaThis</a></li>
         <li><a href="#share-baidu">百度分享</a></li>
         <li><a href="#share-duoshuo">多说分享</a></li>
+        <li><a href="#share-addthis">AddThis</a></li>
       </ul>
     </li>
     <li>
