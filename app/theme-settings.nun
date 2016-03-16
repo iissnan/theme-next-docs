@@ -33,7 +33,20 @@
   </ul>
 
   <h3 id="tags-page">添加「标签」页面</h3>
-  <p>新建「标签」页面，并在菜单中显示「标签」链接。</p>
+  <p>新建「标签」页面，并在菜单中显示「标签」链接。「标签」页面将展示站点的所有标签，若你的所有文章都未包含标签，此页面将是空的。
+    底下代码是一篇包含标签的文章的例子：
+  </p>
+  {% code "md" %}
+  title: 标签测试文章
+  tags:
+    - Testing
+    - Another Tag
+  ---
+  {% endcode %}
+  <p class="bs-callout bs-callout-info">
+    请参阅 <a href="https://hexo.io/zh-cn/docs/front-matter.html#分类和标签" target="_blank">
+      Hexo 的分类与标签文档</a>，了解如何为文章添加标签或者分类。
+  </p>
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
@@ -63,23 +76,12 @@
       $ hexo new page tags
       {% endcode %}
     </div>
-    <div role="tabpanel" class="tab-pane active" id="set-page-tags">
+    <div role="tabpanel" class="tab-pane" id="set-page-tags">
       <p>编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下：</p>
       {% code "markdown" %}
         title: 标签
         date: 2014-12-22 12:39:04
         type: "tags"
-        ---
-      {% endcode %}
-      <p class="bs-callout bs-callout-primary">
-        注意：如果有启用 多说 或者 Disqus 评论，默认页面也会带有评论。
-        需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code>，如：
-      </p>
-      {% code "markdown" %}
-        title: 标签
-        date: 2014-12-22 12:39:04
-        type: "tags"
-        comments: false
         ---
       {% endcode %}
     </div>
@@ -96,9 +98,33 @@
       {% endcode %}
     </div>
   </div>
+  <p class="bs-callout bs-callout-warning">
+    <strong>注意：</strong>如果有启用 多说 或者 Disqus 评论，页面也会带有评论。
+    若需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code>，如：
+  </p>
+  <div class="next-docs-example">禁用评论示例</div>
+  {% code "markdown" %}
+    title: 标签
+    date: 2014-12-22 12:39:04
+    type: "tags"
+    comments: false
+    ---
+  {% endcode %}
 
   <h3 id="categories-page">添加「分类」页面</h3>
-  <p>新建「分类」页面，并在菜单中显示「分类」链接。</p>
+  <p>
+    新建「分类」页面，并在菜单中显示「分类」链接。「分类」页面将展示站点的所有分类，若你的所有文章都未包含分类，此页面将是空的。
+    底下代码是一篇包含分类的文章的例子：
+  </p>
+  {% code "md" %}
+    title: 分类测试文章
+    categories: Testing
+    ---
+  {% endcode %}
+  <p class="bs-callout bs-callout-info">
+    请参阅 <a href="https://hexo.io/zh-cn/docs/front-matter.html#分类和标签" target="_blank">
+      Hexo 的分类与标签文档</a>，了解如何为文章添加标签或者分类。
+  </p>
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active">
@@ -127,23 +153,12 @@
         $ hexo new page categories
       {% endcode %}
     </div>
-    <div role="tabpanel" class="tab-pane active" id="set-page-categories">
-      <p>编辑刚新建的页面，将页面的类型设置为 categories ，主题将自动为这个页面显示标签云。页面内容如下：</p>
+    <div role="tabpanel" class="tab-pane" id="set-page-categories">
+      <p>编辑刚新建的页面，将页面的类型设置为 categories ，主题将自动为这个页面显示分类。页面内容如下：</p>
       {% code "markdown" %}
         title: 标签
         date: 2014-12-22 12:39:04
         type: "categories"
-        ---
-      {% endcode %}
-      <p class="bs-callout bs-callout-primary">
-        注意：如果有启用 多说 或者 Disqus 评论，默认页面也会带有评论。
-        需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code>，如：
-      </p>
-      {% code "markdown" %}
-        title: 标签
-        date: 2014-12-22 12:39:04
-        type: "categories"
-        comments: false
         ---
       {% endcode %}
     </div>
@@ -160,6 +175,18 @@
       {% endcode %}
     </div>
   </div>
+  <p class="bs-callout bs-callout-warning">
+    <strong>注意：</strong>如果有启用 多说 或者 Disqus 评论，页面也会带有评论。
+    若需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code>，如：
+  </p>
+  <div class="next-docs-example">禁用评论示例</div>
+  {% code "markdown" %}
+    title: 分类
+    date: 2014-12-22 12:39:04
+    type: "categories"
+    comments: false
+    ---
+  {% endcode %}
 
   <h3 id="syntax-highlight-scheme">设置代码高亮主题</h3>
   <p>
