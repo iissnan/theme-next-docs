@@ -12,26 +12,27 @@
 
 
 {% block pageContent %}
-  <p>
-    <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a> 是一个基于 Node.js 的高效的静态站点生成框架。
-    通过 Hexo 你可以轻松的使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的
-    <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank">标签插件</a>
-    来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。
-  </p>
-  <div class="bs-callout bs-callout-primary">
-    你可以访问 <a href="https://hexo.io/zh-cn/docs/">Hexo 的文档</a> 了解如何安装 Hexo
-  </div>
-  <p>
-    在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。
-    其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置有主题作者提供，主要用于配置主题相关的选项。
-  </p>
-  <p>
-    为了描述方便，在以下说明中，将前者称为  <span class="label label-primary">站点配置文件</span>，
-    后者称为 <span class="label label-info">主题配置文件</span>。
-  </p>
+  <section data-folding="getting-started-introduction">
+    <p>
+      <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a> 是一个基于 Node.js 的高效的静态站点生成框架。
+      通过 Hexo 你可以轻松的使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的
+      <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank">标签插件</a>
+      来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。
+    </p>
+    <div class="bs-callout bs-callout-primary">
+      你可以访问 <a href="https://hexo.io/zh-cn/docs/">Hexo 的文档</a> 了解如何安装 Hexo
+    </div>
+    <p>
+      在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。
+      其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置有主题作者提供，主要用于配置主题相关的选项。
+    </p>
+    <p>
+      为了描述方便，在以下说明中，将前者称为  <span class="label label-primary">站点配置文件</span>，
+      后者称为 <span class="label label-info">主题配置文件</span>。
+    </p>
+  </section>
 
-
-  <div>
+  <section data-folding="installation">
     <h2 class="page-header" id="install-next-theme">安装 NexT</h2>
     <p>
       Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下，
@@ -95,8 +96,6 @@
       <a href="http://iissnan.com/progit">在线版本（第一版）</a>。
     </p>
 
-
-
     <h3 id="activate-next-theme">启用主题</h3>
     <p>
       与所有 Hexo 主题启用的模式一样。
@@ -131,9 +130,9 @@
     <p>
      现在，你已经成功安装并启用了 NexT 主题。下一步我们将要更改一些主题的设定，包括个性化以及集成第三方服务。
     </p>
-  </div>
+  </section>
 
-  <div class="next-docs-section">
+  <section data-folding="theme-settings">
     <h2 class="page-header" id="theme-settings">主题设定</h2>
 
     <h3 id="select-scheme">选择 Scheme</h3>
@@ -430,9 +429,9 @@
       编辑 <span class="label label-primary">站点配置文件</span>，
       设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)
     </p>
-  </div>
+  </section>
 
-  <div class="next-docs-section">
+  <section data-folding="third-party-services">
     <h2 id="third-party-services" class="page-header">集成第三方服务</h2>
 
     <h3 id="comment-system-duoshuo">多说评论</h3>
@@ -480,7 +479,7 @@
       详细的配置请参考：
         <a href="/third-party-services.html#swfitype" target="_blank">第三方服务 - Swiftype</a>
     </p>
-  </div>
+  </section>
 {% endblock %}
 
 

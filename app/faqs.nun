@@ -18,206 +18,232 @@
     提交你的问题。
   </p>
 
-  {# #region Section - 阅读全文 #}
-  <h2 id="read-more" class="page-header">如何设置「阅读全文」？</h2>
-  <p>
-    在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。
-    NexT 提供三种方式来控制文章在首页的显示方式。
-    也就是说，在首页显示文章的摘录并显示 <strong>阅读全文</strong> 按钮，可以通过以下方法：
-  </p>
-  <ol>
-    <li>
-      在文章中使用 <code>&lt;!-- more --&gt;</code> 手动进行截断，Hexo 提供的方式
-      <span class="label label-success">推荐</span>
-    </li>
-    <li>
-      在文章的 <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">front-matter</a>
-      中添加 <code>description</code>，并提供文章摘录
-    </li>
-    <li>
-      <p>自动形成摘要，在 <strong>主题配置文件</strong> 中添加：</p>
-      {% code "yml" %}
-      auto_excerpt:
-        enable: true
-        length: 150
-      {% endcode %}
-      <p>默认截取的长度为 <code>150</code> 字符，可以根据需要自行设定</p>
-    </li>
-  </ol>
-  <div class="bs-callout bs-callout-info">
-    建议使用 <code>&lt;!-- more --&gt;</code>（即第一种方式），除了可以精确控制需要显示的摘录内容以外，
-    这种方式也可以让 Hexo 中的插件更好的识别。
-  </div>
-  {# #endregion #}
 
-  <h2 id="favicon">Favicon 设置后没有生效？</h2>
-  <p>
-    将你的 <code>favicon</code> 放置到 <strong>站点</strong> 的 <code>source</code>
-    目录下，与站点的配置文件同级。
-    若你发现设置的 Favicon 并未生效，请先清除浏览器的缓存后直接访问 Favicon 的地址，这个地址通常是
-    <code>http://your-domain.com/favicon.ico</code>。
-  </p>
-  <p class="bs-callout bs-callout-warning">
-    如果你的站点是放在子目录下，请设置为：<code>favicon: favicon.ico</code>
-  </p>
+  <section data-folding="read-more">
+    <h2 id="read-more" class="page-header">如何设置「阅读全文」？</h2>
+    <p>
+      在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。
+      NexT 提供三种方式来控制文章在首页的显示方式。
+      也就是说，在首页显示文章的摘录并显示 <strong>阅读全文</strong> 按钮，可以通过以下方法：
+    </p>
+    <ol>
+      <li>
+        在文章中使用 <code>&lt;!-- more --&gt;</code> 手动进行截断，Hexo 提供的方式
+        <span class="label label-success">推荐</span>
+      </li>
+      <li>
+        在文章的 <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">front-matter</a>
+        中添加 <code>description</code>，并提供文章摘录
+      </li>
+      <li>
+        <p>自动形成摘要，在 <strong>主题配置文件</strong> 中添加：</p>
+        {% code "yml" %}
+          auto_excerpt:
+            enable: true
+            length: 150
+        {% endcode %}
+        <p>默认截取的长度为 <code>150</code> 字符，可以根据需要自行设定</p>
+      </li>
+    </ol>
+    <div class="bs-callout bs-callout-info">
+      建议使用 <code>&lt;!-- more --&gt;</code>（即第一种方式），除了可以精确控制需要显示的摘录内容以外，
+      这种方式也可以让 Hexo 中的插件更好的识别。
+    </div>
+  </section>
 
-  <h2 id="custom-font">如何更改字体？</h2>
-  <p>
-    NexT 并未通过配置文件提供字体相关的修改，因此如果你需要自定义字体或者字体的大小，需要编辑样式文件。
-    编辑主题下的 <code>source/css/_variables/custom.styl</code> 文件，新增两个变量：
-  </p>
-  {% code "styl" %}
-    // 标题，修改成你期望的字体族
-    $font-family-headings = Georgia, sans
 
-    // 修改成你期望的字体族
-    $font-family-base = "Microsoft YaHei", Verdana, sans-serif
+  <section data-folding="favicon">
+    <h2 id="favicon">Favicon 设置后没有生效？</h2>
+    <p>
+      将你的 <code>favicon</code> 放置到 <strong>站点</strong> 的 <code>source</code>
+      目录下，与站点的配置文件同级。
+      若你发现设置的 Favicon 并未生效，请先清除浏览器的缓存后直接访问 Favicon 的地址，这个地址通常是
+      <code>http://your-domain.com/favicon.ico</code>。
+    </p>
+    <p class="bs-callout bs-callout-warning">
+      如果你的站点是放在子目录下，请设置为：<code>favicon: favicon.ico</code>
+    </p>
+  </section>
 
-    // 代码字体
-    $code-font-family = "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace
 
-    // 正文字体的大小
-    $font-size-base = 16px
+  <section data-folding="custom-font">
+    <h2 id="custom-font">如何更改字体？</h2>
+    <p>
+      NexT 并未通过配置文件提供字体相关的修改，因此如果你需要自定义字体或者字体的大小，需要编辑样式文件。
+      编辑主题下的 <code>source/css/_variables/custom.styl</code> 文件，新增两个变量：
+    </p>
+    {% code "styl" %}
+      // 标题，修改成你期望的字体族
+      $font-family-headings = Georgia, sans
 
-    // 代码字体的大小
-    $code-font-size = 13px
-  {% endcode %}
+      // 修改成你期望的字体族
+      $font-family-base = "Microsoft YaHei", Verdana, sans-serif
 
-  <h2 id="custom-content-width">如何更改内容区域的宽度？</h2>
-  <p>NexT 对于内容的宽度的设定如下：</p>
-  <ul>
-    <li>700px，当屏幕宽度 < 1600px </li>
-    <li>900px，当屏幕宽度 >= 1600px</li>
-    <li>移动设备下，宽度自适应</li>
-  </ul>
-  <p>
-    如果你需要修改内容的宽度，同样需要编辑样式文件。
-    编辑主题的 <code>source/css/_variables/custom.styl</code> 文件，新增变量：
-  </p>
-  {% code "styl" %}
-    // 修改成你期望的宽度
-    $content-desktop = 700px
+      // 代码字体
+      $code-font-family = "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace
 
-    // 当视窗超过 1600px 后的宽度
-    $content-desktop-large = 900px
-  {% endcode %}
+      // 正文字体的大小
+      $font-size-base = 16px
 
-  <h2 id="count-incorrect-for-tags-categories">标签/分类数量统计不准确？</h2>
-  <p>
-    因为 Hexo 有缓存的功能，因此有时候你会发现在 标签 和 分类 页面中的数量统计并不准确。
-    出现这个问题时，可以按照以下步骤重新生成站点的内容：
-  </p>
-  <ol>
-    <li>删除站点目录下的 <code>db.json</code> 文件</li>
-    <li>在站点目录下执行命令 <code>hexo clean</code></li>
-    <li>在站点目录下执行命令，重新生成 <code>hexo generate</code></li>
-  </ol>
-  <p>当执行完以上步骤后，可以在本地启动服务器来验证下是否已经解决问题。</p>
+      // 代码字体的大小
+      $code-font-size = 13px
+    {% endcode %}
+  </section>
 
-  <h2 id="incorrect-language">为何语言显示不正确？</h2>
-  <p>
-    若没有设定 <code>language</code> 的值或者 <code>language: default</code>，会出现语言选择不正确的情况。
-    因此为了确保语言正确显示，请明确指定需要使用的语言。
-    编辑 <strong>站点配置文件</strong>， 将 <code>language</code> 字段设置成明确的语言代码。
-    例如，设置语言为简体中文：
-  </p>
-  {% code "yml" %}language: zh-Hans{% endcode %}
-  <table class="table table-bordered">
-    <thead>
-    <tr>
-      <th>语言</th>
-      <th>对应值</th>
-    </tr>
-    </thead>
-    <tr>
-      <td>English</td>
-      <td><code>en</code></td>
-    </tr>
-    <tr>
-      <td>简体中文</td>
-      <td><code>zh-Hans</code></td>
-    </tr>
-    <tr>
-      <td>法语</td>
-      <td><code>fr-FR</code></td>
-    </tr>
-    <tr>
-      <td>繁体中文</td>
-      <td><code>zh-hk</code>/<code>zh-tw</code></td>
-    </tr>
-    <tr>
-      <td>俄语</td>
-      <td><code>ru</code></td>
-    </tr>
-    <tr>
-      <td>德语</td>
-      <td><code>de</code></td>
-    </tr>
-    <tr>
-      <td>葡萄牙语</td>
-      <td><code>pt</code></td>
-    </tr>
-    <tr>
-      <td>日语</td>
-      <td><code>ja</code></td>
-    </tr>
-  </table>
 
-  <h2 id="setting-page-comments">如何关闭新建页面的评论功能？</h2>
-  <p>
-    当集成了评论系统，如 多说 或者 Disqus，所有新建的页面都将自动开启评论。若你不需要评论，请在页面的 Front-matter 里添加
-    <code>comments</code> 字段，并将值设置为 <code>false</code>。如下所示：
-  </p>
-  {% code "md" %}
-    title: All tags
-    date: 2015-12-16 17:05:24
-    type: "tags"
-    comments: false
-    ---
-  {% endcode %}
+  <section data-folding="custom-content-width">
+    <h2 id="custom-content-width">如何更改内容区域的宽度？</h2>
+    <p>NexT 对于内容的宽度的设定如下：</p>
+    <ul>
+      <li>700px，当屏幕宽度 < 1600px </li>
+      <li>900px，当屏幕宽度 >= 1600px</li>
+      <li>移动设备下，宽度自适应</li>
+    </ul>
+    <p>
+      如果你需要修改内容的宽度，同样需要编辑样式文件。
+      编辑主题的 <code>source/css/_variables/custom.styl</code> 文件，新增变量：
+    </p>
+    {% code "styl" %}
+      // 修改成你期望的宽度
+      $content-desktop = 700px
 
-  <h2 id="setting-page-size">如何设置页面文章的篇数？</h2>
-  <p>在 Hexo 里可以为首页和归档页面设置不同的文章篇数，但可能需要安装 Hexo 插件。详细步骤如下。</p>
-  <ol>
-    <li>
-      <p>使用 <code>npm install --save</code> 命令来安装需要的 Hexo 插件。</p>
-      {% code %}
-        npm install --save hexo-generator-index
-        npm install --save hexo-generator-archive
-        npm install --save hexo-generator-tag
-      {% endcode %}
-    </li>
-    <li>
-      <p>等待扩展全部安装完成后，在 <strong>站点配置文章</strong> 中，设定如下选项：</p>
-      {% code "yml" %}
-      index_generator:
-        per_page: 5
+      // 当视窗超过 1600px 后的宽度
+      $content-desktop-large = 900px
+    {% endcode %}
+  </section>
 
-      archive_generator:
-        per_page: 20
-        yearly: true
-        monthly: true
 
-      tag_generator:
-        per_page: 10
-      {% endcode %}
+  <section data-folding="count-incorrect-for-tags-categories">
+    <h2 id="count-incorrect-for-tags-categories">标签/分类数量统计不准确？</h2>
+    <p>
+      因为 Hexo 有缓存的功能，因此有时候你会发现在 标签 和 分类 页面中的数量统计并不准确。
+      出现这个问题时，可以按照以下步骤重新生成站点的内容：
+    </p>
+    <ol>
+      <li>删除站点目录下的 <code>db.json</code> 文件</li>
+      <li>在站点目录下执行命令 <code>hexo clean</code></li>
+      <li>在站点目录下执行命令，重新生成 <code>hexo generate</code></li>
+    </ol>
+    <p>当执行完以上步骤后，可以在本地启动服务器来验证下是否已经解决问题。</p>
+  </section>
 
-      <code>per_page</code> 即文章的数量。
-    </li>
-  </ol>
-  <p class="bs-callout bs-callout-warning">
-    需要注意的是，Hexo 3.2 版本不允许配置文件中存在重复的选项设置。
-    因此，最好检查下 <strong>站点配置文件</strong> 中是否有存在上述同名的配置。
-    如果存在，请将两者配置在一起。
-  </p>
 
-  <h2 id="optimize">如何优化 NexT 主题？</h2>
-  <p>
-    NexT 并未对 HTML、JavaScript 以及 CSS 做压缩处理。如果你比较在意这点，可以在
-    NexT 的 Issues 列表搜索
-    <a href="https://github.com/iissnan/hexo-theme-next/issues?utf8=%E2%9C%93&q=+label%3AOptimization">
-      他人共享的优化方案</a>。
-  </p>
+  <section data-fodling="incorrect-language">
+    <h2 id="incorrect-language">为何语言显示不正确？</h2>
+    <p>
+      若没有设定 <code>language</code> 的值或者 <code>language: default</code>，会出现语言选择不正确的情况。
+      因此为了确保语言正确显示，请明确指定需要使用的语言。
+      编辑 <strong>站点配置文件</strong>， 将 <code>language</code> 字段设置成明确的语言代码。
+      例如，设置语言为简体中文：
+    </p>
+    {% code "yml" %}language: zh-Hans{% endcode %}
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>语言</th>
+        <th>对应值</th>
+      </tr>
+      </thead>
+      <tr>
+        <td>English</td>
+        <td><code>en</code></td>
+      </tr>
+      <tr>
+        <td>简体中文</td>
+        <td><code>zh-Hans</code></td>
+      </tr>
+      <tr>
+        <td>法语</td>
+        <td><code>fr-FR</code></td>
+      </tr>
+      <tr>
+        <td>繁体中文</td>
+        <td><code>zh-hk</code>/<code>zh-tw</code></td>
+      </tr>
+      <tr>
+        <td>俄语</td>
+        <td><code>ru</code></td>
+      </tr>
+      <tr>
+        <td>德语</td>
+        <td><code>de</code></td>
+      </tr>
+      <tr>
+        <td>葡萄牙语</td>
+        <td><code>pt</code></td>
+      </tr>
+      <tr>
+        <td>日语</td>
+        <td><code>ja</code></td>
+      </tr>
+    </table>
+  </section>
+
+
+  <section data-fodling="incorrect-language">
+    <h2 id="setting-page-comments">如何关闭新建页面的评论功能？</h2>
+    <p>
+      当集成了评论系统，如 多说 或者 Disqus，所有新建的页面都将自动开启评论。若你不需要评论，请在页面的 Front-matter 里添加
+      <code>comments</code> 字段，并将值设置为 <code>false</code>。如下所示：
+    </p>
+    {% code "md" %}
+      title: All tags
+      date: 2015-12-16 17:05:24
+      type: "tags"
+      comments: false
+      ---
+    {% endcode %}
+  </section>
+
+
+  <section data-fodling="incorrect-language">
+    <h2 id="setting-page-size">如何设置页面文章的篇数？</h2>
+    <p>在 Hexo 里可以为首页和归档页面设置不同的文章篇数，但可能需要安装 Hexo 插件。详细步骤如下。</p>
+    <ol>
+      <li>
+        <p>使用 <code>npm install --save</code> 命令来安装需要的 Hexo 插件。</p>
+        {% code %}
+          npm install --save hexo-generator-index
+          npm install --save hexo-generator-archive
+          npm install --save hexo-generator-tag
+        {% endcode %}
+      </li>
+      <li>
+        <p>等待扩展全部安装完成后，在 <strong>站点配置文章</strong> 中，设定如下选项：</p>
+        {% code "yml" %}
+          index_generator:
+          per_page: 5
+
+          archive_generator:
+          per_page: 20
+          yearly: true
+          monthly: true
+
+          tag_generator:
+          per_page: 10
+        {% endcode %}
+
+        <code>per_page</code> 即文章的数量。
+      </li>
+    </ol>
+    <p class="bs-callout bs-callout-warning">
+      需要注意的是，Hexo 3.2 版本不允许配置文件中存在重复的选项设置。
+      因此，最好检查下 <strong>站点配置文件</strong> 中是否有存在上述同名的配置。
+      如果存在，请将两者配置在一起。
+    </p>
+  </section>
+
+
+  <section data-fodling="incorrect-language">
+    <h2 id="optimize">如何优化 NexT 主题？</h2>
+    <p>
+      NexT 并未对 HTML、JavaScript 以及 CSS 做压缩处理。如果你比较在意这点，可以在
+      NexT 的 Issues 列表搜索
+      <a href="https://github.com/iissnan/hexo-theme-next/issues?utf8=%E2%9C%93&q=+label%3AOptimization">
+        他人共享的优化方案</a>。
+    </p>
+  </section>
+
 {% endblock %}
 
 
