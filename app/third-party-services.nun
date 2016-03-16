@@ -60,7 +60,7 @@
 
   <h2 id="analytics-system" class="page-header">数据统计与分析</h2>
 
-  <h3 id="anlaytics-baidu">百度统计</h3>
+  <h3 id="analytics-baidu">百度统计</h3>
   <ol>
     <li>登录 <a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a>，定位到站点的代码获取页面</li>
     <li>
@@ -81,6 +81,27 @@
     值设置成你的 Google 跟踪 ID。跟踪 ID 通常是以 <code>UA-</code> 开头。
     <img src="/uploads/analytics-google.png" class="img-thumbnail img-responsive">
   </p>
+
+  <h3 id="analytics-tencent">
+    腾讯分析
+    <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/603">Cissoid</a> 提供</small>
+  </h3>
+  <p>
+    请登录 <a href="http://ta.qq.com/" target="_blank">腾讯分析</a>，登录并获取分析的 ID。
+    然后在 <span class="label label-info">主题配置文件</span> 里将 ID 放置 <code>tencent_analytics</code> 字段。
+  </p>
+
+
+  <h3 id="analytics-cnzz">
+    CNZZ 统计
+    <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/712">jerrybendy</a> 提供</small>
+  </h3>
+  <p>
+    在 <span class="label label-info">主题配置文件</span> 中增加了一项
+    <code>cnzz_siteid</code>的配置项，值为 CNZZ 里面添加统计的站点ID。
+    这个ID可以在地址栏里，或者自动生成的脚本里面找到。
+  </p>
+  <p>默认脚本生成的内容会产生“站长统计”几个字，感觉很丑而且和主题不太搭，我用了一个 <code>display: none;</code>把这几个字给隐藏了。</p>
 
   {# 内容分享服务 #}
   <h2 class="page-header" id="share-system">内容分享服务</h2>
@@ -125,7 +146,7 @@
 
   <h3 id="share-addthis">
     AddThis
-    <small>由 <a href="https://github.com/hackjustu">hackjustu</a> 提供</small>
+    <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/660">hackjustu</a> 提供</small>
   </h3>
   <ol>
     <li>
@@ -267,8 +288,10 @@
     <li>
       <a href="#analytics-system">数据统计与分析</a>
       <ul>
-        <li><a href="#anlaytics-baidu">百度统计</a></li>
+        <li><a href="#analytics-baidu">百度统计</a></li>
         <li><a href="#analytics-google">Google 分析</a></li>
+        <li><a href="#analytics-tencent">腾讯分析</a></li>
+        <li><a href="#analytics-cnzz">CNZZ 统计</a></li>
       </ul>
     </li>
     <li>
