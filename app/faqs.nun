@@ -163,6 +163,19 @@
     </tr>
   </table>
 
+  <h2 id="setting-page-comments">如何关闭新建页面的评论功能？</h2>
+  <p>
+    当集成了评论系统，如 多说 或者 Disqus，所有新建的页面都将自动开启评论。若你不需要评论，请在页面的 Front-matter 里添加
+    <code>comments</code> 字段，并将值设置为 <code>false</code>。如下所示：
+  </p>
+  {% code "md" %}
+    title: All tags
+    date: 2015-12-16 17:05:24
+    type: "tags"
+    comments: false
+    ---
+  {% endcode %}
+
   <h2 id="setting-page-size">如何设置页面文章的篇数？</h2>
   <p>在 Hexo 里可以为首页和归档页面设置不同的文章篇数，但可能需要安装 Hexo 插件。详细步骤如下。</p>
   <ol>
@@ -216,6 +229,7 @@
     <li><a href="#custom-content-width">如何更改内容区域的宽度？</a></li>
     <li><a href="#count-incorrect-for-tags-categories">标签/分类数量统计不准确？</a></li>
     <li><a href="#incorrect-language">为何语言显示不正确？</a></li>
+    <li><a href="#setting-page-comments">如何关闭新建页面的评论功能？</a></li>
     <li><a href="#setting-page-size">如何设置页面文章的篇数？</a></li>
     <li><a href="#optimize">如何优化 NexT 主题？</a></li>
   </ul>
