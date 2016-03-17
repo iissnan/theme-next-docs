@@ -111,6 +111,36 @@
     {% endcode %}
   </section>
 
+  <section data-fodling="setting-menu">
+    <h2 id="setting-menu">为何新增的菜单项显示 Menu.xxx</h2>
+    <p>
+      NexT 使用了 Hexo 提供的国际化功能，因此在 Menu 部分配置的值并非直接用于界面的展示，而是作为一个名称。
+      当渲染的时候，NexT 去寻找对应的语言文件，并替换这个键所定义的文本后展示。
+    </p>
+
+    <p>
+      以 <code>home</code> 为例，在
+      <span class="label label-info">主题配置文件</span> 中配置为 <code>home: /</code>，
+      此处的键即是 <code>home</code>，在不同的语言中，这个键所对应的文本都不同：
+    </p>
+    {% code "yml"%}
+      # 简体中文
+      # 语言文件 languages/zh-Hans.yml
+      menu:
+        home: 首页
+
+      # 英文
+      # 语言文件 languages/en.yml
+      menu:
+        home: Home
+    {% endcode %}
+
+    <p>因此，当新增一个项时，必须在 <strong>所使用的语言</strong> 中添加对应的翻译文本。</p>
+
+    <p class="bs-callout bs-callout-success">
+      关于菜单的配置，请参考 <a href="/getting-started.html#menu-settings">菜单的配置</a>
+    </p>
+  </section>
 
   <section data-folding="count-incorrect-for-tags-categories">
     <h2 id="count-incorrect-for-tags-categories">标签/分类数量统计不准确？</h2>
@@ -252,6 +282,7 @@
     <li><a href="#favicon">Favicon 设置后没有生效？</a></li>
     <li><a href="#custom-font">如何更改字体？</a></li>
     <li><a href="#custom-content-width">如何更改内容区域的宽度？</a></li>
+    <li><a href="#setting-menu">为何新增的菜单项显示 Menu.xxx</a></li>
     <li><a href="#count-incorrect-for-tags-categories">标签/分类数量统计不准确？</a></li>
     <li><a href="#incorrect-language">为何语言显示不正确？</a></li>
     <li><a href="#setting-page-comments">如何关闭新建页面的评论功能？</a></li>
