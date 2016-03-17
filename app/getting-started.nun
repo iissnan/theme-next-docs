@@ -470,6 +470,16 @@
       </li>
     </ol>
 
+    <section data-fodling="leanclound-page-views">
+      <h3 id="leanclound-page-views">
+        阅读次数统计（LeanCloud)
+        <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/439">Doublemine</a> 贡献</small>
+      </h3>
+      <p>
+        请查看 <a href="http://notes.xiamo.tk/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud">为NexT主题添加文章阅读量统计功能</a>
+      </p>
+    </section>
+
     <h3 id="search-system-swiftype">Swiftype 搜索</h3>
     <p>
       使用 Swiftype 之前需要前往 Swiftype 配置一个搜索引擎。
@@ -511,6 +521,7 @@
       <ul>
         <li><a href="#comment-system-duoshuo">多说评论</a></li>
         <li><a href="#analysis-system-baidu">百度统计</a></li>
+        <li><a href="#leanclound-page-views">阅读次数统计（LeanCloud)</a></li>
         <li><a href="#search-system-swiftype">Swiftype 搜索</a></li>
       </ul>
     </li>

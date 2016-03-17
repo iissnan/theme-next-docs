@@ -205,7 +205,7 @@
       <code>night bright</code>，
       <code>night eighties</code>：
     </p>
-    <table class="table table-bordered table-compact">
+    <table class="table table-bordered table-condensed">
       <tbody>
       <tr>
         <td>
@@ -234,9 +234,9 @@
     # https://github.com/chriskempson/tomorrow-theme
     highlight_theme: normal
     {% endcode %}
+  </section>
 
-
-    <section data-folding="syntax-highlight-scheme"></section>
+  <section data-folding="author-sites">
     <h3 id="author-sites">侧边栏社交链接</h3>
     <p>
       侧栏社交链接的修改包含两个部分，第一是链接，第二是链接图标。
@@ -291,6 +291,7 @@
       links_title: Links
       links:
         MacTalk: http://macshuo.com/
+        Title: http://example.com/
     {% endcode %}
   </section>
 
