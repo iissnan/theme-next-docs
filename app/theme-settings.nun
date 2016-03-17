@@ -200,21 +200,40 @@
     <h3 id="syntax-highlight-scheme">设置代码高亮主题</h3>
     <p>
       NexT 使用 <a href="https://github.com/chriskempson/tomorrow-theme">Tomorrow Theme</a> 作为代码高亮，共有5款主题供你选择。
-      默认使用的是白色的 <code>normal</code>，以下是 <code>normal</code> 与 <code>night</code> 的预览：
+      NexT 默认使用的是 白色的 <code>normal</code> 主题，可选的值有 <code>normal</code>，<code>night</code>，
+      <code>night blue</code>，
+      <code>night bright</code>，
+      <code>night eighties</code>：
     </p>
     <table class="table table-bordered table-compact">
       <tbody>
       <tr>
         <td>
-            <img src="/assets/img/tomorrow.png" class="img-responsive" />
+            <img src="/assets/img/tomorrow.png" class="img-responsive center-block" />
         </td>
         <td>
-          <img src="/assets/img/tomorrow-night.png" class="img-responsive" />
+          <img src="/assets/img/tomorrow-night.png" class="img-responsive center-block" />
+        </td>
+        <td>
+          <img src="/assets/img/tomorrow-night-blue.png" class="img-responsive center-block" />
+        </td>
+        <td>
+          <img src="/assets/img/tomorrow-night-bright.png" class="img-responsive center-block" />
+        </td>
+        <td>
+          <img src="/assets/img/tomorrow-night-eighties.png" class="img-responsive center-block" />
         </td>
       </tr>
       </tbody>
     </table>
-    <p>请访问 <a href="https://github.com/chriskempson/tomorrow-theme">Tomorrow Theme</a> 查看更多主题。</p>
+    <p>更改 <code>highlight_theme</code> 字段，将其值设定成你所喜爱的高亮主题，例如：</p>
+    <div class="next-docs-example">高亮主题设置示例</div>
+    {% code "yml" %}
+    # Code Highlight theme
+    # Available value: normal | night | night eighties | night blue | night bright
+    # https://github.com/chriskempson/tomorrow-theme
+    highlight_theme: normal
+    {% endcode %}
 
 
     <section data-folding="syntax-highlight-scheme"></section>
