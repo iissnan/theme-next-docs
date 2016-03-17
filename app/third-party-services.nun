@@ -247,7 +247,10 @@
         <p><img src="/uploads/swiftype/step-4.png" class="img-responsive"></p>
       </div>
       <div role="tabpanel" class="tab-pane" id="swiftype-step-5">
-        <p>编辑站点配置文件，新增字段 <code>swiftype_key</code>，值设置成第四步中赋值出来的 key</p>
+        <p>
+          编辑 <span class="label label-primary">站点配置文件</span>，
+          新增字段 <code>swiftype_key</code>，值设置成第四步中赋值出来的 key
+        </p>
         {% code %}
         # Swiftype Search Key
         swiftype_key: xxxxxxxxx

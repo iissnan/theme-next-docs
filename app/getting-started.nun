@@ -338,7 +338,7 @@
     <h3 id="sidebar-settings">设置 侧栏</h3>
     <p>
       默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。
-      可以通过修改 <span class="label label-primary">主题配置文件</span> 中的
+      可以通过修改 <span class="label label-info">主题配置文件</span> 中的
       <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置，
       其二是侧栏显示的时机。
     </p>
@@ -448,7 +448,7 @@
       </li>
       <li>
         <p>
-          创建站点完成后在 站点配置文件 中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。</p>
+          创建站点完成后在 <span class="label label-primary">站点配置文件</span> 中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。</p>
       </li>
     </ol>
     <div class="next-docs-example">多说设置示例</div>

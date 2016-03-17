@@ -36,7 +36,7 @@
         中添加 <code>description</code>，并提供文章摘录
       </li>
       <li>
-        <p>自动形成摘要，在 <strong>主题配置文件</strong> 中添加：</p>
+        <p>自动形成摘要，在 <span class="label label-info">主题配置文件</span> 中添加：</p>
         {% code "yml" %}
           auto_excerpt:
             enable: true
@@ -133,7 +133,7 @@
     <p>
       若没有设定 <code>language</code> 的值或者 <code>language: default</code>，会出现语言选择不正确的情况。
       因此为了确保语言正确显示，请明确指定需要使用的语言。
-      编辑 <strong>站点配置文件</strong>， 将 <code>language</code> 字段设置成明确的语言代码。
+      编辑 <span class="label label-primary">站点配置文件</span>， 将 <code>language</code> 字段设置成明确的语言代码。
       例如，设置语言为简体中文：
     </p>
     {% code "yml" %}language: zh-Hans{% endcode %}
@@ -228,7 +228,7 @@
     </ol>
     <p class="bs-callout bs-callout-warning">
       需要注意的是，Hexo 3.2 版本不允许配置文件中存在重复的选项设置。
-      因此，最好检查下 <strong>站点配置文件</strong> 中是否有存在上述同名的配置。
+      因此，最好检查下 <span class="label label-primary">站点配置文件</span> 中是否有存在上述同名的配置。
       如果存在，请将两者配置在一起。
     </p>
   </section>
