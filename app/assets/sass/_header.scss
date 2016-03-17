@@ -1,6 +1,6 @@
 header {
   position: relative;
-  background-image: url("/assets/img/banner-9.jpg");
+  background: url("/assets/img/banner-9.jpg") 0 80%;
   background-size: cover;
 
   &:before {
@@ -11,6 +11,8 @@ header {
     z-index: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .2);
   }
 }
+
+.home header { background-position: 0 100%; }

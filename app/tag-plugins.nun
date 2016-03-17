@@ -6,8 +6,7 @@
 {# E: 页面元数据 #}
 
 {% block pageHeader %}
-  <i class="fa-rocket fa"></i> <br />
-  内置标签
+  <i class="fa-rocket fa"></i> 内置标签
 {% endblock %}
 
 

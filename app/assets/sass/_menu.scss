@@ -6,8 +6,9 @@
   margin-bottom: 0;
   width: 100%;
   transition: background .5s ease;
-  background: none;
   border-color: transparent;
+
+  .home & { background: none; }
 
   .navbar-nav>li>a:after {
     content: ' ';

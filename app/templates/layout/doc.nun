@@ -3,8 +3,10 @@
 {% block header %}
   {{ super() }}
 
-  <h1 class="text-center next-docs-header">
-    {% block pageHeader %}{% endblock %}
+  <h1 class="next-docs-header">
+    <div class="container">
+      {% block pageHeader %}{% endblock %}
+    </div>
   </h1>
 {% endblock %}
 
