@@ -95,7 +95,7 @@
   <section data-folding="analytics-tencent">
     <h3 id="analytics-tencent">
       腾讯分析
-      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/603">Cissoid</a> 提供</small>
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/603">Cissoid</a> 贡献</small>
     </h3>
     <p>
       请登录 <a href="http://ta.qq.com/" target="_blank">腾讯分析</a>，登录并获取分析的 ID。
@@ -107,7 +107,7 @@
   <section data-folding="analytics-cnzz">
     <h3 id="analytics-cnzz">
       CNZZ 统计
-      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/712">jerrybendy</a> 提供</small>
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/712">jerrybendy</a> 贡献</small>
     </h3>
     <p>
       在 <span class="label label-info">主题配置文件</span> 中增加了一项
@@ -171,7 +171,7 @@
   <section data-folding="share-addthis">
     <h3 id="share-addthis">
       AddThis
-      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/660">hackjustu</a> 提供</small>
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/660">hackjustu</a> 贡献</small>
     </h3>
     <ol>
       <li>
@@ -199,7 +199,10 @@
 
 
   <section data-folding="swiftype">
-    <h3 id="swiftype">Swiftype</h3>
+    <h3 id="swiftype">
+      Swiftype 站内搜索
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/84">lzlun129</a> 贡献</small>
+    </h3>
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
       <li role="presentation" class="active">
@@ -261,7 +264,10 @@
 
 
   <section data-folding="wei-sousuo">
-    <h3 id="wei-sousuo">微搜索</h3>
+    <h3 id="wei-sousuo">
+      微搜索
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/84">lzlun129</a> 贡献</small>
+    </h3>
     <p>TBD</p>
   </section>
 
@@ -303,7 +309,10 @@
 
 
   <section data-folding="duoshuo-popular-posts">
-    <h3 id="duoshuo-popular-posts">多说热评文章</h3>
+    <h3 id="duoshuo-popular-posts">
+      多说热评文章
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/126">xirong</a> 贡献</small>
+    </h3>
     <p>
       多说评论组件提供 <strong>热评文章</strong> 功能，
       详情见 <a href="http://xirong.duoshuo.com/admin/tools/top-threads/" target="_blank" rel="external">多说官网说明</a>，仅在文章页面显示。

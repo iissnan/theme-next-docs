@@ -262,7 +262,10 @@
 
 
   <section data-folding="blogroll">
-    <h3 id="blogroll">友情链接</h3>
+    <h3 id="blogroll">
+      友情链接
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/250">iamwent</a> 贡献</small>
+    </h3>
     <p>编辑 <span class="label label-info">主题配置文件</span> 添加：</p>
     <div class="next-docs-example">友情链接配置示例</div>
     {% code "yml" %}
@@ -308,7 +311,10 @@
   </section>
 
   <section data-folding="volunteer-404">
-    <h3 id="volunteer-404">腾讯公益404页面</h3>
+    <h3 id="volunteer-404">
+      腾讯公益404页面
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/126">xirong</a> 贡献</small>
+    </h3>
     <p>
       腾讯公益404页面，寻找丢失儿童，让大家一起关注此项公益事业！效果如下 <a href="http://www.ixirong.com/404.html">http://www.ixirong.com/404.html</a>
     </p>
