@@ -273,6 +273,39 @@
     {% endcode %}
   </section>
 
+  <section data-fodling="duoshuo-ua">
+    <h3 id="duoshuo-ua">
+      多说评论显示 UA
+      <small>
+        由 <a href="https://github.com/iissnan/hexo-theme-next/pull/286" target="_blank">Doublemine</a>
+        贡献
+      </small>
+    </h3>
+    <p>
+      在每一条多说评论后显示评论者所使用的代理信息（如 操作系统、浏览器），效果如下：
+      <img src="/uploads/duoshuo-ua.png" alt="多说评论 UA 效果" class="img-responsive img-thumbnail">
+    </p>
+    <p>
+      要启用此功能，需要配置 <code>duoshuo_info</code> 这个字段。
+      编辑 <span class="label label-info">主题配置文件</span>，查找 <code>duoshuo_info</code> 字段，
+      设置如下：
+    </p>
+    {% code "yml" %}
+    # Make duoshuo show UA
+    # user_id must NOT be null when admin_enable is true!
+    # you can visit http://dev.duoshuo.com get duoshuo user id.
+    duoshuo_info:
+      ua_enable: true
+      admin_enable: false
+      user_id:
+    {% endcode %}
+    <p>
+      只要设置 <code>ua_enable</code> 为 <code>true</code> 即可显示 UA 信息。
+      <code>admin_enable</code> 是用于显示 「博主」 文字，表明评论者是博主，此字段需要同时配置 <code>user_id</code>。
+      请访问 <a href="http://dev.duoshuo.com/">多说</a>，登录并访问「我的主页」获取 <code>user_id</code> ，
+      此 ID 是 网址最后那串数字。
+    </p>
+  </section>
 
   <section data-folding="volunteer-404">
     <h3 id="volunteer-404">腾讯公益404页面</h3>
@@ -321,6 +354,7 @@
     <li><a href="#syntax-highlight-scheme">设置代码高亮主题</a></li>
     <li><a href="#author-sites">侧边栏社交链接</a></li>
     <li><a href="#blogroll">友情链接</a></li>
+    <li><a href="#duoshuo-ua">多说评论显示 UA</a></li>
     <li><a href="#volunteer-404">腾讯公益404页面</a></li>
     <li><a href="#site-since">站点建立时间</a></li>
   </ul>
