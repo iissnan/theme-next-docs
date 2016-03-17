@@ -254,7 +254,7 @@
             # Icon Mappings
             GitHub: github
             Twitter: twitter
-            Weibo: weibo
+            weibo: weibo
         {% endcode %}
       </li>
     </ol>
