@@ -224,9 +224,10 @@
     <p>编辑 <span class="label label-info">主题配置文件</span> ,修改以下内容：</p>
     <ol>
       <li>
-        <p>设定菜单内容，对应的字段是 <code>menu</code>。
-        菜单内容的设置格式是：<code>item name: link</code>。其中 <code> item name </code>
-        是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。
+        <p>
+          设定菜单内容，对应的字段是 <code>menu</code>。
+          菜单内容的设置格式是：<code>item name: link</code>。其中 <code> item name </code>
+          是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。
         </p>
         <div class="next-docs-example">菜单示例配置</div>
         {% code "yml" %}
@@ -330,8 +331,10 @@
           在菜单图标开启的情况下，如果菜单项与菜单未匹配（没有设置或者无效的 Font Awesome 图标名字）
           的情况下，NexT 将会使用 <i class="fa fa-question-circle"></i> 作为图标。
         </p>
+        <p class="bs-callout bs-callout-danger"> 请注意键值（如 <code>home</code>）的大小写要严格匹配 </p>
       </li>
     </ol>
+
 
 
     <h3 id="sidebar-settings">设置 侧栏</h3>

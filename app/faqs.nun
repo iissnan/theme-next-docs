@@ -241,15 +241,15 @@
         <p>等待扩展全部安装完成后，在 <strong>站点配置文章</strong> 中，设定如下选项：</p>
         {% code "yml" %}
           index_generator:
-          per_page: 5
+            per_page: 5
 
           archive_generator:
-          per_page: 20
-          yearly: true
-          monthly: true
+            per_page: 20
+            yearly: true
+            monthly: true
 
           tag_generator:
-          per_page: 10
+            per_page: 10
         {% endcode %}
 
         <code>per_page</code> 即文章的数量。

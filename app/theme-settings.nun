@@ -270,12 +270,14 @@
           social_icons:
             enable: true
             # Icon Mappings
-            GitHub: github
-            Twitter: twitter
+            gitHub: github
+            twitter: twitter
             weibo: weibo
         {% endcode %}
+        <p class="bs-callout bs-callout-danger"> 请注意图标键值（如 <code>github</code>）的大小写要严格与链接设置的键值匹配 </p>
       </li>
     </ol>
+
   </section>
 
 
