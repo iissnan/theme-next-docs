@@ -133,21 +133,21 @@
         <li>
           <i class="fa fa-star pull-left"></i>
           <div class="next-doc-categories-item-content">
-            <h4><a href="">主题配置</a></h4>
+            <h4><a href="/theme-settings.html">主题配置</a></h4>
             <p>NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保持最大限度的易用性。</p>
           </div>
         </li>
         <li>
           <i class="fa fa-plug pull-left"></i>
           <div class="next-doc-categories-item-content">
-            <h4><a href="">第三方服务集成</a></h4>
+            <h4><a href="/third-party-services.html">第三方服务集成</a></h4>
             <p>使用 第三方服务 来扩展站点的功能， NexT 支持多种常见第三方服务。</p>
           </div>
         </li>
         <li>
           <i class="fa fa-rocket pull-left"></i>
           <div class="next-doc-categories-item-content">
-            <h4><a href="">内置标签</a></h4>
+            <h4><a href="/tag-plugins.html">内置标签</a></h4>
             <p>
               除了 Markdown 支持的语法之外，NexT 借助 Hexo 提供的标签特性，
               为您提供在书写文档时快速插入带特殊样式的内容。
@@ -157,7 +157,7 @@
         <li>
           <i class="fa fa-life-ring pull-left"></i>
           <div class="next-doc-categories-item-content">
-            <h4><a href="">常见问题</a></h4>
+            <h4><a href="/faqs.html">常见问题</a></h4>
             <p>
               NexT 使用中常见的问题。当您在使用中有疑问的时候，不妨先来这里看看。
               或者在这里分享您在使用过程中碰到的问题。
