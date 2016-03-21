@@ -1,0 +1,30 @@
+language: node_js
+node_js: stable
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+before_script:
+  - npm install -g gulp
+
+script:
+  - gulp dist
+
+after_script:
+  - cd dist
+  - git init
+  - git config user.name "iissnan"
+  - git config user.email "iissnan@gmail.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+# E: Build LifeCycle
+
+branches:
+  only:
+    - master
+env:
+ global:
+   - GH_REF: github.com/iissnan/theme-next-docs.git
+   - secure: "Ja74iiYqQYKQto9lr89h12E2NbyClaWBk4VlPhCzTfbWQW2Z0safr7LZkpgdqnr5TOK91OAlKXxKwJl5rhOQuAHm6urzl2Ji9fyW6M+NbjI7OB+ZseIFGSXY3/aTzBJ5FtxnYIyefM8DecjGVimeDStXm74Dfe5Gs0PrZ0Q1Mq3FOqqMNwZi1H3oadewqL9LgRpeKIy/Hr2qfGJN880MQ64rNHCwY0j6cYf38Vn29hsJJ0W3pfQcHt0+EkStUiGD4acmQ5CNToUZzDOD6MlOu/+EqMdephiryZQxQCtee/NFOoKrGvEJx9PJsPATBSW2k27pizD12mrLehym3nviQdIjMRDgTUcJ5gn9DKKCdUHDL2hwerc64Jn0dc5bQtEFHa0NfZiUOhVOlrbl1PSLXgtzkWvR5zllHebDriYWwyhsvmQSFwDXa2bIu79o2BtNil7cVdaW9sl73pJDZ0/2syifdhH7U+zn9/rEec78jFgNTrXYFMQTZfVejKWZ4axOH5QGVwCieFLq62bn6cc82h2EBlA7WWk+FoxEntKDCGXRSMOcKn7jlNcimRzQY2Ml2BkFJFbcw+NRC/MIlT0V9OppWMqdK7zgHiwrSZPa0JGjJdP/zoNh78FP6PiN/6knSkQQFTP+uxYOZg02Gt6mr5xp2SVfL7OMlRc71iy46KQ="
