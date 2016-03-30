@@ -109,6 +109,10 @@
       // 当视窗超过 1600px 后的宽度
       $content-desktop-large = 900px
     {% endcode %}
+    <p class="bs-callout bs-callout-warning">
+      此方法不适用于 Pisces Scheme，关于如何修改 Pisces Scheme 的宽度请参看
+      <a href="https://github.com/iissnan/hexo-theme-next/issues/759#issuecomment-202242848">这个 Issue</a>
+    </p>
   </section>
 
   <section data-fodling="setting-menu">

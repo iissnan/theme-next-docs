@@ -280,6 +280,22 @@
 
   </section>
 
+  <section data-fodling="reward">
+    <h3 id="reward">
+      开启打赏功能
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/687" target="_blank">habren</a> 贡献</small>
+    </h3>
+    <p>
+      越来越多的平台（微信公众平台，新浪微博，简书，百度打赏等）支持打赏功能，付费阅读时代越来越近，特此增加了打赏功能，支持微信打赏和支付宝打赏。
+      只需要 <span class="label label-info">主题配置文件</span> 中填入 微信 和 支付宝 收款二维码图片地址 即可开启该功能。
+    </p>
+    <div class="next-docs-example">打赏功能配置示例</div>
+    {% code "yml" %}
+    reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+    wechatpay: /path/to/wechat-reward-image
+    alipay: /path/to/alipay-reward-image
+    {% endcode %}
+  </section>
 
   <section data-folding="blogroll">
     <h3 id="blogroll">
@@ -380,7 +396,8 @@
     <li><a href="#categories-page">添加「分类」页面</a></li>
     <li><a href="#syntax-highlight-scheme">设置代码高亮主题</a></li>
     <li><a href="#author-sites">侧边栏社交链接</a></li>
-    <li><a href="#blogroll">友情链接</a></li>
+    <li><a href="#reward">开启打赏功能</a></li>
+    <li><a href="#blogroll">设置友情链接</a></li>
     <li><a href="#duoshuo-ua">多说评论显示 UA</a></li>
     <li><a href="#volunteer-404">腾讯公益404页面</a></li>
     <li><a href="#site-since">站点建立时间</a></li>
