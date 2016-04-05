@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第三方服务集成 - NexT 使用文档</title>
+  <link rel="stylesheet" href="/assets/vendors/bootstrap-cosmo/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/vendors/font-awesome/css/font-awesome.min.css" />
+  <link href="http://fonts.useso.com/css?family=Monda:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/assets/vendors/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+
+<body class="third-party-services">
+<!--[if lt IE 10]>
+<p class="browserupgrade">
+  You are using an <strong>outdated</strong> browser.
+  Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+
+  <header>
+  <nav class="navbar navbar-default navbar-static-top" id="nav">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">NexT</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li>
+          <a href="/getting-started.html">开始使用</a>
+        </li>
+        <li>
+          <a href="/theme-settings.html">主题配置</a>
+        </li>
+        <li>
+          <a href="/third-party-services.html">第三方服务</a>
+        </li>
+        <li>
+          <a href="/tag-plugins.html">内建标签</a>
+        </li>
+        <li>
+          <a href="/faqs.html">常见问题</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <h1 class="next-docs-header">
+    <div class="container">
+  <i class="fa-plug fa"></i> 第三方服务集成
+    </div>
+  </h1>
+  </header>
+
+  <main>
+  <section class="next-docs">
+    <div class="container next-docs-sections">
+      <div class="row">
+        <div class="col-md-9 next-docs-section" role="main">
+  静态站点拥有一定的局限性，因此我们需要借助于第三方服务来扩展站点的功能。
+  以下是 NexT 目前支持的第三方服务，你可以根据你的需求集成一些功能进来。
+
+  <h2 id="comment-system" class="page-header">评论系统</h2>
+  <p>
+    NexT 支持 <a href="http://duoshuo.com" target="_blank" rel="external">多说</a> 和
+    <a href="https://disqus.com/" target="_blank" rel="external">DISQUS</a> 评论系统。
+    当同时设置了 多说 和 DISQUS 时，优先选择多说。 NexT 内置了一套 多说 的样式。
+  </p>
+  <p class="bs-callout bs-callout-primary">
+    如需取消某个 页面/文章 的评论，在 md 文件的
+    <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">
+      front-matter
+    </a> 中增加
+    <code>comments: false</code>
+  </p>
+
+  <section data-folding="duoshuo">
+    <h3 id="duoshuo">多说</h3>
+    <p>
+      使用多说前需要先在
+      <a href="http://duoshuo.com" target="_blank" rel="external">多说</a>
+      创建一个站点。具体步骤如下：
+    </p>
+    <ol>
+      <li>登录后在首页选择 “我要安装”。</li>
+      <li><p>创建站点，填写表单。<strong>多说域名</strong> 这一栏填写的即是你的 <code>duoshuo_shortname</code>，如图：</p>
+        <img src="/uploads/five-minutes-setup/duoshuo-create-site.png" class="img-thumbnail img-responsive">
+      </li>
+      <li>
+        <p>
+          创建站点完成后在
+            <span class="label label-primary">站点配置文件</span>
+          中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <section data-folding="disqus">
+    <h3 id="disqus">DISUQS</h3>
+    <p>
+      编辑 <span class="label label-primary">站点配置文件</span>，
+      添加 <code>disqus_shortname</code> 字段，设置如下：
+    </p>
+<pre><code class="yml hljs"><span class="hljs-attr">disqus_shortname:</span> your-disqus-shortname
+</code></pre>  </section>
+
+  <h2 id="analytics-system" class="page-header">数据统计与分析</h2>
+
+  <section data-folding="analytics-baidu">
+    <h3 id="analytics-baidu">百度统计</h3>
+    <ol>
+      <li>登录 <a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a>，定位到站点的代码获取页面</li>
+      <li>
+        复制 <code>hm.js?</code> 后面那串统计脚本 id，如下图所示：<br>
+        <img src="/uploads/five-minutes-setup/analytics-baidu-id.png"
+             class="img-thumbnail img-responsive">
+      </li>
+      <li>
+        编辑 <span class="label label-primary">站点配置文件</span>，
+        新增字段 <code>baidu_analytics</code>，值设置成你的百度统计脚本 id。
+      </li>
+    </ol>
+  </section>
+
+
+  <section data-folding="analytics-google">
+    <h3 id="analytics-google">Google 分析</h3>
+    <p>
+      编辑 <span class="label label-primary">站点配置文件</span>，
+      新增字段 <code>google_analytics</code>，
+      值设置成你的 Google 跟踪 ID。跟踪 ID 通常是以 <code>UA-</code> 开头。
+      <img src="/uploads/analytics-google.png" class="img-thumbnail img-responsive">
+    </p>
+  </section>
+
+
+  <section data-folding="analytics-tencent">
+    <h3 id="analytics-tencent">
+      腾讯分析
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/603">Cissoid</a> 贡献</small>
+    </h3>
+    <p>
+      请登录 <a href="http://ta.qq.com/" target="_blank">腾讯分析</a>，登录并获取分析的 ID。
+      然后在 <span class="label label-info">主题配置文件</span> 里将 ID 放置 <code>tencent_analytics</code> 字段。
+    </p>
+  </section>
+
+
+  <section data-folding="analytics-cnzz">
+    <h3 id="analytics-cnzz">
+      CNZZ 统计
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/712">jerrybendy</a> 贡献</small>
+    </h3>
+    <p>
+      在 <span class="label label-info">主题配置文件</span> 中增加了一项
+      <code>cnzz_siteid</code>的配置项，值为 CNZZ 里面添加统计的站点ID。
+      这个ID可以在地址栏里，或者自动生成的脚本里面找到。
+    </p>
+    <p>默认脚本生成的内容会产生“站长统计”几个字，感觉很丑而且和主题不太搭，我用了一个 <code>display: none;</code>把这几个字给隐藏了。</p>
+
+    
+    <h2 class="page-header" id="share-system">内容分享服务</h2>
+    <p>
+      分享服务优先选择 <a href="http://www.jiathis.com/" target="_blank" rel="external">JiaThis</a>，
+      也就是说，当同时开启了 JiaThis、多说分享，将仅启用 JiaThis。
+    </p>
+  </section>
+
+
+  <section data-folding="share-jiathis">
+    <h3 id="share-jiathis">JiaThis</h3>
+    <p>
+      编辑 <span class="label label-primary">站点配置文件</span>，
+      添加字段 <code>jiathis</code>，值为 <code>true</code>。
+    </p>
+    <div class="next-docs-example"> JiaThis 内容分享服务配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># JiaThis 分享服务</span>
+<span class="hljs-attr">jiathis:</span> <span class="hljs-literal">true</span>
+</code></pre>  </section>
+
+
+  <section data-folding="share-baidu">
+    <h3 id="share-baidu">
+      <a href="http://share.baidu.com/" target="_blank" rel="external">百度分享</a>
+    </h3>
+    <p>编辑 <span class="label label-primary">站点配置文件</span>，添加字段 <code>baidushare</code>，值为 <code>true</code>。</p>
+    <div class="next-docs-example"> 百度内容分享服务配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># 百度分享服务</span>
+<span class="hljs-attr">baidushare:</span> <span class="hljs-literal">true</span>
+</code></pre>  </section>
+
+
+  <section data-folding="share-duoshuo">
+    <h3 id="share-duoshuo">多说分享</h3>
+    <p class="bs-callout bs-callout-warning">多说分享必须与多说评论同时使用</p>
+    <p>
+      编辑 <span class="label label-primary">站点配置文件</span>，
+      添加字段 <code>duoshuo_share</code>，
+      值为 <code>true</code>。
+    </p>
+    <div class="next-docs-example"> 多说内容分享服务配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># 多说分享服务</span>
+<span class="hljs-attr">duoshuo_share:</span> <span class="hljs-literal">true</span>
+</code></pre>  </section>
+
+
+  <section data-folding="share-addthis">
+    <h3 id="share-addthis">
+      AddThis
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/660">hackjustu</a> 贡献</small>
+    </h3>
+    <ol>
+      <li>
+        在网站 <a href="https://www.addthis.com/">AddThis</a> 上注册账号。
+        可以使用 Google/Facebook/Twitter 账号进行第三方登陆
+      </li>
+      <li>
+        从下面菜单获得 AddThis id：<code>More.. --&gt; General --&gt; ID</code>。
+        具体 ID 获得方式参考以下截图 <br/>
+        <img src="/uploads/add-this-id.png" alt="AddThis Id" class="img-responsive img-thumbnail">
+      </li>
+      <li>
+        在主题<code>_config.yml</code>中，把<code>#Share</code>下的 <code>#add_this_id</code>取消注释，
+        改为<code>add_this_id: put_your_add_this_id_here</code>
+      </li>
+    </ol>
+  </section>
+
+
+  <h2 id="search-system" class="page-header">搜索服务</h2>
+  <p>
+    NexT 支持集成 <a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a> 和
+    <a href="http://tinysou.com/" target="_blank" rel="external">微搜索</a>
+  </p>
+
+
+  <section data-folding="swiftype">
+    <h3 id="swiftype">
+      Swiftype 站内搜索
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/84">lzlun129</a> 贡献</small>
+    </h3>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#swiftype-step-1" aria-controls="clone" role="tab" data-toggle="tab">
+          注册账户
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#swiftype-step-2" aria-controls="profile" role="tab" data-toggle="tab">
+          创建搜索引擎
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#swiftype-step-3" aria-controls="profile" role="tab" data-toggle="tab">
+          定制与激活搜索
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#swiftype-step-4" aria-controls="profile" role="tab" data-toggle="tab">
+          获取 Key
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#swiftype-step-5" aria-controls="profile" role="tab" data-toggle="tab">
+          更新主题配置
+        </a>
+      </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="swiftype-step-1">
+        <p>前往 <a href="https://swiftype.com/users/sign_up" target="_blank" rel="external">Swiftype 注册页面</a>，注册一个新账户。</p>
+        <p><img src="/uploads/swiftype/step-1.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="swiftype-step-2">
+        <p>注册完成后，创建一个新的搜索引擎，并按照提示完成创建步骤。</p>
+        <p><img src="/uploads/swiftype/step-2.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="swiftype-step-3">
+        <p>搜索引擎创建完成后，在菜单中选择 <code>Integrate -&gt; Install Search</code> 开启搜索定制，按照步骤完成定制。最后一步记得点击 <code>Active</code> 按钮。</p>
+        <p><img src="/uploads/swiftype/step-3.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="swiftype-step-4">
+        <p>返回定制引擎的第二个步骤 <code>INSTALL CODE</code>，复制出你的 <code>swiftype_key</code>。</p>
+        <p><img src="/uploads/swiftype/step-4.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="swiftype-step-5">
+        <p>
+          编辑 <span class="label label-primary">站点配置文件</span>，
+          新增字段 <code>swiftype_key</code>，值设置成第四步中赋值出来的 key
+        </p>
+<pre><code class="armasm hljs"># <span class="hljs-keyword">Swiftype </span>Search Key
+<span class="hljs-keyword">swiftype_key: </span>xxxxxxxxx
+</code></pre>      </div>
+    </div>
+  </section>
+
+
+  <section data-folding="wei-sousuo">
+    <h3 id="wei-sousuo">
+      微搜索
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/84">lzlun129</a> 贡献</small>
+    </h3>
+    <p>TBD</p>
+  </section>
+
+  <h2 id="others" class="page-header">其他服务</h2>
+
+
+  <section data-folding="mathjax">
+    <h3 id="mathjax">MathJax </h3>
+    <p>NexT 借助于 MathJax 来显示数学公式，此选项默认关闭。</p>
+    <p>编辑 <span class="label label-info">主题配置文件</span>，将 <code>mathjax</code> 设定为 <code>true</code> 即可。</p>
+<pre><code class="yml hljs"><span class="hljs-comment"># MathJax Support</span>
+<span class="hljs-attr">mathjax:</span>
+</code></pre>    <p class="bs-callout bs-callout-success">
+      ProTip: <a href="https://github.com/iissnan/hexo-theme-next/pull/363">使用七牛 CDN 来加速 MathJax 脚本的加载</a>
+    </p>
+  </section>
+
+
+  <section data-folding="google-webmaster-tools">
+    <h3 id="google-webmaster-tools">Google Webmaster tools</h3>
+    <p>设置 <a href="https://www.google.com/webmasters/tools/" target="_blank" rel="external">Google站点管理工具</a> 的验证字符串，用于提交 sitemap</p>
+    <ol>
+      <li>
+        <p>获取 google site verification code<br> 登录 Google Webmaster Tools，导航到验证方法，并选择 <code>HTML Tag</code>。将会获取到一段代码： </p>
+<pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"google-site-verification"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"XXXXXXXXXXXXXXXXXXXXXXX"</span> /&gt;</span></code></pre>        <p> 将 <code>content</code> 里面的 <code>XXXXXXXXXXXXXXXXXXXXXXX</code> 复制出来。
+        </p>
+      </li>
+      <li>
+        <p>设置主题。编辑 站点配置，新增字段 <code>google_site_verification</code>。</p>
+<pre><code class="yml hljs"><span class="hljs-attr">google_site_verification:</span> XXXXXXXXXXXXXXXXXXXXXXX
+</code></pre>      </li>
+    </ol>
+  </section>
+
+
+  <section data-folding="duoshuo-popular-posts">
+    <h3 id="duoshuo-popular-posts">
+      多说热评文章
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/126">xirong</a> 贡献</small>
+    </h3>
+    <p>
+      多说评论组件提供 <strong>热评文章</strong> 功能，
+      详情见 <a href="http://xirong.duoshuo.com/admin/tools/top-threads/" target="_blank" rel="external">多说官网说明</a>，仅在文章页面显示。
+    </p>
+    <p>站点/主题配置文件 中设置：</p>
+<pre><code class="autohotkey hljs"># 多说热评文章 <span class="hljs-literal">true</span> 或者 <span class="hljs-literal">false</span>
+<span class="hljs-symbol">duoshuo_hotartical:</span> <span class="hljs-literal">true</span>
+</code></pre>    <p>使用效果如下图：</p>
+    <img src="/uploads/duoshuo-hot.png" class="img-thumbnail img-responsive">
+  </section>
+
+          <div class="text-center next-docs-section-footer">
+            <a href="https://github.com/iissnan/theme-next-docs/issues"
+               target="_blank" class="next-docs-btn next-docs-btn-default">
+              <i class="fa fa-bug"></i> 文档问题反馈
+            </a>
+            <a href="#top" class="back-to-top next-docs-btn next-docs-btn-default">
+              <i class="fa fa-arrow-up"></i> 返回顶部
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <nav class="next-docs-sidebar nav">
+            <div class="nav">
+  <ul>
+    <li>
+      <a href="#comment-system">评论系统</a>
+      <ul>
+        <li><a href="#duoshuo">多说</a></li>
+        <li><a href="#disqus">Disqus</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#analytics-system">数据统计与分析</a>
+      <ul>
+        <li><a href="#analytics-baidu">百度统计</a></li>
+        <li><a href="#analytics-google">Google 分析</a></li>
+        <li><a href="#analytics-tencent">腾讯分析</a></li>
+        <li><a href="#analytics-cnzz">CNZZ 统计</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#share-system">内容分享服务</a>
+      <ul>
+        <li><a href="#share-jiathis">JiaThis</a></li>
+        <li><a href="#share-baidu">百度分享</a></li>
+        <li><a href="#share-duoshuo">多说分享</a></li>
+        <li><a href="#share-addthis">AddThis</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#search-system">搜索服务</a>
+      <ul>
+        <li><a href="#swiftype">Swiftype</a></li>
+        <li><a href="#wei-sousuo">微搜索</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#others">其他服务</a>
+      <ul>
+        <li><a href="#mathjax">MathJax</a></li>
+        <li><a href="#google-webmaster-tools">Google Webmaster tools</a></li>
+        <li><a href="#duoshuo-popular-posts">多说热评文章</a></li>
+      </ul>
+    </li>
+  </ul>
+            </div>
+
+            <ul>
+              <li><a href="#top" class="back-to-top">回到顶部</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+<footer class="footer">
+  <div class="container">
+    <hr>
+    <p class="pull-right text-muted next-maker">
+      &copy; Made by <a href="https://github.com/iissnan" target="_blank">IIssNan</a>
+      with <i class="fa fa-heart"></i>
+    </p>
+    <div>
+      <ul class="next-docs-footer-links">
+        <li><a href="https://github.com/iissnan/theme-next-docs/issues">文档问题反馈</a></li>
+        <li><a href="https://github.com/iissnan/theme-next-docs">文档 @ GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/vendors/jquery/index.js"></script>
+    <script src="/assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/vendors/slick-carousel/slick/slick.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75665289-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
