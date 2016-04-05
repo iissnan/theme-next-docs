@@ -386,6 +386,25 @@
     <div class="next-docs-example">配置示例</div>
     {% code "yml" %}since: 2013{% endcode %}
   </section>
+
+  <section data-folding="#wechat-subscriber">
+    <h3 id="wechat-subscriber">
+      订阅微信公众号
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/788">huiwang</a> 贡献</small>
+    </h3>
+    <p>在每篇文章的末尾显示微信公众号二维码，扫一扫，轻松订阅博客。</p>
+    <p>在微信公众号平台下载您的二维码，并将它存放于博客<code>source/uploads/</code>目录下。</p>
+    <p>然后编辑 <span class="label label-info">主题配置文件</span>，如下：</p>
+    <div class="next-docs-example">配置示例</div>
+    {% code "yml" %}
+      # Wechat Subscriber
+      wechat_subscriber:
+        enabled: true
+        qcode: /uploads/wechat-qcode.jpg
+        description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！
+    {% endcode %}
+  </section>
+
 {% endblock %}
 
 
@@ -401,5 +420,6 @@
     <li><a href="#duoshuo-ua">多说评论显示 UA</a></li>
     <li><a href="#volunteer-404">腾讯公益404页面</a></li>
     <li><a href="#site-since">站点建立时间</a></li>
+    <li><a href="#wechat-subscriber">订阅微信公众号</a></li>
   </ul>
 {% endblock %}
