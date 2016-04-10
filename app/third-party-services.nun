@@ -114,13 +114,6 @@
       这个ID可以在地址栏里，或者自动生成的脚本里面找到。
     </p>
     <p>默认脚本生成的内容会产生“站长统计”几个字，感觉很丑而且和主题不太搭，我用了一个 <code>display: none;</code>把这几个字给隐藏了。</p>
-
-    {# 内容分享服务 #}
-    <h2 class="page-header" id="share-system">内容分享服务</h2>
-    <p>
-      分享服务优先选择 <a href="http://www.jiathis.com/" target="_blank" rel="external">JiaThis</a>，
-      也就是说，当同时开启了 JiaThis、多说分享，将仅启用 JiaThis。
-    </p>
   </section>
 
 
@@ -190,7 +183,13 @@
       </div>
     </div>
   </section>
-
+  
+  {# 内容分享服务 #}
+  <h2 class="page-header" id="share-system">内容分享服务</h2>
+  <p>
+    分享服务优先选择 <a href="http://www.jiathis.com/" target="_blank" rel="external">JiaThis</a>，
+    也就是说，当同时开启了 JiaThis、多说分享，将仅启用 JiaThis。
+  </p>
 
   <section data-folding="share-jiathis">
     <h3 id="share-jiathis">JiaThis</h3>
