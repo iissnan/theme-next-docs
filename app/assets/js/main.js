@@ -20,7 +20,7 @@ $(document).ready(function () {
     centerMode: true,
     centerPadding: '0',
     slidesToShow: 3,
-    initialSlide: 2,
+    initialSlide: 4,
     prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-arrow-left"></i></button>',
     nextArrow: '<button type="button" class="slick-next"><i class="fa fa-arrow-right"></i></button>',
     responsive: [

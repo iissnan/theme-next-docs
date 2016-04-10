@@ -7,7 +7,7 @@
   <title>{% block documentTitle %}{% endblock %}</title>
   <link rel="stylesheet" href="/assets/vendors/bootstrap-cosmo/bootstrap.min.css" />
   <link rel="stylesheet" href="/assets/vendors/font-awesome/css/font-awesome.min.css" />
-  <link href="{{ config.fonts_api[config.fonts_api.active] }}Monda:400,700" rel="stylesheet" type="text/css">
+  <link href="{{ config.fonts_api[config.fonts_api.active] }}Monda:400,700|PT+Mono:300,300italic,400,400italic,700,700italic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/assets/vendors/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
