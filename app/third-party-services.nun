@@ -124,6 +124,74 @@
   </section>
 
 
+  <section data-folding="analytics-busuanzi">
+    <h3 id="analytics-busuanzi">
+      不蒜子统计
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/809">panzhitian</a> 贡献</small>
+    </h3>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#analytics-busuanzi-enable" aria-controls="clone" role="tab" data-toggle="tab">
+          全局配置
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#analytics-busuanzi-site-uv" aria-controls="profile" role="tab" data-toggle="tab">
+          站点UV配置
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#analytics-busuanzi-site-pv" aria-controls="profile" role="tab" data-toggle="tab">
+          站点PV配置
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#analytics-busuanzi-page-pv" aria-controls="profile" role="tab" data-toggle="tab">
+          单页面PV配置
+        </a>
+      </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="analytics-busuanzi-enable">
+        <p>编辑 <span class="label label-info">主题配置文件</span> 中的<code>busuanzi_count</code>的配置项。</p>
+        <p>当<code>enable: true</code>时，代表开启全局开关。若<code>site_uv</code>、<code>site_pv</code>、<code>page_pv</code>的值均为<code>false</code>时，不蒜子仅作记录而不会在页面上显示。</p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="analytics-busuanzi-site-uv">
+        <p>当<code>site_uv: true</code>时，代表在页面底部显示站点的UV值。</p>
+        <p><code>site_uv_header</code>和<code>site_uv_footer</code>为自定义样式配置，相关的值留空时将不显示，可以使用（带特效的）font-awesome。显示效果为<code>[site_uv_header]UV值[site_uv_footer]</code>。</p>
+        {% code "yml" %}
+          # 效果：本站访客数12345人次
+          site_uv: true
+          site_uv_header: 本站访客数
+          site_uv_footer: 人次
+        {% endcode %}
+      </div>
+      <div role="tabpanel" class="tab-pane" id="analytics-busuanzi-site-pv">
+        <p>当<code>site_pv: true</code>时，代表在页面底部显示站点的PV值。</p>
+        <p><code>site_pv_header</code>和<code>site_pv_footer</code>为自定义样式配置，相关的值留空时将不显示，可以使用（带特效的）font-awesome。显示效果为<code>[site_pv_header]PV值[site_pv_footer]</code>。</p>
+        {% code "yml" %}
+          # 效果：本站总访问量12345次
+          site_pv: true
+          site_pv_header: 本站总访问量
+          site_pv_footer: 次
+        {% endcode %}
+      </div>
+      <div role="tabpanel" class="tab-pane" id="analytics-busuanzi-page-pv">
+        <p>当<code>page_pv: true</code>时，代表在文章页面的标题下显示该页面的PV值（阅读数）。</p>
+        <p><code>page_pv_header</code>和<code>page_pv_footer</code>为自定义样式配置，相关的值留空时将不显示，可以使用（带特效的）font-awesome。显示效果为<code>[page_pv_header]PV值[page_pv_footer]</code>。</p>
+        {% code "yml" %}
+          # 效果：本文总阅读量12345次
+          page_pv: true
+          page_pv_header: 本文总阅读量
+          page_pv_footer: 次
+        {% endcode %}
+      </div>
+    </div>
+  </section>
+
+
   <section data-folding="share-jiathis">
     <h3 id="share-jiathis">JiaThis</h3>
     <p>
@@ -343,6 +411,7 @@
         <li><a href="#analytics-google">Google 分析</a></li>
         <li><a href="#analytics-tencent">腾讯分析</a></li>
         <li><a href="#analytics-cnzz">CNZZ 统计</a></li>
+        <li><a href="#analytics-cnzz">不蒜子统计</a></li>
       </ul>
     </li>
     <li>
