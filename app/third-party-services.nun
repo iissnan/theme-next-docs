@@ -260,7 +260,7 @@
   <h2 id="search-system" class="page-header">搜索服务</h2>
   <p>
     NexT 支持集成 <a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a> 和
-    <a href="http://tinysou.com/" target="_blank" rel="external">微搜索</a>
+    <a href="http://tinysou.com/" target="_blank" rel="external">微搜索</a>，以及 Local Search。
   </p>
 
 
@@ -336,6 +336,31 @@
     </h3>
     <p>TBD</p>
   </section>
+
+  <section data-folding="local-search">
+    <h3 id="local-search">
+      Local Search
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/694">flashlab</a> 贡献</small>
+    </h3>
+    <p>添加百度/谷歌/本地 自定义站点内容搜索</p>
+    <ol>
+      <li>
+        <p>安装 <code>hexo-generator-search</code>，在站点的根目录下执行以下命令：</p>
+        {% code "shell" %}
+        npm install hexo-generator-search --save
+        {% endcode %}
+      </li>
+      <li>
+        <p>编辑 <span class="label label-primary">站点配置文件</span>，新增以下内容到任意位置：</p>
+        {% code "yml" %}
+        search:
+          path: search.xml
+          field: post
+        {% endcode %}
+      </li>
+    </ol>
+  </section>
+
 
   <h2 id="others" class="page-header">其他服务</h2>
 
@@ -461,6 +486,7 @@
       <ul>
         <li><a href="#swiftype">Swiftype</a></li>
         <li><a href="#wei-sousuo">微搜索</a></li>
+        <li><a href="#local-search">Local Search</a></li>
       </ul>
     </li>
     <li>
