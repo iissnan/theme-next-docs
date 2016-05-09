@@ -183,7 +183,7 @@
       </div>
     </div>
   </section>
-  
+
   {# 内容分享服务 #}
   <h2 class="page-header" id="share-system">内容分享服务</h2>
   <p>
@@ -343,14 +343,48 @@
   <section data-folding="mathjax">
     <h3 id="mathjax">MathJax </h3>
     <p>NexT 借助于 MathJax 来显示数学公式，此选项默认关闭。</p>
-    <p>编辑 <span class="label label-info">主题配置文件</span>，将 <code>mathjax</code> 设定为 <code>true</code> 即可。</p>
-    {% code "yml" %}
-      # MathJax Support
-      mathjax:
-    {% endcode %}
-    <p class="bs-callout bs-callout-success">
-      ProTip: <a href="https://github.com/iissnan/hexo-theme-next/pull/363">使用七牛 CDN 来加速 MathJax 脚本的加载</a>
-    </p>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#mathjax-old-settings" aria-controls="clone" role="tab" data-toggle="tab">
+          5.0.0 及之前的版本
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#mathjax-new-settings" aria-controls="profile" role="tab" data-toggle="tab">
+          5.0.1 及以上的版本
+        </a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="mathjax-old-settings">
+        <p>编辑 <span class="label label-info">主题配置文件</span>，将 <code>mathjax</code> 设定为 <code>true</code> 即可。</p>
+        {% code "yml" %}
+          # MathJax Support
+          mathjax:
+        {% endcode %}
+        <p class="bs-callout bs-callout-success">
+          ProTip: <a href="https://github.com/iissnan/hexo-theme-next/pull/363">使用七牛 CDN 来加速 MathJax 脚本的加载</a>
+        </p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="mathjax-new-settings">
+        <p>
+          编辑 <span class="label label-info">主题配置文件</span>，
+          将 <code>mathjax</code> 下的 <code>enable</code> 设定为 <code>true</code> 即可。
+          <code>cdn</code> 用于指定 MathJax 的脚本地址，默认是 MathJax 官方提供的 CDN 地址。
+        </p>
+        {% code "yml" %}
+          # MathJax Support
+          mathjax:
+            enable: true
+            cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+        {% endcode %}
+      </div>
+    </div>
+
   </section>
 
 
