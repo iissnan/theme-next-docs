@@ -13,8 +13,8 @@
 {% block pageContent %}
   <section data-folding="getting-started-introduction">
     <p>
-      <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a> 是一个基于 Node.js 的高效的静态站点生成框架。
-      通过 Hexo 你可以轻松的使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的
+      <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a> 是高效的静态站点生成框架，她基于 <a href="https://nodejs.org">Node.js</a>。
+      通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的
       <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank">标签插件</a>
       来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。
     </p>
@@ -425,10 +425,9 @@
       avatar: http://example.com/avtar.png
     {% endcode %}
 
-    <h3 id="author-setting">作者名称</h3>
+    <h3 id="author-setting">设置 作者昵称</h3>
     <p>
-      编辑 <span class="label label-primary">站点配置文件</span>，
-      设置 <code>author</code> 为你的昵称
+      编辑 <span class="label label-primary">站点配置文件</span>， 设置 <code>author</code> 为你的昵称。
     </p>
 
     <h3 id="description-setting">站点描述</h3>
@@ -513,13 +512,13 @@
     <li>
       <a href="#theme-settings">主题设定</a>
       <ul>
-        <li><a href="#select-scheme">选择 Scheme</a></li>
-        <li><a href="#select-language">设置 语言</a></li>
-        <li><a href="#menu-settings">设置 菜单</a></li>
-        <li><a href="#sidebar-settings">设置 侧栏</a></li>
-        <li><a href="#avatar-setting">设置 头像</a></li>
-        <li><a href="#author-setting">作者名称</a></li>
-        <li><a href="#description-setting">站点描述</a></li>
+        <li><a href="#select-scheme">选择「Scheme」</a></li>
+        <li><a href="#select-language">设置「界面语言」</a></li>
+        <li><a href="#menu-settings">设置「菜单」</a></li>
+        <li><a href="#sidebar-settings">设置「侧栏」</a></li>
+        <li><a href="#avatar-setting">设置「头像」</a></li>
+        <li><a href="#author-setting">设置「作者昵称」</a></li>
+        <li><a href="#description-setting">设置「站点描述」</a></li>
       </ul>
     </li>
     <li>

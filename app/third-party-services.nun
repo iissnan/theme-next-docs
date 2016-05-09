@@ -347,7 +347,7 @@
       <li>
         <p>安装 <code>hexo-generator-search</code>，在站点的根目录下执行以下命令：</p>
         {% code "shell" %}
-        npm install hexo-generator-search --save
+        $ npm install hexo-generator-search --save
         {% endcode %}
       </li>
       <li>

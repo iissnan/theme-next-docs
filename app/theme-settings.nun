@@ -338,13 +338,22 @@
       ua_enable: true
       admin_enable: false
       user_id:
+      admin_nickname:
     {% endcode %}
     <p>
       只要设置 <code>ua_enable</code> 为 <code>true</code> 即可显示 UA 信息。
-      <code>admin_enable</code> 是用于显示 「博主」 文字，表明评论者是博主，此字段需要同时配置 <code>user_id</code>。
+      <code>admin_enable</code> 是用于显示 「博主」 文字，表明评论者是博主，此字段需要同时配置 <code>user_id</code> 和 <code>admin_nickname</code> 字段。
       请访问 <a href="http://dev.duoshuo.com/">多说</a>，登录并访问「我的主页」获取 <code>user_id</code> ，
       此 ID 是 网址最后那串数字。
     </p>
+    <div class="next-docs-example">配置示例</div>
+    {% code "yml" %}
+    duoshuo_info:
+      ua_enable: true
+      admin_enable: true
+      user_id: 1234567
+      admin_nickname: 主编大人
+    {% endcode %}
   </section>
 
   <section data-folding="volunteer-404">
