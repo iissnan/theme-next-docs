@@ -211,6 +211,11 @@
         <td><code>ja</code></td>
         <td><code>language: ja</code></td>
       </tr>
+      <tr>
+        <td>Indonesian</td>
+        <td><code>id</code></td>
+        <td><code>language: id</code></td>
+      </tr>
       </tbody>
     </table>
 

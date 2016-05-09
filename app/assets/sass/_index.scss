@@ -28,16 +28,16 @@
 .next-hero-buttons .btn {
   margin-left: 10px;
   padding: 8px 40px;
-  color: black;
-  background: white;
+  color: white;
+  background: transparent;
   border: 2px solid white;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 .next-hero-buttons .btn:hover {
-  color: white;
-  background: transparent;
+  color: black;
+  background: white;
 }
 
 
