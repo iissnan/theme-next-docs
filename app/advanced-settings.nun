@@ -1,0 +1,133 @@
+{% extends './templates/layout/doc.nun' %}
+
+{# S: 页面元数据 #}
+{% block documentTitle %}进阶设定 - NexT 使用文档{% endblock %}
+{% block pageName %}advanced-settings{% endblock %}
+{# E: 页面元数据 #}
+
+{% block pageHeader %}
+  <i class="fa-rocket fa"></i> 进阶设定
+{% endblock %}
+
+
+{% block pageContent %}
+  <p>
+    除了常见的 <a href="/theme-settings.html">主题设定</a> 与 <a href="/third-party-services.html">第三方服务集成</a> 以外，
+    NexT 也提供了一些进阶的设定，让 NexT 更具定制性。
+    请注意，这些设定可能影响到 NexT 的正常运作，请务必先了解这些设定背后的相关知识。
+  </p>
+  <section data-fodling="javascript-vendors">
+    <h3 id="javascript-vendors">设置 「JavaScript 第三方库」</h3>
+
+    <div class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>
+      此特性在版本 <span class="label label-success">5.0.1</span> 中引入，要使用此功能请确保所使用的 NexT 版本在此之后
+    </div>
+
+    <p>设定成合适的 CDN 地址，此特性可以加速静态资源（JavaScript 第三方库）的加载，目前 NexT 使用的第三方库包括：</p>
+    <table class="table table-bordered table-condensed table-striped">
+      <thead>
+        <tr>
+          <th>名称</th>
+          <th>官方地址</th>
+          <th>NexT 内部使用版本</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>jQuery</td>
+          <td><a href="http://jquery.com/" target="_blank">http://jquery.com/</a></td>
+          <td>2.1.3</td>
+        </tr>
+        <tr>
+          <td>Fancybox</td>
+          <td><a href="http://fancyapps.com/fancybox/" target="_blank">http://fancyapps.com/fancybox/</a></td>
+          <td>2.1.5</td>
+        </tr>
+        <tr>
+          <td>FastClick</td>
+          <td><a href="https://github.com/ftlabs/fastclick" target="_blank">https://github.com/ftlabs/fastclick</a></td>
+          <td>1.0.6</td>
+        </tr>
+        <tr>
+          <td>jQuery LazyLoad</td>
+          <td><a href="https://github.com/tuupola/jquery_lazyload" target="_blank">https://github.com/tuupola/jquery_lazyload</a></td>
+          <td>2.1.5</td>
+        </tr>
+        <tr>
+          <td>VelocityJS</td>
+          <td><a href="http://julian.com/research/velocity/" target="_blank">http://julian.com/research/velocity/</a></td>
+          <td>1.2.1</td>
+        </tr>
+        <tr>
+          <td>VelocityJS UI Pack</td>
+          <td><a href="http://julian.com/research/velocity/#uiPack" target="_blank">http://julian.com/research/velocity/#uiPack</a></td>
+          <td>1.2.1</td>
+        </tr>
+        <tr>
+          <td>UAParser.js</td>
+          <td><a href="https://faisalman.github.io/ua-parser-js/" target="_blank">https://faisalman.github.io/ua-parser-js/</a></td>
+          <td>0.7.9</td>
+        </tr>
+        <tr>
+          <td>FontAwesome</td>
+          <td><a href="http://fontawesome.io/" target="_blank">http://fontawesome.io/</a></td>
+          <td>4.4.0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      此特性配置位于 <span class="label label-info">主题配置文件</span>，键值 <code>vendors</code>。
+      其中 <code>_internal: vendors</code> 用于指定 NexT 内部使用的路径前缀，通常情况下不需要更改。接着便是各个库的设定，若设定为空，NexT
+      将使用内部集成的文件。每一个设定都是 <code>库： CDN 地址</code> 的键值形式。例如：
+    </p>
+
+    {% code "yml" %}
+    jquery: //cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js
+    {% endcode %}
+
+    <p>「Internal version」说明 NexT 内部使用的版本，经过测试的版本。因此若你需要指定其他版本，需要进行额外的自行测试。</p>
+
+    <div class="next-docs-example">设置示例</div>
+    {% code "yml" %}
+    vendors:
+      # Internal path prefix. Please do not edit it.
+      _internal: vendors
+
+      # Internal version: 2.1.3
+      jquery: //cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js
+
+      # Internal version: 2.1.5
+      # Fancybox: http://fancyapps.com/fancybox/
+      fancybox: //cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js
+      fancybox_css: //cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css
+
+      # Internal version: 1.0.6
+      fastclick: //cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js
+
+      # Internal version: 1.9.7
+      lazyload: //cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js
+
+      # Internal version: 1.2.1
+      velocity: //cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js
+
+      # Internal version: 1.2.1
+      velocity_ui: //cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js
+
+      # Internal version: 0.7.9
+      ua_parser: //cdn.jsdelivr.net/ua-parser.js/0.7.10/ua-parser.min.js
+
+      # Internal version: 4.4.0
+      # http://fontawesome.io/
+      fontawesome: //maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css
+    {% endcode %}
+
+  </section>
+{% endblock %}
+
+{% block pageSidebar %}
+  <ul>
+    <li><a href="#javascript-vendors">设置 「JavaScript 第三方库」</a></li>
+  </ul>
+{% endblock %}

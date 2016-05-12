@@ -122,6 +122,12 @@
       不蒜子统计
       <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/809">panzhitian</a> 贡献</small>
     </h3>
+
+    <div class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>
+      此特性在版本 <span class="label label-success">5.0.1</span> 中引入，要使用此功能请确保所使用的 NexT 版本在此之后
+    </div>
+
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
       <li role="presentation" class="active">
@@ -145,6 +151,7 @@
         </a>
       </li>
     </ul>
+
     <!-- Tab panes -->
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="analytics-busuanzi-enable">
@@ -182,6 +189,7 @@
         {% endcode %}
       </div>
     </div>
+
   </section>
 
   {# 内容分享服务 #}

@@ -195,6 +195,70 @@
     {% endcode %}
   </section>
 
+  <section data-fodling="fonts-customization">
+    <h3 id="fonts-customization">设置字体</h3>
+    <div class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>
+      此特性在版本 <span class="label label-success">5.0.1</span> 中引入，要使用此功能请确保所使用的 NexT 版本在此之后
+    </div>
+
+    <p>
+      为了解决 <a href="https://www.google.com/fonts">Google Fonts API</a> 不稳定的问题，NexT 在 5.0.1 中引入此特性。
+      通过此特性，你可以指定所使用的字体库外链地址；与此同时，NexT 开放了 5 个特定范围的字体设定，他们是：
+    </p>
+    <ul>
+      <li>全局字体：定义的字体将在全站范围使用</li>
+      <li>标题字体：文章内标题的字体（h1, h2, h3, h4, h5, h6）</li>
+      <li>文章字体：文章所使用的字体</li>
+      <li>Logo字体：Logo 所使用的字体</li>
+      <li>代码字体： 代码块所使用的字体</li>
+    </ul>
+    <p>各项所指定的字体将作为首选字体，当他们不可用时会自动 Fallback 到 NexT 设定的基础字体组：</p>
+    <ul>
+      <li>非代码类字体：Fallback 到 <code>"PingFang SC", "Microsoft YaHei", sans-serif</code></li>
+      <li>代码类字体： Fallback 到 <code>consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace</code></li>
+    </ul>
+    <p>
+      另外，每一项都有一个额外的 <code>external</code> 属性，此属性用来控制是否使用外链字体库。
+      开放此属性方便你设定那些已经安装在系统中的字体，减少不必要的请求（请求大小）。
+    </p>
+
+    <div class="next-docs-example">配置示例</div>
+    {% code "yml" %}
+    font:
+      enable: true
+
+      # 外链字体库地址，例如 //fonts.googleapis.com (默认值)
+      host:
+
+      # 全局字体，应用在 <body> 元素上
+      global:
+        external: true
+        family: Monda
+
+      # 标题字体 (h1, h2, h3, h4, h5, h6)
+      headings:
+        external: true
+        family: Roboto Slab
+
+      # 文章字体
+      posts:
+        external: true
+        family:
+
+      # Logo 字体
+      logo:
+        external: true
+        family: Lobster Two
+        size: 24
+
+      # 代码字体，应用于 <code> 以及代码块
+      codes:
+        external: true
+        family: PT Mono
+    {% endcode %}
+  </section>
+
 
   <section data-folding="syntax-highlight-scheme">
     <h3 id="syntax-highlight-scheme">设置代码高亮主题</h3>
@@ -401,6 +465,12 @@
       订阅微信公众号
       <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/788">huiwang</a> 贡献</small>
     </h3>
+
+    <div class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>
+      此特性在版本 <span class="label label-success">5.0.1</span> 中引入，要使用此功能请确保所使用的 NexT 版本在此之后
+    </div>
+
     <p>在每篇文章的末尾显示微信公众号二维码，扫一扫，轻松订阅博客。</p>
     <p>在微信公众号平台下载您的二维码，并将它存放于博客<code>source/uploads/</code>目录下。</p>
     <p>然后编辑 <span class="label label-info">主题配置文件</span>，如下：</p>
@@ -419,10 +489,11 @@
 
 {% block pageSidebar %}
   <ul>
-    <li><a href="#rss">设置 RSS</a></li>
+    <li><a href="#rss">设置「RSS」</a></li>
     <li><a href="#tags-page">添加「标签」页面</a></li>
     <li><a href="#categories-page">添加「分类」页面</a></li>
-    <li><a href="#syntax-highlight-scheme">设置代码高亮主题</a></li>
+    <li><a href="#fonts-customization">设置「字体」</a></li>
+    <li><a href="#syntax-highlight-scheme">设置「代码高亮主题」</a></li>
     <li><a href="#author-sites">侧边栏社交链接</a></li>
     <li><a href="#reward">开启打赏功能</a></li>
     <li><a href="#blogroll">设置友情链接</a></li>

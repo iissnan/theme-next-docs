@@ -23,6 +23,9 @@ menu:
   tag-plugins:
     label: 内建标签
     href: /tag-plugins.html
+  advanced-settings:
+    label: 进阶设定
+    href: /advanced-settings.html
   faqs:
     label: 常见问题
     href: /faqs.html

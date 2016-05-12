@@ -68,7 +68,8 @@
   <section data-folding="custom-font">
     <h2 id="custom-font">如何更改字体？</h2>
     <p>
-      NexT 并未通过配置文件提供字体相关的修改，因此如果你需要自定义字体或者字体的大小，需要编辑样式文件。
+      NexT 从 <strong>5.0.1</strong> 版本开始提供一个 <a href="/theme-settings.html#fonts-customization">字体定制特性</a>，
+      请先查看此特性是否能满足你的需求。以下的修改将覆盖 字体定制 的特性。
       编辑主题下的 <code>source/css/_variables/custom.styl</code> 文件，新增两个变量：
     </p>
     {% code "styl" %}
