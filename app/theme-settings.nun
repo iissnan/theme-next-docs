@@ -308,37 +308,35 @@
     </p>
     <ol>
       <li>
-        <p>链接放置在 <code>social</code> 字段下，其格式是 <code>item label</code>: <code>Link</code>，一行一个链接。</p>
-        <p class="next-doc-example">链接配置示例</p>
+        <p>链接放置在 <code>social</code> 字段下，一行一个链接。其键值格式是 <code>显示文本: 链接地址</code>。</p>
+        <div class="next-docs-example">配置示例</div>
         {% code "yml" %}
           # Social links
           social:
-            github: https://github.com/your-user-name
-            twitter: https://twitter.com/your-user-name
-            weibo: http://weibo.com/your-user-name
-            douban: http://douban.com/people/your-user-name
-            zhihu: http://www.zhihu.com/people/your-user-name
+            GitHub: https://github.com/your-user-name
+            Twitter: https://twitter.com/your-user-name
+            微博: http://weibo.com/your-user-name
+            豆瓣: http://douban.com/people/your-user-name
+            知乎: http://www.zhihu.com/people/your-user-name
             # 等等
         {% endcode %}
       </li>
       <li>
         <p>
-          设定链接的图标，对应的字段是 <code>menu_icons</code>。此设定格式是 <code>item name: icon name</code>，其中 <code>item label</code>
-          与上一步所配置的链接的文本，<code>icon name</code> 是 Font Awesome 图标的
-          名字。而 <code>enable</code> 可用于控制是否显示图标，你可以设置成 <code>false</code>
-          来去掉图标。
+          设定链接的图标，对应的字段是 <code>social_icons</code>。其键值格式是 <code>匹配键: Font Awesome 图标名称</code>， <code>匹配键</code>
+          与上一步所配置的链接的 <code>显示文本</code> 相同（大小写严格匹配），<code>图标名称</code> 是 Font Awesome 图标的名字（不必带 <code>fa-</code> 前缀）。
+          <code>enable</code> 选项用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。
         </p>
-        <div class="next-docs-example">社交链接配置示例</div>
+        <div class="next-docs-example">配置示例</div>
         {% code "yml" %}
           # Social Icons
           social_icons:
             enable: true
             # Icon Mappings
-            gitHub: github
-            twitter: twitter
-            weibo: weibo
+            GitHub: github
+            Twitter: twitter
+            微博: weibo
         {% endcode %}
-        <p class="bs-callout bs-callout-danger"> 请注意图标键值（如 <code>github</code>）的大小写要严格与链接设置的键值匹配 </p>
       </li>
     </ol>
 
