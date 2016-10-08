@@ -3,8 +3,7 @@
 
 fonts_api:
   google: https://fonts.googleapis.com/css?family=
-  360: http://fonts.useso.com/css?family=
-  active: 360
+  active: google
 
 menu:
   getting-started:
