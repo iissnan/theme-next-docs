@@ -51,7 +51,7 @@
   </section>
 
   <section data-folding="disqus">
-    <h3 id="disqus">DISUQS</h3>
+    <h3 id="disqus">DISQUS</h3>
     <p>
       编辑 <span class="label label-primary">站点配置文件</span>，
       添加 <code>disqus_shortname</code> 字段，设置如下：
@@ -191,8 +191,8 @@
     </div>
 
   </section>
-  
-  
+
+
   <section data-fodling="leanclound-page-views">
     <h3 id="leanclound-page-views">
       阅读次数统计（LeanCloud)
@@ -201,7 +201,7 @@
     <p>
       请查看 <a href="https://notes.wanghao.work/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud">为NexT主题添加文章阅读量统计功能</a>
     </p>
-  </section>  
+  </section>
 
 
   {# 内容分享服务 #}
