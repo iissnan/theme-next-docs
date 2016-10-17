@@ -367,7 +367,7 @@
       <li>
         <p>安装 <code>hexo-generator-search</code>，在站点的根目录下执行以下命令：</p>
         {% code "shell" %}
-        $ npm install hexo-generator-search --save
+        $ npm install hexo-generator-searchdb --save
         {% endcode %}
       </li>
       <li>
@@ -376,6 +376,8 @@
         search:
           path: search.xml
           field: post
+          format: html
+          limit: 10000
         {% endcode %}
       </li>
     </ol>
