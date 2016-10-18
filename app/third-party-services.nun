@@ -279,10 +279,9 @@
 
   <h2 id="search-system" class="page-header">搜索服务</h2>
   <p>
-    NexT 支持集成 <a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a> 和
-    <a href="http://tinysou.com/" target="_blank" rel="external">微搜索</a>，以及 Local Search。
+    NexT 支持集成 <a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a>、
+    <a href="http://tinysou.com/" target="_blank" rel="external">微搜索</a>、Local Search 和 Algolia。
   </p>
-
 
   <section data-folding="swiftype">
     <h3 id="swiftype">
@@ -348,7 +347,6 @@
     </div>
   </section>
 
-
   <section data-folding="wei-sousuo">
     <h3 id="wei-sousuo">
       微搜索
@@ -365,7 +363,7 @@
     <p>添加百度/谷歌/本地 自定义站点内容搜索</p>
     <ol>
       <li>
-        <p>安装 <code>hexo-generator-search</code>，在站点的根目录下执行以下命令：</p>
+        <p>安装 <code>hexo-generator-searchdb</code>，在站点的根目录下执行以下命令：</p>
         {% code "shell" %}
         $ npm install hexo-generator-searchdb --save
         {% endcode %}
@@ -381,6 +379,99 @@
         {% endcode %}
       </li>
     </ol>
+  </section>
+
+  <section data-folding="algolia">
+    <h3 id="algolia-search">Algolia</h3>
+    <p class="bs-callout bs-callout-warning">
+      Algolia 搜索集成正在开发中，
+      分支 <label class="label label-warning">5.1.0</label>
+    </p>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#algolia-step-1" aria-controls="clone" role="tab" data-toggle="tab">
+          注册 Algolia，创建 Index
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#algolia-step-2" aria-controls="profile" role="tab" data-toggle="tab">
+          安装 Hexo Algolia
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#algolia-step-3" aria-controls="profile" role="tab" data-toggle="tab">
+          获取 Key，更新站点配置
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#algolia-step-4" aria-controls="profile" role="tab" data-toggle="tab">
+          更新 Index
+        </a>
+      </li>
+      <li>
+        <a href="#algolia-step-5" role="tab" data-toggle="tab">主题集成</a>
+      </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="algolia-step-1">
+        <p>
+          前往 <a href="https://www.algolia.com" target="_blank" rel="external">Algolia 注册页面</a>，注册一个新账户。
+          可以使用 GitHub 或者 Google 账户直接登录，注册后的 14 天内拥有所有功能（包括收费类别的）。之后若未续费会自动降级为免费账户，免费账户
+          总共有 10,000 条记录，每月有 100,000 的可以操作数。注册完成后，创建一个新的 Index，这个 Index 将在后面使用。
+        </p>
+        <p><img src="/uploads/algolia/algolia-step-2.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="algolia-step-2">
+        <p>
+          Index 创建完成后，此时这个 Index 里未包含任何数据。
+          接下来需要安装 <a href="https://github.com/oncletom/hexo-algolia" target="_blank">Hexo Algolia</a> 扩展，
+          这个扩展的功能是搜集站点的内容并通过 API 发送给 Algolia。前往站点根目录，执行命令安装：
+        </p>
+        {% code %}
+        npm install --save hexo-algolia
+        {% endcode %}
+      </div>
+      <div role="tabpanel" class="tab-pane" id="algolia-step-3">
+        <p>
+          在 Algolia 服务站点上找到需要使用的一些配置的值，包括 <code>ApplicationID</code>、<code>Search API Key</code>、
+          <code>Admin API Key</code>。注意，<code>Admin API Key</code> 需要保密保存。
+        </p>
+        <p><img src="/uploads/algolia/algolia-step-4.png" class="img-responsive"></p>
+        <p>
+          编辑 <span class="label label-primary">站点配置文件</span>，新增以下配置：
+          {% code "yml"%}
+          algolia:
+            applicationID: 'applicationID'
+            apiKey: 'apiKey'
+            adminApiKey: 'adminApiKey'
+            indexName: 'indexName'
+            chunkSize: 5000
+          {% endcode %}
+          替换除了 <code>chunkSize</code> 以外的其他字段为在 Algolia 获取到的值。
+        </p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="algolia-step-4">
+        <p>当配置完成，在站点根目录下执行 <code>hexo algolia</code> 来更新 Index。请注意观察命令的输出。</p>
+        <p><img src="/uploads/algolia/algolia-step-4.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="algolia-step-5">
+        <p>更改主题配置文件，找到 Algolia Search 配置部分：</p>
+        {% code "yml" %}
+        # Algolia Search
+        algolia_search:
+          enable: false
+          hits:
+            per_page: 10
+          labels:
+            input_placeholder: Search for Posts
+            hits_empty: "We didn't find any results for the search: ${query}"
+            hits_stats: "${hits} results found in ${time} ms"
+        {% endcode %}
+        将 <code>enable</code> 改为 <code>true</code> 即可，根据需要你可以调整 <code>labels</code> 中的文本。
+      </div>
+    </div>
   </section>
 
 
@@ -509,6 +600,7 @@
         <li><a href="#swiftype">Swiftype</a></li>
         <li><a href="#wei-sousuo">微搜索</a></li>
         <li><a href="#local-search">Local Search</a></li>
+        <li><a href="#algolia-search">Algolia</a></li>
       </ul>
     </li>
     <li>
