@@ -160,9 +160,9 @@
         {% endcode %}
       </div>
       <div role="tabpanel" class="tab-pane" id="set-page-categories">
-        <p>编辑刚新建的页面，将页面的类型设置为 categories ，主题将自动为这个页面显示分类。页面内容如下：</p>
+        <p>编辑刚新建的页面，将页面的 <code>type</code> 设置为 <code>categories</code> ，主题将自动为这个页面显示分类。页面内容如下：</p>
         {% code "markdown" %}
-          title: 标签
+          title: 分类
           date: 2014-12-22 12:39:04
           type: "categories"
           ---
@@ -177,7 +177,7 @@
           menu:
             home: /
             archives: /archives
-            categories : /categories
+            categories: /categories
         {% endcode %}
       </div>
     </div>
