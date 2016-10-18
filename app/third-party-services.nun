@@ -438,7 +438,7 @@
           在 Algolia 服务站点上找到需要使用的一些配置的值，包括 <code>ApplicationID</code>、<code>Search API Key</code>、
           <code>Admin API Key</code>。注意，<code>Admin API Key</code> 需要保密保存。
         </p>
-        <p><img src="/uploads/algolia/algolia-step-4.png" class="img-responsive"></p>
+        <p><img src="/uploads/algolia/algolia-step-3.png" class="img-responsive"></p>
         <p>
           编辑 <span class="label label-primary">站点配置文件</span>，新增以下配置：
           {% code "yml"%}
