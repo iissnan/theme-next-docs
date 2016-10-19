@@ -1,0 +1,32 @@
+{% extends './templates/layout/doc.nun' %}
+
+{# S: 页面元数据 #}
+{% block documentTitle %}其他平台 - NexT 使用文档{% endblock %}
+{% block pageName %}platforms{% endblock %}
+{# E: 页面元数据 #}
+
+{% block pageHeader %}
+  <i class="fa-retweet fa"></i> 其他平台
+{% endblock %}
+
+{% block pageContent %}
+  这里包含 NexT 在其中平台的实现版本。
+
+  <section data-folding="platform-farbox">
+    <h2 class="page-header" id="platform-farbox">Farbox</h2>
+    <ul>
+      <li>
+        <a href="https://github.com/Sunnyyoung/Farbox-NexT">Farbox-NexT</a>
+      </li>
+    </ul>
+  </section>
+{% endblock %}
+
+
+{% block pageSidebar %}
+  <ul>
+    <li>
+      <a href="#platform-farbox">Farbox</a>
+    </li>
+  </ul>
+{% endblock %}

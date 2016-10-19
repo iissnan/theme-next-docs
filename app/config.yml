@@ -28,4 +28,8 @@ menu:
   faqs:
     label: 常见问题
     href: /faqs.html
+  platforms:
+    label: 其他平台
+    href: /platforms.html
+
 

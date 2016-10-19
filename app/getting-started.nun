@@ -73,10 +73,11 @@
         <div role="tabpanel" class="tab-pane" id="stable">
           <ol>
             <li>
-              前往 NexT 版本 [发布页面](https://github.com/iissnan/hexo-theme-next/releases)。
+              前往 NexT 版本
+              <a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank">发布页面</a>。
             </li>
             <li>
-              选择你所需要的版本，下载 Download 下的 Source Code (zip) 到本地。例如，下载 v0.4.0 版本：
+              选择你所需要的版本，下载 Download 区域下的 Source Code (zip) 到本地。例如，下载 v0.4.0 版本：
               <img src="/uploads/five-minutes-setup/download-stable-version.png"
                     alt="next-releases" class="img-thumbnail  img-responsive"/>
             </li>
@@ -221,12 +222,12 @@
 
     <h3 id="menu-settings">设置 菜单</h3>
     <p>
-      菜单配置包括两个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。
+      菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。
       NexT 使用的是 <a href="http://fontawesome.io/" target="_blank">Font Awesome</a> 提供的图标，
       Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下
       图标模糊的问题。
     </p>
-    <p>编辑 <span class="label label-info">主题配置文件</span> ,修改以下内容：</p>
+    <p>编辑 <span class="label label-info">主题配置文件</span>，修改以下内容：</p>
     <ol>
       <li>
         <p>
