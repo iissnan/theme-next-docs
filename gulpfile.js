@@ -28,7 +28,7 @@ var dest = {
     css: './app/assets/css/**/*',
     img: './app/assets/img/**/*',
     fonts: './app/assets/fonts/**/*',
-    vendors: './app/assets/vendors/**/*',
+    vendors: './app/assets/libs/**/*',
     html: {
       zh: './app/*.nun'
     },
@@ -41,7 +41,7 @@ var dest = {
     css: './dist/assets/css',
     img: './dist/assets/img',
     fonts: './dist/assets/fonts',
-    vendors: './dist/assets/vendors/',
+    vendors: './dist/assets/libs/',
     uploads: './dist/uploads'
   }
 };

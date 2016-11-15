@@ -8,10 +8,10 @@ dist/
 app/assets/css/
 
 # Bootstrap
-app/assets/vendors/bootstrap/**
-!app/assets/vendors/bootstrap/dist/
+app/assets/libs/bootstrap/**
+!app/assets/libs/bootstrap/dist/
 
 # FontAwesome
-app/assets/vendors/font-awesome/**
-!app/assets/vendors/font-awesome/css/
-!app/assets/vendors/font-awesome/fonts/
+app/assets/libs/font-awesome/**
+!app/assets/libs/font-awesome/css/
+!app/assets/libs/font-awesome/fonts/
