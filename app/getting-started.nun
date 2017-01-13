@@ -401,7 +401,7 @@
       <tr>
         <td>完整的互联网 URI</td>
         <td>
-          <code>http://example.com/avtar.png</code>
+          <code>http://example.com/avatar.png</code>
         </td>
       </tr>
       <tr>
@@ -423,7 +423,7 @@
     </table>
     <div class="next-docs-example">头像设置示例 </div>
     {% code "yml"%}
-      avatar: http://example.com/avtar.png
+      avatar: http://example.com/avatar.png
     {% endcode %}
 
     <h3 id="author-setting">设置 作者昵称</h3>
