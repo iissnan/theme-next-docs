@@ -4,15 +4,28 @@
   "description": "Documetation for NexT theme.",
   "main": "index.html",
   "devDependencies": {
-    "browser-sync": "^2.10.0",
-    "del": "^2.2.0",
-    "gulp": "^3.9.0",
-    "gulp-sass": "^2.2.0",
+    "@types/jquery": "^2.0.40",
+    "browser-sync": "^2.18.7",
+    "css-loader": "^0.26.1",
+    "del": "^2.2.2",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.10.0",
+    "gulp": "^3.9.1",
     "gulp-tap": "^0.1.3",
+    "gulp-util": "^3.0.8",
     "highlight.js": "^9.2.0",
     "js-yaml": "^3.5.4",
+    "node-sass": "^4.5.0",
     "nunjucks": "^2.3.0",
-    "url": "^0.11.0"
+    "sass-loader": "^5.0.1",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.6",
+    "url": "^0.11.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-dev-server": "^2.3.0",
+    "webpack-merge": "^2.6.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,5 +43,11 @@
   "bugs": {
     "url": "https://github.com/iissnan/theme-next-docs/issues"
   },
-  "homepage": "https://github.com/iissnan/theme-next-docs#readme"
+  "homepage": "http://theme-next.iissnan.com",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1"
+  }
 }

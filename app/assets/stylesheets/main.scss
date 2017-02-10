@@ -1,0 +1,59 @@
+@import "bootstrap-cosmo/variables";
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bootstrap-cosmo/bootswatch.scss";
+
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome";
+
+$slick-font-path: "~slick-carousel/slick/fonts/";
+@import "~slick-carousel/slick/slick";
+
+@import "mixins/font-face";
+@import "scaffolding";
+@import "buttons";
+@import "header";
+@import "menu";
+@import "sidebar";
+@import "docs-section";
+@import "github";
+@import "bootstrap-extend";
+@import "index";
+
+.hljs {
+  padding: 20px;
+  font-size: 13px;
+}
+.hljs-comment, .hljs-quote { font-style: normal; }
+
+hr.half-rule {
+  margin: 40px auto;
+  width: 100px;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.footer { padding: 0 0 40px; }
+.footer .fa {
+  margin: 0 5px;
+  font-size: 10px;
+}
+
+.footer hr { margin-bottom: 10px; }
+
+.footer a {
+  color: #999;
+  text-decoration: underline;
+}
+
+.next-docs-footer-links {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin: 0 0 0 10px;
+  }
+}
