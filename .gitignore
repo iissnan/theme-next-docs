@@ -3,15 +3,4 @@ node_modules/
 .vagrant/
 npm-debug.log
 dist/
-
-
 app/assets/css/
-
-# Bootstrap
-app/assets/libs/bootstrap/**
-!app/assets/libs/bootstrap/dist/
-
-# FontAwesome
-app/assets/libs/font-awesome/**
-!app/assets/libs/font-awesome/css/
-!app/assets/libs/font-awesome/fonts/
