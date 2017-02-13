@@ -31,7 +31,7 @@
 
   {% block scripts %}
     <script src="/assets/libs/jquery/index.js"></script>
-    <script src="/assets/libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/assets/libs/slick-carousel/slick/slick.min.js"></script>
     <script src="/assets/js/main.js"></script>
   {% endblock %}
