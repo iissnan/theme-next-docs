@@ -378,6 +378,14 @@
           limit: 10000
         {% endcode %}
       </li>
+      <li>
+        <p>编辑 <span class="label label-info">主题配置文件</span>，启用本地搜索功能：</p>
+        {% code "yml" %}
+        # Local search
+        local_search:
+          enable: true
+        {% endcode %}
+      </li>
     </ol>
   </section>
 
