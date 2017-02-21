@@ -14,7 +14,7 @@
   <p>NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保持最大限度的易用性。</p>
 
   <section data-folding="rss">
-    <h3 id="rss">设置 RSS</h3>
+    <h3 id="rss" class="page-header">设置 RSS</h3>
     <p>
       NexT 中 RSS 有三个设置选项，满足特定的使用场景。
       更改 <span class="label label-info">主题配置文件</span>，设定 <code>rss</code> 字段的值：
@@ -35,7 +35,7 @@
 
 
   <section data-folding="tags-page">
-    <h3 id="tags-page">添加「标签」页面</h3>
+    <h3 id="tags-page" class="page-header">添加「标签」页面</h3>
     <p>新建「标签」页面，并在菜单中显示「标签」链接。「标签」页面将展示站点的所有标签，若你的所有文章都未包含标签，此页面将是空的。
       底下代码是一篇包含标签的文章的例子：
     </p>
@@ -117,7 +117,7 @@
 
 
   <section data-folding="categories-page">
-    <h3 id="categories-page">添加「分类」页面</h3>
+    <h3 id="categories-page" class="page-header">添加「分类」页面</h3>
     <p>
       新建「分类」页面，并在菜单中显示「分类」链接。「分类」页面将展示站点的所有分类，若你的所有文章都未包含分类，此页面将是空的。
       底下代码是一篇包含分类的文章的例子：
@@ -196,7 +196,7 @@
   </section>
 
   <section data-fodling="fonts-customization">
-    <h3 id="fonts-customization">设置字体</h3>
+    <h3 id="fonts-customization" class="page-header">设置字体</h3>
     <div class="bs-callout bs-callout-warning">
       <strong>注意：</strong>
       此特性在版本 <span class="label label-success">5.0.1</span> 中引入，要使用此功能请确保所使用的 NexT 版本在此之后
@@ -231,7 +231,7 @@
       # 外链字体库地址，例如 //fonts.googleapis.com (默认值)
       host:
 
-      # 全局字体，应用在 <body> 元素上
+      # 全局字体，应用在 body 元素上
       global:
         external: true
         family: Monda
@@ -252,7 +252,7 @@
         family: Lobster Two
         size: 24
 
-      # 代码字体，应用于 <code> 以及代码块
+      # 代码字体，应用于 code 以及代码块
       codes:
         external: true
         family: PT Mono
@@ -261,7 +261,7 @@
 
 
   <section data-folding="syntax-highlight-scheme">
-    <h3 id="syntax-highlight-scheme">设置代码高亮主题</h3>
+    <h3 id="syntax-highlight-scheme" class="page-header">设置代码高亮主题</h3>
     <p>
       NexT 使用 <a href="https://github.com/chriskempson/tomorrow-theme">Tomorrow Theme</a> 作为代码高亮，共有5款主题供你选择。
       NexT 默认使用的是 白色的 <code>normal</code> 主题，可选的值有 <code>normal</code>，<code>night</code>，
@@ -301,7 +301,7 @@
   </section>
 
   <section data-folding="author-sites">
-    <h3 id="author-sites">侧边栏社交链接</h3>
+    <h3 id="author-sites" class="page-header">侧边栏社交链接</h3>
     <p>
       侧栏社交链接的修改包含两个部分，第一是链接，第二是链接图标。
       两者配置均在 <span class="label label-info">主题配置文件</span> 中。
@@ -343,7 +343,7 @@
   </section>
 
   <section data-fodling="reward">
-    <h3 id="reward">
+    <h3 id="reward" class="page-header">
       开启打赏功能
       <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/687" target="_blank">habren</a> 贡献</small>
     </h3>
@@ -360,7 +360,7 @@
   </section>
 
   <section data-folding="blogroll">
-    <h3 id="blogroll">
+    <h3 id="blogroll" class="page-header">
       友情链接
       <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/250">iamwent</a> 贡献</small>
     </h3>
@@ -376,7 +376,7 @@
   </section>
 
   <section data-fodling="duoshuo-ua">
-    <h3 id="duoshuo-ua">
+    <h3 id="duoshuo-ua" class="page-header">
       多说评论显示 UA
       <small>
         由 <a href="https://github.com/iissnan/hexo-theme-next/pull/286" target="_blank">Doublemine</a>
@@ -419,7 +419,7 @@
   </section>
 
   <section data-folding="volunteer-404">
-    <h3 id="volunteer-404">
+    <h3 id="volunteer-404" class="page-header">
       腾讯公益404页面
       <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/126">xirong</a> 贡献</small>
     </h3>
@@ -451,7 +451,7 @@
   </section>
 
   <section data-folding="site-since">
-    <h3 id="site-since">站点建立时间</h3>
+    <h3 id="site-since" class="page-header">站点建立时间</h3>
     <p>
       这个时间将在站点的底部显示，例如 <code>&copy; 2013 - 2015</code>。
       编辑 <span class="label label-info">主题配置文件</span>，新增字段 <code>since</code>。
@@ -461,7 +461,7 @@
   </section>
 
   <section data-folding="#wechat-subscriber">
-    <h3 id="wechat-subscriber">
+    <h3 id="wechat-subscriber" class="page-header">
       订阅微信公众号
       <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/788">huiwang</a> 贡献</small>
     </h3>

@@ -480,7 +480,7 @@
 
     <section data-fodling="leanclound-page-views">
       <h3 id="leanclound-page-views">
-        阅读次数统计（LeanCloud)
+        阅读次数统计（LeanCloud）
         <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/439">Doublemine</a> 贡献</small>
       </h3>
       <p>
@@ -488,13 +488,10 @@
       </p>
     </section>
 
-    <h3 id="search-system-swiftype">Swiftype 搜索</h3>
+    <h3 id="search-system-algolia">Algolia 搜索</h3>
     <p>
-      使用 Swiftype 之前需要前往 Swiftype 配置一个搜索引擎。
-      而后编辑 <span class="label label-primary">站点配置文件</span>，
-      新增 <code>swiftype_key</code> 字段，值为你的 swiftype 搜索引擎的 key。
       详细的配置请参考：
-        <a href="/third-party-services.html#swfitype" target="_blank">第三方服务 - Swiftype</a>
+        <a href="/third-party-services.html#algolia-search">第三方服务 - Algolia</a>
     </p>
   </section>
 {% endblock %}
@@ -529,8 +526,8 @@
       <ul>
         <li><a href="#comment-system-duoshuo">多说评论</a></li>
         <li><a href="#analysis-system-baidu">百度统计</a></li>
-        <li><a href="#leanclound-page-views">阅读次数统计（LeanCloud)</a></li>
-        <li><a href="#search-system-swiftype">Swiftype 搜索</a></li>
+        <li><a href="#leanclound-page-views">阅读次数统计（LeanCloud）</a></li>
+        <li><a href="#search-system-algolia">Algolia 搜索</a></li>
       </ul>
     </li>
   </ul>

@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block pageContent %}
-  这里包含 NexT 在其中平台的实现版本。
+  这里包含 NexT 在其他平台的实现版本。
 
   <section data-folding="platform-farbox">
     <h2 class="page-header" id="platform-farbox">Farbox</h2>

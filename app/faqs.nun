@@ -52,7 +52,7 @@
 
 
   <section data-folding="favicon">
-    <h2 id="favicon">Favicon 设置后没有生效？</h2>
+    <h2 id="favicon" class="page-header">Favicon 设置后没有生效？</h2>
     <p>
       将你的 <code>favicon</code> 放置到 <strong>站点</strong> 的 <code>source</code>
       目录下，与站点的配置文件同级。
@@ -66,7 +66,7 @@
 
 
   <section data-folding="custom-font">
-    <h2 id="custom-font">如何更改字体？</h2>
+    <h2 id="custom-font" class="page-header">如何更改字体？</h2>
     <p>
       NexT 从 <strong>5.0.1</strong> 版本开始提供一个 <a href="/theme-settings.html#fonts-customization">字体定制特性</a>，
       请先查看此特性是否能满足你的需求。以下的修改将覆盖 字体定制 的特性。
@@ -92,7 +92,7 @@
 
 
   <section data-folding="custom-content-width">
-    <h2 id="custom-content-width">如何更改内容区域的宽度？</h2>
+    <h2 id="custom-content-width" class="page-header">如何更改内容区域的宽度？</h2>
     <p>NexT 对于内容的宽度的设定如下：</p>
     <ul>
       <li>700px，当屏幕宽度 < 1600px </li>
@@ -117,7 +117,7 @@
   </section>
 
   <section data-fodling="setting-menu">
-    <h2 id="setting-menu">为何新增的菜单项显示 Menu.xxx</h2>
+    <h2 id="setting-menu" class="page-header">为何新增的菜单项显示 Menu.xxx</h2>
     <p>
       NexT 使用了 Hexo 提供的国际化功能，因此在 Menu 部分配置的值并非直接用于界面的展示，而是作为一个名称。
       当渲染的时候，NexT 去寻找对应的语言文件，并替换这个键所定义的文本后展示。
@@ -163,7 +163,7 @@
 
 
   <section data-fodling="incorrect-language">
-    <h2 id="incorrect-language">为何语言显示不正确？</h2>
+    <h2 id="incorrect-language" class="page-header">为何语言显示不正确？</h2>
     <p>
       若没有设定 <code>language</code> 的值或者 <code>language: default</code>，会出现语言选择不正确的情况。
       因此为了确保语言正确显示，请明确指定需要使用的语言。
@@ -215,7 +215,7 @@
 
 
   <section data-fodling="incorrect-language">
-    <h2 id="setting-page-comments">如何关闭新建页面的评论功能？</h2>
+    <h2 id="setting-page-comments" class="page-header">如何关闭新建页面的评论功能？</h2>
     <p>
       当集成了评论系统，如 多说 或者 Disqus，所有新建的页面都将自动开启评论。若你不需要评论，请在页面的 Front-matter 里添加
       <code>comments</code> 字段，并将值设置为 <code>false</code>。如下所示：
@@ -231,7 +231,7 @@
 
 
   <section data-fodling="incorrect-language">
-    <h2 id="setting-page-size">如何设置页面文章的篇数？</h2>
+    <h2 id="setting-page-size" class="page-header">如何设置页面文章的篇数？</h2>
     <p>在 Hexo 里可以为首页和归档页面设置不同的文章篇数，但可能需要安装 Hexo 插件。详细步骤如下。</p>
     <ol>
       <li>
@@ -269,7 +269,7 @@
 
 
   <section data-fodling="incorrect-language">
-    <h2 id="optimize">如何优化 NexT 主题？</h2>
+    <h2 id="optimize" class="page-header">如何优化 NexT 主题？</h2>
     <p>
       NexT 并未对 HTML、JavaScript 以及 CSS 做压缩处理。如果你比较在意这点，可以在
       NexT 的 Issues 列表搜索

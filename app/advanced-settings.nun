@@ -17,7 +17,7 @@
     请注意，这些设定可能影响到 NexT 的正常运作，请务必先了解这些设定背后的相关知识。
   </p>
   <section data-fodling="javascript-vendors">
-    <h3 id="javascript-vendors">设置 「JavaScript 第三方库」</h3>
+    <h2 id="javascript-vendors" class="page-header">设置 「JavaScript 第三方库」</h2>
 
     <div class="bs-callout bs-callout-warning">
       <strong>注意：</strong>
