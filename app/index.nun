@@ -40,7 +40,7 @@
     <div class="container">
       <div class="next-section-header">
         <h3 class="next-section-intersect-title">多种语言支持</h3>
-        <p>感谢 NexT 的热心用户，正是他们的贡献， NexT 现已支持 9 种语言</p>
+        <p>感谢 NexT 的热心用户，正是他们的贡献， NexT 现已支持 10 种语言</p>
       </div>
 
       <table>
@@ -88,6 +88,11 @@
           <td>Indonesian</td>
           <td>Selamat siang</td>
           <td>suh-lah-mat see-ahng</td>
+        </tr>
+        <tr>
+          <td>Korean</td>
+          <td>안녕하십니까</td>
+          <td>ahn-yong hahshim-nee-kah</td>
         </tr>
       </table>
     </div>

@@ -192,6 +192,39 @@
 
   </section>
 
+  <section data-folding="facebook-comments">
+    <h3 id="facebook-comments">
+      Facebook Comments
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/925">hydai</a> 贡献</small>
+    </h3>
+    <p>需要先集成 <a href="#facebook-sdk">Facebook SDK</a>。修改 <span class="label label-info">主题配置文件</span> 以下配置：</p>
+    {% code "yml" %}
+    # Facebook comments plugin
+    # This plugin depends on Facebook SDK.
+    # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
+    facebook_comments_plugin:
+      enable: false
+      num_of_posts: 10  # min posts num is 1
+      width: 100%       # default width is 550px
+      scheme: light     # default scheme is light (light or dark)
+    {% endcode %}
+  </section>
+
+  <section data-folding="hypercomments">
+    <h3 id="hypercomments">
+      HyperComments
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1155">ivan-nginx</a> 贡献</small>
+    </h3>
+    <p>
+      Add support for <a href="https://www.hypercomments.com/" target="_blank">Hypercomments</a> system instead of Disqus.
+      修改 <span class="label label-info">主题配置文件</span> 以下配置：
+    </p>
+    {% code "yml" %}
+    # Hypercomments
+    #hypercomments_id:
+    {% endcode %}
+  </section>
+
 
   <section data-fodling="leanclound-page-views">
     <h3 id="leanclound-page-views">
@@ -533,6 +566,22 @@
 
   </section>
 
+  <section data-folding="facebook-sdk">
+    <h3 id="facebook-sdk">
+      Facebook SDK
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/410">changyuheng</a> 贡献</small>
+    </h3>
+    <p>修改 <span class="label label-info">主题配置文件</span> 以下配置：</p>
+    {% code "yml" %}
+    # Facebook SDK Support.
+    facebook_sdk:
+      enable: false
+      app_id:
+        fb_admin:
+          like_button:  #true
+          webmaster:    #true
+    {% endcode %}
+  </section>
 
   <section data-folding="google-webmaster-tools">
     <h3 id="google-webmaster-tools">Google Webmaster tools</h3>
@@ -581,6 +630,8 @@
       <ul>
         <li><a href="#duoshuo">多说</a></li>
         <li><a href="#disqus">Disqus</a></li>
+        <li><a href="#facebook-comments">Facebook Comments</a></li>
+        <li><a href="#hypercomments">HyperComments</a></li>
       </ul>
     </li>
     <li>
@@ -615,6 +666,7 @@
       <a href="#others">其他服务</a>
       <ul>
         <li><a href="#mathjax">MathJax</a></li>
+        <li><a href="#facebook-sdk">Facebook SDK</a></li>
         <li><a href="#google-webmaster-tools">Google Webmaster tools</a></li>
         <li><a href="#duoshuo-popular-posts">多说热评文章</a></li>
       </ul>
