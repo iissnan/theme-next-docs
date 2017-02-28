@@ -43,7 +43,7 @@
       <li>
         <p>
           创建站点完成后在
-            <span class="label label-primary">站点配置文件</span>
+            <span class="label label-info">站点配置文件</span>
           中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。
         </p>
       </li>
@@ -53,11 +53,74 @@
   <section data-folding="disqus">
     <h3 id="disqus">DISQUS</h3>
     <p>
-      编辑 <span class="label label-primary">站点配置文件</span>，
+      编辑 <span class="label label-info">主题配置文件</span>，
       添加 <code>disqus_shortname</code> 字段，设置如下：
     </p>
     {% code "yml" %}
     disqus_shortname: your-disqus-shortname
+    {% endcode %}
+  </section>
+
+  <section data-folding="facebook-comments">
+    <h3 id="facebook-comments">
+      Facebook Comments
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/925">hydai</a> 贡献</small>
+    </h3>
+    <p>需要先集成 <a href="#facebook-sdk">Facebook SDK</a>。修改 <span class="label label-info">主题配置文件</span> 以下配置：</p>
+    {% code "yml" %}
+    # Facebook comments plugin
+    # This plugin depends on Facebook SDK.
+    # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
+    facebook_comments_plugin:
+    enable: false
+    num_of_posts: 10  # min posts num is 1
+    width: 100%       # default width is 550px
+    scheme: light     # default scheme is light (light or dark)
+    {% endcode %}
+  </section>
+
+  <section data-folding="hypercomments">
+    <h3 id="hypercomments">
+      HyperComments
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1155">ivan-nginx</a> 贡献</small>
+    </h3>
+    <p>
+      Add support for <a href="https://www.hypercomments.com/" target="_blank">Hypercomments</a> system instead of Disqus.
+      修改 <span class="label label-info">主题配置文件</span> 以下配置：
+    </p>
+    {% code "yml" %}
+    # Hypercomments
+    #hypercomments_id:
+    {% endcode %}
+  </section>
+
+  <section data-folding="yungentie">
+    <h3 id="yungentie">
+      网易云跟帖
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1301">geekrainy</a> 贡献</small>
+    </h3>
+    <p>
+      登陆 <a href="https://gentie.163.com/" target="_blank">网易云跟帖</a> 获取你的 Product Key。
+      编辑 <span class="label label-info">主题配置文件</span>，
+      编辑 <code>gentie_productKey</code> 字段，设置如下：
+    </p>
+    {% code "yml" %}
+    gentie_productKey: #your-gentie-product-key
+    {% endcode %}
+  </section>
+
+  <section data-folding="livere">
+    <h3 id="livere">
+      来必力
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1415">asmoker</a> 贡献</small>
+    </h3>
+    <p>
+      登陆 <a href="https://livere.com/" target="_blank">来必力</a> 获取你的 LiveRe UID。
+      编辑 <span class="label label-info">主题配置文件</span>，
+      编辑 <code>livere_uid</code> 字段，设置如下：
+    </p>
+    {% code "yml" %}
+    livere_uid: #your livere_uid
     {% endcode %}
   </section>
 
@@ -79,7 +142,6 @@
     </ol>
   </section>
 
-
   <section data-folding="analytics-google">
     <h3 id="analytics-google">Google 分析</h3>
     <p>
@@ -89,7 +151,6 @@
       <img src="/uploads/analytics-google.png" class="img-thumbnail img-responsive">
     </p>
   </section>
-
 
   <section data-folding="analytics-tencent">
     <h3 id="analytics-tencent">
@@ -101,7 +162,6 @@
       然后在 <span class="label label-info">主题配置文件</span> 里将 ID 放置 <code>tencent_analytics</code> 字段。
     </p>
   </section>
-
 
   <section data-folding="analytics-cnzz">
     <h3 id="analytics-cnzz">
@@ -115,7 +175,6 @@
     </p>
     <p>默认脚本生成的内容会产生“站长统计”几个字，感觉很丑而且和主题不太搭，我用了一个 <code>display: none;</code>把这几个字给隐藏了。</p>
   </section>
-
 
   <section data-folding="analytics-busuanzi">
     <h3 id="analytics-busuanzi">
@@ -192,39 +251,19 @@
 
   </section>
 
-  <section data-folding="facebook-comments">
-    <h3 id="facebook-comments">
-      Facebook Comments
-      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/925">hydai</a> 贡献</small>
-    </h3>
-    <p>需要先集成 <a href="#facebook-sdk">Facebook SDK</a>。修改 <span class="label label-info">主题配置文件</span> 以下配置：</p>
-    {% code "yml" %}
-    # Facebook comments plugin
-    # This plugin depends on Facebook SDK.
-    # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
-    facebook_comments_plugin:
-      enable: false
-      num_of_posts: 10  # min posts num is 1
-      width: 100%       # default width is 550px
-      scheme: light     # default scheme is light (light or dark)
-    {% endcode %}
-  </section>
-
-  <section data-folding="hypercomments">
-    <h3 id="hypercomments">
-      HyperComments
-      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1155">ivan-nginx</a> 贡献</small>
+  <section data-folding="analytics-tencent-mta">
+    <h3 id="analytics-tencent-mta">
+      腾讯移动分析
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1408">aleonchen</a> 贡献</small>
     </h3>
     <p>
-      Add support for <a href="https://www.hypercomments.com/" target="_blank">Hypercomments</a> system instead of Disqus.
-      修改 <span class="label label-info">主题配置文件</span> 以下配置：
+      编辑 <span class="label label-info">主题配置文件</span>，填写 <code>tencent_mta</code> 的值。
     </p>
     {% code "yml" %}
-    # Hypercomments
-    #hypercomments_id:
+    # Tencent MTA ID
+    tencent_mta: your-tencent-mta-id
     {% endcode %}
   </section>
-
 
   <section data-fodling="leanclound-page-views">
     <h3 id="leanclound-page-views">
@@ -257,7 +296,6 @@
     {% endcode %}
   </section>
 
-
   <section data-folding="share-baidu">
     <h3 id="share-baidu">
       <a href="http://share.baidu.com/" target="_blank" rel="external">百度分享</a>
@@ -269,7 +307,6 @@
       baidushare: true
     {% endcode %}
   </section>
-
 
   <section data-folding="share-duoshuo">
     <h3 id="share-duoshuo">多说分享</h3>
@@ -285,7 +322,6 @@
       duoshuo_share: true
     {% endcode %}
   </section>
-
 
   <section data-folding="share-addthis">
     <h3 id="share-addthis">
@@ -518,7 +554,6 @@
 
   <h2 id="others" class="page-header">其他服务</h2>
 
-
   <section data-folding="mathjax">
     <h3 id="mathjax">MathJax </h3>
     <p>NexT 借助于 MathJax 来显示数学公式，此选项默认关闭。</p>
@@ -602,7 +637,6 @@
     </ol>
   </section>
 
-
   <section data-folding="duoshuo-popular-posts">
     <h3 id="duoshuo-popular-posts">
       多说热评文章
@@ -632,6 +666,8 @@
         <li><a href="#disqus">Disqus</a></li>
         <li><a href="#facebook-comments">Facebook Comments</a></li>
         <li><a href="#hypercomments">HyperComments</a></li>
+        <li><a href="#yungentie">网易云跟帖</a></li>
+        <li><a href="#livere">来必力</a></li>
       </ul>
     </li>
     <li>
@@ -642,6 +678,7 @@
         <li><a href="#analytics-tencent">腾讯分析</a></li>
         <li><a href="#analytics-cnzz">CNZZ 统计</a></li>
         <li><a href="#analytics-busuanzi">不蒜子统计</a></li>
+        <li><a href="#analytics-tencent-mta">腾讯移动分析</a></li>
       </ul>
     </li>
     <li>
