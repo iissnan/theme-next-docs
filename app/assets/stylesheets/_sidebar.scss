@@ -1,5 +1,5 @@
 .next-docs-sidebar {
-  padding: 0 20px;
+  padding: 40px 10px;
 
   &.affix-bottom { position: absolute; }
 
@@ -7,26 +7,42 @@
 
   ul { padding-left: 0; }
   li {
-    margin: 10px 0;
+    margin: 5px 0;
     list-style: none;
-    &.active > a {
-      text-decoration: underline;
-      font-weight: bold;
-    }
   }
+  li.active > a { font-weight: bold; }
 
   .nav>ul>li:first-child { margin-top: 0; }
+  li ul { display: none; }
+  li>ul{ margin: 10px 2px; }
+  li.active ul { display: block; }
 
   a { color: #333; }
   a:hover { text-decoration: underline; }
 
-  li>ul { padding-left: 20px; }
+  li li a {
+    border-radius: 3px;
+    display: block;
+    background: #eee;
+    padding: 2px 10px;
+    &:hover {
+      text-decoration: none;
+      color: white;
+      background: #337ab7;
+    }
+  }
+
+  li.active li.active>a {
+    font-weight: normal;
+    color: white;
+    background: #337ab7;
+  }
 }
 
 @media (min-width: 992px) {
   .next-docs-sidebar.affix {
     position: fixed;
-    top: 20px;
+    top: 0;
     width: 213px;
   }
 }

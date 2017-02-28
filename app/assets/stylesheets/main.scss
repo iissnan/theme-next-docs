@@ -40,7 +40,10 @@ hr.half-rule {
   font-size: 10px;
 }
 
-.footer hr { margin-bottom: 10px; }
+.footer hr {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 
 .footer a {
   color: #999;
