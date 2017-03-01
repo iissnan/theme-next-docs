@@ -24,7 +24,31 @@ This server (using BrowserSync) will listen on port `3000`, visit `http://localh
 
 ### Project Structure
 
-TBD
+Directory/File | Description |
+----------| ------------|
+app       | Application main directory which contains documentations and site assets |
+ ├── assets| Site assets |
+ ├── en    | English documentations |
+ ├── templates| Documentation layouts |
+ ├── uploads | Images used in documentations |
+gulp        | Gulp library |
+ ├── dev-server-middleware | Middleware for BrowserSync |
+ ├── tasks  | Gulp tasks |
+lib         | Application library |
+ ├── tags  | Nunjunks tags used in documentations to ease writing |
+ ├── configs.js | Parse config from `app/config.yaml` | 
+ ├── renderer.js | Nunjunks Renderer |
+ ├── utils.js | Various utilities |
+webpack     | Webpack configuration for different environments |
+ ├── common.js | Webpack configuration for all environments |
+ ├── dev.js | Webpack configuration of development |
+ ├── pro.js | Webpack configuration of production |
+.editorconfig | EditorConfig configuration |
+.travis.yml  | Configuration for TravisCI |
+bower.json   | Front-end library dependency management |
+gulpfile.js  | Gulp tasks definition |
+package.json | Package Information |
+tsconfig.json | Typescript configuration file |
 
 ### Syntax Highlight Support of WebStorm for Nunjucks Template
 
