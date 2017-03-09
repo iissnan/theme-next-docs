@@ -10,11 +10,11 @@
 </head>
 
 <body class="{% block pageName %}{% endblock %}">
-  {% include '../partials/browser-upgrade.nun' %}
+  {% include '../partials/browser-upgrade.njk' %}
 
   <header>
     {% block header %}
-      {% include '../partials/menu.nun' %}
+      {% include '../partials/menu.njk' %}
     {% endblock %}
   </header>
 
@@ -23,7 +23,7 @@
   </main>
 
   {% block footer %}
-    {% include '../partials/footer.nun' %}
+    {% include '../partials/footer.njk' %}
   {% endblock %}
 
   {% block scripts %}

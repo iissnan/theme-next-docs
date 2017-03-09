@@ -8,7 +8,7 @@ const APP_DIR = 'app/';
 const SOURCE = {
   img: APP_DIR + 'assets/img/**/*',
   html: {
-    zh: APP_DIR + '*.nun'
+    zh: APP_DIR + '*.njk'
   },
   uploads: APP_DIR + 'uploads/**/*',
   CNAME: APP_DIR + 'CNAME'
@@ -33,7 +33,7 @@ module.exports = () => {
   gulp.src(SOURCE.html.zh)
     .pipe(tap(function (file) {
       file.contents = new Buffer(renderer.render(file.path));
-      file.path = file.path.replace('nun', 'html');
+      file.path = file.path.replace('njk', 'html');
     }))
     .pipe(gulp.dest(DIST.dist));
 };

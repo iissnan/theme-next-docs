@@ -62,4 +62,4 @@ To make WebStorm to recognize Nunjucks templates, follow the following steps:
 
     ![Add File Type](install-twig-register.png "Add File Type")
     
-    In this repo, `.nun` extension is used for Nunjucks Template, so add it to the `Registered Pattern`.
+    In this repo, `.njk` extension is used for Nunjucks Template, so add it to the `Registered Pattern`.

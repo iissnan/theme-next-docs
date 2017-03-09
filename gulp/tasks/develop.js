@@ -13,5 +13,5 @@ module.exports = () => {
     }
   });
 
-  gulp.watch(['app/**/*.nun'], bs.reload);
+  gulp.watch(['app/**/*.njk'], bs.reload);
 };
