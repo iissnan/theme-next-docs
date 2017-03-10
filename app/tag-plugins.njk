@@ -13,7 +13,7 @@
 {% block pageContent %}
   <p>
     「标签」(Tag Plugin) 是 Hexo 提供的一种快速生成特定内容的方式。
-    在标准 Markdown 中，我们无法指定图片的大小，在这种情景下，我们即可使用标签来解决。
+    例如，在标准 Markdown 语法中，我们无法指定图片的大小。这种情景，我们即可使用标签来解决。
     Hexo 内置来许多标签来帮助写作者可以更快的书写，
     <a href="https://hexo.io/docs/tag-plugins.html" target="_blank">完整的标签列表</a> 可以参考 Hexo 官网。
     另外，Hexo 也开放来接口给主题，使主题有可能提供给写作者更简便的写作方法。
@@ -43,8 +43,8 @@
       <span class="label label-success">标签调用方法</span>
     </div>
     {% code %}
-    <!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 -->
-    <!-- 其中 class="blockquote-center" 是必须的 -->
+      <!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 -->
+      <!-- 其中 class="blockquote-center" 是必须的 -->
       <blockquote class="blockquote-center">blah blah blah</blockquote>
 
       <!-- 标签 方式，要求版本在0.4.5或以上 -->
@@ -90,7 +90,7 @@
       <!-- 其中 class="full-image" 是必须的 -->
       <img src="/image-url" class="full-image" />
 
-    <!-- 标签 方式，要求版本在0.4.5或以上 -->
+      <!-- 标签 方式，要求版本在0.4.5或以上 -->
       {% raw %}{% fullimage /image-url, alt, title %}{% endraw %}
 
       <!-- 别名 -->
@@ -99,6 +99,30 @@
 
     <h4 id="full-width-image-example">效果示例:</h4>
     <img src="/uploads/tags/full-image.jpg" class="img-thumbnail img-responsive center-block">
+  </section>
+
+  <section data-folding="bootstrap-callout">
+    <h2 id="bootstrap-callout" class="page-header">
+      Bootstrap Callout
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1160">ivan-nginx</a> 贡献</small>
+    </h2>
+    <p>这些样式出现在 <a href="http://getbootstrap.com/">Bootstrap 的官方文档</a>中。</p>
+    <h4 id="bootstrap-callout-usage">使用方式</h4>
+    {% code %}
+    {% raw %}{% note class_name %} Content (md partial supported) {% endnote %}{% endraw %}
+    {% endcode %}
+    <p>其中，<code>class_name</code> 可以是以下列表中的一个值：</p>
+    <ul>
+      <li><code>default</code></li>
+      <li><code>primary</code></li>
+      <li><code>success</code></li>
+      <li><code>info</code></li>
+      <li><code>warning</code></li>
+      <li><code>danger</code></li>
+    </ul>
+    <h4 id="bootstrap-callout-example">效果示例:</h4>
+    <img src="/uploads/tags/bootstrap-callout.png"
+         class="img-thumbnail img-responsive center-block" />
   </section>
 {% endblock %}
 
@@ -117,6 +141,13 @@
       <ul>
         <li><a href="#full-width-image-usage">使用方式</a></li>
         <li><a href="#full-width-image-example">效果示例</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#bootstrap-callout">Bootstrap Callout</a>
+      <ul>
+        <li><a href="#bootstrap-callout-usage">使用方式</a></li>
+        <li><a href="#bootstrap-callout-example">效果示例</a></li>
       </ul>
     </li>
   </ul>
