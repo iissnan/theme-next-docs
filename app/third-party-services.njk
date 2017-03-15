@@ -136,8 +136,8 @@
              class="img-thumbnail img-responsive">
       </li>
       <li>
-        编辑 <span class="label label-primary">站点配置文件</span>，
-        新增字段 <code>baidu_analytics</code>，值设置成你的百度统计脚本 id。
+        编辑 <span class="label label-info">主题配置文件</span>，
+        修改字段 <code>baidu_analytics</code>，值设置成你的百度统计脚本 id。
       </li>
     </ol>
   </section>
@@ -145,8 +145,8 @@
   <section data-folding="analytics-google">
     <h3 id="analytics-google">Google 分析</h3>
     <p>
-      编辑 <span class="label label-primary">站点配置文件</span>，
-      新增字段 <code>google_analytics</code>，
+      编辑 <span class="label label-info">主题配置文件</span>，
+      修改字段 <code>google_analytics</code>，
       值设置成你的 Google 跟踪 ID。跟踪 ID 通常是以 <code>UA-</code> 开头。
       <img src="/uploads/analytics-google.png" class="img-thumbnail img-responsive">
     </p>
@@ -286,8 +286,8 @@
   <section data-folding="share-jiathis">
     <h3 id="share-jiathis">JiaThis</h3>
     <p>
-      编辑 <span class="label label-primary">站点配置文件</span>，
-      添加字段 <code>jiathis</code>，值为 <code>true</code>。
+      编辑 <span class="label label-info">主题配置文件</span>，
+      添加/修改字段 <code>jiathis</code>，值为 <code>true</code>。
     </p>
     <div class="next-docs-example"> JiaThis 内容分享服务配置示例</div>
     {% code "yml" %}
@@ -300,7 +300,7 @@
     <h3 id="share-baidu">
       <a href="http://share.baidu.com/" target="_blank" rel="external">百度分享</a>
     </h3>
-    <p>编辑 <span class="label label-primary">站点配置文件</span>，添加字段 <code>baidushare</code>，值为 <code>true</code>。</p>
+    <p>编辑 <span class="label label-info">主题配置文件</span>，添加/修改字段 <code>baidushare</code>，值为 <code>true</code>。</p>
     <div class="next-docs-example"> 百度内容分享服务配置示例</div>
     {% code "yml"%}
       # 百度分享服务
@@ -312,8 +312,8 @@
     <h3 id="share-duoshuo">多说分享</h3>
     <p class="bs-callout bs-callout-warning">多说分享必须与多说评论同时使用</p>
     <p>
-      编辑 <span class="label label-primary">站点配置文件</span>，
-      添加字段 <code>duoshuo_share</code>，
+      编辑 <span class="label label-info">主题配置文件</span>，
+      添加/修改字段 <code>duoshuo_share</code>，
       值为 <code>true</code>。
     </p>
     <div class="next-docs-example"> 多说内容分享服务配置示例</div>
@@ -339,7 +339,7 @@
         <img src="/uploads/add-this-id.png" alt="AddThis Id" class="img-responsive img-thumbnail">
       </li>
       <li>
-        在主题<code>_config.yml</code>中，把<code>#Share</code>下的 <code>#add_this_id</code>取消注释，
+        在 <span class="label label-info">主题配置文件</span> 中，把<code>#Share</code>下的 <code>#add_this_id</code>取消注释，
         改为<code>add_this_id: put_your_add_this_id_here</code>
       </li>
     </ol>
@@ -629,7 +629,7 @@
         </p>
       </li>
       <li>
-        <p>设置主题。编辑 站点配置，新增字段 <code>google_site_verification</code>。</p>
+        <p>设置主题。编辑 <span class="label label-info">主题配置文件</span>，新增/修改字段 <code>google_site_verification</code>。</p>
         {% code "yml"%}
           google_site_verification: XXXXXXXXXXXXXXXXXXXXXXX
         {% endcode %}
@@ -646,7 +646,7 @@
       多说评论组件提供 <strong>热评文章</strong> 功能，
       详情见 <a href="http://xirong.duoshuo.com/admin/tools/top-threads/" target="_blank" rel="external">多说官网说明</a>，仅在文章页面显示。
     </p>
-    <p>站点/主题配置文件 中设置：</p>
+    <p>在 <span class="label label-info">主题配置文件</span> 中设置：</p>
     {% code %}
     # 多说热评文章 true 或者 false
     duoshuo_hotartical: true
