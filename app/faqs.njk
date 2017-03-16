@@ -271,11 +271,27 @@
   <section data-fodling="incorrect-language">
     <h2 id="optimize" class="page-header">如何优化 NexT 主题？</h2>
     <p>
-      NexT 并未对 HTML、JavaScript 以及 CSS 做压缩处理。如果你比较在意这点，可以在
-      NexT 的 Issues 列表搜索
+      NexT 并未对 HTML、JavaScript 以及 CSS 做压缩处理。如果你比较在意这点，可以在 NexT 的 Issues 列表搜索
       <a href="https://github.com/iissnan/hexo-theme-next/issues?utf8=%E2%9C%93&q=+label%3AOptimization">
-        他人共享的优化方案</a>。
+        他人共享的优化方案
+      </a>。
     </p>
+  </section>
+
+  <section data-fodling="module-not-found">
+    <h2 id="module-not-found" class="page-header">Cannot find module XXX</h2>
+    <p>
+      NexT 提供的标签插件引用了 Hexo 模块中的一些子模块，例如 <code>hexo-util</code>。
+      NPM 在版本 3 中引入了新的模块安装机制， NexT 将使用这种机制，意味着如果是旧的 NPM 将会碰到这个错误。
+      因此，如果您碰到 "Cannot find module XXX" 的错误时，请首先使用 <code>npm -v</code> 确认您的 NPM 版本。
+    </p>
+    <ul>
+      <li>版本 > 3 依然报错： 请先删除 <code>node_module</code> 目录，然后使用 <code>npm install</code> 重新安装一下模块。</li>
+      <li>
+        版本 < 3： 您可以选择升级您的 NPM； 或者在站点目录下明确指定模块依赖 <code>npm install --save hexo-util</code>。
+        其中 `hexo-util` 仅是示例，请替换成错误中提示的模块名称。
+      </li>
+    </ul>
   </section>
 
 {% endblock %}
@@ -293,5 +309,6 @@
     <li><a href="#setting-page-comments">如何关闭新建页面的评论功能？</a></li>
     <li><a href="#setting-page-size">如何设置页面文章的篇数？</a></li>
     <li><a href="#optimize">如何优化 NexT 主题？</a></li>
+    <li><a href="#module-not-found">Cannot find module</a></li>
   </ul>
 {% endblock %}
