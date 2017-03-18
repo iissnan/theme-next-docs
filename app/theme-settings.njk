@@ -483,6 +483,22 @@
     {% endcode %}
   </section>
 
+  <section data-folding="#use-motion">
+    <h3 id="use-motion">设置「动画效果」</h3>
+    <p>
+      NexT 默认开启动画效果，效果使用 JavaScript 编写，因此需要等待 JavaScript 脚本完全加载完毕后才会显示内容。
+      如果您比较在乎速度，可以将设置此字段的值为 <code>false</code> 来关闭动画。
+    </p>
+    <p>
+      编辑 <span class="label label-info">主题配置文件</span>，
+      搜索 <code>use_motion</code>，根据您的需求设置值为 <code>true</code> 或者 <code>false</code> 即可：
+    </p>
+    {% code "yml" %}
+      use_motion: true  # 开启动画效果
+      use_motion: false # 关闭动画效果
+    {% endcode %}
+  </section>
+
 {% endblock %}
 
 
@@ -500,5 +516,6 @@
     <li><a href="#volunteer-404">腾讯公益404页面</a></li>
     <li><a href="#site-since">站点建立时间</a></li>
     <li><a href="#wechat-subscriber">订阅微信公众号</a></li>
+    <li><a href="#use-motion">设置「动画效果」</a></li>
   </ul>
 {% endblock %}
