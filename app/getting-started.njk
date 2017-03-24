@@ -446,33 +446,6 @@
   <section data-folding="third-party-services">
     <h2 id="third-party-services" class="page-header">集成常用的第三方服务</h2>
 
-    <h3 id="comment-system-duoshuo">多说评论</h3>
-    <div class="bs-callout bs-callout-warning">注意：duoshuo_shortname 不是你的多说登录的 id</div>
-    <p>使用多说前需要先在 <a href="http://duoshuo.com/" target="_blank">多说</a> 创建一个站点。具体步骤如下：</p>
-    <ol>
-      <li>登录后在首页选择 “我要安装”。</li>
-      <li>
-        <p>
-          创建站点，填写站点相关信息。
-          <strong>多说域名</strong> 这一栏填写的即是你的 <code>duoshuo_shortname</code>，如图：
-        </p>
-        <img src="/uploads/five-minutes-setup/duoshuo-create-site.png" class="img-thumbnail  img-responsive">
-      </li>
-      <li>
-        <p>
-          创建站点完成后在 <span class="label label-info">主题配置文件</span> 中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。
-        </p>
-        <div class="next-docs-example">多说设置示例</div>
-        {% code "yml" %}duoshuo_shortname: iissnan-notes{% endcode %}
-      </li>
-      <li>
-        <p>
-          请注意为了确保多说索引的页面地址正确，需要在 <span class="label label-primary">站点配置文件</span> 中正确设置 <code>url</code> 为你站点的域名。
-          若您的评论跳转到 <code>http://yoursite.com</code>，请检查下 <code>url</code> 的配置是否正确。
-        </p>
-      </li>
-    </ol>
-
     <h3 id="analysis-system-baidu">百度统计</h3>
     <div class="bs-callout bs-callout-warning">注意： baidu_analytics 不是你的百度 id 或者 百度统计 id</div>
     <ol>
@@ -536,7 +509,6 @@
         集成第三方服务
       </a>
       <ul>
-        <li><a href="#comment-system-duoshuo">多说评论</a></li>
         <li><a href="#analysis-system-baidu">百度统计</a></li>
         <li><a href="#leanclound-page-views">阅读次数统计（LeanCloud）</a></li>
         <li><a href="#search-system-algolia">Algolia 搜索</a></li>

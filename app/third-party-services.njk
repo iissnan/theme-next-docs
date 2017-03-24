@@ -15,11 +15,7 @@
   以下是 NexT 目前支持的第三方服务，你可以根据你的需求集成一些功能进来。
 
   <h2 id="comment-system" class="page-header">评论系统</h2>
-  <p>
-    NexT 支持 <a href="http://duoshuo.com" target="_blank" rel="external">多说</a> 和
-    <a href="https://disqus.com/" target="_blank" rel="external">DISQUS</a> 评论系统。
-    当同时设置了 多说 和 DISQUS 时，优先选择多说。 NexT 内置了一套 多说 的样式。
-  </p>
+  <p>NexT 支持多款评论系统。</p>
   <p class="bs-callout bs-callout-primary">
     如需取消某个 页面/文章 的评论，在 md 文件的
     <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">
@@ -27,28 +23,6 @@
     </a> 中增加
     <code>comments: false</code>
   </p>
-
-  <section data-folding="duoshuo">
-    <h3 id="duoshuo">多说</h3>
-    <p>
-      使用多说前需要先在
-      <a href="http://duoshuo.com" target="_blank" rel="external">多说</a>
-      创建一个站点。具体步骤如下：
-    </p>
-    <ol>
-      <li>登录后在首页选择 “我要安装”。</li>
-      <li><p>创建站点，填写表单。<strong>多说域名</strong> 这一栏填写的即是你的 <code>duoshuo_shortname</code>，如图：</p>
-        <img src="/uploads/five-minutes-setup/duoshuo-create-site.png" class="img-thumbnail img-responsive">
-      </li>
-      <li>
-        <p>
-          创建站点完成后在
-            <span class="label label-info">主题配置文件</span>
-          中新增 <code>duoshuo_shortname</code> 字段，值设置成上一步中的值。
-        </p>
-      </li>
-    </ol>
-  </section>
 
   <section data-folding="disqus">
     <h3 id="disqus">DISQUS</h3>
@@ -284,10 +258,6 @@
 
   {# 内容分享服务 #}
   <h2 class="page-header" id="share-system">内容分享服务</h2>
-  <p>
-    分享服务优先选择 <a href="http://www.jiathis.com/" target="_blank" rel="external">JiaThis</a>，
-    也就是说，当同时开启了 JiaThis、多说分享，将仅启用 JiaThis。
-  </p>
 
   <section data-folding="share-jiathis">
     <h3 id="share-jiathis">JiaThis</h3>
@@ -311,21 +281,6 @@
     {% code "yml"%}
       # 百度分享服务
       baidushare: true
-    {% endcode %}
-  </section>
-
-  <section data-folding="share-duoshuo">
-    <h3 id="share-duoshuo">多说分享</h3>
-    <p class="bs-callout bs-callout-warning">多说分享必须与多说评论同时使用</p>
-    <p>
-      编辑 <span class="label label-info">主题配置文件</span>，
-      添加/修改字段 <code>duoshuo_share</code>，
-      值为 <code>true</code>。
-    </p>
-    <div class="next-docs-example"> 多说内容分享服务配置示例</div>
-    {% code "yml"%}
-      # 多说分享服务
-      duoshuo_share: true
     {% endcode %}
   </section>
 
@@ -642,24 +597,6 @@
       </li>
     </ol>
   </section>
-
-  <section data-folding="duoshuo-popular-posts">
-    <h3 id="duoshuo-popular-posts">
-      多说热评文章
-      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/126">xirong</a> 贡献</small>
-    </h3>
-    <p>
-      多说评论组件提供 <strong>热评文章</strong> 功能，
-      详情见 <a href="http://xirong.duoshuo.com/admin/tools/top-threads/" target="_blank" rel="external">多说官网说明</a>，仅在文章页面显示。
-    </p>
-    <p>在 <span class="label label-info">主题配置文件</span> 中设置：</p>
-    {% code %}
-    # 多说热评文章 true 或者 false
-    duoshuo_hotartical: true
-    {% endcode %}
-    <p>使用效果如下图：</p>
-    <img src="/uploads/duoshuo-hot.png" class="img-thumbnail img-responsive">
-  </section>
 {% endblock %}
 
 
@@ -668,7 +605,6 @@
     <li>
       <a href="#comment-system">评论系统</a>
       <ul>
-        <li><a href="#duoshuo">多说</a></li>
         <li><a href="#disqus">Disqus</a></li>
         <li><a href="#facebook-comments">Facebook Comments</a></li>
         <li><a href="#hypercomments">HyperComments</a></li>
@@ -692,7 +628,6 @@
       <ul>
         <li><a href="#share-jiathis">JiaThis</a></li>
         <li><a href="#share-baidu">百度分享</a></li>
-        <li><a href="#share-duoshuo">多说分享</a></li>
         <li><a href="#share-addthis">AddThis</a></li>
       </ul>
     </li>
@@ -711,7 +646,6 @@
         <li><a href="#mathjax">MathJax</a></li>
         <li><a href="#facebook-sdk">Facebook SDK</a></li>
         <li><a href="#google-webmaster-tools">Google Webmaster tools</a></li>
-        <li><a href="#duoshuo-popular-posts">多说热评文章</a></li>
       </ul>
     </li>
   </ul>

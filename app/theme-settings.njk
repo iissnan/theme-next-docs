@@ -102,7 +102,7 @@
       </div>
     </div>
     <p class="bs-callout bs-callout-warning">
-      <strong>注意：</strong>如果有启用 多说 或者 Disqus 评论，页面也会带有评论。
+      <strong>注意：</strong>如果有集成评论服务，页面也会带有评论。
       若需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code>，如：
     </p>
     <div class="next-docs-example">禁用评论示例</div>
@@ -182,7 +182,7 @@
       </div>
     </div>
     <p class="bs-callout bs-callout-warning">
-      <strong>注意：</strong>如果有启用 多说 或者 Disqus 评论，页面也会带有评论。
+      <strong>注意：</strong>如果有集成评论服务，页面也会带有评论。
       若需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code>，如：
     </p>
     <div class="next-docs-example">禁用评论示例</div>
@@ -375,49 +375,6 @@
     {% endcode %}
   </section>
 
-  <section data-fodling="duoshuo-ua">
-    <h3 id="duoshuo-ua" class="page-header">
-      多说评论显示 UA
-      <small>
-        由 <a href="https://github.com/iissnan/hexo-theme-next/pull/286" target="_blank">Doublemine</a>
-        贡献
-      </small>
-    </h3>
-    <p>
-      在每一条多说评论后显示评论者所使用的代理信息（如 操作系统、浏览器），效果如下：
-      <img src="/uploads/duoshuo-ua.png" alt="多说评论 UA 效果" class="img-responsive img-thumbnail">
-    </p>
-    <p>
-      要启用此功能，需要配置 <code>duoshuo_info</code> 这个字段。
-      编辑 <span class="label label-info">主题配置文件</span>，查找 <code>duoshuo_info</code> 字段，
-      设置如下：
-    </p>
-    {% code "yml" %}
-    # Make duoshuo show UA
-    # user_id must NOT be null when admin_enable is true!
-    # you can visit http://dev.duoshuo.com get duoshuo user id.
-    duoshuo_info:
-      ua_enable: true
-      admin_enable: false
-      user_id:
-      admin_nickname:
-    {% endcode %}
-    <p>
-      只要设置 <code>ua_enable</code> 为 <code>true</code> 即可显示 UA 信息。
-      <code>admin_enable</code> 是用于显示 「博主」 文字，表明评论者是博主，此字段需要同时配置 <code>user_id</code> 和 <code>admin_nickname</code> 字段。
-      请访问 <a href="http://dev.duoshuo.com/">多说</a>，登录并访问「我的主页」获取 <code>user_id</code> ，
-      此 ID 是 网址最后那串数字。
-    </p>
-    <div class="next-docs-example">配置示例</div>
-    {% code "yml" %}
-    duoshuo_info:
-      ua_enable: true
-      admin_enable: true
-      user_id: 1234567
-      admin_nickname: 主编大人
-    {% endcode %}
-  </section>
-
   <section data-folding="volunteer-404">
     <h3 id="volunteer-404" class="page-header">
       腾讯公益404页面
@@ -512,7 +469,6 @@
     <li><a href="#author-sites">侧边栏社交链接</a></li>
     <li><a href="#reward">开启打赏功能</a></li>
     <li><a href="#blogroll">设置友情链接</a></li>
-    <li><a href="#duoshuo-ua">多说评论显示 UA</a></li>
     <li><a href="#volunteer-404">腾讯公益404页面</a></li>
     <li><a href="#site-since">站点建立时间</a></li>
     <li><a href="#wechat-subscriber">订阅微信公众号</a></li>
