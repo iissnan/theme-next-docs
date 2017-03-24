@@ -29,12 +29,12 @@
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation">
+      <li role="presentation" class="active">
         <a href="#disqus-new-settings" aria-controls="profile" role="tab" data-toggle="tab">
           >= 5.1.1
         </a>
       </li>
-      <li role="presentation" class="active">
+      <li role="presentation">
         <a href="#disqus-old-settings" aria-controls="clone" role="tab" data-toggle="tab">
           < 5.1.1
         </a>
@@ -43,7 +43,7 @@
 
     <!-- Tab panes -->
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane" id="disqus-new-settings">
+      <div role="tabpanel" class="tab-pane active" id="disqus-new-settings">
         <p>
           编辑 <span class="label label-info">主题配置文件</span>，
           将 <code>disqus</code> 下的 <code>enable</code> 设定为 <code>true</code>，同时提供您的
@@ -56,7 +56,7 @@
           count: true
         {% endcode %}
       </div>
-      <div role="tabpanel" class="tab-pane active" id="disqus-old-settings">
+      <div role="tabpanel" class="tab-pane" id="disqus-old-settings">
         <p>编辑 <span class="label label-info">主题配置文件</span>，设定 <code>disqus_shortname</code> 的值即可。</p>
         {% code "yml" %}
         disqus_shortname: your-disqus-shortname
