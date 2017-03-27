@@ -456,6 +456,33 @@
     {% endcode %}
   </section>
 
+  <section data-folding="#use-bg-animation">
+    <h3 id="use-bg-animation">设置「背景动画」</h3>
+    <p>
+      NexT 自带两种背景动画效果
+    </p>
+    <p>
+      编辑 <span class="label label-info">主题配置文件</span>，
+      搜索 <code>canvas_nest</code> 或 <code>three_waves</code>，根据您的需求设置值为 <code>true</code> 或者 <code>false</code> 即可：
+    </p>
+    <div class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>
+      <code>three_waves</code> 在版本 <span class="label label-success">5.1.1</span> 中引入。只能同时开启一种背景动画效果。
+    </div>
+    <div class="next-docs-example"><code>canvas_nest</code> 配置示例</div>
+    {% code "yml" %}
+      # canvas_nest
+      canvas_nest: true //开启动画
+      canvas_nest: false //关闭动画
+    {% endcode %}
+    <div class="next-docs-example"><code>three_waves</code> 配置示例</div>
+    {% code "yml" %}
+      # three_waves
+      three_waves: true //开启动画
+      three_waves: false //关闭动画
+    {% endcode %}
+  </section>
+
 {% endblock %}
 
 
@@ -473,5 +500,6 @@
     <li><a href="#site-since">站点建立时间</a></li>
     <li><a href="#wechat-subscriber">订阅微信公众号</a></li>
     <li><a href="#use-motion">设置「动画效果」</a></li>
+    <li><a href="#use-bg-animation">设置「背景动画」</a></li>
   </ul>
 {% endblock %}
