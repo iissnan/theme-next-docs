@@ -504,8 +504,9 @@
       </div>
       <div role="tabpanel" class="tab-pane" id="algolia-step-3">
         <p>
-          在 Algolia 服务站点上找到需要使用的一些配置的值，包括 <code>ApplicationID</code>、<code>Search API Key</code>、
-          <code>Admin API Key</code>。注意，<code>Admin API Key</code> 需要保密保存。
+          在 Algolia 服务站点上找到需要使用的一些配置的值，包括 <code>ApplicationID</code>、<code>Search-Only API Key</code>、
+          <code>Admin API Key</code>。注意，<code>Admin API Key</code> 需要保密保存。点击ALL API KEYS 找到新建INDEX对应的key，
+          编辑权限，在弹出框中找到ACL选择勾选Add records, Delete records, List indices, Delete index权限，点击update更新。
         </p>
         <p><img src="/uploads/algolia/algolia-step-3.png" class="img-responsive"></p>
         <p>
@@ -513,8 +514,6 @@
           {% code "yml"%}
           algolia:
             applicationID: 'applicationID'
-            apiKey: 'apiKey'
-            adminApiKey: 'adminApiKey'
             indexName: 'indexName'
             chunkSize: 5000
           {% endcode %}
@@ -522,7 +521,12 @@
         </p>
       </div>
       <div role="tabpanel" class="tab-pane" id="algolia-step-4">
-        <p>当配置完成，在站点根目录下执行 <code>hexo algolia</code> 来更新 Index。请注意观察命令的输出。</p>
+        <p>当配置完成，在站点根目录下执行 
+        {% code "bash"%}
+        $ export(windows 为 set) HEXO_ALGOLIA_INDEXING_KEY=Search-Only API key
+        $ hexo algolia
+        {% endcode %}
+        来更新 Index。请注意观察命令的输出。</p>
         <p><img src="/uploads/algolia/algolia-step-4.png" class="img-responsive"></p>
       </div>
       <div role="tabpanel" class="tab-pane" id="algolia-step-5">
