@@ -11,15 +11,6 @@
 
 
 {% block pageContent %}
-  <p>
-    「标签」(Tag Plugin) 是 Hexo 提供的一种快速生成特定内容的方式。
-    例如，在标准 Markdown 语法中，我们无法指定图片的大小。这种情景，我们即可使用标签来解决。
-    Hexo 内置来许多标签来帮助写作者可以更快的书写，
-    <a href="https://hexo.io/docs/tag-plugins.html" target="_blank">完整的标签列表</a> 可以参考 Hexo 官网。
-    另外，Hexo 也开放来接口给主题，使主题有可能提供给写作者更简便的写作方法。
-    以下标签便是 NexT 主题当前提供的标签。
-  </p>
-
   <section data-folding="tag-centerquote">
     <h2 id="center-blockquote" class="page-header">文本居中的引用</h2>
     <p>
@@ -30,14 +21,7 @@
     <h4 id="center-blockquote-usage">使用方式</h4>
     <ul>
       <li>HTML方式：使用这种方式时，给 <code>img</code> 添加属性 <code>class="blockquote-center"</code> 即可。</li>
-      <li>
-        标签方式：使用 <code>centerquote</code> 或者 简写 <code>cq</code>。
-      </li>
     </ul>
-    <p class="bs-callout bs-callout-warning">
-      此标签要求 NexT 的版本在 <span class="label label-warning">0.4.5</span> 或以上。
-      若你正在使用的版本比较低，可以选择使用 <code>HTML</code> 方式。
-    </p>
 
     <div class="next-docs-example">
       <span class="label label-success">标签调用方法</span>
@@ -46,12 +30,6 @@
       <!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 -->
       <!-- 其中 class="blockquote-center" 是必须的 -->
       <blockquote class="blockquote-center">blah blah blah</blockquote>
-
-      <!-- 标签 方式，要求版本在0.4.5或以上 -->
-      {% raw %}{% centerquote %}blah blah blah{% endcenterquote %}{% endraw %}
-
-      <!-- 标签别名 -->
-      {% raw %}{% cq %} blah blah blah {% endcq %}{% endraw %}
     {% endcode %}
 
     <h4 id="center-blockquote-example">效果示例:</h4>
@@ -69,17 +47,7 @@
     <h4 id="full-width-image-usage">使用方式</h4>
     <ul>
       <li>HTML方式：使用这种方式时，为 <code>img</code> 添加属性 <code>class="full-image"</code>即可。</li>
-      <li>
-        标签方式：使用 <code>fullimage</code> 或者 简写 <code>fi</code>，
-        并传递图片地址、 <code>alt</code> 和 <code>title</code> 属性即可。
-        属性之间以逗号分隔。
-      </li>
     </ul>
-    <p class="bs-callout bs-callout-warning">
-      此标签要求 NexT 的版本在 <span class="label label-warning">0.4.5</span> 或以上。
-      若你正在使用的版本比较低，可以选择使用 <code>HTML</code> 方式。<br />
-      如果要在图片下显示图片的标题，请使用 标签方式 并给定 <code>title</code> 属性。
-    </p>
 
 
     <div class="next-docs-example">
@@ -89,41 +57,12 @@
       <!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 -->
       <!-- 其中 class="full-image" 是必须的 -->
       <img src="/image-url" class="full-image" />
-
-      <!-- 标签 方式，要求版本在0.4.5或以上 -->
-      {% raw %}{% fullimage /image-url, alt, title %}{% endraw %}
-
-      <!-- 别名 -->
-      {% raw %}{% fi /image-url, alt, title %}{% endraw %}
     {% endcode %}
 
     <h4 id="full-width-image-example">效果示例:</h4>
     <img src="/uploads/tags/full-image.jpg" class="img-thumbnail img-responsive center-block">
   </section>
 
-  <section data-folding="bootstrap-callout">
-    <h2 id="bootstrap-callout" class="page-header">
-      Bootstrap Callout
-      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1160">ivan-nginx</a> 贡献</small>
-    </h2>
-    <p>这些样式出现在 <a href="http://getbootstrap.com/">Bootstrap 的官方文档</a>中。</p>
-    <h4 id="bootstrap-callout-usage">使用方式</h4>
-    {% code %}
-    {% raw %}{% note class_name %} Content (md partial supported) {% endnote %}{% endraw %}
-    {% endcode %}
-    <p>其中，<code>class_name</code> 可以是以下列表中的一个值：</p>
-    <ul>
-      <li><code>default</code></li>
-      <li><code>primary</code></li>
-      <li><code>success</code></li>
-      <li><code>info</code></li>
-      <li><code>warning</code></li>
-      <li><code>danger</code></li>
-    </ul>
-    <h4 id="bootstrap-callout-example">效果示例:</h4>
-    <img src="/uploads/tags/bootstrap-callout.png"
-         class="img-thumbnail img-responsive center-block" />
-  </section>
 {% endblock %}
 
 
@@ -141,13 +80,6 @@
       <ul>
         <li><a href="#full-width-image-usage">使用方式</a></li>
         <li><a href="#full-width-image-example">效果示例</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#bootstrap-callout">Bootstrap Callout</a>
-      <ul>
-        <li><a href="#bootstrap-callout-usage">使用方式</a></li>
-        <li><a href="#bootstrap-callout-example">效果示例</a></li>
       </ul>
     </li>
   </ul>

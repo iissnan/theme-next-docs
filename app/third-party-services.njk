@@ -18,7 +18,7 @@
   <p>NexT 支持多款评论系统。</p>
   <p class="bs-callout bs-callout-primary">
     如需取消某个 页面/文章 的评论，在 md 文件的
-    <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">
+    <a href="http://jekyllcn.com/docs/frontmatter/" target="_blank" rel="external">
       front-matter
     </a> 中增加
     <code>comments: false</code>
@@ -115,7 +115,7 @@
     <p>请注意，您在云跟帖管理后台设置的域名必须跟您站点的域名一致。在本地测试时，需要做两步骤前置设定：</p>
     <ol>
       <li>修改 hosts 文件，将您域名的请求指向本地。例如：<code>127.0.0.1 notes.example.com</code></li>
-      <li>修改 Hexo 监听的端口为 80：<code>hexo s --debug -p 80</code></li>
+      <li>修改 Jekyll 监听的端口为 80：<code>bundle exec jekyll server --port 80</code></li>
     </ol>
     <p>测试完成后请将 hosts 文件中的域名映射删除。</p>
   </section>
@@ -397,7 +397,7 @@
       </div>
       <div role="tabpanel" class="tab-pane" id="swiftype-step-5">
         <p>
-          编辑 <span class="label label-primary">站点配置文件</span>，
+          编辑 <span class="label label-info">主题配置文件</span>，
           新增字段 <code>swiftype_key</code>，值设置成第四步中赋值出来的 key
         </p>
         {% code %}
@@ -422,32 +422,12 @@
       <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/694">flashlab</a> 贡献</small>
     </h3>
     <p>添加百度/谷歌/本地 自定义站点内容搜索</p>
-    <ol>
-      <li>
-        <p>安装 <code>hexo-generator-searchdb</code>，在站点的根目录下执行以下命令：</p>
-        {% code "shell" %}
-        $ npm install hexo-generator-searchdb --save
-        {% endcode %}
-      </li>
-      <li>
-        <p>编辑 <span class="label label-primary">站点配置文件</span>，新增以下内容到任意位置：</p>
-        {% code "yml" %}
-        search:
-          path: search.xml
-          field: post
-          format: html
-          limit: 10000
-        {% endcode %}
-      </li>
-      <li>
-        <p>编辑 <span class="label label-info">主题配置文件</span>，启用本地搜索功能：</p>
-        {% code "yml" %}
-        # Local search
-        local_search:
-          enable: true
-        {% endcode %}
-      </li>
-    </ol>
+    <p>编辑 <span class="label label-info">主题配置文件</span>，启用本地搜索功能：</p>
+    {% code "yml" %}
+    # Local search
+    local_search:
+      enable: true
+    {% endcode %}
   </section>
 
   <section data-folding="algolia">
@@ -465,7 +445,7 @@
       </li>
       <li role="presentation">
         <a href="#algolia-step-2" aria-controls="profile" role="tab" data-toggle="tab">
-          安装 Hexo Algolia
+          安装 Jekyll Algolia
         </a>
       </li>
       <li role="presentation">
@@ -495,11 +475,27 @@
       <div role="tabpanel" class="tab-pane" id="algolia-step-2">
         <p>
           Index 创建完成后，此时这个 Index 里未包含任何数据。
-          接下来需要安装 <a href="https://github.com/oncletom/hexo-algolia" target="_blank">Hexo Algolia</a> 扩展，
-          这个扩展的功能是搜集站点的内容并通过 API 发送给 Algolia。前往站点根目录，执行命令安装：
+          接下来需要安装 <a href="https://github.com/algolia/algoliasearch-jekyll" target="_blank">Jekyll Algolia</a> 扩展，
+          这个扩展的功能是搜集站点的内容并通过 API 发送给 Algolia。
+        </p>
+        <p>
+          在<code>Gemfile</code>中，添加<code>algoliasearch-jekyll</code>到<code>:jekyll_plugins</code>，内容如下：
         </p>
         {% code %}
-        npm install --save hexo-algolia
+          source 'https://rubygems.org'
+
+          gem 'jekyll', '~> 2.5.3'
+
+          group :jekyll_plugins do
+            gem 'algoliasearch-jekyll', '~> 0.8.0'
+          end
+        {% endcode %}
+        <p>
+          在 <span class="label label-info">主题配置文件</span> 中，添加<code>algoliasearch-jekyll</code>到<code>gems</code>：
+        </p>
+        {% code "yml" %}
+        gems:
+          - algoliasearch-jekyll
         {% endcode %}
       </div>
       <div role="tabpanel" class="tab-pane" id="algolia-step-3">
@@ -509,21 +505,16 @@
         </p>
         <p><img src="/uploads/algolia/algolia-step-3.png" class="img-responsive"></p>
         <p>
-          编辑 <span class="label label-primary">站点配置文件</span>，新增以下配置：
+          编辑 <span class="label label-info">主题配置文件</span>，新增以下配置：
           {% code "yml"%}
           algolia:
-            applicationID: 'applicationID'
-            apiKey: 'apiKey'
-            adminApiKey: 'adminApiKey'
-            indexName: 'indexName'
-            chunkSize: 5000
+            application_id: 'your_application_id'
+            index_name:     'your_index_name'
           {% endcode %}
-          替换除了 <code>chunkSize</code> 以外的其他字段为在 Algolia 获取到的值。
         </p>
       </div>
       <div role="tabpanel" class="tab-pane" id="algolia-step-4">
-        <p>当配置完成，在站点根目录下执行 <code>hexo algolia</code> 来更新 Index。请注意观察命令的输出。</p>
-        <p><img src="/uploads/algolia/algolia-step-4.png" class="img-responsive"></p>
+        <p>当配置完成，在站点根目录下执行 <code>ALGOLIA_API_KEY='your_write_api_key' jekyll algolia push</code> 来更新 Index。请注意观察命令的输出。</p>
       </div>
       <div role="tabpanel" class="tab-pane" id="algolia-step-5">
         <p>更改主题配置文件，找到 Algolia Search 配置部分：</p>

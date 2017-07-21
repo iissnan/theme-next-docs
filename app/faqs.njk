@@ -27,11 +27,11 @@
     </p>
     <ol>
       <li>
-        在文章中使用 <code>&lt;!-- more --&gt;</code> 手动进行截断，Hexo 提供的方式
+        在文章中使用 <code>&lt;!-- more --&gt;</code> 手动进行截断，需要设置<code>excerpt_separator</code>，详见：<a href="http://jekyllcn.com/docs/posts/">撰写博客</a>
         <span class="label label-success">推荐</span>
       </li>
       <li>
-        在文章的 <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">front-matter</a>
+        在文章的 <a href="http://jekyllcn.com/docs/frontmatter/" target="_blank" rel="external">front-matter</a>
         中添加 <code>description</code>，并提供文章摘录
       </li>
       <li>
@@ -46,7 +46,7 @@
     </ol>
     <div class="bs-callout bs-callout-info">
       建议使用 <code>&lt;!-- more --&gt;</code>（即第一种方式），除了可以精确控制需要显示的摘录内容以外，
-      这种方式也可以让 Hexo 中的插件更好的识别。
+      这种方式也可以让 Jekyll 中的插件更好的识别。
     </div>
   </section>
 
@@ -54,13 +54,10 @@
   <section data-folding="favicon">
     <h2 id="favicon" class="page-header">Favicon 设置后没有生效？</h2>
     <p>
-      将你的 <code>favicon</code> 放置到 <strong>站点</strong> 的 <code>source</code>
-      目录下，与站点的配置文件同级。
+      将你的 <code>favicon</code> 放置到 <strong>站点</strong> 的 <code>assets</code>
+      目录下。
       若你发现设置的 Favicon 并未生效，请先清除浏览器的缓存后直接访问 Favicon 的地址，这个地址通常是
-      <code>http://your-domain.com/favicon.ico</code>。
-    </p>
-    <p class="bs-callout bs-callout-warning">
-      如果你的站点是放在子目录下，请设置为：<code>favicon: favicon.ico</code>
+      <code>http://your-domain.com/assets/favicon.ico</code>。
     </p>
   </section>
 
@@ -70,23 +67,23 @@
     <p>
       NexT 从 <strong>5.0.1</strong> 版本开始提供一个 <a href="/theme-settings.html#fonts-customization">字体定制特性</a>，
       请先查看此特性是否能满足你的需求。以下的修改将覆盖 字体定制 的特性。
-      编辑主题下的 <code>source/css/_variables/custom.styl</code> 文件，新增两个变量：
+      编辑主题下的 <code>source/css/_variables/custom.scss</code> 文件，新增两个变量：
     </p>
-    {% code "styl" %}
+    {% code "scss" %}
       // 标题，修改成你期望的字体族
-      $font-family-headings = Georgia, sans
+      $font-family-headings : Georgia, sans;
 
       // 修改成你期望的字体族
-      $font-family-base = "Microsoft YaHei", Verdana, sans-serif
+      $font-family-base : "Microsoft YaHei", Verdana, sans-serif;
 
       // 代码字体
-      $code-font-family = "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace
+      $code-font-family : "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
 
       // 正文字体的大小
-      $font-size-base = 16px
+      $font-size-base : 16px;
 
       // 代码字体的大小
-      $code-font-size = 13px
+      $code-font-size : 13px;
     {% endcode %}
   </section>
 
@@ -103,12 +100,12 @@
       如果你需要修改内容的宽度，同样需要编辑样式文件。
       编辑主题的 <code>source/css/_variables/custom.styl</code> 文件，新增变量：
     </p>
-    {% code "styl" %}
+    {% code "scss" %}
       // 修改成你期望的宽度
-      $content-desktop = 700px
+      $content-desktop : 700px;
 
       // 当视窗超过 1600px 后的宽度
-      $content-desktop-large = 900px
+      $content-desktop-large : 900px;
     {% endcode %}
     <p class="bs-callout bs-callout-warning">
       此方法不适用于 Pisces Scheme，关于如何修改 Pisces Scheme 的宽度请参看
@@ -119,7 +116,7 @@
   <section data-fodling="setting-menu">
     <h2 id="setting-menu" class="page-header">为何新增的菜单项显示 Menu.xxx</h2>
     <p>
-      NexT 使用了 Hexo 提供的国际化功能，因此在 Menu 部分配置的值并非直接用于界面的展示，而是作为一个名称。
+      NexT 使用了国际化功能，因此在 Menu 部分配置的值并非直接用于界面的展示，而是作为一个名称。
       当渲染的时候，NexT 去寻找对应的语言文件，并替换这个键所定义的文本后展示。
     </p>
 
@@ -130,12 +127,12 @@
     </p>
     {% code "yml"%}
       # 简体中文
-      # 语言文件 languages/zh-Hans.yml
+      # 语言文件 _data/languages/zh-Hans.yml
       menu:
         home: 首页
 
       # 英文
-      # 语言文件 languages/en.yml
+      # 语言文件 _data/languages/en.yml
       menu:
         home: Home
     {% endcode %}
@@ -147,27 +144,12 @@
     </p>
   </section>
 
-  <section data-folding="count-incorrect-for-tags-categories">
-    <h2 id="count-incorrect-for-tags-categories">标签/分类数量统计不准确？</h2>
-    <p>
-      因为 Hexo 有缓存的功能，因此有时候你会发现在 标签 和 分类 页面中的数量统计并不准确。
-      出现这个问题时，可以按照以下步骤重新生成站点的内容：
-    </p>
-    <ol>
-      <li>删除站点目录下的 <code>db.json</code> 文件</li>
-      <li>在站点目录下执行命令 <code>hexo clean</code></li>
-      <li>在站点目录下执行命令，重新生成 <code>hexo generate</code></li>
-    </ol>
-    <p>当执行完以上步骤后，可以在本地启动服务器来验证下是否已经解决问题。</p>
-  </section>
-
-
   <section data-fodling="incorrect-language">
     <h2 id="incorrect-language" class="page-header">为何语言显示不正确？</h2>
     <p>
       若没有设定 <code>language</code> 的值或者 <code>language: default</code>，会出现语言选择不正确的情况。
       因此为了确保语言正确显示，请明确指定需要使用的语言。
-      编辑 <span class="label label-primary">站点配置文件</span>， 将 <code>language</code> 字段设置成明确的语言代码。
+      编辑 <span class="label label-info">主题配置文件</span>， 将 <code>language</code> 字段设置成明确的语言代码。
       例如，设置语言为简体中文：
     </p>
     {% code "yml" %}language: zh-Hans{% endcode %}
@@ -221,6 +203,7 @@
       <code>comments</code> 字段，并将值设置为 <code>false</code>。如下所示：
     </p>
     {% code "md" %}
+      ---
       title: All tags
       date: 2015-12-16 17:05:24
       type: "tags"
@@ -232,66 +215,28 @@
 
   <section data-fodling="incorrect-language">
     <h2 id="setting-page-size" class="page-header">如何设置页面文章的篇数？</h2>
-    <p>在 Hexo 里可以为首页和归档页面设置不同的文章篇数，但可能需要安装 Hexo 插件。详细步骤如下。</p>
+    <p>在 Jekyll 里可以为首页和归档页面设置不同的文章篇数。详细步骤如下。</p>
     <ol>
       <li>
-        <p>使用 <code>npm install --save</code> 命令来安装需要的 Hexo 插件。</p>
-        {% code %}
-          npm install --save hexo-generator-index
-          npm install --save hexo-generator-archive
-          npm install --save hexo-generator-tag
-        {% endcode %}
-      </li>
-      <li>
-        <p>等待扩展全部安装完成后，在 <strong>站点配置文章</strong> 中，设定如下选项：</p>
+        <p>在 <strong>站点配置文章</strong> 中，设定如下选项：</p>
         {% code "yml" %}
-          index_generator:
-            per_page: 5
-
-          archive_generator:
-            per_page: 20
-            yearly: true
-            monthly: true
-
-          tag_generator:
-            per_page: 10
+          # Pagination
+          paginate: 10
+          paginate_path: "/page:num/"
+          archive:
+            paginate: 10
+            paginate_path: "/page:num/"
+          category:
+            paginate: 10
+            paginate_path: "/page:num/"
+          tag:
+            paginate: 10
+            paginate_path: "/page:num/"
         {% endcode %}
 
-        <code>per_page</code> 即文章的数量。
+        <code>paginate</code> 即文章的数量。
       </li>
     </ol>
-    <p class="bs-callout bs-callout-warning">
-      需要注意的是，Hexo 3.2 版本不允许配置文件中存在重复的选项设置。
-      因此，最好检查下 <span class="label label-primary">站点配置文件</span> 中是否有存在上述同名的配置。
-      如果存在，请将两者配置在一起。
-    </p>
-  </section>
-
-
-  <section data-fodling="incorrect-language">
-    <h2 id="optimize" class="page-header">如何优化 NexT 主题？</h2>
-    <p>
-      NexT 并未对 HTML、JavaScript 以及 CSS 做压缩处理。如果你比较在意这点，可以在 NexT 的 Issues 列表搜索
-      <a href="https://github.com/iissnan/hexo-theme-next/issues?utf8=%E2%9C%93&q=+label%3AOptimization">
-        他人共享的优化方案
-      </a>。
-    </p>
-  </section>
-
-  <section data-fodling="module-not-found">
-    <h2 id="module-not-found" class="page-header">Cannot find module XXX</h2>
-    <p>
-      NexT 提供的标签插件引用了 Hexo 模块中的一些子模块，例如 <code>hexo-util</code>。
-      NPM 在版本 3 中引入了新的模块安装机制， NexT 将使用这种机制，意味着如果是旧的 NPM 将会碰到这个错误。
-      因此，如果您碰到 "Cannot find module XXX" 的错误时，请首先使用 <code>npm -v</code> 确认您的 NPM 版本。
-    </p>
-    <ul>
-      <li>版本 > 3 依然报错： 请先删除 <code>node_module</code> 目录，然后使用 <code>npm install</code> 重新安装一下模块。</li>
-      <li>
-        版本 < 3： 您可以选择升级您的 NPM； 或者在站点目录下明确指定模块依赖 <code>npm install --save hexo-util</code>。
-        其中 `hexo-util` 仅是示例，请替换成错误中提示的模块名称。
-      </li>
-    </ul>
   </section>
 
 {% endblock %}
@@ -304,11 +249,8 @@
     <li><a href="#custom-font">如何更改字体？</a></li>
     <li><a href="#custom-content-width">如何更改内容区域的宽度？</a></li>
     <li><a href="#setting-menu">为何新增的菜单项显示 Menu.xxx</a></li>
-    <li><a href="#count-incorrect-for-tags-categories">标签/分类数量统计不准确？</a></li>
     <li><a href="#incorrect-language">为何语言显示不正确？</a></li>
     <li><a href="#setting-page-comments">如何关闭新建页面的评论功能？</a></li>
     <li><a href="#setting-page-size">如何设置页面文章的篇数？</a></li>
-    <li><a href="#optimize">如何优化 NexT 主题？</a></li>
-    <li><a href="#module-not-found">Cannot find module</a></li>
   </ul>
 {% endblock %}

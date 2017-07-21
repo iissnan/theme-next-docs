@@ -13,112 +13,57 @@
 {% block pageContent %}
   <section data-folding="getting-started-introduction">
     <p>
-      <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a> 是高效的静态站点生成框架，她基于 <a href="https://nodejs.org">Node.js</a>。
-      通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的
-      <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank">标签插件</a>
-      来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。
+      <a href="http://jekyllcn.com" target="_blank">Jekyll</a>  是一个简单的博客形态的静态站点生产机器。
+      它有一个模版目录，其中包含原始文本格式的文档，通过一个转换器（如 <a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown</a>）
+      和我们的 <a href="https://github.com/Shopify/liquid/wiki" target="_blank">Liquid</a> 渲染器转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。
+      Jekyll 也可以运行在 <a href="http://pages.github.com/" target="_blank">GitHub Page</a> 上，也就是说，
+      你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是<strong>完全免费</strong>的。
     </p>
     <div class="bs-callout bs-callout-primary">
-      你可以访问 <a href="https://hexo.io/zh-cn/docs/">Hexo 的文档</a> 了解如何安装 Hexo
+      你可以访问 <a href="http://jekyllcn.com">Jekyll 的文档</a> 了解 Jekyll
     </div>
     <p>
-      在 Hexo 中有两份主要的配置文件，其名称都是 <code>_config.yml</code>。
-      其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。
-    </p>
-    <p>
-      为了描述方便，在以下说明中，将前者称为  <span class="label label-primary">站点配置文件</span>，
-      后者称为 <span class="label label-info">主题配置文件</span>。
+      在 Jekyll 中的配置文件是 <code>_config.yml</code>。为了描述方便，在以下说明中，将称为 <span class="label label-info">主题配置文件</span>。
     </p>
   </section>
 
   <section data-folding="installation">
     <h2 class="page-header" id="install-next-theme">安装 NexT</h2>
+
     <p>
-      Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下，
-      然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。
-    </p>
-
-    <h3 id="download-next-theme">下载主题</h3>
-    <p>
-      如果你熟悉 <a href="http://git-scm.com/" target="_blank">Git</a>，
-      建议你使用 克隆最新版本 的方式，之后的更新可以通过 <code>git pull</code> 来快速更新，
-      而不用再次下载压缩包替换。
-    </p>
-
-    <div>
-
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active">
-          <a href="#clone" aria-controls="clone" role="tab" data-toggle="tab">
-            克隆最新版本
-          </a>
-        </li>
-        <li role="presentation">
-          <a href="#stable" aria-controls="profile" role="tab" data-toggle="tab">
-            下载稳定版本
-          </a>
-        </li>
-      </ul>
-
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="clone">
-          <p>在终端窗口下，定位到 Hexo 站点目录下。使用 <code>Git</code> checkout 代码：</p>
-          {% code %}
-            $ cd your-hexo-site
-            $ git clone https://github.com/iissnan/hexo-theme-next themes/next
-          {% endcode %}
-        </div>
-        <div role="tabpanel" class="tab-pane" id="stable">
-          <ol>
-            <li>
-              前往 NexT 版本
-              <a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank">发布页面</a>。
-            </li>
-            <li>
-              选择你所需要的版本，下载 Download 区域下的 Source Code (zip) 到本地。例如，下载 v0.4.0 版本：
-              <img src="/uploads/five-minutes-setup/download-stable-version.png"
-                    alt="next-releases" class="img-thumbnail  img-responsive"/>
-            </li>
-            <li>
-              解压所下载的压缩包至站点的 themes 目录下，
-              并将 解压后的文件夹名称（<code>hexo-theme-next-0.4.0</code>）更改为 <code>next</code>。
-            </li>
-          </ol>
-        </div>
-      </div>
-
-    </div>
-
-    <p class="bs-callout bs-callout-success">
-      如果你对 Git 感兴趣，可以通过《Pro Git》这本书来学习。你可以访问我制作的一个
-      <a href="http://iissnan.com/progit">在线版本（第一版）</a>。
-    </p>
-
-    <h3 id="activate-next-theme">启用主题</h3>
-    <p>
-      与所有 Hexo 主题启用的模式一样。
-      当 克隆/下载 完成后，打开 <span class="label label-primary">站点配置文件</span>，
-      找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。
-    </p>
-    <div class="next-docs-example">启用 NexT 主题</div>
-    {% code "yml" %}
-      theme: next
-    {% endcode %}
-    <p>
-      到此，NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前，
-      我们最好使用 <code>hexo clean</code> 来清除 Hexo 的缓存。
-    </p>
-
-    <h3 id="validate-next-theme">验证主题</h3>
-    <p>
-      首先启动 Hexo 本地站点，并开启调试模式（即加上 <code>--debug</code>），整个命令是 <code>hexo s --debug</code>。
-      在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助他人更好的定位错误。
-      当命令行输出中提示出：
+      确保已安装`Ruby 2.1.0` 或更高版本：
     </p>
     {% code %}
-      INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
+      $ ruby --version
+    {% endcode %}
+
+    <p>
+      安装<code>Bundler</code>：
+    </p>
+    {% code %}
+      $ gem install bundler
+    {% endcode %}
+
+    <p>
+      下载 Jacman 主题：
+    </p>
+    {% code %}
+      $ git clone https://github.com/Simpleyyt/jekyll-jacman.git
+      $ cd jekyll-jacman
+    {% endcode %}
+
+    <p>
+      安装依赖：
+    </p>
+    {% code %}
+      $ bundle install
+    {% endcode %}
+
+    <p>
+      运行 Jekyll：
+    </p>
+    {% code %}
+      $ bundle exec jekyll server
     {% endcode %}
     <p>此时即可使用浏览器访问 <code>http://localhost:4000</code>，检查站点是否正确运行。</p>
     <p class="bs-callout bs-callout-success">
@@ -158,7 +103,7 @@
 
     <h3 id="select-language">设置 语言</h3>
     <p>
-      编辑 <span class="label label-primary">站点配置文件</span>，
+      编辑 <span class="label label-info">主题配置文件</span>，
       将 <code>language</code> 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：
     </p>
     {% code "yml" %}language: zh-Hans{% endcode %}
@@ -250,8 +195,7 @@
               tags: /tags
               #commonweal: /404.html
         {% endcode %}
-        <p class="bs-callout bs-callout-warning">若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉</p>
-        <p>NexT 默认的菜单项有（标注 <i class="fa fa-exclamation-circle"></i> 的项表示需要手动创建这个页面）：</p>
+        <p>NexT 默认的菜单项有：</p>
         <div class="table-responsive">
           <table class="table table-condensed table-striped table-bordered table-hover">
             <thead>
@@ -275,22 +219,22 @@
             <tr>
               <td>categories</td>
               <td><code>categories: /categories</code></td>
-              <td>分类页 <i class="fa fa-exclamation-circle"></i></td>
+              <td>分类页</td>
             </tr>
             <tr>
               <td>tags</td>
               <td><code>tags: /tags</code></td>
-              <td>标签页 <i class="fa fa-exclamation-circle"></i></td>
+              <td>标签页</td>
             </tr>
             <tr>
               <td>about</td>
               <td><code>about: /about</code></td>
-              <td>关于页面 <i class="fa fa-exclamation-circle"></i></td>
+              <td>关于页面</td>
             </tr>
             <tr>
               <td>commonweal</td>
               <td><code>commonweal: /404.html</code></td>
-              <td>公益 404 <i class="fa fa-exclamation-circle"></i></td>
+              <td>公益 404</td>
             </tr>
             </tbody>
           </table>
@@ -298,13 +242,13 @@
       </li>
       <li>
         <p>
-          设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用
+          设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Jekyll 在生成的时候将使用
           这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的
-          <code>languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。
+          <code>_data/languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。
         </p>
         <p>
           以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件
-          <code>languages/zh-Hans.yml</code>，在 <code>menu</code> 字段下添加一项：
+          <code>_data/languages/zh-Hans.yml</code>，在 <code>menu</code> 字段下添加一项：
         </p>
         {% code "yml" %}
         menu:
@@ -433,12 +377,12 @@
 
     <h3 id="author-setting">设置 作者昵称</h3>
     <p>
-      编辑 <span class="label label-primary">站点配置文件</span>， 设置 <code>author</code> 为你的昵称。
+      编辑 <span class="label label-info">主题配置文件</span>， 设置 <code>author</code> 为你的昵称。
     </p>
 
     <h3 id="description-setting">站点描述</h3>
     <p>
-      编辑 <span class="label label-primary">站点配置文件</span>，
+      编辑 <span class="label label-info">主题配置文件</span>，
       设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)
     </p>
   </section>
