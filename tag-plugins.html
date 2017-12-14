@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>内置标签 - NexT 使用文档</title>
+  <link href="https://fonts.googleapis.com/css?family=Monda:400,700|PT+Mono:300,300italic,400,400italic,700,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body class="tag-plugins">
+<!--[if lt IE 10]>
+<p class="browserupgrade">
+  You are using an <strong>outdated</strong> browser.
+  Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+
+  <header>
+  <nav class="navbar navbar-default navbar-static-top" id="nav">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">NexT</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li>
+          <a href="/getting-started.html">开始使用</a>
+        </li>
+        <li>
+          <a href="/theme-settings.html">主题配置</a>
+        </li>
+        <li>
+          <a href="/third-party-services.html">第三方服务</a>
+        </li>
+        <li>
+          <a href="/tag-plugins.html">内建标签</a>
+        </li>
+        <li>
+          <a href="/advanced-settings.html">进阶设定</a>
+        </li>
+        <li>
+          <a href="/faqs.html">常见问题</a>
+        </li>
+        <li>
+          <a href="/platforms.html">其他平台</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <h1 class="next-docs-header">
+    <div class="container">
+  <i class="fa-rocket fa"></i> 内置标签
+    </div>
+  </h1>
+  </header>
+
+  <main>
+  <section class="next-docs">
+    <div class="container next-docs-sections">
+      <div class="row">
+        <div class="col-md-9 next-docs-section" role="main">
+  <p>
+    「标签」(Tag Plugin) 是 Hexo 提供的一种快速生成特定内容的方式。
+    例如，在标准 Markdown 语法中，我们无法指定图片的大小。这种情景，我们即可使用标签来解决。
+    Hexo 内置来许多标签来帮助写作者可以更快的书写，
+    <a href="https://hexo.io/docs/tag-plugins.html" target="_blank">完整的标签列表</a> 可以参考 Hexo 官网。
+    另外，Hexo 也开放来接口给主题，使主题有可能提供给写作者更简便的写作方法。
+    以下标签便是 NexT 主题当前提供的标签。
+  </p>
+
+  <section data-folding="tag-centerquote">
+    <h2 id="center-blockquote" class="page-header">文本居中的引用</h2>
+    <p>
+      此标签将生成一个带上下分割线的引用，同时引用内文本将自动居中。
+      文本居中时，多行文本若长度不等，视觉上会显得不对称，因此建议在引用单行文本的场景下使用。
+      例如作为文章开篇引用 或者 结束语之前的总结引用。
+    </p>
+    <h4 id="center-blockquote-usage">使用方式</h4>
+    <ul>
+      <li>HTML方式：使用这种方式时，给 <code>img</code> 添加属性 <code>class="blockquote-center"</code> 即可。</li>
+      <li>
+        标签方式：使用 <code>centerquote</code> 或者 简写 <code>cq</code>。
+      </li>
+    </ul>
+    <p class="bs-callout bs-callout-warning">
+      此标签要求 NexT 的版本在 <span class="label label-warning">0.4.5</span> 或以上。
+      若你正在使用的版本比较低，可以选择使用 <code>HTML</code> 方式。
+    </p>
+
+    <div class="next-docs-example">
+      <span class="label label-success">标签调用方法</span>
+    </div>
+<pre><code class="django hljs"><span class="xml"><span class="hljs-comment">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</span>
+<span class="hljs-comment">&lt;!-- 其中 class="blockquote-center" 是必须的 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"blockquote-center"</span>&gt;</span>blah blah blah<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name">centerquote</span> %}</span><span class="xml">blah blah blah</span><span class="hljs-template-tag">{% <span class="hljs-name">endcenterquote</span> %}</span><span class="xml">
+
+<span class="hljs-comment">&lt;!-- 标签别名 --&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name">cq</span> %}</span><span class="xml"> blah blah blah </span><span class="hljs-template-tag">{% <span class="hljs-name">endcq</span> %}</span><span class="xml">
+</span></code></pre>
+    <h4 id="center-blockquote-example">效果示例:</h4>
+    <img src="/uploads/tags/blockquote-center.png" alt="Center Blockquote Tag"
+         class="img-thumbnail img-responsive center-block">
+  </section>
+
+  <section data-folding="tag-fullimage">
+    <h2 id="full-width-image" class="page-header">突破容器宽度限制的图片</h2>
+    <p>
+      当使用此标签引用图片时，图片将自动扩大 26%，并突破文章容器的宽度。
+      此标签使用于需要突出显示的图片, 图片的扩大与容器的偏差从视觉上提升图片的吸引力。
+      此标签有两种调用方式（详细参看底下示例）：
+    </p>
+    <h4 id="full-width-image-usage">使用方式</h4>
+    <ul>
+      <li>HTML方式：使用这种方式时，为 <code>img</code> 添加属性 <code>class="full-image"</code>即可。</li>
+      <li>
+        标签方式：使用 <code>fullimage</code> 或者 简写 <code>fi</code>，
+        并传递图片地址、 <code>alt</code> 和 <code>title</code> 属性即可。
+        属性之间以逗号分隔。
+      </li>
+    </ul>
+    <p class="bs-callout bs-callout-warning">
+      此标签要求 NexT 的版本在 <span class="label label-warning">0.4.5</span> 或以上。
+      若你正在使用的版本比较低，可以选择使用 <code>HTML</code> 方式。<br />
+      如果要在图片下显示图片的标题，请使用 标签方式 并给定 <code>title</code> 属性。
+    </p>
+
+
+    <div class="next-docs-example">
+      <span class="label label-success">标签调用方法 </span>
+    </div>
+<pre><code class="django hljs"><span class="xml"><span class="hljs-comment">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</span>
+<span class="hljs-comment">&lt;!-- 其中 class="full-image" 是必须的 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/image-url"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"full-image"</span> /&gt;</span>
+
+<span class="hljs-comment">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name">fullimage</span> /image-url, alt, title %}</span><span class="xml">
+
+<span class="hljs-comment">&lt;!-- 别名 --&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name">fi</span> /image-url, alt, title %}</span><span class="xml">
+</span></code></pre>
+    <h4 id="full-width-image-example">效果示例:</h4>
+    <img src="/uploads/tags/full-image.jpg" class="img-thumbnail img-responsive center-block">
+  </section>
+
+  <section data-folding="bootstrap-callout">
+    <h2 id="bootstrap-callout" class="page-header">
+      Bootstrap Callout
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1160">ivan-nginx</a> 贡献</small>
+    </h2>
+    <p>这些样式出现在 <a href="http://getbootstrap.com/">Bootstrap 的官方文档</a>中。</p>
+    <h4 id="bootstrap-callout-usage">使用方式</h4>
+<pre><code class="routeros hljs">{%<span class="hljs-built_in"> note </span>class_name %} Content (md partial supported) {% endnote %}
+</code></pre>    <p>其中，<code>class_name</code> 可以是以下列表中的一个值：</p>
+    <ul>
+      <li><code>default</code></li>
+      <li><code>primary</code></li>
+      <li><code>success</code></li>
+      <li><code>info</code></li>
+      <li><code>warning</code></li>
+      <li><code>danger</code></li>
+    </ul>
+    <h4 id="bootstrap-callout-example">效果示例:</h4>
+    <img src="/uploads/tags/bootstrap-callout.png"
+         class="img-thumbnail img-responsive center-block" />
+  </section>
+
+          <div class="text-center next-docs-section-footer">
+            <a href="https://github.com/iissnan/theme-next-docs/issues"
+               target="_blank" class="next-docs-btn next-docs-btn-default">
+              <i class="fa fa-bug"></i> 文档问题反馈
+            </a>
+            <a href="#top" class="back-to-top next-docs-btn next-docs-btn-default">
+              <i class="fa fa-arrow-up"></i> 返回顶部
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <nav class="next-docs-sidebar nav">
+            <div class="nav">
+  <ul>
+    <li>
+      <a href="#center-blockquote">文本居中的引用</a>
+      <ul>
+        <li><a href="#center-blockquote-usage">使用方式</a></li>
+        <li><a href="#center-blockquote-example">效果示例</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#full-width-image">突破容器宽度限制的图片</a>
+      <ul>
+        <li><a href="#full-width-image-usage">使用方式</a></li>
+        <li><a href="#full-width-image-example">效果示例</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#bootstrap-callout">Bootstrap Callout</a>
+      <ul>
+        <li><a href="#bootstrap-callout-usage">使用方式</a></li>
+        <li><a href="#bootstrap-callout-example">效果示例</a></li>
+      </ul>
+    </li>
+  </ul>
+            </div>
+
+            <ul>
+              <li><a href="#top" class="back-to-top">回到顶部</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+<footer class="footer">
+  <div class="container">
+    <hr>
+    <p class="pull-right text-muted next-maker">
+      &copy; Made by <a href="https://github.com/iissnan" target="_blank">IIssNan</a>
+    </p>
+    <div>
+      <ul class="next-docs-footer-links">
+        <li><a href="https://github.com/iissnan/theme-next-docs/issues">文档问题反馈</a></li>
+        <li><a href="https://github.com/iissnan/theme-next-docs">文档 @ GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75665289-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

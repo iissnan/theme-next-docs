@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第三方服务集成 - NexT 使用文档</title>
+  <link href="https://fonts.googleapis.com/css?family=Monda:400,700|PT+Mono:300,300italic,400,400italic,700,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body class="third-party-services">
+<!--[if lt IE 10]>
+<p class="browserupgrade">
+  You are using an <strong>outdated</strong> browser.
+  Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+
+  <header>
+  <nav class="navbar navbar-default navbar-static-top" id="nav">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">NexT</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li>
+          <a href="/getting-started.html">开始使用</a>
+        </li>
+        <li>
+          <a href="/theme-settings.html">主题配置</a>
+        </li>
+        <li>
+          <a href="/third-party-services.html">第三方服务</a>
+        </li>
+        <li>
+          <a href="/tag-plugins.html">内建标签</a>
+        </li>
+        <li>
+          <a href="/advanced-settings.html">进阶设定</a>
+        </li>
+        <li>
+          <a href="/faqs.html">常见问题</a>
+        </li>
+        <li>
+          <a href="/platforms.html">其他平台</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <h1 class="next-docs-header">
+    <div class="container">
+  <i class="fa-plug fa"></i> 第三方服务集成
+    </div>
+  </h1>
+  </header>
+
+  <main>
+  <section class="next-docs">
+    <div class="container next-docs-sections">
+      <div class="row">
+        <div class="col-md-9 next-docs-section" role="main">
+  静态站点拥有一定的局限性，因此我们需要借助于第三方服务来扩展站点的功能。
+  以下是 NexT 目前支持的第三方服务，你可以根据你的需求集成一些功能进来。
+
+  <h2 id="comment-system" class="page-header">评论系统</h2>
+  <p>NexT 支持多款评论系统。</p>
+  <p class="bs-callout bs-callout-primary">
+    如需取消某个 页面/文章 的评论，在 md 文件的
+    <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">
+      front-matter
+    </a> 中增加
+    <code>comments: false</code>
+  </p>
+
+  <section data-folding="disqus">
+    <h3 id="disqus">DISQUS</h3>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#disqus-new-settings" aria-controls="profile" role="tab" data-toggle="tab">
+          >= 5.1.1
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#disqus-old-settings" aria-controls="clone" role="tab" data-toggle="tab">
+          < 5.1.1
+        </a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="disqus-new-settings">
+        <p>
+          编辑 <span class="label label-info">主题配置文件</span>，
+          将 <code>disqus</code> 下的 <code>enable</code> 设定为 <code>true</code>，同时提供您的
+          <code>shortname</code>。<code>count</code> 用于指定是否显示评论数量。
+        </p>
+<pre><code class="yml hljs"><span class="hljs-attr">disqus:</span>
+<span class="hljs-attr">  enable:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">  shortname:</span>
+<span class="hljs-attr">  count:</span> <span class="hljs-literal">true</span>
+</code></pre>      </div>
+      <div role="tabpanel" class="tab-pane" id="disqus-old-settings">
+        <p>编辑 <span class="label label-info">主题配置文件</span>，设定 <code>disqus_shortname</code> 的值即可。</p>
+<pre><code class="yml hljs"><span class="hljs-attr">disqus_shortname:</span> <span class="hljs-string">your-disqus-shortname</span>
+</code></pre>      </div>
+    </div>
+
+  </section>
+
+  <section data-folding="facebook-comments">
+    <h3 id="facebook-comments">
+      Facebook Comments
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/925">hydai</a> 贡献</small>
+    </h3>
+    <p>需要先集成 <a href="#facebook-sdk">Facebook SDK</a>。修改 <span class="label label-info">主题配置文件</span> 以下配置：</p>
+<pre><code class="yml hljs"><span class="hljs-comment"># Facebook comments plugin</span>
+<span class="hljs-comment"># This plugin depends on Facebook SDK.</span>
+<span class="hljs-comment"># If facebook_sdk.enable is false, Facebook comments plugin is unavailable.</span>
+<span class="hljs-attr">facebook_comments_plugin:</span>
+<span class="hljs-attr">enable:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">num_of_posts:</span> <span class="hljs-number">10</span>  <span class="hljs-comment"># min posts num is 1</span>
+<span class="hljs-attr">width:</span> <span class="hljs-number">100</span><span class="hljs-string">%</span>       <span class="hljs-comment"># default width is 550px</span>
+<span class="hljs-attr">scheme:</span> <span class="hljs-string">light</span>     <span class="hljs-comment"># default scheme is light (light or dark)</span>
+</code></pre>  </section>
+
+  <section data-folding="hypercomments">
+    <h3 id="hypercomments">
+      HyperComments
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1155">ivan-nginx</a> 贡献</small>
+    </h3>
+    <p>
+      Add support for <a href="https://www.hypercomments.com/" target="_blank">Hypercomments</a> system instead of Disqus.
+      修改 <span class="label label-info">主题配置文件</span> 以下配置：
+    </p>
+<pre><code class="yml hljs"><span class="hljs-comment"># Hypercomments</span>
+<span class="hljs-comment">#hypercomments_id:</span>
+</code></pre>  </section>
+
+  <section data-folding="yungentie">
+    <h3 id="yungentie">
+      网易云跟帖
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1301">geekrainy</a> 贡献</small>
+    </h3>
+    <p>
+      登陆 <a href="https://gentie.163.com/" target="_blank">网易云跟帖</a> 获取你的 Product Key。
+      编辑 <span class="label label-info">主题配置文件</span>，
+      编辑 <code>gentie_productKey</code> 字段，设置如下：
+    </p>
+<pre><code class="yml hljs"><span class="hljs-attr">gentie_productKey:</span> <span class="hljs-comment">#your-gentie-product-key</span>
+</code></pre>    <p>请注意，您在云跟帖管理后台设置的域名必须跟您站点的域名一致。在本地测试时，需要做两步骤前置设定：</p>
+    <ol>
+      <li>修改 hosts 文件，将您域名的请求指向本地。例如：<code>127.0.0.1 notes.example.com</code></li>
+      <li>修改 Hexo 监听的端口为 80：<code>hexo s --debug -p 80</code></li>
+    </ol>
+    <p>测试完成后请将 hosts 文件中的域名映射删除。</p>
+  </section>
+
+  <section data-folding="livere">
+    <h3 id="livere">
+      来必力
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1415">asmoker</a> 贡献</small>
+    </h3>
+    <p>
+      登陆 <a href="https://livere.com/" target="_blank">来必力</a> 获取你的 LiveRe UID。
+      编辑 <span class="label label-info">主题配置文件</span>，
+      编辑 <code>livere_uid</code> 字段，设置如下：
+    </p>
+<pre><code class="yml hljs"><span class="hljs-attr">livere_uid:</span> <span class="hljs-comment">#your livere_uid</span>
+</code></pre>  </section>
+
+  <h2 id="analytics-system" class="page-header">数据统计与分析</h2>
+
+  <section data-folding="analytics-baidu">
+    <h3 id="analytics-baidu">百度统计</h3>
+    <ol>
+      <li>登录 <a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a>，定位到站点的代码获取页面</li>
+      <li>
+        复制 <code>hm.js?</code> 后面那串统计脚本 id，如下图所示：<br>
+        <img src="/uploads/five-minutes-setup/analytics-baidu-id.png"
+             class="img-thumbnail img-responsive">
+      </li>
+      <li>
+        编辑 <span class="label label-info">主题配置文件</span>，
+        修改字段 <code>baidu_analytics</code>，值设置成你的百度统计脚本 id。
+      </li>
+    </ol>
+  </section>
+
+  <section data-folding="analytics-google">
+    <h3 id="analytics-google">Google 分析</h3>
+    <p>
+      编辑 <span class="label label-info">主题配置文件</span>，
+      修改字段 <code>google_analytics</code>，
+      值设置成你的 Google 跟踪 ID。跟踪 ID 通常是以 <code>UA-</code> 开头。
+      <img src="/uploads/analytics-google.png" class="img-thumbnail img-responsive">
+    </p>
+  </section>
+
+  <section data-folding="analytics-tencent">
+    <h3 id="analytics-tencent">
+      腾讯分析
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/603">Cissoid</a> 贡献</small>
+    </h3>
+    <p>
+      请登录 <a href="http://ta.qq.com/" target="_blank">腾讯分析</a>，登录并获取分析的 ID。
+      然后在 <span class="label label-info">主题配置文件</span> 里将 ID 放置 <code>tencent_analytics</code> 字段。
+    </p>
+  </section>
+
+  <section data-folding="analytics-cnzz">
+    <h3 id="analytics-cnzz">
+      CNZZ 统计
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/712">jerrybendy</a> 贡献</small>
+    </h3>
+    <p>
+      在 <span class="label label-info">主题配置文件</span> 中增加了一项
+      <code>cnzz_siteid</code>的配置项，值为 CNZZ 里面添加统计的站点ID。
+      这个ID可以在地址栏里，或者自动生成的脚本里面找到。
+    </p>
+    <p>默认脚本生成的内容会产生“站长统计”几个字，感觉很丑而且和主题不太搭，我用了一个 <code>display: none;</code>把这几个字给隐藏了。</p>
+  </section>
+
+  <section data-folding="analytics-busuanzi">
+    <h3 id="analytics-busuanzi">
+      不蒜子统计
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/809">panzhitian</a> 贡献</small>
+    </h3>
+
+    <div class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>
+      此特性在版本 <span class="label label-success">5.0.1</span> 中引入，要使用此功能请确保所使用的 NexT 版本在此之后
+    </div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#analytics-busuanzi-enable" aria-controls="clone" role="tab" data-toggle="tab">
+          全局配置
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#analytics-busuanzi-site-uv" aria-controls="profile" role="tab" data-toggle="tab">
+          站点UV配置
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#analytics-busuanzi-site-pv" aria-controls="profile" role="tab" data-toggle="tab">
+          站点PV配置
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#analytics-busuanzi-page-pv" aria-controls="profile" role="tab" data-toggle="tab">
+          单页面PV配置
+        </a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="analytics-busuanzi-enable">
+        <p>编辑 <span class="label label-info">主题配置文件</span> 中的<code>busuanzi_count</code>的配置项。</p>
+        <p>当<code>enable: true</code>时，代表开启全局开关。若<code>site_uv</code>、<code>site_pv</code>、<code>page_pv</code>的值均为<code>false</code>时，不蒜子仅作记录而不会在页面上显示。</p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="analytics-busuanzi-site-uv">
+        <p>当<code>site_uv: true</code>时，代表在页面底部显示站点的UV值。</p>
+        <p><code>site_uv_header</code>和<code>site_uv_footer</code>为自定义样式配置，相关的值留空时将不显示，可以使用（带特效的）font-awesome。显示效果为<code>[site_uv_header]UV值[site_uv_footer]</code>。</p>
+<pre><code class="yml hljs"><span class="hljs-comment"># 效果：本站访客数12345人次</span>
+<span class="hljs-attr">site_uv:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">site_uv_header:</span> <span class="hljs-string">本站访客数</span>
+<span class="hljs-attr">site_uv_footer:</span> <span class="hljs-string">人次</span>
+</code></pre>      </div>
+      <div role="tabpanel" class="tab-pane" id="analytics-busuanzi-site-pv">
+        <p>当<code>site_pv: true</code>时，代表在页面底部显示站点的PV值。</p>
+        <p><code>site_pv_header</code>和<code>site_pv_footer</code>为自定义样式配置，相关的值留空时将不显示，可以使用（带特效的）font-awesome。显示效果为<code>[site_pv_header]PV值[site_pv_footer]</code>。</p>
+<pre><code class="yml hljs"><span class="hljs-comment"># 效果：本站总访问量12345次</span>
+<span class="hljs-attr">site_pv:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">site_pv_header:</span> <span class="hljs-string">本站总访问量</span>
+<span class="hljs-attr">site_pv_footer:</span> <span class="hljs-string">次</span>
+</code></pre>      </div>
+      <div role="tabpanel" class="tab-pane" id="analytics-busuanzi-page-pv">
+        <p>当<code>page_pv: true</code>时，代表在文章页面的标题下显示该页面的PV值（阅读数）。</p>
+        <p><code>page_pv_header</code>和<code>page_pv_footer</code>为自定义样式配置，相关的值留空时将不显示，可以使用（带特效的）font-awesome。显示效果为<code>[page_pv_header]PV值[page_pv_footer]</code>。</p>
+<pre><code class="yml hljs"><span class="hljs-comment"># 效果：本文总阅读量12345次</span>
+<span class="hljs-attr">page_pv:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">page_pv_header:</span> <span class="hljs-string">本文总阅读量</span>
+<span class="hljs-attr">page_pv_footer:</span> <span class="hljs-string">次</span>
+</code></pre>      </div>
+    </div>
+
+  </section>
+
+  <section data-folding="analytics-tencent-mta">
+    <h3 id="analytics-tencent-mta">
+      腾讯移动分析
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/1408">aleonchen</a> 贡献</small>
+    </h3>
+    <p>
+      编辑 <span class="label label-info">主题配置文件</span>，填写 <code>tencent_mta</code> 的值。
+    </p>
+<pre><code class="yml hljs"><span class="hljs-comment"># Tencent MTA ID</span>
+<span class="hljs-attr">tencent_mta:</span> <span class="hljs-string">your-tencent-mta-id</span>
+</code></pre>  </section>
+
+  <section data-fodling="leanclound-page-views">
+    <h3 id="leanclound-page-views">
+      阅读次数统计（LeanCloud)
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/439">Doublemine</a> 贡献</small>
+    </h3>
+    <p>
+      请查看 <a href="https://notes.wanghao.work/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud">为NexT主题添加文章阅读量统计功能</a>
+    </p>
+  </section>
+
+
+  
+  <h2 class="page-header" id="share-system">内容分享服务</h2>
+
+  <section data-folding="share-jiathis">
+    <h3 id="share-jiathis">JiaThis</h3>
+    <p>
+      编辑 <span class="label label-info">主题配置文件</span>，
+      添加/修改字段 <code>jiathis</code>，值为 <code>true</code>。
+    </p>
+    <div class="next-docs-example"> JiaThis 内容分享服务配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># JiaThis 分享服务</span>
+<span class="hljs-attr">jiathis:</span> <span class="hljs-literal">true</span>
+</code></pre>  </section>
+
+  <section data-folding="share-baidu">
+    <h3 id="share-baidu">
+      <a href="http://share.baidu.com/" target="_blank" rel="external">百度分享</a>
+    </h3>
+    <p>编辑 <span class="label label-info">主题配置文件</span>，添加/修改字段 <code>baidushare</code>，值为 <code>true</code>。</p>
+    <div class="next-docs-example"> 百度内容分享服务配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># 百度分享服务</span>
+<span class="hljs-attr">baidushare:</span> <span class="hljs-literal">true</span>
+</code></pre>  </section>
+
+  <section data-folding="share-addthis">
+    <h3 id="share-addthis">
+      AddThis
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/660">hackjustu</a> 贡献</small>
+    </h3>
+    <ol>
+      <li>
+        在网站 <a href="https://www.addthis.com/">AddThis</a> 上注册账号。
+        可以使用 Google/Facebook/Twitter 账号进行第三方登陆
+      </li>
+      <li>
+        从下面菜单获得 AddThis id：<code>More.. --&gt; General --&gt; ID</code>。
+        具体 ID 获得方式参考以下截图 <br/>
+        <img src="/uploads/add-this-id.png" alt="AddThis Id" class="img-responsive img-thumbnail">
+      </li>
+      <li>
+        在 <span class="label label-info">主题配置文件</span> 中，把<code>#Share</code>下的 <code>#add_this_id</code>取消注释，
+        改为<code>add_this_id: put_your_add_this_id_here</code>
+      </li>
+    </ol>
+  </section>
+
+
+  <h2 id="search-system" class="page-header">搜索服务</h2>
+  <p>
+    NexT 支持集成 <a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a>、
+    <a href="http://tinysou.com/" target="_blank" rel="external">微搜索</a>、Local Search 和 Algolia。
+  </p>
+
+  <section data-folding="swiftype">
+    <h3 id="swiftype">
+      Swiftype 站内搜索
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/84">lzlun129</a> 贡献</small>
+    </h3>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#swiftype-step-1" aria-controls="clone" role="tab" data-toggle="tab">
+          注册账户
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#swiftype-step-2" aria-controls="profile" role="tab" data-toggle="tab">
+          创建搜索引擎
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#swiftype-step-3" aria-controls="profile" role="tab" data-toggle="tab">
+          定制与激活搜索
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#swiftype-step-4" aria-controls="profile" role="tab" data-toggle="tab">
+          获取 Key
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#swiftype-step-5" aria-controls="profile" role="tab" data-toggle="tab">
+          更新主题配置
+        </a>
+      </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="swiftype-step-1">
+        <p>前往 <a href="https://swiftype.com/users/sign_up" target="_blank" rel="external">Swiftype 注册页面</a>，注册一个新账户。</p>
+        <p><img src="/uploads/swiftype/step-1.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="swiftype-step-2">
+        <p>注册完成后，创建一个新的搜索引擎，并按照提示完成创建步骤。</p>
+        <p><img src="/uploads/swiftype/step-2.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="swiftype-step-3">
+        <p>搜索引擎创建完成后，在菜单中选择 <code>Integrate -&gt; Install Search</code> 开启搜索定制，按照步骤完成定制。最后一步记得点击 <code>Active</code> 按钮。</p>
+        <p><img src="/uploads/swiftype/step-3.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="swiftype-step-4">
+        <p>返回定制引擎的第二个步骤 <code>INSTALL CODE</code>，复制出你的 <code>swiftype_key</code>。</p>
+        <p><img src="/uploads/swiftype/step-4.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="swiftype-step-5">
+        <p>
+          编辑 <span class="label label-primary">站点配置文件</span>，
+          新增字段 <code>swiftype_key</code>，值设置成第四步中赋值出来的 key
+        </p>
+<pre><code class="armasm hljs"># <span class="hljs-keyword">Swiftype </span>Search Key
+<span class="hljs-keyword">swiftype_key: </span>xxxxxxxxx
+</code></pre>      </div>
+    </div>
+  </section>
+
+  <section data-folding="wei-sousuo">
+    <h3 id="wei-sousuo">
+      微搜索
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/84">lzlun129</a> 贡献</small>
+    </h3>
+    <p>TBD</p>
+  </section>
+
+  <section data-folding="local-search">
+    <h3 id="local-search">
+      Local Search
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/694">flashlab</a> 贡献</small>
+    </h3>
+    <p>添加百度/谷歌/本地 自定义站点内容搜索</p>
+    <ol>
+      <li>
+        <p>安装 <code>hexo-generator-searchdb</code>，在站点的根目录下执行以下命令：</p>
+<pre><code class="shell hljs"><span class="hljs-meta">$</span><span class="bash"> npm install hexo-generator-searchdb --save</span>
+</code></pre>      </li>
+      <li>
+        <p>编辑 <span class="label label-primary">站点配置文件</span>，新增以下内容到任意位置：</p>
+<pre><code class="yml hljs"><span class="hljs-attr">search:</span>
+<span class="hljs-attr">  path:</span> <span class="hljs-string">search.xml</span>
+<span class="hljs-attr">  field:</span> <span class="hljs-string">post</span>
+<span class="hljs-attr">  format:</span> <span class="hljs-string">html</span>
+<span class="hljs-attr">  limit:</span> <span class="hljs-number">10000</span>
+</code></pre>      </li>
+      <li>
+        <p>编辑 <span class="label label-info">主题配置文件</span>，启用本地搜索功能：</p>
+<pre><code class="yml hljs"><span class="hljs-comment"># Local search</span>
+<span class="hljs-attr">local_search:</span>
+<span class="hljs-attr">  enable:</span> <span class="hljs-literal">true</span>
+</code></pre>      </li>
+    </ol>
+  </section>
+
+  <section data-folding="algolia">
+    <h3 id="algolia-search">Algolia</h3>
+    <div class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>
+      此特性在版本 <span class="label label-success">5.1.0</span> 中引入，要使用此功能请确保所使用的 NexT 版本在此之后
+    </div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#algolia-step-1" aria-controls="clone" role="tab" data-toggle="tab">
+          注册 Algolia，创建 Index
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#algolia-step-2" aria-controls="profile" role="tab" data-toggle="tab">
+          安装 Hexo Algolia
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#algolia-step-3" aria-controls="profile" role="tab" data-toggle="tab">
+          获取 Key，更新站点配置
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#algolia-step-4" aria-controls="profile" role="tab" data-toggle="tab">
+          更新 Index
+        </a>
+      </li>
+      <li>
+        <a href="#algolia-step-5" role="tab" data-toggle="tab">主题集成</a>
+      </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="algolia-step-1">
+        <p>
+          前往 <a href="https://www.algolia.com" target="_blank" rel="external">Algolia 注册页面</a>，注册一个新账户。
+          可以使用 GitHub 或者 Google 账户直接登录，注册后的 14 天内拥有所有功能（包括收费类别的）。之后若未续费会自动降级为免费账户，免费账户
+          总共有 10,000 条记录，每月有 100,000 的可以操作数。注册完成后，创建一个新的 Index，这个 Index 将在后面使用。
+        </p>
+        <p><img src="/uploads/algolia/algolia-step-2.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="algolia-step-2">
+        <p>
+          Index 创建完成后，此时这个 Index 里未包含任何数据。
+          接下来需要安装 <a href="https://github.com/oncletom/hexo-algolia" target="_blank">Hexo Algolia</a> 扩展，
+          这个扩展的功能是搜集站点的内容并通过 API 发送给 Algolia。前往站点根目录，执行命令安装：
+        </p>
+<pre><code class="sql hljs">npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save hexo-algolia</span>
+</code></pre>      </div>
+      <div role="tabpanel" class="tab-pane" id="algolia-step-3">
+        <p>
+          在 Algolia 服务站点上找到需要使用的一些配置的值，包括 <code>ApplicationID</code>、<code>Search-Only API Key</code>、
+          <code>Admin API Key</code>。注意，<code>Admin API Key</code> 需要保密保存。点击ALL API KEYS 找到新建INDEX对应的key，
+          编辑权限，在弹出框中找到ACL选择勾选Add records, Delete records, List indices, Delete index权限，点击update更新。
+        </p>
+        <p><img src="/uploads/algolia/algolia-step-3.png" class="img-responsive"></p>
+        <p>
+          编辑 <span class="label label-primary">站点配置文件</span>，新增以下配置：
+<pre><code class="yml hljs"><span class="hljs-attr">algolia:</span>
+<span class="hljs-attr">  applicationID:</span> <span class="hljs-string">'applicationID'</span>
+<span class="hljs-attr">  indexName:</span> <span class="hljs-string">'indexName'</span>
+<span class="hljs-attr">  chunkSize:</span> <span class="hljs-number">5000</span>
+</code></pre>          替换除了 <code>chunkSize</code> 以外的其他字段为在 Algolia 获取到的值。
+        </p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="algolia-step-4">
+        <p>当配置完成，在站点根目录下执行 
+<pre><code class="bash hljs">$ <span class="hljs-built_in">export</span>(windows 为 <span class="hljs-built_in">set</span>) HEXO_ALGOLIA_INDEXING_KEY=Search-Only API key
+$ hexo algolia
+</code></pre>        来更新 Index。请注意观察命令的输出。</p>
+        <p><img src="/uploads/algolia/algolia-step-4.png" class="img-responsive"></p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="algolia-step-5">
+        <p>更改主题配置文件，找到 Algolia Search 配置部分：</p>
+<pre><code class="yml hljs"><span class="hljs-comment"># Algolia Search</span>
+<span class="hljs-attr">algolia_search:</span>
+<span class="hljs-attr">  enable:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">  hits:</span>
+<span class="hljs-attr">    per_page:</span> <span class="hljs-number">10</span>
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    input_placeholder:</span> <span class="hljs-string">Search</span> <span class="hljs-string">for</span> <span class="hljs-string">Posts</span>
+<span class="hljs-attr">    hits_empty:</span> <span class="hljs-string">"We didn't find any results for the search: ${query}"</span>
+<span class="hljs-attr">    hits_stats:</span> <span class="hljs-string">"${hits} results found in ${time} ms"</span>
+</code></pre>        将 <code>enable</code> 改为 <code>true</code> 即可，根据需要你可以调整 <code>labels</code> 中的文本。
+      </div>
+    </div>
+  </section>
+
+
+  <h2 id="others" class="page-header">其他服务</h2>
+
+  <section data-folding="mathjax">
+    <h3 id="mathjax">MathJax </h3>
+    <p>NexT 借助于 MathJax 来显示数学公式，此选项默认关闭。</p>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#mathjax-old-settings" aria-controls="clone" role="tab" data-toggle="tab">
+          5.0.0 及之前的版本
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#mathjax-new-settings" aria-controls="profile" role="tab" data-toggle="tab">
+          5.0.1 及以上的版本
+        </a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="mathjax-old-settings">
+        <p>编辑 <span class="label label-info">主题配置文件</span>，将 <code>mathjax</code> 设定为 <code>true</code> 即可。</p>
+<pre><code class="yml hljs"><span class="hljs-comment"># MathJax Support</span>
+<span class="hljs-attr">mathjax:</span>
+</code></pre>        <p class="bs-callout bs-callout-success">
+          ProTip: <a href="https://github.com/iissnan/hexo-theme-next/pull/363">使用七牛 CDN 来加速 MathJax 脚本的加载</a>
+        </p>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="mathjax-new-settings">
+        <p>
+          编辑 <span class="label label-info">主题配置文件</span>，
+          将 <code>mathjax</code> 下的 <code>enable</code> 设定为 <code>true</code> 即可。
+          <code>cdn</code> 用于指定 MathJax 的脚本地址，默认是 MathJax 官方提供的 CDN 地址。
+        </p>
+<pre><code class="yml hljs"><span class="hljs-comment"># MathJax Support</span>
+<span class="hljs-attr">mathjax:</span>
+<span class="hljs-attr">  enable:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">  cdn:</span> <span class="hljs-string">//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span>
+</code></pre>      </div>
+    </div>
+
+  </section>
+
+  <section data-folding="facebook-sdk">
+    <h3 id="facebook-sdk">
+      Facebook SDK
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/410">changyuheng</a> 贡献</small>
+    </h3>
+    <p>修改 <span class="label label-info">主题配置文件</span> 以下配置：</p>
+<pre><code class="yml hljs"><span class="hljs-comment"># Facebook SDK Support.</span>
+<span class="hljs-attr">facebook_sdk:</span>
+<span class="hljs-attr">  enable:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">  app_id:</span>
+<span class="hljs-attr">    fb_admin:</span>
+<span class="hljs-attr">      like_button:</span>  <span class="hljs-comment">#true</span>
+<span class="hljs-attr">      webmaster:</span>    <span class="hljs-comment">#true</span>
+</code></pre>  </section>
+
+  <section data-folding="google-webmaster-tools">
+    <h3 id="google-webmaster-tools">Google Webmaster tools</h3>
+    <p>设置 <a href="https://www.google.com/webmasters/tools/" target="_blank" rel="external">Google站点管理工具</a> 的验证字符串，用于提交 sitemap</p>
+    <ol>
+      <li>
+        <p>获取 google site verification code<br> 登录 Google Webmaster Tools，导航到验证方法，并选择 <code>HTML Tag</code>。将会获取到一段代码： </p>
+<pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"google-site-verification"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"XXXXXXXXXXXXXXXXXXXXXXX"</span> /&gt;</span></code></pre>        <p> 将 <code>content</code> 里面的 <code>XXXXXXXXXXXXXXXXXXXXXXX</code> 复制出来。
+        </p>
+      </li>
+      <li>
+        <p>设置主题。编辑 <span class="label label-info">主题配置文件</span>，新增/修改字段 <code>google_site_verification</code>。</p>
+<pre><code class="yml hljs"><span class="hljs-attr">google_site_verification:</span> <span class="hljs-string">XXXXXXXXXXXXXXXXXXXXXXX</span>
+</code></pre>      </li>
+    </ol>
+  </section>
+
+          <div class="text-center next-docs-section-footer">
+            <a href="https://github.com/iissnan/theme-next-docs/issues"
+               target="_blank" class="next-docs-btn next-docs-btn-default">
+              <i class="fa fa-bug"></i> 文档问题反馈
+            </a>
+            <a href="#top" class="back-to-top next-docs-btn next-docs-btn-default">
+              <i class="fa fa-arrow-up"></i> 返回顶部
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <nav class="next-docs-sidebar nav">
+            <div class="nav">
+  <ul>
+    <li>
+      <a href="#comment-system">评论系统</a>
+      <ul>
+        <li><a href="#disqus">Disqus</a></li>
+        <li><a href="#facebook-comments">Facebook Comments</a></li>
+        <li><a href="#hypercomments">HyperComments</a></li>
+        <li><a href="#yungentie">网易云跟帖</a></li>
+        <li><a href="#livere">来必力</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#analytics-system">数据统计与分析</a>
+      <ul>
+        <li><a href="#analytics-baidu">百度统计</a></li>
+        <li><a href="#analytics-google">Google 分析</a></li>
+        <li><a href="#analytics-tencent">腾讯分析</a></li>
+        <li><a href="#analytics-cnzz">CNZZ 统计</a></li>
+        <li><a href="#analytics-busuanzi">不蒜子统计</a></li>
+        <li><a href="#analytics-tencent-mta">腾讯移动分析</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#share-system">内容分享服务</a>
+      <ul>
+        <li><a href="#share-jiathis">JiaThis</a></li>
+        <li><a href="#share-baidu">百度分享</a></li>
+        <li><a href="#share-addthis">AddThis</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#search-system">搜索服务</a>
+      <ul>
+        <li><a href="#swiftype">Swiftype</a></li>
+        <li><a href="#wei-sousuo">微搜索</a></li>
+        <li><a href="#local-search">Local Search</a></li>
+        <li><a href="#algolia-search">Algolia</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#others">其他服务</a>
+      <ul>
+        <li><a href="#mathjax">MathJax</a></li>
+        <li><a href="#facebook-sdk">Facebook SDK</a></li>
+        <li><a href="#google-webmaster-tools">Google Webmaster tools</a></li>
+      </ul>
+    </li>
+  </ul>
+            </div>
+
+            <ul>
+              <li><a href="#top" class="back-to-top">回到顶部</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+<footer class="footer">
+  <div class="container">
+    <hr>
+    <p class="pull-right text-muted next-maker">
+      &copy; Made by <a href="https://github.com/iissnan" target="_blank">IIssNan</a>
+    </p>
+    <div>
+      <ul class="next-docs-footer-links">
+        <li><a href="https://github.com/iissnan/theme-next-docs/issues">文档问题反馈</a></li>
+        <li><a href="https://github.com/iissnan/theme-next-docs">文档 @ GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75665289-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

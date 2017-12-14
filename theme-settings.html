@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>主题配置 - NexT 使用文档</title>
+  <link href="https://fonts.googleapis.com/css?family=Monda:400,700|PT+Mono:300,300italic,400,400italic,700,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body class="theme-settings">
+<!--[if lt IE 10]>
+<p class="browserupgrade">
+  You are using an <strong>outdated</strong> browser.
+  Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+
+  <header>
+  <nav class="navbar navbar-default navbar-static-top" id="nav">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">NexT</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li>
+          <a href="/getting-started.html">开始使用</a>
+        </li>
+        <li>
+          <a href="/theme-settings.html">主题配置</a>
+        </li>
+        <li>
+          <a href="/third-party-services.html">第三方服务</a>
+        </li>
+        <li>
+          <a href="/tag-plugins.html">内建标签</a>
+        </li>
+        <li>
+          <a href="/advanced-settings.html">进阶设定</a>
+        </li>
+        <li>
+          <a href="/faqs.html">常见问题</a>
+        </li>
+        <li>
+          <a href="/platforms.html">其他平台</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <h1 class="next-docs-header">
+    <div class="container">
+  <i class="fa-star fa"></i> 主题配置
+    </div>
+  </h1>
+  </header>
+
+  <main>
+  <section class="next-docs">
+    <div class="container next-docs-sections">
+      <div class="row">
+        <div class="col-md-9 next-docs-section" role="main">
+  <p>NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保持最大限度的易用性。</p>
+
+  <section data-folding="rss">
+    <h3 id="rss" class="page-header">设置 RSS</h3>
+    <p>
+      NexT 中 RSS 有三个设置选项，满足特定的使用场景。
+      更改 <span class="label label-info">主题配置文件</span>，设定 <code>rss</code> 字段的值：
+    </p>
+    <ul>
+      <li>
+        <code>false</code>：禁用 RSS，不在页面上显示 RSS 连接。
+      </li>
+      <li>
+        留空：使用 Hexo 生成的 Feed 链接。
+        你可以需要先安装 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank">hexo-generator-feed</a> 插件。
+      </li>
+      <li>
+        具体的链接地址：适用于已经烧制过 Feed 的情形。
+      </li>
+    </ul>
+  </section>
+
+
+  <section data-folding="tags-page">
+    <h3 id="tags-page" class="page-header">添加「标签」页面</h3>
+    <p>新建「标签」页面，并在菜单中显示「标签」链接。「标签」页面将展示站点的所有标签，若你的所有文章都未包含标签，此页面将是空的。
+      底下代码是一篇包含标签的文章的例子：
+    </p>
+<pre><code class="md hljs">title: 标签测试文章
+tags:
+  - Testing
+<span class="hljs-section">  - Another Tag
+---</span>
+</code></pre>    <p class="bs-callout bs-callout-info">
+      请参阅 <a href="https://hexo.io/zh-cn/docs/front-matter.html#分类和标签" target="_blank">
+        Hexo 的分类与标签文档</a>，了解如何为文章添加标签或者分类。
+    </p>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#new-page-tags" aria-controls="clone" role="tab" data-toggle="tab">
+          新建页面
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#set-page-tags" aria-controls="profile" role="tab" data-toggle="tab">
+          设置页面类型
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#update-menu-for-tags-page" aria-controls="profile" role="tab" data-toggle="tab">
+          修改菜单
+        </a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="new-page-tags">
+        <p>在终端窗口下，定位到 Hexo 站点目录下。使用 <code>hexo new page</code> 新建一个页面，命名为 <code>tags</code> ：</p>
+<pre><code class="routeros hljs">$ cd your-hexo-site
+$ hexo new<span class="hljs-built_in"> page </span>tags
+</code></pre>      </div>
+      <div role="tabpanel" class="tab-pane" id="set-page-tags">
+        <p>编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下：</p>
+<pre><code class="markdown hljs">title: 标签
+date: 2014-12-22 12:39:04
+<span class="hljs-section">type: "tags"
+---</span>
+</code></pre>      </div>
+      <div role="tabpanel" class="tab-pane" id="update-menu-for-tags-page">
+        <p>
+          在菜单中添加链接。编辑 <span class="label label-info">主题配置文件</span> ，
+          添加 <code>tags</code> 到 <code>menu</code> 中，如下:
+        </p>
+<pre><code class="yml hljs"><span class="hljs-attr">menu:</span>
+<span class="hljs-attr">  home:</span> <span class="hljs-string">/</span>
+<span class="hljs-attr">  archives:</span> <span class="hljs-string">/archives</span>
+<span class="hljs-attr">  tags:</span> <span class="hljs-string">/tags</span>
+</code></pre>      </div>
+    </div>
+    <p class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>如果有集成评论服务，页面也会带有评论。
+      若需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code>，如：
+    </p>
+    <div class="next-docs-example">禁用评论示例</div>
+<pre><code class="markdown hljs">title: 标签
+date: 2014-12-22 12:39:04
+type: "tags"
+<span class="hljs-section">comments: false
+---</span>
+</code></pre>  </section>
+
+
+  <section data-folding="categories-page">
+    <h3 id="categories-page" class="page-header">添加「分类」页面</h3>
+    <p>
+      新建「分类」页面，并在菜单中显示「分类」链接。「分类」页面将展示站点的所有分类，若你的所有文章都未包含分类，此页面将是空的。
+      底下代码是一篇包含分类的文章的例子：
+    </p>
+<pre><code class="md hljs">title: 分类测试文章
+<span class="hljs-section">categories: Testing
+---</span>
+</code></pre>    <p class="bs-callout bs-callout-info">
+      请参阅 <a href="https://hexo.io/zh-cn/docs/front-matter.html#分类和标签" target="_blank">
+        Hexo 的分类与标签文档</a>，了解如何为文章添加标签或者分类。
+    </p>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#new-page-categories" aria-controls="clone" role="tab" data-toggle="tab">
+          新建页面
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#set-page-categories" aria-controls="profile" role="tab" data-toggle="tab">
+          设置页面类型
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#update-menu-for-categories-page" aria-controls="profile" role="tab" data-toggle="tab">
+          修改菜单
+        </a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="new-page-categories">
+        <p>在终端窗口下，定位到 Hexo 站点目录下。使用 <code>hexo new page</code> 新建一个页面，命名为 <code>categories</code> ：</p>
+<pre><code class="routeros hljs">$ cd your-hexo-site
+$ hexo new<span class="hljs-built_in"> page </span>categories
+</code></pre>      </div>
+      <div role="tabpanel" class="tab-pane" id="set-page-categories">
+        <p>编辑刚新建的页面，将页面的 <code>type</code> 设置为 <code>categories</code> ，主题将自动为这个页面显示分类。页面内容如下：</p>
+<pre><code class="markdown hljs">title: 分类
+date: 2014-12-22 12:39:04
+<span class="hljs-section">type: "categories"
+---</span>
+</code></pre>      </div>
+      <div role="tabpanel" class="tab-pane" id="update-menu-for-categories-page">
+        <p>
+          在菜单中添加链接。编辑 <span class="label label-info">主题配置文件</span> ，
+          添加 <code>categories</code> 到 <code>menu</code> 中，如下:
+        </p>
+<pre><code class="yml hljs"><span class="hljs-attr">menu:</span>
+<span class="hljs-attr">  home:</span> <span class="hljs-string">/</span>
+<span class="hljs-attr">  archives:</span> <span class="hljs-string">/archives</span>
+<span class="hljs-attr">  categories:</span> <span class="hljs-string">/categories</span>
+</code></pre>      </div>
+    </div>
+    <p class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>如果有集成评论服务，页面也会带有评论。
+      若需要关闭的话，请添加字段 <code>comments</code> 并将值设置为 <code>false</code>，如：
+    </p>
+    <div class="next-docs-example">禁用评论示例</div>
+<pre><code class="markdown hljs">title: 分类
+date: 2014-12-22 12:39:04
+type: "categories"
+<span class="hljs-section">comments: false
+---</span>
+</code></pre>  </section>
+
+  <section data-fodling="fonts-customization">
+    <h3 id="fonts-customization" class="page-header">设置字体</h3>
+    <div class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>
+      此特性在版本 <span class="label label-success">5.0.1</span> 中引入，要使用此功能请确保所使用的 NexT 版本在此之后
+    </div>
+
+    <p>
+      为了解决 <a href="https://www.google.com/fonts">Google Fonts API</a> 不稳定的问题，NexT 在 5.0.1 中引入此特性。
+      通过此特性，你可以指定所使用的字体库外链地址；与此同时，NexT 开放了 5 个特定范围的字体设定，他们是：
+    </p>
+    <ul>
+      <li>全局字体：定义的字体将在全站范围使用</li>
+      <li>标题字体：文章内标题的字体（h1, h2, h3, h4, h5, h6）</li>
+      <li>文章字体：文章所使用的字体</li>
+      <li>Logo字体：Logo 所使用的字体</li>
+      <li>代码字体： 代码块所使用的字体</li>
+    </ul>
+    <p>各项所指定的字体将作为首选字体，当他们不可用时会自动 Fallback 到 NexT 设定的基础字体组：</p>
+    <ul>
+      <li>非代码类字体：Fallback 到 <code>"PingFang SC", "Microsoft YaHei", sans-serif</code></li>
+      <li>代码类字体： Fallback 到 <code>consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace</code></li>
+    </ul>
+    <p>
+      另外，每一项都有一个额外的 <code>external</code> 属性，此属性用来控制是否使用外链字体库。
+      开放此属性方便你设定那些已经安装在系统中的字体，减少不必要的请求（请求大小）。
+    </p>
+
+    <div class="next-docs-example">配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-attr">font:</span>
+<span class="hljs-attr">  enable:</span> <span class="hljs-literal">true</span>
+
+  <span class="hljs-comment"># 外链字体库地址，例如 //fonts.googleapis.com (默认值)</span>
+<span class="hljs-attr">  host:</span>
+
+  <span class="hljs-comment"># 全局字体，应用在 body 元素上</span>
+<span class="hljs-attr">  global:</span>
+<span class="hljs-attr">    external:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    family:</span> <span class="hljs-string">Monda</span>
+
+  <span class="hljs-comment"># 标题字体 (h1, h2, h3, h4, h5, h6)</span>
+<span class="hljs-attr">  headings:</span>
+<span class="hljs-attr">    external:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    family:</span> <span class="hljs-string">Roboto</span> <span class="hljs-string">Slab</span>
+
+  <span class="hljs-comment"># 文章字体</span>
+<span class="hljs-attr">  posts:</span>
+<span class="hljs-attr">    external:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    family:</span>
+
+  <span class="hljs-comment"># Logo 字体</span>
+<span class="hljs-attr">  logo:</span>
+<span class="hljs-attr">    external:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    family:</span> <span class="hljs-string">Lobster</span> <span class="hljs-string">Two</span>
+<span class="hljs-attr">    size:</span> <span class="hljs-number">24</span>
+
+  <span class="hljs-comment"># 代码字体，应用于 code 以及代码块</span>
+<span class="hljs-attr">  codes:</span>
+<span class="hljs-attr">    external:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    family:</span> <span class="hljs-string">PT</span> <span class="hljs-string">Mono</span>
+</code></pre>  </section>
+
+
+  <section data-folding="syntax-highlight-scheme">
+    <h3 id="syntax-highlight-scheme" class="page-header">设置代码高亮主题</h3>
+    <p>
+      NexT 使用 <a href="https://github.com/chriskempson/tomorrow-theme">Tomorrow Theme</a> 作为代码高亮，共有5款主题供你选择。
+      NexT 默认使用的是 白色的 <code>normal</code> 主题，可选的值有 <code>normal</code>，<code>night</code>，
+      <code>night blue</code>，
+      <code>night bright</code>，
+      <code>night eighties</code>：
+    </p>
+    <table class="table table-bordered table-condensed">
+      <tbody>
+      <tr>
+        <td>
+            <img src="/assets/img/tomorrow.png" class="img-responsive center-block" />
+        </td>
+        <td>
+          <img src="/assets/img/tomorrow-night.png" class="img-responsive center-block" />
+        </td>
+        <td>
+          <img src="/assets/img/tomorrow-night-blue.png" class="img-responsive center-block" />
+        </td>
+        <td>
+          <img src="/assets/img/tomorrow-night-bright.png" class="img-responsive center-block" />
+        </td>
+        <td>
+          <img src="/assets/img/tomorrow-night-eighties.png" class="img-responsive center-block" />
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <p>更改 <code>highlight_theme</code> 字段，将其值设定成你所喜爱的高亮主题，例如：</p>
+    <div class="next-docs-example">高亮主题设置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># Code Highlight theme</span>
+<span class="hljs-comment"># Available value: normal | night | night eighties | night blue | night bright</span>
+<span class="hljs-comment"># https://github.com/chriskempson/tomorrow-theme</span>
+<span class="hljs-attr">highlight_theme:</span> <span class="hljs-string">normal</span>
+</code></pre>  </section>
+
+  <section data-folding="author-sites">
+    <h3 id="author-sites" class="page-header">侧边栏社交链接</h3>
+    <p>
+      侧栏社交链接的修改包含两个部分，第一是链接，第二是链接图标。
+      两者配置均在 <span class="label label-info">主题配置文件</span> 中。
+    </p>
+    <ol>
+      <li>
+        <p>链接放置在 <code>social</code> 字段下，一行一个链接。其键值格式是 <code>显示文本: 链接地址</code>。</p>
+        <div class="next-docs-example">配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># Social links</span>
+<span class="hljs-attr">social:</span>
+<span class="hljs-attr">  GitHub:</span> <span class="hljs-attr">https://github.com/your-user-name</span>
+<span class="hljs-attr">  Twitter:</span> <span class="hljs-attr">https://twitter.com/your-user-name</span>
+  <span class="hljs-string">微博:</span> <span class="hljs-attr">http://weibo.com/your-user-name</span>
+  <span class="hljs-string">豆瓣:</span> <span class="hljs-attr">http://douban.com/people/your-user-name</span>
+  <span class="hljs-string">知乎:</span> <span class="hljs-attr">http://www.zhihu.com/people/your-user-name</span>
+  <span class="hljs-comment"># 等等</span>
+</code></pre>      </li>
+      <li>
+        <p>
+          设定链接的图标，对应的字段是 <code>social_icons</code>。其键值格式是 <code>匹配键: Font Awesome 图标名称</code>， <code>匹配键</code>
+          与上一步所配置的链接的 <code>显示文本</code> 相同（大小写严格匹配），<code>图标名称</code> 是 Font Awesome 图标的名字（不必带 <code>fa-</code> 前缀）。
+          <code>enable</code> 选项用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。
+        </p>
+        <div class="next-docs-example">配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># Social Icons</span>
+<span class="hljs-attr">social_icons:</span>
+<span class="hljs-attr">  enable:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-comment"># Icon Mappings</span>
+<span class="hljs-attr">  GitHub:</span> <span class="hljs-string">github</span>
+<span class="hljs-attr">  Twitter:</span> <span class="hljs-string">twitter</span>
+  <span class="hljs-string">微博:</span> <span class="hljs-string">weibo</span>
+</code></pre>      </li>
+    </ol>
+
+  </section>
+
+  <section data-fodling="reward">
+    <h3 id="reward" class="page-header">
+      开启打赏功能
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/687" target="_blank">habren</a> 贡献</small>
+    </h3>
+    <p>
+      越来越多的平台（微信公众平台，新浪微博，简书，百度打赏等）支持打赏功能，付费阅读时代越来越近，特此增加了打赏功能，支持微信打赏和支付宝打赏。
+      只需要 <span class="label label-info">主题配置文件</span> 中填入 微信 和 支付宝 收款二维码图片地址 即可开启该功能。
+    </p>
+    <div class="next-docs-example">打赏功能配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-attr">reward_comment:</span> <span class="hljs-string">坚持原创技术分享，您的支持将鼓励我继续创作！</span>
+<span class="hljs-attr">wechatpay:</span> <span class="hljs-string">/path/to/wechat-reward-image</span>
+<span class="hljs-attr">alipay:</span> <span class="hljs-string">/path/to/alipay-reward-image</span>
+</code></pre>  </section>
+
+  <section data-folding="blogroll">
+    <h3 id="blogroll" class="page-header">
+      友情链接
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/250">iamwent</a> 贡献</small>
+    </h3>
+    <p>编辑 <span class="label label-info">主题配置文件</span> 添加：</p>
+    <div class="next-docs-example">友情链接配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># title</span>
+<span class="hljs-attr">links_title:</span> <span class="hljs-string">Links</span>
+<span class="hljs-attr">links:</span>
+<span class="hljs-attr">  MacTalk:</span> <span class="hljs-attr">http://macshuo.com/</span>
+<span class="hljs-attr">  Title:</span> <span class="hljs-attr">http://example.com/</span>
+</code></pre>  </section>
+
+  <section data-folding="volunteer-404">
+    <h3 id="volunteer-404" class="page-header">
+      腾讯公益404页面
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/126">xirong</a> 贡献</small>
+    </h3>
+    <p>
+      腾讯公益404页面，寻找丢失儿童，让大家一起关注此项公益事业！效果如下 <a href="http://www.ixirong.com/404.html">http://www.ixirong.com/404.html</a>
+    </p>
+    <p>使用方法，新建 404.html 页面，放到主题的 <code>source</code> 目录下，内容如下：</p>
+<pre><code class="html hljs"><span class="hljs-meta">&lt;!DOCTYPE HTML&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"content-type"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"text/html;charset=utf-8;"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"IE=edge,chrome=1"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"robots"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"all"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"robots"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"index,follow"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://qzone.qq.com/gy/404/style/404style.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/plain"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://www.qq.com/404/search_children.js"</span>
+          <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> <span class="hljs-attr">homePageUrl</span>=<span class="hljs-string">"/"</span>
+          <span class="hljs-attr">homePageName</span>=<span class="hljs-string">"回到我的主页"</span>&gt;</span><span class="undefined">
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://qzone.qq.com/gy/404/data.js"</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://qzone.qq.com/gy/404/page.js"</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>  </section>
+
+  <section data-folding="site-since">
+    <h3 id="site-since" class="page-header">站点建立时间</h3>
+    <p>
+      这个时间将在站点的底部显示，例如 <code>&copy; 2013 - 2015</code>。
+      编辑 <span class="label label-info">主题配置文件</span>，新增字段 <code>since</code>。
+    </p>
+    <div class="next-docs-example">配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-attr">since:</span> <span class="hljs-number">2013</span></code></pre>  </section>
+
+  <section data-folding="#wechat-subscriber">
+    <h3 id="wechat-subscriber" class="page-header">
+      订阅微信公众号
+      <small>由 <a href="https://github.com/iissnan/hexo-theme-next/pull/788">huiwang</a> 贡献</small>
+    </h3>
+
+    <div class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>
+      此特性在版本 <span class="label label-success">5.0.1</span> 中引入，要使用此功能请确保所使用的 NexT 版本在此之后
+    </div>
+
+    <p>在每篇文章的末尾显示微信公众号二维码，扫一扫，轻松订阅博客。</p>
+    <p>在微信公众号平台下载您的二维码，并将它存放于博客<code>source/uploads/</code>目录下。</p>
+    <p>然后编辑 <span class="label label-info">主题配置文件</span>，如下：</p>
+    <div class="next-docs-example">配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># Wechat Subscriber</span>
+<span class="hljs-attr">wechat_subscriber:</span>
+<span class="hljs-attr">  enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">  qcode:</span> <span class="hljs-string">/uploads/wechat-qcode.jpg</span>
+<span class="hljs-attr">  description:</span> <span class="hljs-string">欢迎您扫一扫上面的微信公众号，订阅我的博客！</span>
+</code></pre>  </section>
+
+  <section data-folding="#use-motion">
+    <h3 id="use-motion">设置「动画效果」</h3>
+    <p>
+      NexT 默认开启动画效果，效果使用 JavaScript 编写，因此需要等待 JavaScript 脚本完全加载完毕后才会显示内容。
+      如果您比较在乎速度，可以将设置此字段的值为 <code>false</code> 来关闭动画。
+    </p>
+    <p>
+      编辑 <span class="label label-info">主题配置文件</span>，
+      搜索 <code>use_motion</code>，根据您的需求设置值为 <code>true</code> 或者 <code>false</code> 即可：
+    </p>
+<pre><code class="yml hljs"><span class="hljs-attr">use_motion:</span> <span class="hljs-literal">true</span>  <span class="hljs-comment"># 开启动画效果</span>
+<span class="hljs-attr">use_motion:</span> <span class="hljs-literal">false</span> <span class="hljs-comment"># 关闭动画效果</span>
+</code></pre>  </section>
+
+  <section data-folding="#use-bg-animation">
+    <h3 id="use-bg-animation">设置「背景动画」</h3>
+    <p>
+      NexT 自带两种背景动画效果
+    </p>
+    <p>
+      编辑 <span class="label label-info">主题配置文件</span>，
+      搜索 <code>canvas_nest</code> 或 <code>three_waves</code>，根据您的需求设置值为 <code>true</code> 或者 <code>false</code> 即可：
+    </p>
+    <div class="bs-callout bs-callout-warning">
+      <strong>注意：</strong>
+      <code>three_waves</code> 在版本 <span class="label label-success">5.1.1</span> 中引入。只能同时开启一种背景动画效果。
+    </div>
+    <div class="next-docs-example"><code>canvas_nest</code> 配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># canvas_nest</span>
+<span class="hljs-attr">canvas_nest:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//开启动画</span>
+<span class="hljs-attr">canvas_nest:</span> <span class="hljs-literal">false</span> <span class="hljs-string">//关闭动画</span>
+</code></pre>    <div class="next-docs-example"><code>three_waves</code> 配置示例</div>
+<pre><code class="yml hljs"><span class="hljs-comment"># three_waves</span>
+<span class="hljs-attr">three_waves:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//开启动画</span>
+<span class="hljs-attr">three_waves:</span> <span class="hljs-literal">false</span> <span class="hljs-string">//关闭动画</span>
+</code></pre>  </section>
+
+
+          <div class="text-center next-docs-section-footer">
+            <a href="https://github.com/iissnan/theme-next-docs/issues"
+               target="_blank" class="next-docs-btn next-docs-btn-default">
+              <i class="fa fa-bug"></i> 文档问题反馈
+            </a>
+            <a href="#top" class="back-to-top next-docs-btn next-docs-btn-default">
+              <i class="fa fa-arrow-up"></i> 返回顶部
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <nav class="next-docs-sidebar nav">
+            <div class="nav">
+  <ul>
+    <li><a href="#rss">设置「RSS」</a></li>
+    <li><a href="#tags-page">添加「标签」页面</a></li>
+    <li><a href="#categories-page">添加「分类」页面</a></li>
+    <li><a href="#fonts-customization">设置「字体」</a></li>
+    <li><a href="#syntax-highlight-scheme">设置「代码高亮主题」</a></li>
+    <li><a href="#author-sites">侧边栏社交链接</a></li>
+    <li><a href="#reward">开启打赏功能</a></li>
+    <li><a href="#blogroll">设置友情链接</a></li>
+    <li><a href="#volunteer-404">腾讯公益404页面</a></li>
+    <li><a href="#site-since">站点建立时间</a></li>
+    <li><a href="#wechat-subscriber">订阅微信公众号</a></li>
+    <li><a href="#use-motion">设置「动画效果」</a></li>
+    <li><a href="#use-bg-animation">设置「背景动画」</a></li>
+  </ul>
+            </div>
+
+            <ul>
+              <li><a href="#top" class="back-to-top">回到顶部</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+<footer class="footer">
+  <div class="container">
+    <hr>
+    <p class="pull-right text-muted next-maker">
+      &copy; Made by <a href="https://github.com/iissnan" target="_blank">IIssNan</a>
+    </p>
+    <div>
+      <ul class="next-docs-footer-links">
+        <li><a href="https://github.com/iissnan/theme-next-docs/issues">文档问题反馈</a></li>
+        <li><a href="https://github.com/iissnan/theme-next-docs">文档 @ GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75665289-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

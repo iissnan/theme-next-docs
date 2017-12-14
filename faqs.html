@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>常见问题 - NexT 使用文档</title>
+  <link href="https://fonts.googleapis.com/css?family=Monda:400,700|PT+Mono:300,300italic,400,400italic,700,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body class="faqs">
+<!--[if lt IE 10]>
+<p class="browserupgrade">
+  You are using an <strong>outdated</strong> browser.
+  Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+
+  <header>
+  <nav class="navbar navbar-default navbar-static-top" id="nav">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">NexT</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li>
+          <a href="/getting-started.html">开始使用</a>
+        </li>
+        <li>
+          <a href="/theme-settings.html">主题配置</a>
+        </li>
+        <li>
+          <a href="/third-party-services.html">第三方服务</a>
+        </li>
+        <li>
+          <a href="/tag-plugins.html">内建标签</a>
+        </li>
+        <li>
+          <a href="/advanced-settings.html">进阶设定</a>
+        </li>
+        <li>
+          <a href="/faqs.html">常见问题</a>
+        </li>
+        <li>
+          <a href="/platforms.html">其他平台</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <h1 class="next-docs-header">
+    <div class="container">
+  <i class="fa-life-ring fa"></i> 常见问题
+    </div>
+  </h1>
+  </header>
+
+  <main>
+  <section class="next-docs">
+    <div class="container next-docs-sections">
+      <div class="row">
+        <div class="col-md-9 next-docs-section" role="main">
+  <p>
+    这里罗列的是 NexT Issues 中用户提问最频繁的问题。若你在这里无法找到问题的答案，
+    请访问 <a href="https://github.com/iissnan/hexo-theme-next/issues" target="_blank">NexT Issues</a>，
+    提交你的问题。
+  </p>
+
+
+  <section data-folding="read-more">
+    <h2 id="read-more" class="page-header">如何设置「阅读全文」？</h2>
+    <p>
+      在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。
+      NexT 提供三种方式来控制文章在首页的显示方式。
+      也就是说，在首页显示文章的摘录并显示 <strong>阅读全文</strong> 按钮，可以通过以下方法：
+    </p>
+    <ol>
+      <li>
+        在文章中使用 <code>&lt;!-- more --&gt;</code> 手动进行截断，Hexo 提供的方式
+        <span class="label label-success">推荐</span>
+      </li>
+      <li>
+        在文章的 <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">front-matter</a>
+        中添加 <code>description</code>，并提供文章摘录
+      </li>
+      <li>
+        <p>自动形成摘要，在 <span class="label label-info">主题配置文件</span> 中添加：</p>
+<pre><code class="yml hljs"><span class="hljs-attr">auto_excerpt:</span>
+<span class="hljs-attr">  enable:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">  length:</span> <span class="hljs-number">150</span>
+</code></pre>        <p>默认截取的长度为 <code>150</code> 字符，可以根据需要自行设定</p>
+      </li>
+    </ol>
+    <div class="bs-callout bs-callout-info">
+      建议使用 <code>&lt;!-- more --&gt;</code>（即第一种方式），除了可以精确控制需要显示的摘录内容以外，
+      这种方式也可以让 Hexo 中的插件更好的识别。
+    </div>
+  </section>
+
+
+  <section data-folding="favicon">
+    <h2 id="favicon" class="page-header">Favicon 设置后没有生效？</h2>
+    <p>
+      将你的 <code>favicon</code> 放置到 <strong>站点</strong> 的 <code>source</code>
+      目录下，与站点的配置文件同级。
+      若你发现设置的 Favicon 并未生效，请先清除浏览器的缓存后直接访问 Favicon 的地址，这个地址通常是
+      <code>http://your-domain.com/favicon.ico</code>。
+    </p>
+    <p class="bs-callout bs-callout-warning">
+      如果你的站点是放在子目录下，请设置为：<code>favicon: favicon.ico</code>
+    </p>
+  </section>
+
+
+  <section data-folding="custom-font">
+    <h2 id="custom-font" class="page-header">如何更改字体？</h2>
+    <p>
+      NexT 从 <strong>5.0.1</strong> 版本开始提供一个 <a href="/theme-settings.html#fonts-customization">字体定制特性</a>，
+      请先查看此特性是否能满足你的需求。以下的修改将覆盖 字体定制 的特性。
+      编辑主题下的 <code>source/css/_variables/custom.styl</code> 文件，新增两个变量：
+    </p>
+<pre><code class="styl hljs"><span class="hljs-comment">// 标题，修改成你期望的字体族</span>
+<span class="hljs-variable">$font</span>-family-headings = Georgia, sans
+
+<span class="hljs-comment">// 修改成你期望的字体族</span>
+<span class="hljs-variable">$font</span>-family-base = <span class="hljs-string">"Microsoft YaHei"</span>, Verdana, sans-serif
+
+<span class="hljs-comment">// 代码字体</span>
+<span class="hljs-variable">$code</span>-<span class="hljs-attribute">font-family</span> = <span class="hljs-string">"Input Mono"</span>, <span class="hljs-string">"PT Mono"</span>, Consolas, Monaco, Menlo, monospace
+
+<span class="hljs-comment">// 正文字体的大小</span>
+<span class="hljs-variable">$font</span>-size-base = <span class="hljs-number">16px</span>
+
+<span class="hljs-comment">// 代码字体的大小</span>
+<span class="hljs-variable">$code</span>-<span class="hljs-attribute">font-size</span> = <span class="hljs-number">13px</span>
+</code></pre>  </section>
+
+
+  <section data-folding="custom-content-width">
+    <h2 id="custom-content-width" class="page-header">如何更改内容区域的宽度？</h2>
+    <p>NexT 对于内容的宽度的设定如下：</p>
+    <ul>
+      <li>700px，当屏幕宽度 < 1600px </li>
+      <li>900px，当屏幕宽度 >= 1600px</li>
+      <li>移动设备下，宽度自适应</li>
+    </ul>
+    <p>
+      如果你需要修改内容的宽度，同样需要编辑样式文件。
+      编辑主题的 <code>source/css/_variables/custom.styl</code> 文件，新增变量：
+    </p>
+<pre><code class="styl hljs"><span class="hljs-comment">// 修改成你期望的宽度</span>
+<span class="hljs-variable">$content</span>-desktop = <span class="hljs-number">700px</span>
+
+<span class="hljs-comment">// 当视窗超过 1600px 后的宽度</span>
+<span class="hljs-variable">$content</span>-desktop-large = <span class="hljs-number">900px</span>
+</code></pre>    <p class="bs-callout bs-callout-warning">
+      此方法不适用于 Pisces Scheme，关于如何修改 Pisces Scheme 的宽度请参看
+      <a href="https://github.com/iissnan/hexo-theme-next/issues/759#issuecomment-202242848">这个 Issue</a>
+    </p>
+  </section>
+
+  <section data-fodling="setting-menu">
+    <h2 id="setting-menu" class="page-header">为何新增的菜单项显示 Menu.xxx</h2>
+    <p>
+      NexT 使用了 Hexo 提供的国际化功能，因此在 Menu 部分配置的值并非直接用于界面的展示，而是作为一个名称。
+      当渲染的时候，NexT 去寻找对应的语言文件，并替换这个键所定义的文本后展示。
+    </p>
+
+    <p>
+      以 <code>home</code> 为例，在
+      <span class="label label-info">主题配置文件</span> 中配置为 <code>home: /</code>，
+      此处的键即是 <code>home</code>，在不同的语言中，这个键所对应的文本都不同：
+    </p>
+<pre><code class="yml hljs"><span class="hljs-comment"># 简体中文</span>
+<span class="hljs-comment"># 语言文件 languages/zh-Hans.yml</span>
+<span class="hljs-attr">menu:</span>
+<span class="hljs-attr">  home:</span> <span class="hljs-string">首页</span>
+
+<span class="hljs-comment"># 英文</span>
+<span class="hljs-comment"># 语言文件 languages/en.yml</span>
+<span class="hljs-attr">menu:</span>
+<span class="hljs-attr">  home:</span> <span class="hljs-string">Home</span>
+</code></pre>
+    <p>因此，当新增一个项时，必须在 <strong>所使用的语言</strong> 中添加对应的翻译文本。</p>
+
+    <p class="bs-callout bs-callout-success">
+      关于菜单的配置，请参考 <a href="/getting-started.html#menu-settings">菜单的配置</a>
+    </p>
+  </section>
+
+  <section data-folding="count-incorrect-for-tags-categories">
+    <h2 id="count-incorrect-for-tags-categories">标签/分类数量统计不准确？</h2>
+    <p>
+      因为 Hexo 有缓存的功能，因此有时候你会发现在 标签 和 分类 页面中的数量统计并不准确。
+      出现这个问题时，可以按照以下步骤重新生成站点的内容：
+    </p>
+    <ol>
+      <li>删除站点目录下的 <code>db.json</code> 文件</li>
+      <li>在站点目录下执行命令 <code>hexo clean</code></li>
+      <li>在站点目录下执行命令，重新生成 <code>hexo generate</code></li>
+    </ol>
+    <p>当执行完以上步骤后，可以在本地启动服务器来验证下是否已经解决问题。</p>
+  </section>
+
+
+  <section data-fodling="incorrect-language">
+    <h2 id="incorrect-language" class="page-header">为何语言显示不正确？</h2>
+    <p>
+      若没有设定 <code>language</code> 的值或者 <code>language: default</code>，会出现语言选择不正确的情况。
+      因此为了确保语言正确显示，请明确指定需要使用的语言。
+      编辑 <span class="label label-primary">站点配置文件</span>， 将 <code>language</code> 字段设置成明确的语言代码。
+      例如，设置语言为简体中文：
+    </p>
+<pre><code class="yml hljs"><span class="hljs-attr">language:</span> <span class="hljs-string">zh-Hans</span></code></pre>    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>语言</th>
+        <th>对应值</th>
+      </tr>
+      </thead>
+      <tr>
+        <td>English</td>
+        <td><code>en</code></td>
+      </tr>
+      <tr>
+        <td>简体中文</td>
+        <td><code>zh-Hans</code></td>
+      </tr>
+      <tr>
+        <td>法语</td>
+        <td><code>fr-FR</code></td>
+      </tr>
+      <tr>
+        <td>繁体中文</td>
+        <td><code>zh-hk</code>/<code>zh-tw</code></td>
+      </tr>
+      <tr>
+        <td>俄语</td>
+        <td><code>ru</code></td>
+      </tr>
+      <tr>
+        <td>德语</td>
+        <td><code>de</code></td>
+      </tr>
+      <tr>
+        <td>葡萄牙语</td>
+        <td><code>pt</code></td>
+      </tr>
+      <tr>
+        <td>日语</td>
+        <td><code>ja</code></td>
+      </tr>
+    </table>
+  </section>
+
+
+  <section data-fodling="incorrect-language">
+    <h2 id="setting-page-comments" class="page-header">如何关闭新建页面的评论功能？</h2>
+    <p>
+      当集成了评论系统，如 Disqus，所有新建的页面都将自动开启评论。若你不需要评论，请在页面的 Front-matter 里添加
+      <code>comments</code> 字段，并将值设置为 <code>false</code>。如下所示：
+    </p>
+<pre><code class="md hljs">title: All tags
+date: 2015-12-16 17:05:24
+type: "tags"
+<span class="hljs-section">comments: false
+---</span>
+</code></pre>  </section>
+
+
+  <section data-fodling="incorrect-language">
+    <h2 id="setting-page-size" class="page-header">如何设置页面文章的篇数？</h2>
+    <p>在 Hexo 里可以为首页和归档页面设置不同的文章篇数，但可能需要安装 Hexo 插件。详细步骤如下。</p>
+    <ol>
+      <li>
+        <p>使用 <code>npm install --save</code> 命令来安装需要的 Hexo 插件。</p>
+<pre><code class="sql hljs">npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save hexo-generator-index</span>
+npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save hexo-generator-archive</span>
+npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save hexo-generator-tag</span>
+</code></pre>      </li>
+      <li>
+        <p>等待扩展全部安装完成后，在 <strong>站点配置文章</strong> 中，设定如下选项：</p>
+<pre><code class="yml hljs"><span class="hljs-attr">index_generator:</span>
+<span class="hljs-attr">  per_page:</span> <span class="hljs-number">5</span>
+
+<span class="hljs-attr">archive_generator:</span>
+<span class="hljs-attr">  per_page:</span> <span class="hljs-number">20</span>
+<span class="hljs-attr">  yearly:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">  monthly:</span> <span class="hljs-literal">true</span>
+
+<span class="hljs-attr">tag_generator:</span>
+<span class="hljs-attr">  per_page:</span> <span class="hljs-number">10</span>
+</code></pre>
+        <code>per_page</code> 即文章的数量。
+      </li>
+    </ol>
+    <p class="bs-callout bs-callout-warning">
+      需要注意的是，Hexo 3.2 版本不允许配置文件中存在重复的选项设置。
+      因此，最好检查下 <span class="label label-primary">站点配置文件</span> 中是否有存在上述同名的配置。
+      如果存在，请将两者配置在一起。
+    </p>
+  </section>
+
+
+  <section data-fodling="incorrect-language">
+    <h2 id="optimize" class="page-header">如何优化 NexT 主题？</h2>
+    <p>
+      NexT 并未对 HTML、JavaScript 以及 CSS 做压缩处理。如果你比较在意这点，可以在 NexT 的 Issues 列表搜索
+      <a href="https://github.com/iissnan/hexo-theme-next/issues?utf8=%E2%9C%93&q=+label%3AOptimization">
+        他人共享的优化方案
+      </a>。
+    </p>
+  </section>
+
+  <section data-fodling="module-not-found">
+    <h2 id="module-not-found" class="page-header">Cannot find module XXX</h2>
+    <p>
+      NexT 提供的标签插件引用了 Hexo 模块中的一些子模块，例如 <code>hexo-util</code>。
+      NPM 在版本 3 中引入了新的模块安装机制， NexT 将使用这种机制，意味着如果是旧的 NPM 将会碰到这个错误。
+      因此，如果您碰到 "Cannot find module XXX" 的错误时，请首先使用 <code>npm -v</code> 确认您的 NPM 版本。
+    </p>
+    <ul>
+      <li>版本 > 3 依然报错： 请先删除 <code>node_module</code> 目录，然后使用 <code>npm install</code> 重新安装一下模块。</li>
+      <li>
+        版本 < 3： 您可以选择升级您的 NPM； 或者在站点目录下明确指定模块依赖 <code>npm install --save hexo-util</code>。
+        其中 `hexo-util` 仅是示例，请替换成错误中提示的模块名称。
+      </li>
+    </ul>
+  </section>
+
+
+          <div class="text-center next-docs-section-footer">
+            <a href="https://github.com/iissnan/theme-next-docs/issues"
+               target="_blank" class="next-docs-btn next-docs-btn-default">
+              <i class="fa fa-bug"></i> 文档问题反馈
+            </a>
+            <a href="#top" class="back-to-top next-docs-btn next-docs-btn-default">
+              <i class="fa fa-arrow-up"></i> 返回顶部
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <nav class="next-docs-sidebar nav">
+            <div class="nav">
+  <ul>
+    <li><a href="#read-more">如何设置「阅读全文」？</a></li>
+    <li><a href="#favicon">Favicon 设置后没有生效？</a></li>
+    <li><a href="#custom-font">如何更改字体？</a></li>
+    <li><a href="#custom-content-width">如何更改内容区域的宽度？</a></li>
+    <li><a href="#setting-menu">为何新增的菜单项显示 Menu.xxx</a></li>
+    <li><a href="#count-incorrect-for-tags-categories">标签/分类数量统计不准确？</a></li>
+    <li><a href="#incorrect-language">为何语言显示不正确？</a></li>
+    <li><a href="#setting-page-comments">如何关闭新建页面的评论功能？</a></li>
+    <li><a href="#setting-page-size">如何设置页面文章的篇数？</a></li>
+    <li><a href="#optimize">如何优化 NexT 主题？</a></li>
+    <li><a href="#module-not-found">Cannot find module</a></li>
+  </ul>
+            </div>
+
+            <ul>
+              <li><a href="#top" class="back-to-top">回到顶部</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+<footer class="footer">
+  <div class="container">
+    <hr>
+    <p class="pull-right text-muted next-maker">
+      &copy; Made by <a href="https://github.com/iissnan" target="_blank">IIssNan</a>
+    </p>
+    <div>
+      <ul class="next-docs-footer-links">
+        <li><a href="https://github.com/iissnan/theme-next-docs/issues">文档问题反馈</a></li>
+        <li><a href="https://github.com/iissnan/theme-next-docs">文档 @ GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/main.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75665289-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
