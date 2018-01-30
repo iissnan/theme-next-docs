@@ -53,3 +53,9 @@
     width: 263px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .next-docs-sidebar {
+    display: none;
+  }
+}
